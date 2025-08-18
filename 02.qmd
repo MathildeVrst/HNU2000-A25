@@ -1,0 +1,219 @@
+# [Séance 2 : 09/09] CHERCHER: corpus et ressources numériques
+
+## Une histoire d'internet et du Web 
+
+Nous avons évoqué, la semaine passée, Internet le Web. Qu'en avez-vous retenu ? S'agit-il de la même chose ? 
+
+<!-- MV: 
+- S'agit-il de la même chose ? 
+--> 
+
+> Ce ne sont pas tant les « nouvelles technologies » en général, mais le réseau en lui-même qui a bouleversé notre rapport à la connaissance. [@milleChapitre2DInternet2014]
+
+- Dimension physique de l'infrastructure d'Internet qui permet la possibilité de l'existence du Web. Voir le documentaire *World Brain* par Stéphane Degoutin et Gwenola Wagon, visible [ici](https://vimeo.com/381166153).
+
+### Origines 
+
+- 1962-1968 : ARPAnet
+- 1969-1978 : Internet
+- années 1970 et 1980 : accès aux machines
+- 1984 : un réseau fonctionnel
+
+Plus de détails dans [@milleChapitre2DInternet2014]. 
+
+### Principes : TCP/IP 
+
+TCP/IP : TCP (Transmission Control Protocol) et IP (Internet Protocol).
+
+Une pile de protocoles :
+
+- physique : les câbles (cuivre ou fibre), éventuellement radio ; ; 
+- liaison : Ethernet ou Wireless Ethernet (Wifi), il s’agit de déterminer comment les paquets sont acheminés ; 
+- réseau : c’est la partie IP qui permet d’acheminer des paquets en donnant des adresses à toutes les machines connectées sur un réseau ;
+- transport : c’est la partie TCP, pour transférer les informations découpées en paquets et reconstituées en vérifiant qu’il ne manque rien (c’est ce qui permet à Internet d’être un réseau fiable) ;
+- application : il s’agit du Web, mais aussi d’autres applications comme le partage de fichiers (FTP) ou le courriel (IMAP et SMTP).
+
+
+::: {.callout-tip}
+
+Pour en savoir plus sur Internet et ses protocoles, voici une série de vidéos très complètes : https://iletaitunefoisinternet.fr/.
+
+:::
+
+### Expérimentation 
+
+Découvrir la *route* pour accéder à un serveur :
+
+- utiliser tracepath (ou traceroute) en ligne de commande
+- lancer la commande `tracepath umontreal.ca` ou `traceroute umontreal.ca`
+- analyser les résultats
+
+<!-- MV:  
+La commande va afficher une liste de “sauts” (hops), c’est-à-dire les routeurs par lesquels passent les paquets pour atteindre le serveur de l’Université de Montréal.
+Chaque ligne montre :
+
+le numéro du saut (1, 2, 3, …)
+
+l’adresse IP (et parfois le nom) du routeur
+
+le temps de réponse en millisecondes (3 mesures par défaut).
+
+En gros, tu “vois” ton paquet passer de ta box à ton FAI, puis dans le réseau canadien, jusqu’au serveur cible.
+
+=== 
+
+- pmtu 1500 : path MTU (valeur Ethernet) 
+- 1: _gateway ~2 ms : ta box/routeur local.
+- 2: modemcable001.140-59-74.mc.videotron.ca 239 ms : premier équipement de ton FAI (Vidéotron), typiquement le CMTS.
+- 3: 10.170.160.106 56 ms asymm 4 : adresse privée (10.x) à l’intérieur du réseau du FAI (lien intermédiaire). 
+- 4: 192.77.55.229 13.8 ms : encore un routeur d’agrégation/peering (toujours côté FAI ou proche du point d’échange).
+- 5–7: no reply : un ou plusieurs routeurs ne renvoient pas de message “TTL exceeded” (ICMP filtré/limité). Rien d’anormal. 
+- 8: umontreal2-contenu-membre.risq.net 16.1 ms : tu es maintenant sur le RISQ (Réseau d’informatique des institutions du Québec), proche de la destination (UdeM y est connectée). 
+- 9–30: no reply puis Too many hops : au-delà de ce point, les équipements n’envoient plus de réponses ICMP (politiques de filtrage), donc tracepath ne voit pas la fin du trajet, même si, en pratique, la ressource est probablement joignable.
+
+Le trafic part de chez toi → Vidéotron → (quelques sauts internes) → peering vers le RISQ → un nœud proche de l’UdeM.
+
+L’absence de réponse après le RISQ est courante : beaucoup d’équipements filtrent le TTL Exceeded (ICMP) ou la destination n’envoie pas le “port unreachable” attendu par tracepath.
+
+Le PMTU 1500 indique que tu n’as pas de fragmentation problématique sur le chemin.
+
+Les latences “bizarres” (239 ms au hop 2) sont probablement du policing des réponses ICMP, pas un vrai indicateur de lenteur utilisateur.
+
+--> 
+
+### Le Web 
+
+- Internet ≠ Web
+- le Web = une application d’Internet
+- un protocole (HTTP) et des langages (HTML/CSS/JavaScript)
+
+Le Web est une application d’Internet permettant de publier et de consulter facilement des informations.
+
+### Exercice
+
+- comment lire une page web via un autre outil qu’un navigateur ?
+- utiliser la commande curl dans le terminal 
+- exemple 1 : `curl https://mathildevrst.github.io/HNU2000-A25/Plan-Cours.html`
+- exemple 2 : `curl https://theread.me/raw-permalinks-for-accessibility/`
+
+<!-- MV: 
+Il est intéressant de noter que l’accès à un document disponible via Internet et le Web peut se faire via différentes façons, et pas uniquement avec un navigateur web. 
+--> 
+
+## Les moteurs de recherche 
+
+> Au principe d’autorité qui a fait la force du PageRank, Google substitue de plus en plus un principe d’efficacité qui renvoie de manière toujours plus appropriée vers l’internaute les choix que l’algorithme a appris de ses comportements. [@cardonDansLespritPageRank2013]
+
+### Le Web, au commencent étaient les annuaires
+
+- Dans les années 1990, les premiers répertoires (Yahoo!, DMOZ) proposaient une liste classée de sites web sous forme d’une arborescence thématique.
+- La démarche est différente d’aujourd’hui : on naviguait dans une hiérarchie, on ne formulait pas encore une requête.
+
+- Avantages : navigation linéaire par thématiques, parcours dans une arborescence logique, aperçu potentiellement exhaustif de l’existant. 
+- Inconvénients : parfois une seule entrée pour un résultat qui concerne plusieurs thématiques, recherche fastidieuse ; explosion du Web rendant le modèle vite obsolète.
+
+![Yahoo! en 2001](img/yahoo-en-2001.jpg)
+
+### Constituer des index 
+
+Les moteurs de recherche, apparus au milieu des années 1990 (Altavista, Lycos, Excite…), fonctionnent selon deux grandes opérations :
+
+- Indexation : des robots (« crawlers » ou « spiders ») parcourent le Web de lien en lien et enregistrent les pages dans des bases de données.
+- Recherche : lorsqu’un utilisateur formule une requête, le moteur interroge cet index, applique ses algorithmes et hiérarchise les résultats.
+
+### Google et le PageRank
+
+En 1998, Google introduit le PageRank, qui attribue une importance à une page selon le nombre et la qualité des liens qui pointent vers elle (= système de mesure quantitative de popularité d’une page web). C'est inspiré par la mesure des articles académiques (Science Citation Index). 
+
+![Schéma du PageRank](img/pagerank.png) 
+
+<!-- MV: 
+Le système du PageRank, conçu et utilisé par Google, est relativement complexe. Ce que l’on peut retenir c’est qu’il s’agit d’un système inspiré des publications académiques. Le fonctionnement est le suivant : la popularité d’une page web A est mesurée en fonction du nombre de pages web qui pointent vers cette page web A. Si les pages web qui pointent vers la page web A, alors la popularité sera d’autant plus importante. Il s’agit donc de la prise en compte du nombre de pages web qui pointent vers la page, mais également indirectement du nombre de pages web qui pointent vers les pages web qui pointent vers la page web A. (mes excuses pour ces répétitions)
+--> 
+
+Cela fonde un principe d’autorité : les pages citées par beaucoup d’autres deviennent les plus visibles.
+
+Progressivement, Google combine ce principe avec d’autres critères (localisation, personnalisation).
+
+Pour en savoir plus sur le PageRank, écouter le podcast [@franceinterFrancaisQuiVu2021] (à partir de la 21e mn.) ou lisez [@cardonDansLespritPageRank2013]
+
+### Les évolutions des moteurs de recherche 
+
+Il y a plusieurs évolutions majeures des moteurs de recherche ces dernières années :
+
+- Interface utilisateur (UI) : simplification radicale de la page Google, disparition progressive des options avancées. 
+- Aide à la formulation : autocomplétion, suggestions liées aux recherches fréquentes.
+- Web sémantique et Knowledge Graph (2012–) : affichage de données structurées (fiche Wikipédia, horaires, météo,...) directement dans les résultats.
+- Personnalisation : traçage des comportements, adaptation aux historiques et aux contextes.
+- SEO (Search Engine Optimization) : pratiques d’optimisation par les sites pour “plaire” à Google.
+- IA générative (2023–) : moteurs qui ne se contentent plus de lister des pages, mais produisent directement des résumés de réponse (Google SGE, Perplexity).
+
+Phénomène de simplification : 
+
+- Suppression des options → interface minimale, recherche “intuitive” ; 
+- Autocomplétion → orientation subtile des requêtes ; 
+- Pertinence des premiers résultats → effet d’écrasement : très peu d’utilisateurs consultent la deuxième page ; 
+- Affichage de données liées (web sémantique) → l’utilisateur n’a plus besoin de cliquer sur les sites sources ; 
+- IA générative → bascule majeure : le moteur devient assistant ou agent conversationnel, qui filtre et reformule le Web au lieu de seulement l’indexer ; 
+- Tendance globale → l’information va de plus en plus vers l’utilisateur, au risque de réduire sa diversité d’accès.
+
+![Outil de réservation SNCF, capture d'écran, 18 août 2025](img/SNCF.png)
+
+Fonctionnement d’un moteur de recherche : 
+
+- Des robots parcourent le Web, de liens en liens ; 
+- Les données sont indexées et classées.
+- L’utilisateur formule une requête.
+- Le moteur sélectionne et hiérarchise les résultats grâce à des algorithmes.
+- Les requêtes influencent à leur tour les robots et les algorithmes (boucle d’apprentissage).
+
+### Vade-Mecum d'une recherche google 
+
+1. Commencer simple
+
+- Tapez quelques mots-clés principaux de votre sujet.
+- Utilisez des mots précis plutôt que des phrases longues.
+- Google ignore généralement les mots très fréquents (le, la, de…).
+
+2. Utiliser les guillemets pour les expressions exactes
+
+- `"expression exacte"` → Google recherche ces mots dans cet ordre précis.
+- e.g. : `"humanités numériques"` ne retournera que les pages contenant exactement cette expression.
+
+3. Limiter la recherche à un site ou un domaine
+
+- `site:lesite.com requête` → Recherche uniquement sur ce site.
+- e.g`: `site:umontreal.ca "humanités numériques"` → pages sur l’Université de Montréal concernant les humanités numériques.
+
+4. Chercher un type de fichier spécifique
+
+- `filetype:pdf requête` → Cherche des fichiers PDF uniquement.
+- e.g. : `filetype:pdf "édition numérique"` → documents PDF sur l’édition numérique.
+
+5. Chercher dans le titre d’une page
+
+- `intitle:mot` → Page dont le titre contient ce mot.
+- e.g. : `intitle:"humanités numériques"` → pages dont le titre contient l’expression exacte.
+
+6. Combiner des opérateurs
+
+- `AND`, `OR`,`-` (exclusion) permettent de préciser la recherche. Des parenthèses servent à grouper des termes ou des opérateurs. 
+- e.g. : `"humanités numériques" AND "édition" -cours` → pages sur l’édition dans les humanités numériques mais sans cours. 
+- e.g. : `("humanités numériques" OR "digital humanities") AND "édition"` → pages qui contiennent soit "humanités numériques", soit "digital humanities", mais qui contiennent aussi "édition".
+
+### Exercice
+
+Dans votre moteur de recherche favori : 
+
+- Cherchez une expression exacte ; 
+- Cherchez là uniquement sur un site spécifique ; 
+- Cherchez un type de fichier particulier ; 
+- Cherchez des pages dont le titre contient un mot clé ; 
+- Combinez plusieurs opérateurs pour affiner la recherche ; 
+- Cherchez toutes les pages qui parlent d’humanités numériques et d’édition sur le site web de l’Université de Montréal 
+
+<!-- MV: 
+
+("humanités numériques" AND "édition") site:umontreal.ca
+
+--> 

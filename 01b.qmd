@@ -1,0 +1,185 @@
+# [Séance 1 : 02/09] Introduction aux Humanités Numériques
+
+## Définitions 
+
+Comment définiriez-vous, en vos mots, les *Humanités Numériques* ?
+
+
+<!-- MV: 
+
+Quand il s'agit de qualifier l'informatique appliquée aux lettres et sciences huamines, c'est aujourd'hui l'expression d'Humanités Numériques qui nous vient à l'esprit. 
+
+--> 
+
+> D’une part, les humanités numériques pourraient être définies comme l’application d’une méthode d’analyse informatique aux sciences humaines. En d’autres mots, l’approche des DH consiste à prendre en compte le fait que la puissance ne doit pas être limitée aux sciences dures, mais peut et doit aussi être employée pour des recherches en sciences humaines. D’autre part, les humanités numériques transcendent cet aspect technique et peuvent être pensées comme un regard global posé sur les changements culturels déterminés par le numérique ; en ce sens, les humanités numériques pourraient conduire à une sorte d’« humanisme numérique ». [@sinatraChapitre3Histoire2014]
+
+<!-- MV: 
+
+Avec cette définition, les auteurs remettent en question l'opposition entre une approche du numérique reposant sur le développement d'outils techniques et une approche théorique car pour eux les deux sont liées : les choix techniques, qui sont à la base de la structuration de contenus, témoignent et promeuvent des valeurs particulières. 
+
+--> 
+
+> Domaine de recherche et d’enseignement au croisement de l’informatique et des lettres, des arts, des
+sciences humaines et des sciences sociales, visant à produire et à partager des savoirs, des méthodes et de
+nouveaux objets de connaissance à partir d’un corpus de données numériques.^[Cette définition a été réutilisée [sur le site de l'OQLF](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26557956/humanites-numeriques).][@commissiondenrichissementdelalanguefrancaiseJournalOfficielElectronique2019]
+
+- *Quelques* autres définitions [ici](https://archive.artsrn.ualberta.ca/day-of-dh/define-dh.html) ou [ici](https://whatisdigitalhumanities.com/).
+
+<!-- MV: 
+
+Les HN s'étendent à un vaste domaine de recherche au croisement de plusieurs disciplines 
+
+--> 
+
+## Humanités...
+
+- Traditionnellement : lettres classiques ; 
+- Aujourd’hui (et surtout en Amérique du nord) : les sciences humaines ; 
+- Littérature, philosophie, histoire, arts vivants, linguistiques, etc.
+
+<!-- MV: 
+Quand on parle des humanités, on désigne une tradition ancienne.
+Traditionnellement, ce terme renvoie aux lettres classiques, au cœur de la formation humaniste : lire, traduire, commenter les textes grecs et latins.
+
+Mais aujourd’hui, et surtout dans le monde anglophone et nord-américain, les humanities englobent un champ beaucoup plus large : ce sont toutes les sciences humaines et les disciplines qui interrogent l’humain et ses productions culturelles.
+Cela comprend la littérature, la philosophie, l’histoire, mais aussi les arts vivants, la linguistique, et d’autres disciplines proches.
+
+Donc quand on dit humanités numériques, il faut avoir à l’esprit que le terme “humanités” est polysémique : il n’a pas forcément le même contenu si l’on se place en Europe continentale ou en Amérique du Nord.
+-->
+
+## ...Numérique(s)
+
+- Représentation par nombre ; 
+- Discrétisation ; 
+- Numérisation du monde ; 
+- Culture numérique.
+
+<!-- MV:
+Le deuxième mot, numérique, mérite aussi un petit arrêt.
+
+Numérique, au sens strict, signifie représentation par des nombres. Toute information est traduite en 0 et 1, ce qui suppose une étape de discrétisation : on découpe un phénomène continu (comme une voix, une image, un geste) en unités discrètes, mesurables, qu’on peut ensuite traiter.
+
+C’est ce qu’on appelle la numérisation du monde : les images, les sons, les textes, mais aussi les données sociales ou biologiques, peuvent être transformés en données numériques.
+
+Enfin, au-delà de l’aspect technique, le mot numérique renvoie aussi à une culture numérique : de nouveaux usages, de nouvelles pratiques sociales, une façon différente de produire, de partager et d’interpréter le savoir.
+
+C’est donc dans cette rencontre entre les humanités et le numérique qu’émergent les humanités numériques, un domaine à la fois interdisciplinaire et en constante évolution.
+-->
+
+## Les trois moments des Humanités Numériques 
+
+Lou Burnard [-@burnardLiteraryLinguisticComputing2012] distingue trois moments des humanités numériques : 
+
+### env. 1970 : *Literary and Linguistic Computing* 
+
+- Déjà vers la fin des années 1940 avec l'*Index Thomisticus* de R. Busa 
+- Puissance de calcul des ordinateurs afin d'*automatiser* la création d'index, le repérage de concordances, le calcul de fréquences ... 
+- Ex.: British National Corpus, Thesaurus Linguae Graecae 
+
+### env. 1980 : L’*humanities computing*
+
+- Compréhension et maîtrise du programme informatique qui devient à proprement parler l'instrument d'une méthode de recherche et ce, dans une perspective interdisciplinaire. 
+- Ex.: la TEI (*Text Encoding Initiative*)
+
+<!-- MV: 
+TEI: norme d'encodage en xml utilisable opur toute source textuelle numérisée, qui apparaît donc comme un métalangage commun 
+--> 
+
+### env. 1990 : *Digital Humanities* 
+
+- Apparition du Web → disponibilité des corpus numériques → nécessité de penser des interface pour consulter les corpus. Nouveaux rythmes de publication, modes de diffusions, formats. 
+- > « On est passés de l'ninformatique comme outil au service de la recherche au numérique comme environnement global au sein duquel s'effectue la recherche. » [@debouyVademecumInformatiquePour2025, p. 15] 
+- Ex.: la *William Blake Archive* 
+
+## Quelques repères historiques 
+
+- Aujourd'hui, l'informatique est partout → gain de temps, facilité de traitement ; accès aux informations ; ... 
+- Nouvelles questions : où sont stockées les données ? quelle confidentialité ? quelle est notre relation aux outils que nous utilisons tous les jours ? ... 
+- > « Le citoyen du XXI^e^ siècle en est bien souvent réduit à être de plus en plus un consommateur et non un utilisateur averti et libre de ces technologies numériques. » [@debouyVademecumInformatiquePour2025, p. 17]
+ 
+<!-- MV (Debouy 2025, p. 17)
+
+- Comme vous le savez, nous vivons dans une civilisation transformée par l'informatique qui a ouvert des possibilités gigantesques en gain de temps et en facilité de traitement, a créé de nouvelles fonctionnalités, a permis l'accès aux informations et aux archives 
+- Nouvelles questions sont apparures : où sont stockées les données ? Qui y a accès ? Sont-elles en sécurité ? Sommes-nous dépendants des machines, de logiciels, de sociétés commerciales ? 
+- Par exemple, tout un chacun est-il sûr de pouvoir nommer son OS, saisir du texte dans une autre langue que la sienne sur un ordinateur, savoir quand utiliser un éditeur de texte plutôt qu'un traitement de texte définir son identité numérique, dire ce qu'est un cookie ou encore pourquoi les résultats de Google traduction sont parfois inutilisables ? 
+
+! Tout objet numérique résulte certes de croisement entre les techniques mais révèle aussi les intérêts économiques et les visions politiques d'une société !  
+Avoir des repères historiques précis permet de comprendre son environnement informatique et d'être en mesure de le reprendre en main. 
+-->
+
+### Les prémices mécaniques
+
+- II^e^ s. av. J.-C. : le mécanisme d'Anticythère peut être considéré comme le premier calculateur analogique (connu). Il permettait de modéliser la course des astres grâce à une trentaine d'engrenage. Il faudra attendre près d'un millénaire pour les prochains systèmes comparables, dans les horloges de Moyen Âge. La reconstruction de ce mécanisme intéresse toujours les chercheurs aujourd'hui. 
+
+![Le fragment principal de la machine d'Anticythère](img/Anticythere.jpg) 
+
+- Env. 1640 : la *Pascaline* de Blaise Pascal, calculatrice mécanique capable d’additionner et de soustraire, conçue pour assister son père percepteur d’impôts.
+
+![Pascaline, conservée au musée des Arts et Métiers, Paris](img/Pascaline.jpg)
+
+- XVII^e^ s. -- fin du XX^e^ s. : la règle à calcul, un instrument mécanique utilisé massivement jusqu'aux années 1970 pour faire des opérations arithmétiques et trigonométriques. Elle sera préférée à la Pascaline notamment en raison de son prix, sa facilité d'utilisation et de fabrication. 
+
+![Règle à calcul scolaire, 10 pouces (Pickett N902-T simplex trig).](img/RegleCalcul.jpg)
+
+- 1801 : le métier à tisser de Jacquard, système mécanique programmable par l'utilisation de cartes perforées, introduit l’idée d’un programme externe pour automatiser des opérations. 
+
+![Métier à tisser de J.-M. Jacquard](img/Jacquard.jpg)
+
+#### Les concepts fondateurs 
+
+- Env. 1830 : Charles Babbage conçoit la machine analytique, un ordinateur programmable universel avant l’heure, inspiré du métier à tisser de Jacquard. Elle ne sera jamais construite faute de moyens techniques et financiers, mais ses plans étaient fonctionnels. Ada Lovelace y voit la possibilité d’écrire de véritables programmes (une suite d’instructions à mémoriser, exécuter et produire un résultat) et imagine déjà que la machine pourrait manipuler n’importe quel type de symbole — anticipant l’usage des ordinateurs pour le texte, la musique ou les arts: elle conçoit le premier algorithme en plus d'élargir la portée conceptuelle de la machine. 
+
+![Prototype (1871) non terminé de la machine analytique de Babbage](img/Babbage.jpg)
+
+![« Programme » de calcul des nombres de Bernoulli dans une note d'A. Lovelace (1843)](img/Algorithme_Bernoulli.jpg)
+
+<!-- MV: 
+
+Charles Babbage (1791-1871), mathématicien britannique, voulait automatiser les calculs mathématiques afin d’éviter les erreurs humaines, fréquentes dans les tables de navigation ou d’astronomie.
+
+Il conçoit dans les années 1830 la machine analytique, jamais réalisée complètement (problèmes techniques et financiers). Idée révolutionnaire : un ordinateur programmable universel, bien avant que l’électronique n’existe. Pour ce faire, il s'inspire du Métier de Jacquard et ajoute une entrée et sortie avec cartes perforées. Il ajoute aussi des boucles et branchements conditionnels, permettant de répéter des instructions ou de changer le flux du programme.
+
+Ada Lovelace (1815-1852) est la fille du poète Lord Byron et, passionnée de mathématiques, collabore rapidement avec Babbage. Elle décrira comment la machine pourrait exécuter une série d’instructions pour calculer les nombres de Bernoulli : c’est ce qu’on considère comme le premier algorithme publié pour une machine. Mais surtout, elle va plus loin : elle imagine que la machine pourrait manipuler n’importe quel type de symbole, pas seulement des nombres — anticipant l’usage des ordinateurs pour la musique, le texte, ou les arts.
+
+La machine analytique n’a jamais été construite à l’époque (la technologie mécanique n’était pas assez avancée), mais des prototypes réalisés au XXᵉ siècle ont montré que ses plans étaient fonctionnels.
+
+Dans les humanités numériques, cette histoire est importante car elle montre très tôt une vision interdisciplinaire : calcul, symboles, langage, arts… une anticipation de ce que seront les DH.
+
+-->
+
+- 1890 : Développement (par Herman Hollerith) des machines à cartes perforées pour le recensement américain, à l’origine d’IBM. 
+
+- 1936 : Alan Turing formalise, dans son article *On Computable Numbers*, la notion de *machine universelle*, un modèle théorique capable d’exécuter tout algorithme. Turing est ainsi une figure primordiale de l’histoire de l’informatique. Durant la Seconde Guerre mondiale, il contribue également au déchiffrement des codes secrets allemands (notamment *Enigma*)^[C’est sur cet épisode que porte le film *The Imitation Game* (2014).].
+ 
+#### Vers l'ordinateur moderne 
+
+- 1945 : John von Neumann formalise l’architecture du *programme enregistré*, où instructions et données sont stockées dans une même mémoire. 
+
+![Oppenheimer et von Neumann à l'inauguration en 1952 de l'ordinateur construit pour l'*Institute for Advanced Study*.](img/OppenheimerNeumann.jpg)
+
+- Années 1950 : IBM commercialise ses premiers ordinateurs ; FORTRAN^[Un bac à sable est disponible [ici](https://dev.lfortran.org/).] (FORmula TRANslator) devient le premier langage de haut niveau utilisé massivement pour le calcul scientifique et l’ingénierie. 
+
+#### L’informatique et les sciences humaines
+
+- 1949 : le jésuite Roberto Busa, avec IBM, lance le projet de l'*Index Thomisticus* (analyse assistée par ordinateur de l’œuvre de Thomas d’Aquin), considéré comme l’acte fondateur des humanités numériques.
+
+#### Démocratisation et réseau
+
+- Années 1960–1970 : naissance d’Internet, à la suite de projets militaires et universitaires (comme ARPANET, financé par le Department of Defense américain) qui mettent au point un réseau de communication décentralisé, capable de transmettre des paquets d’informations entre ordinateurs. 
+
+- Années 1980 : diffusion des micro-ordinateurs personnels, qui ouvrent l’informatique à la recherche, l’enseignement et le grand public. 
+
+![IBM PC 5150 avec clavier](img/IBM5150.jpg)
+
+- 1990 : Tim Berners-Lee invente le World Wide Web au CERN, rendant possible la circulation mondiale des textes numériques. Les concepts d'Internet et du Web sont complètement différents ! Le Web repose sur Internet, mais il en est une application.
+
+![Tim Berners-Lee](img/BernersLee.jpg)
+
+- Années 1990-2000 : grands projets de bibliothèques numériques (Gutenberg, Perseus, Gallica) et standardisation de l’encodage de texte (TEI).
+
+- 1998 : Google est créé par Larry Page et Sergey Brin. Il s'agit d'un moteur de recherche qui classe les pages Web selon leur popularité (PageRank).  
+
+#### Vers les humanités numériques contemporaines 
+
+- Années 2000-2010 : massification du numérique en SHS : OCR3HTR, bases textuelles, textométrie, fouille de texte.
+- Années 2010-2020 : montée en puissance de l’IA et des grands modèles de langage, offrant de nouvelles méthodes d’analyse, mais aussi de nouveaux enjeux critiques. 

@@ -1,10 +1,258 @@
-# Hello World ! {.unnumbered}
+# Plan du cours {.unnumbered} 
 
-Bienvenue sur le support du cours HNU200 – Humanités numériques : technologies. Celui-ci est destiné aux étudiantes et étudiants qui suivent le cours à l’automne 2025. 
+- *Sigle du cours* : HNU2000 
+- *Titre du cours* : Humanités numériques : technologies 
+- *Trimestre* : Automne 2025 
+- *Titulaire du cours* : Mathilde Verstraete 
+- *Coordonnées* : [mathilde.verstraete@umontreal.ca](mailto:mathilde.verstraete@umontreal.ca)
+- *Horaire* : Mardi 08h30-11h30 (du 02/09 au 09/12/2025) 
+- *Lieu* : À confirmer 
+
+## Description du cours 
+
+Espace de formation pratique basée sur des compétences pour les méthodes de base dans les humanités numériques, y compris l’exploration de textes, l’analyse de données, l’analyse du web et les systèmes d’information géographique. 
+ 
+## Objectifs et contenu du cours 
+
+> Le numérique habite l’ensemble de nos vies et touche aussi, et surtout, à nos activités purement « humanistes », ou même « humaines ». 
+>
+> [@sinatraChapitre3Histoire2014] 
+
+Les disciplines humanistes au sens large s’appuient de plus en plus sur des outils informatiques pour explorer, traiter, analyser, diffuser leurs objets d’étude. Cette irruption des outils issus des sciences dites dures dans les sciences humaines a donné naissance à un nouveau champ interdisciplinaire, celui dit des *humanités numériques*.  
+
+L’objectif principal du cours ***HU2000 -- Humanités numériques : technologies*** est de familiariser les étudiant·e·s aux principaux outils, technologies, logiciels, utilisés dans ce champ. Cette familiarisation passera par la manipulation concrète d’outils numériques et par la réalisation de projets pratiques.
+ 
+Parmi les thématiques abordées durant le cours: 
+
+- La connaissance de son ordinateur; 
+- L’encodage et la structure de fichiers numériques; 
+- Les formats d’écriture; 
+- Le versionnement de ses données; 
+- Le traitement et la gestion des références bibliographiques; 
+- La fouille et l’analyse de textes;  
+- La reconnaissance automatique d’écritures manuscrites; 
+- La programmation (introduction); 
+- etc. 
+
+<!-- MV:
+
+En résumé: 
+- comprendre les humanités numériques; 
+- découvrir des outils et des méthodes; 
+- apprendre à travailler avec le numérique; 
+- réfléchir à nos conceptions des sciences humaines; 
+- jouer avec des logiciels/applications/programmes.
+
+--> 
+
+Que sont les humanités numériques et quelles technologies sont utilisées dans cette approche scientifique ? Les « humanités numériques » sont à la fois une méthode scientifique, un programme de recherche ou une approche pluridisciplinaire : elles offrent de nouvelles perspectives pour appréhender, lire et comprendre le monde qui nous entoure. Depuis l’avènement du numérique, la compréhension des écosystèmes technologiques devient une nécessité dans le champ des sciences humaines. Le cours HNU 2000 « Humanités numériques : technologies » est une opportunité pour explorer de façon originale les outils théoriques et pratiques utilisés dans les humanités numériques : lire, écrire, chercher, explorer, visualiser, analyser, publier, etc. Ce cours est un espace de formation pratique et de découverte des méthodes de base en humanités numériques, avec une orientation vers les démarches d’écriture, d’édition et de publication.
+
+Ce cours est une initiation aux technologies utilisées dans les humanités numériques, les étudiant·e·s devront comprendre, explorer, manipuler et expérimenter des outils, des logiciels, des méthodes et des programmes informatiques. Le cours HNU 1000 « Humanités numériques : théories » est un compagnon adéquat pour ce cours pratique.
+
+À l’issue du cours les étudiant·e·s seront en mesure de comprendre les enjeux technologiques des humanités numériques, de réutiliser des concepts liés aux humanités numériques, d’appréhender des méthodes utilisées dans les humanités numériques et d’utiliser des outils/applications.
+
+<!-- MV:
+
+Quelques moyens pour remplir ces objectifs :
+
+- questionner notre rapport aux numériques
+- faire preuve de curiosité
+- établir des liens entre les pratiques d’hier et celles d’aujourd’hui
+
+--> 
+
+L’*outillage* est souvent un aspect mal considéré en humanités, pourtant c’est la condition même de la possibilité de nos recherches : nos outils de collecte, d’enregistrement, de traitement, de prise de notes, de rédaction et de publication sont ce par quoi tout commence. 
+
+## Organisation du cours 
+
+Le cours alterna entre théorie et pratique. De manière générale, chaque cours sera l’occasion d’étudier un outil. À cette fin, il sera demandé à l’étudiant⸱e de préparer la séance par une ou des lecture(s) et/ou des manipulations sur son ordinateur personnel  (installation de logiciel, création de compte, etc.). Le cours sera l’occasion d’étudier -- d’un point de vue pratique, mais aussi théorique -- l’outil en question. Il pourra être demandé à l’étudiant⸱e de terminer des manipulations après la séance de cours et pour le cours suivant. 
+
+Il est impératif que l’étudiant⸱e possède un ordinateur. 
+
+## Calendrier des séances et des lectures 
+
+Le cours de cette année sera axé sur le cycle de vie du texte savant en contexte numérique. On abordera le texte source (séances 1-7), son analyse (8-10) et sa publication et diffusion (11-13). 
+
+### [Séance 1 : 02/09] Introduction 
+
+- Présentation de l'enseignante 
+- Présentation des étudiant·e·s 
+- Présentation du cours : déroulement, courte présentation des séances, participation, évaluations ;
+- Introduction aux Humanités Numériques
+
+**Lectures obligatoires** 
+
+- [@sinatraChapitre3Histoire2014]
+- [@underwoodWhyAgeMachine2018] 
+
+**Outils** 
+
+- <https://whatisdigitalhumanities.com/> 
+
+**Lectures supplémentaires** 
+
+- [@dacosHumanitesNumeriques2015] 
+- [@dacosManifesteDigitalHumanities2011a]
+- [@burdickHumanitiesDigitalHumanities2012] 
+
+
+### [Séance 2 : 09/09] CHERCHER: corpus et ressources numériques 
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| TBD | TBD | Bibliothèques numériques, archives ouvertes, écosystèmes des ressources numériques | Moteurs de recherche (+regex?) | 
+
+**Lectures supplémentaires** 
+
+- [@franceinterFrancaisQuiVu2021] (podcast)
+- [@cardonDansLespritPageRank2013]
+
+### [Séance 3 : 16/09] ORGANISER: métadonnées et formats 
+
+::: callout-note
+
+[17/09] Date limite pour la modification des choix de cours
+
+:::
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| TBD | TBD | Les différents formats textuels<br>Les traitements *vs* éditeurs de texte | Pandoc | 
+
+
+<!--
+- Le texte et sa saisie 
+  - ASCII à Unicode, Mufi 
+  - De l'encodage au format 
+  - ... 
+- Éditeur de texte vs Traitement de Texte
+- Point sur le libre 
+
+- Stylo ? 
+-->
+
+### [Séance 4 : 23/09] ANNOTER: des *marginalia* à l'annotation numérique 
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| TBD | TBD | Typologie de l’annotation, enjeux collaboratifs, question de la trace | Hypothes.is | 
+
+### [30/09]  
+
+::: callout-note
+
+Congé universitaire -- Journée nationale de la vérité et de la réconciliation
+
+:::
+
+### [Séance 5 : 07/10] REPRÉSENTER le texte (I): formats légers  
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| J. H. Coombs, Allen H Renear, et Steven J DeRose. « Markup Systems and the Future of Scholarly Text Processing » | TBD | Introduction à .txt, .md, .html | Prise en main de Markdown<br>Stylo | 
+
+### [Séance 6 : 14/10] REPRÉSENTER le texte (II): formats riches et normés   
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| LaTeX + Introduction à la TEI | TBD | Baliser son texte | Prise en main de LaTeX (OverLeaf)<br>Observation d'un document en XML-TEI (LeafWriter)<br>Interopérabilité des formats (ekdosis) | 
+
+### [21/10] 
+
+::: callout-note
+
+Semaine de lecture -- pas de cours
+
+:::
+
+### [Séance 7 : 28/10] EXAMEN  
+
+::: callout-important
+
+Examen de mi-session
+
+:::
+
+### [Séance 8 : 04/11] BIBLIOGRAPHIER: citations, identifiants, interopérabilité
+
+::: callout-note
+
+[07/11] Date limite pour l'abandon d'un cours
+
+:::
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| TBD | TBD | BibTeX, CSL | Zotero | 
+
+### [Séance 9 : 11/11] NETTOYER les données textuelles  
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| TBD (data captcha?) | TBD | OCR, HTR, dirty OCR | Introduction à eScriptorium (?) | 
+
+### [Séance 10 : 18/11] ANALYSER: textométrie, stylométrie et TAL 
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| TBD | TBD | Ce que nous disent les mots | Voyant + Notebook Python | 
+
+### [Séance 11 : 25/11] VISUALIER: vers une autre lecture 
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| TBD | [D. Keim et al., « Visual Analytics: Definition, Process, and Challenges »](https://faculty.cc.gatech.edu/~stasko/7450/Papers/keim-va08.pdf)<br>Drucker, [Humanities Approaches to Graphical Display](https://dhq.digitalhumanities.org/vol/5/1/000091/000091.html) | Les différents types de visualisation | TimeLineJS, StoryMapJS | 
+
+### [Séance 12 : 02/12] ÉCRIRE & PUBLIER 
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| TBD | Fauchié,  [The Importance of Single Source Publishing in Scientific Publishing](https://www.digitalstudies.org/article/id/9655/) | Le SSP et les chaînes de publication + introduction à Git | Mise en place d'un workflow éditorial | 
+
+### [Séance 13 : 09/12] IA 
+
+| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
+| --- | --- | --- | --- | 
+| TBD | TBD | Définition, panorama (algorithmes, modèles de langage, IA générative) | Discussion? | 
+
+### [Séance 14 : 16/12] 
+
+::: callout-important
+
+Examen final
+
+:::
+
+## Modalités d'évaluation 
+
+::: {.callout-important}
+
+Rappel : 1h de cours = 1,5h de travail hors cours
+
+:::
+
+- Participation^[Par participation, j'entends la préparation, la concentration lors des séances, l'écoute active, l'implication lors des échanges.] & Implication dans les exercices et travaux non évalués : 25%; 
+- Examen de mi-session (théorie) : 25%
+- Examen final (théorie) : 25% 
+- Travail final (pratique) : 25% 
+
+L'examen est composé de deux parties : 
+
+1. deux examens écrits, qui consistent en un QCM et des questions ouvertes portant sur la théorie vue en cours et dans les lectures ; 
+2.  un travail portant sur la rédaction d'un projet en utilisant au moins deux des outils vus en cours. 
+
+## Ressources utilisées dans le cadre de ce cours 
+
+- Le présent site contient l'ensemble des informations dont vous aurez besoin pour ce cours. 
+- Lorsque les références sont disponibles en ligne le lien est indiqué sur le site du cours. Attention, certaines ressources en ligne nécessitent une connexion UdeM : soit depuis l’Université, soit en passant par le VPN.
+
+## Plagiat et fraude 
+
+« Tout acte de plagiat, fraude, copiage, tricherie ou falsification de document commis par une étudiante, un étudiant, de même que toute participation à ces actes ou tentative de les commettre, à l’occasion d’un examen ou d’un travail faisant l’objet d’une évaluation ou dans toute autre circonstance, constituent une infraction. Vous trouverez à l’adresse suivante les différentes formes de fraude et de plagiat ainsi que les sanctions prévues par l’Université : https://integrite.umontreal.ca » 
 
 ## Crédits 
 
-Le contenu de ce cours doit beaucoup aux préparations réalisées par Antoine Fauchié, Margot Mellet, Alix Chagué ainsi qu’aux séances de [Débogue tes humanités](https://debugue.ecrituresnumeriques.ca/).
+Le contenu de ce cours doit beaucoup aux préparations réalisées par Antoine Fauchié, Margot Mellet, Alix Chagué ainsi qu’aux séances de [Débogue tes humanités](https://debugue.ecrituresnumeriques.ca/) et à l'ouvrage *Vade-mecum informatique pour les lettres et sciences humaines* [@debouyVademecumInformatiquePour2025]. 
 
 Le support du cours a été créé avec [Quarto](https://quarto.org/docs/books/). 
 

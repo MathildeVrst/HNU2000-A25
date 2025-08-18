@@ -1,0 +1,47 @@
+# [Séance 1 : 02/09] Introduction 
+
+## Bienvenue ! 
+
+Cette séance est dédiée d'une part à la présentation du cours, son déroulement et autres détails utiles, d'autre part à un bref panorama des Humanités Numériques. 
+
+## Tour de table 
+
+Quelques questions :
+
+- quel est votre nom ? 
+- quel est votre parcours académique ? 
+- qu’attendez-vous de ce cours ? 
+- que savez-vous des Humanités Numériques ? 
+
+<!-- 
+MV: 
+
+Mon nom est Mathilde Verstraete, je suis doctorante au Département de littératures et de langues du monde de l’Université de Montréal. J'ai un parcours en lettres classiques: j'ai donc étudié le latin et le grec ancien avant de me tourner vers les Humanités Numériques. Je suis en rédaction de thèse depuis peu, je suis aussi auxiliaire de recherche à la Chaire de recherche du Canada sur les écritures numériques (dirigée par Marcello Vitali-Rosati), je suis proche des Groupe de recherche sur les éditions critiques en contexte numérique et Centre de recherche interuniversitaire sur les humanités numériques. Je vais avoir beaucoup d’occasions de vous parler des projets sur lesquels nous travaillons dans ces laboratoires.
+
+Je donne ce cours parce qu’il m’a été attribué par le Département de littératures et de langues du monde, je suis très heureuse d’avoir l’occasion de présenter des initiatives et des projets qui me tiennent à cœur et qui sont parfois en lien avec ma thèse. À vous! 
+
+--> 
+
+## Déroulement du cours 
+
+- Cours en présentiel = présence requise ; 
+- Lectures obligatoires avant chaque séance ; 
+- Support/ressources disponibles à la fin de chaque cours (site web dédié) ; 
+- Pendant les séances : partie théorique, manipulations, échanges ; 
+- Exposés à prévoir sur certaines séances. 
+
+Pour chaque séance vous devez lire un texte, souvent de quelques pages. Ce texte servira de base à une discussion pendant la séance, vous aurez par ailleurs besoin de les connaître pour les différents travaux à réaliser.
+
+Les supports de cours, y compris une partie de mes notes, seront placés à la suite de chaque séance sur un site web dédié. Vous pourrez donc les consulter à tout moment. Attention, cela ne vous dispense pas de prendre des notes pendant le cours !
+
+## Objectifs du cours 
+
+Cf. le [Plan de cours](Plan-Cours.html#objectifs-et-contenu-du-cours)
+
+## Présentation des séances 
+
+Cf. le [Plan de cours](Plan-Cours.html#calendrier-des-séances-et-des-lectures)
+
+## Modalités d'évaluation 
+
+Cf. le [Plan de cours](Plan-Cours.html#modalités-dévaluation)

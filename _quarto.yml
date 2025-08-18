@@ -2,6 +2,7 @@ project:
   type: book
 
 book:
+  language: "fr"
   title: "HNU2000-A25"
   subtitle: "Humanités Numériques : technologies"
   author: "[Mathilde Verstraete](mailto:mathilde.verstraete@umontreal.ca)"
@@ -10,9 +11,9 @@ book:
   search: true
   chapters:
     - index.qmd
-    - Plan-Cours.qmd
-    - intro.qmd
-    - summary.qmd
+    - 01a.qmd
+    - 01b.qmd
+    - 02.qmd
     - references.qmd
 
 bibliography: references.bib
