@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./01a.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -109,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hello World !</span></a>
+ <span class="menu-text">Plan du cours</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -120,14 +140,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  <a href="./01a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">[Séance 1 : 02/09] Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  <a href="./01b.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">[Séance 1 : 02/09] Introduction aux Humanités Numériques</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">[Séance 2 : 09/09] CHERCHER: corpus et ressources numériques</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -146,7 +172,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#objectifs-et-contenu-du-cours" id="toc-objectifs-et-contenu-du-cours" class="nav-link active" data-scroll-target="#objectifs-et-contenu-du-cours">Objectifs et contenu du cours</a></li>
+  <li><a href="#description-du-cours" id="toc-description-du-cours" class="nav-link active" data-scroll-target="#description-du-cours">Description du cours</a></li>
+  <li><a href="#objectifs-et-contenu-du-cours" id="toc-objectifs-et-contenu-du-cours" class="nav-link" data-scroll-target="#objectifs-et-contenu-du-cours">Objectifs et contenu du cours</a></li>
   <li><a href="#organisation-du-cours" id="toc-organisation-du-cours" class="nav-link" data-scroll-target="#organisation-du-cours">Organisation du cours</a></li>
   <li><a href="#calendrier-des-séances-et-des-lectures" id="toc-calendrier-des-séances-et-des-lectures" class="nav-link" data-scroll-target="#calendrier-des-séances-et-des-lectures">Calendrier des séances et des lectures</a>
   <ul class="collapse">
@@ -168,6 +195,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#séance-14-1612" id="toc-séance-14-1612" class="nav-link" data-scroll-target="#séance-14-1612">[Séance 14 : 16/12]</a></li>
   </ul></li>
   <li><a href="#modalités-dévaluation" id="toc-modalités-dévaluation" class="nav-link" data-scroll-target="#modalités-dévaluation">Modalités d’évaluation</a></li>
+  <li><a href="#ressources-utilisées-dans-le-cadre-de-ce-cours" id="toc-ressources-utilisées-dans-le-cadre-de-ce-cours" class="nav-link" data-scroll-target="#ressources-utilisées-dans-le-cadre-de-ce-cours">Ressources utilisées dans le cadre de ce cours</a></li>
+  <li><a href="#plagiat-et-fraude" id="toc-plagiat-et-fraude" class="nav-link" data-scroll-target="#plagiat-et-fraude">Plagiat et fraude</a></li>
+  <li><a href="#crédits" id="toc-crédits" class="nav-link" data-scroll-target="#crédits">Crédits</a></li>
+  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
   </ul>
 </nav>
     </div>
@@ -202,9 +233,17 @@ ul.task-list li input[type="checkbox"] {
 <li><em>Horaire</em> : Mardi 08h30-11h30 (du 02/09 au 09/12/2025)</li>
 <li><em>Lieu</em> : À confirmer</li>
 </ul>
+<section id="description-du-cours" class="level2">
+<h2 class="anchored" data-anchor-id="description-du-cours">Description du cours</h2>
+<p>Espace de formation pratique basée sur des compétences pour les méthodes de base dans les humanités numériques, y compris l’exploration de textes, l’analyse de données, l’analyse du web et les systèmes d’information géographique.</p>
+</section>
 <section id="objectifs-et-contenu-du-cours" class="level2">
 <h2 class="anchored" data-anchor-id="objectifs-et-contenu-du-cours">Objectifs et contenu du cours</h2>
-<p>Les disciplines humanistes au sens large s’appuient de plus en plus sur des outils informatiques pour explorer, traiter, analyser, diffuser leurs objets d’étude. Cette irruption des outils issus des sciences dites dures dans les sciences humaines a donné naissance à un nouveau champ interdisciplinaire, celui dit des humanités numériques.</p>
+<blockquote class="blockquote">
+<p>Le numérique habite l’ensemble de nos vies et touche aussi, et surtout, à nos activités purement « humanistes », ou même « humaines ».</p>
+<p><span class="citation" data-cites="sinatraChapitre3Histoire2014">(<a href="references.html#ref-sinatraChapitre3Histoire2014" role="doc-biblioref">Sinatra and Vitali-Rosati 2014</a>)</span></p>
+</blockquote>
+<p>Les disciplines humanistes au sens large s’appuient de plus en plus sur des outils informatiques pour explorer, traiter, analyser, diffuser leurs objets d’étude. Cette irruption des outils issus des sciences dites dures dans les sciences humaines a donné naissance à un nouveau champ interdisciplinaire, celui dit des <em>humanités numériques</em>.</p>
 <p>L’objectif principal du cours <strong><em>HU2000&nbsp;– Humanités numériques&nbsp;: technologies</em></strong> est de familiariser les étudiant·e·s aux principaux outils, technologies, logiciels, utilisés dans ce champ. Cette familiarisation passera par la manipulation concrète d’outils numériques et par la réalisation de projets pratiques.</p>
 <p>Parmi les thématiques abordées durant le cours:</p>
 <ul>
@@ -219,7 +258,29 @@ ul.task-list li input[type="checkbox"] {
 <li>La programmation (introduction);</li>
 <li>etc.</li>
 </ul>
-<p>À l’issue de ce cours, les étudiant·e·s seront en mesure d’entreprendre, de documenter et de structurer un projet en exploitant les méthodologies des humanités numériques. En outre, les étudiant·e·s auront développé une capacité critique face aux outils numériques, en comprenant leurs potentiels, leurs limites, et leurs implications dans les pratiques de recherche.</p>
+<!-- MV:
+
+En résumé: 
+- comprendre les humanités numériques; 
+- découvrir des outils et des méthodes; 
+- apprendre à travailler avec le numérique; 
+- réfléchir à nos conceptions des sciences humaines; 
+- jouer avec des logiciels/applications/programmes.
+
+-->
+<p>Que sont les humanités numériques et quelles technologies sont utilisées dans cette approche scientifique ? Les « humanités numériques » sont à la fois une méthode scientifique, un programme de recherche ou une approche pluridisciplinaire : elles offrent de nouvelles perspectives pour appréhender, lire et comprendre le monde qui nous entoure. Depuis l’avènement du numérique, la compréhension des écosystèmes technologiques devient une nécessité dans le champ des sciences humaines. Le cours HNU 2000 « Humanités numériques : technologies » est une opportunité pour explorer de façon originale les outils théoriques et pratiques utilisés dans les humanités numériques : lire, écrire, chercher, explorer, visualiser, analyser, publier, etc. Ce cours est un espace de formation pratique et de découverte des méthodes de base en humanités numériques, avec une orientation vers les démarches d’écriture, d’édition et de publication.</p>
+<p>Ce cours est une initiation aux technologies utilisées dans les humanités numériques, les étudiant·e·s devront comprendre, explorer, manipuler et expérimenter des outils, des logiciels, des méthodes et des programmes informatiques. Le cours HNU 1000 « Humanités numériques : théories » est un compagnon adéquat pour ce cours pratique.</p>
+<p>À l’issue du cours les étudiant·e·s seront en mesure de comprendre les enjeux technologiques des humanités numériques, de réutiliser des concepts liés aux humanités numériques, d’appréhender des méthodes utilisées dans les humanités numériques et d’utiliser des outils/applications.</p>
+<!-- MV:
+
+Quelques moyens pour remplir ces objectifs :
+
+- questionner notre rapport aux numériques
+- faire preuve de curiosité
+- établir des liens entre les pratiques d’hier et celles d’aujourd’hui
+
+-->
+<p>L’<em>outillage</em> est souvent un aspect mal considéré en humanités, pourtant c’est la condition même de la possibilité de nos recherches : nos outils de collecte, d’enregistrement, de traitement, de prise de notes, de rédaction et de publication sont ce par quoi tout commence.</p>
 </section>
 <section id="organisation-du-cours" class="level2">
 <h2 class="anchored" data-anchor-id="organisation-du-cours">Organisation du cours</h2>
@@ -231,24 +292,27 @@ ul.task-list li input[type="checkbox"] {
 <p>Le cours de cette année sera axé sur le cycle de vie du texte savant en contexte numérique. On abordera le texte source (séances 1-7), son analyse (8-10) et sa publication et diffusion (11-13).</p>
 <section id="séance-1-0209-introduction" class="level3">
 <h3 class="anchored" data-anchor-id="séance-1-0209-introduction">[Séance 1 : 02/09] Introduction</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Lecture obligatoire</th>
-<th>Lecture optionnelle</th>
-<th>Théorie</th>
-<th>Outil</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://www.parcoursnumeriques-pum.ca/1-pratiques/chapitre3.html">Sinatra, Vitali-Rosati, Histoire des humanités numériques, 2014</a></td>
-<td>Digital Humanities Manifesto 2.0<br><a href="https://www.publicbooks.org/why-an-age-of-machine-learning-needs-the-humanities/">Underwood, Why an Age of Machine Learning Needs the Humanities</a></td>
-<td>Présentation du cours<br>Quelques jalons historiques<br>Introduction aux HN (Définitions, Objectifs, Utilisations)</td>
-<td><a href="https://whatisdigitalhumanities.com/" class="uri">https://whatisdigitalhumanities.com/</a></td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>Présentation de l’enseignante</li>
+<li>Présentation des étudiant·e·s</li>
+<li>Présentation du cours : déroulement, courte présentation des séances, participation, évaluations ;</li>
+<li>Introduction aux Humanités Numériques</li>
+</ul>
+<p><strong>Lectures obligatoires</strong></p>
+<ul>
+<li><span class="citation" data-cites="sinatraChapitre3Histoire2014">(<a href="references.html#ref-sinatraChapitre3Histoire2014" role="doc-biblioref">Sinatra and Vitali-Rosati 2014</a>)</span></li>
+<li><span class="citation" data-cites="underwoodWhyAgeMachine2018">(<a href="references.html#ref-underwoodWhyAgeMachine2018" role="doc-biblioref">Underwood 2018</a>)</span></li>
+</ul>
+<p><strong>Outils</strong></p>
+<ul>
+<li><a href="https://whatisdigitalhumanities.com/" class="uri">https://whatisdigitalhumanities.com/</a></li>
+</ul>
+<p><strong>Lectures supplémentaires</strong></p>
+<ul>
+<li><span class="citation" data-cites="dacosHumanitesNumeriques2015">(<a href="references.html#ref-dacosHumanitesNumeriques2015" role="doc-biblioref">Dacos and Mounier 2015</a>)</span></li>
+<li><span class="citation" data-cites="dacosManifesteDigitalHumanities2011a">(<a href="references.html#ref-dacosManifesteDigitalHumanities2011a" role="doc-biblioref">Dacos 2011</a>)</span></li>
+<li><span class="citation" data-cites="burdickHumanitiesDigitalHumanities2012">(<a href="references.html#ref-burdickHumanitiesDigitalHumanities2012" role="doc-biblioref">Burdick et al. 2012</a>)</span></li>
+</ul>
 </section>
 <section id="séance-2-0909-chercher-corpus-et-ressources-numériques" class="level3">
 <h3 class="anchored" data-anchor-id="séance-2-0909-chercher-corpus-et-ressources-numériques">[Séance 2 : 09/09] CHERCHER: corpus et ressources numériques</h3>
@@ -276,6 +340,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+<p><strong>Lectures supplémentaires</strong></p>
+<ul>
+<li><span class="citation" data-cites="franceinterFrancaisQuiVu2021">(<a href="references.html#ref-franceinterFrancaisQuiVu2021" role="doc-biblioref">France Inter n.d.</a>)</span> (podcast)</li>
+<li><span class="citation" data-cites="cardonDansLespritPageRank2013">(<a href="references.html#ref-cardonDansLespritPageRank2013" role="doc-biblioref">Cardon 2013</a>)</span></li>
+</ul>
 </section>
 <section id="séance-3-1609-organiser-métadonnées-et-formats" class="level3">
 <h3 class="anchored" data-anchor-id="séance-3-1609-organiser-métadonnées-et-formats">[Séance 3 : 16/09] ORGANISER: métadonnées et formats</h3>
@@ -626,8 +695,21 @@ Important
 </section>
 <section id="modalités-dévaluation" class="level2">
 <h2 class="anchored" data-anchor-id="modalités-dévaluation">Modalités d’évaluation</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Rappel : 1h de cours = 1,5h de travail hors cours</p>
+</div>
+</div>
 <ul>
-<li>Participation &amp; Implication dans les exercices et travaux non évalués&nbsp;: 25%;</li>
+<li>Participation<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> &amp; Implication dans les exercices et travaux non évalués&nbsp;: 25%;</li>
 <li>Examen de mi-session (théorie)&nbsp;: 25%</li>
 <li>Examen final (théorie)&nbsp;: 25%</li>
 <li>Travail final (pratique)&nbsp;: 25%</li>
@@ -637,21 +719,60 @@ Important
 <li>deux examens écrits, qui consistent en un QCM et des questions ouvertes portant sur la théorie vue en cours et dans les lectures ;</li>
 <li>un travail portant sur la rédaction d’un projet en utilisant au moins deux des outils vus en cours.</li>
 </ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-TODO
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Join class prepared to discuss the readings due that day and having explored the tools we will be learning. Plan on expressing your ideas, frustrations, questions, and confusions using your voice during class whenever possible. This is a discussion-based class, so we have the opportunity to delve deeply into issues.</p>
-</div>
-</div>
+</section>
+<section id="ressources-utilisées-dans-le-cadre-de-ce-cours" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-utilisées-dans-le-cadre-de-ce-cours">Ressources utilisées dans le cadre de ce cours</h2>
+<ul>
+<li>Le présent site contient l’ensemble des informations dont vous aurez besoin pour ce cours.</li>
+<li>Lorsque les références sont disponibles en ligne le lien est indiqué sur le site du cours. Attention, certaines ressources en ligne nécessitent une connexion UdeM : soit depuis l’Université, soit en passant par le VPN.</li>
+</ul>
+</section>
+<section id="plagiat-et-fraude" class="level2">
+<h2 class="anchored" data-anchor-id="plagiat-et-fraude">Plagiat et fraude</h2>
+<p>« Tout acte de plagiat, fraude, copiage, tricherie ou falsification de document commis par une étudiante, un étudiant, de même que toute participation à ces actes ou tentative de les commettre, à l’occasion d’un examen ou d’un travail faisant l’objet d’une évaluation ou dans toute autre circonstance, constituent une infraction. Vous trouverez à l’adresse suivante les différentes formes de fraude et de plagiat ainsi que les sanctions prévues par l’Université : https://integrite.umontreal.ca »</p>
+</section>
+<section id="crédits" class="level2">
+<h2 class="anchored" data-anchor-id="crédits">Crédits</h2>
+<p>Le contenu de ce cours doit beaucoup aux préparations réalisées par Antoine Fauchié, Margot Mellet, Alix Chagué ainsi qu’aux séances de <a href="https://debugue.ecrituresnumeriques.ca/">Débogue tes humanités</a> et à l’ouvrage <em>Vade-mecum informatique pour les lettres et sciences humaines</em> <span class="citation" data-cites="debouyVademecumInformatiquePour2025">(<a href="references.html#ref-debouyVademecumInformatiquePour2025" role="doc-biblioref">Debouy 2025</a>)</span>.</p>
+<p>Le support du cours a été créé avec <a href="https://quarto.org/docs/books/">Quarto</a>.</p>
+</section>
+<section id="license" class="level2">
+<h2 class="anchored" data-anchor-id="license">License</h2>
+<p>Tous les contenus de ce site ou de ce document sont sous licence CC BY-NC-SA : Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-burdickHumanitiesDigitalHumanities2012" class="csl-entry" role="listitem">
+Burdick, Anne, Johanna Drucker, Peter Lunenfeld, Todd Presner, and Jeffrey Schnapp, eds. 2012. <span>“Humanities to <span>Digital Humanities</span>.”</span> In <em>Digital_<span>Humanities</span></em>, 0. The MIT Press. <a href="https://doi.org/10.7551/mitpress/9248.003.0003">https://doi.org/10.7551/mitpress/9248.003.0003</a>.
+</div>
+<div id="ref-cardonDansLespritPageRank2013" class="csl-entry" role="listitem">
+Cardon, Dominique. 2013. <span>“<span>Dans l’esprit du PageRank:Une enqu<span>ê</span>te sur l’algorithme de Google</span>.”</span> <em>R<span>é</span>seaux</em> 177 (1): 63–95. <a href="https://doi.org/10.3917/res.177.0063">https://doi.org/10.3917/res.177.0063</a>.
+</div>
+<div id="ref-dacosManifesteDigitalHumanities2011a" class="csl-entry" role="listitem">
+Dacos, Marin. 2011. <span>“<span>Manifeste des Digital humanities</span>.”</span> {Billet}. <em>THATCamp Paris</em>. <a href="https://doi.org/10.58079/uo27">https://doi.org/10.58079/uo27</a>.
+</div>
+<div id="ref-dacosHumanitesNumeriques2015" class="csl-entry" role="listitem">
+Dacos, Marin, and Pierre Mounier. 2015. <span>“Humanit<span>é</span>s Num<span>é</span>riques.”</span> Research {{Report}}. Institut fran<span>ç</span>ais.
+</div>
+<div id="ref-debouyVademecumInformatiquePour2025" class="csl-entry" role="listitem">
+Debouy, Estelle. 2025. <em>Vade-Mecum Informatique Pour Lettres Et Sciences Humaines</em>. Edited by Presses universitaires de Rennes. Didact <span class="nocase">M<span class="nocase">é</span>thodes</span>.
+</div>
+<div id="ref-franceinterFrancaisQuiVu2021" class="csl-entry" role="listitem">
+France Inter. n.d. <span>“<span>Le Fran<span>ç</span>ais qui a vu na<span>î</span>tre Google</span>.”</span> Accessed August 18, 2025.
+</div>
+<div id="ref-sinatraChapitre3Histoire2014" class="csl-entry" role="listitem">
+Sinatra, Michaël E., and Marcello Vitali-Rosati. 2014. <span>“<span>Chapitre 3. Histoire des humanit<span>é</span>s num<span>é</span>riques</span>.”</span> In <em><span>Pratiques de l’<span>é</span>dition num<span>é</span>rique</span></em>, edited by Michael E. Sinatra, 49–60. <span>Parcours num<span>é</span>rique</span>. Montr<span>é</span>al: Presses de l’Universit<span>é</span> de Montr<span>é</span>al. <a href="https://doi.org/10.4000/books.pum.317">https://doi.org/10.4000/books.pum.317</a>.
+</div>
+<div id="ref-underwoodWhyAgeMachine2018" class="csl-entry" role="listitem">
+Underwood, Ted. 2018. <span>“Why an <span>Age</span> of <span>Machine Learning Needs</span> the <span>Humanities</span>.”</span> <em>Public Books</em>.
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Par participation, j’entends la préparation, la concentration lors des séances, l’écoute active, l’implication lors des échanges.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -1077,13 +1198,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Hello World !">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hello World !</span>
+      <a href="./index.html" class="pagination-link" aria-label="Plan du cours">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Plan du cours</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./01a.html" class="pagination-link" aria-label="[Séance 1 : 02/09] Introduction">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">[Séance 1 : 02/09] Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
