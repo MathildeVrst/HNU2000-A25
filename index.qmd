@@ -1,0 +1,14 @@
+# Hello World ! {.unnumbered}
+
+Bienvenue sur le support du cours HNU200 – Humanités numériques : technologies. Celui-ci est destiné aux étudiantes et étudiants qui suivent le cours à l’automne 2025. 
+
+## Crédits 
+
+Le contenu de ce cours doit beaucoup aux préparations réalisées par Antoine Fauchié, Margot Mellet, Alix Chagué ainsi qu’aux séances de [Débogue tes humanités](https://debugue.ecrituresnumeriques.ca/).
+
+Le support du cours a été créé avec [Quarto](https://quarto.org/docs/books/). 
+
+## License
+
+Tous les contenus de ce site ou de ce document sont sous licence CC BY-NC-SA : Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions. 
+
