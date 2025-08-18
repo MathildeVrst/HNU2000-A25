@@ -1,0 +1,112 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "HNU2000-A25",
+    "section": "",
+    "text": "Hello World !\nBienvenue sur le support du cours HNU200 – Humanités numériques : technologies. Celui-ci est destiné aux étudiantes et étudiants qui suivent le cours à l’automne 2025.",
+    "crumbs": [
+      "Hello World !"
+    ]
+  },
+  {
+    "objectID": "index.html#crédits",
+    "href": "index.html#crédits",
+    "title": "HNU2000-A25",
+    "section": "Crédits",
+    "text": "Crédits\nLe contenu de ce cours doit beaucoup aux préparations réalisées par Antoine Fauchié, Margot Mellet, Alix Chagué ainsi qu’aux séances de Débogue tes humanités.\nLe support du cours a été créé avec Quarto.",
+    "crumbs": [
+      "Hello World !"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "HNU2000-A25",
+    "section": "License",
+    "text": "License\nTous les contenus de ce site ou de ce document sont sous licence CC BY-NC-SA : Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions.",
+    "crumbs": [
+      "Hello World !"
+    ]
+  },
+  {
+    "objectID": "Plan-Cours.html",
+    "href": "Plan-Cours.html",
+    "title": "Plan du cours",
+    "section": "",
+    "text": "Objectifs et contenu du cours\nLes disciplines humanistes au sens large s’appuient de plus en plus sur des outils informatiques pour explorer, traiter, analyser, diffuser leurs objets d’étude. Cette irruption des outils issus des sciences dites dures dans les sciences humaines a donné naissance à un nouveau champ interdisciplinaire, celui dit des humanités numériques.\nL’objectif principal du cours HU2000 – Humanités numériques : technologies est de familiariser les étudiant·e·s aux principaux outils, technologies, logiciels, utilisés dans ce champ. Cette familiarisation passera par la manipulation concrète d’outils numériques et par la réalisation de projets pratiques.\nParmi les thématiques abordées durant le cours:\nÀ l’issue de ce cours, les étudiant·e·s seront en mesure d’entreprendre, de documenter et de structurer un projet en exploitant les méthodologies des humanités numériques. En outre, les étudiant·e·s auront développé une capacité critique face aux outils numériques, en comprenant leurs potentiels, leurs limites, et leurs implications dans les pratiques de recherche.",
+    "crumbs": [
+      "Plan du cours"
+    ]
+  },
+  {
+    "objectID": "Plan-Cours.html#objectifs-et-contenu-du-cours",
+    "href": "Plan-Cours.html#objectifs-et-contenu-du-cours",
+    "title": "Plan du cours",
+    "section": "",
+    "text": "La connaissance de son ordinateur;\nL’encodage et la structure de fichiers numériques;\nLes formats d’écriture;\nLe versionnement de ses données;\nLe traitement et la gestion des références bibliographiques;\nLa fouille et l’analyse de textes;\n\nLa reconnaissance automatique d’écritures manuscrites;\nLa programmation (introduction);\netc.",
+    "crumbs": [
+      "Plan du cours"
+    ]
+  },
+  {
+    "objectID": "Plan-Cours.html#organisation-du-cours",
+    "href": "Plan-Cours.html#organisation-du-cours",
+    "title": "Plan du cours",
+    "section": "Organisation du cours",
+    "text": "Organisation du cours\nLe cours alterna entre théorie et pratique. De manière générale, chaque cours sera l’occasion d’étudier un outil. À cette fin, il sera demandé à l’étudiant⸱e de préparer la séance par une ou des lecture(s) et/ou des manipulations sur son ordinateur personnel (installation de logiciel, création de compte, etc.). Le cours sera l’occasion d’étudier – d’un point de vue pratique, mais aussi théorique – l’outil en question. Il pourra être demandé à l’étudiant⸱e de terminer des manipulations après la séance de cours et pour le cours suivant.\nIl est impératif que l’étudiant⸱e possède un ordinateur.",
+    "crumbs": [
+      "Plan du cours"
+    ]
+  },
+  {
+    "objectID": "Plan-Cours.html#calendrier-des-séances-et-des-lectures",
+    "href": "Plan-Cours.html#calendrier-des-séances-et-des-lectures",
+    "title": "Plan du cours",
+    "section": "Calendrier des séances et des lectures",
+    "text": "Calendrier des séances et des lectures\nLe cours de cette année sera axé sur le cycle de vie du texte savant en contexte numérique. On abordera le texte source (séances 1-7), son analyse (8-10) et sa publication et diffusion (11-13).\n\n[Séance 1 : 02/09] Introduction\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nSinatra, Vitali-Rosati, Histoire des humanités numériques, 2014\nDigital Humanities Manifesto 2.0Underwood, Why an Age of Machine Learning Needs the Humanities\nPrésentation du coursQuelques jalons historiquesIntroduction aux HN (Définitions, Objectifs, Utilisations)\nhttps://whatisdigitalhumanities.com/\n\n\n\n\n\n[Séance 2 : 09/09] CHERCHER: corpus et ressources numériques\n\n\n\n\n\n\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nTBD\nTBD\nBibliothèques numériques, archives ouvertes, écosystèmes des ressources numériques\nMoteurs de recherche (+regex?)\n\n\n\n\n\n[Séance 3 : 16/09] ORGANISER: métadonnées et formats\n\n\n\n\n\n\nNote\n\n\n\n[17/09] Date limite pour la modification des choix de cours\n\n\n\n\n\n\n\n\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nTBD\nTBD\nLes différents formats textuelsLes traitements vs éditeurs de texte\nPandoc\n\n\n\n\n\n\n[Séance 4 : 23/09] ANNOTER: des marginalia à l’annotation numérique\n\n\n\n\n\n\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nTBD\nTBD\nTypologie de l’annotation, enjeux collaboratifs, question de la trace\nHypothes.is\n\n\n\n\n\n[30/09]\n\n\n\n\n\n\nNote\n\n\n\nCongé universitaire – Journée nationale de la vérité et de la réconciliation\n\n\n\n\n[Séance 5 : 07/10] REPRÉSENTER le texte (I): formats légers\n\n\n\n\n\n\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nJ. H. Coombs, Allen H Renear, et Steven J DeRose. « Markup Systems and the Future of Scholarly Text Processing »\nTBD\nIntroduction à .txt, .md, .html\nPrise en main de MarkdownStylo\n\n\n\n\n\n[Séance 6 : 14/10] REPRÉSENTER le texte (II): formats riches et normés\n\n\n\n\n\n\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nLaTeX + Introduction à la TEI\nTBD\nBaliser son texte\nPrise en main de LaTeX (OverLeaf)Observation d’un document en XML-TEI (LeafWriter)Interopérabilité des formats (ekdosis)\n\n\n\n\n\n[21/10]\n\n\n\n\n\n\nNote\n\n\n\nSemaine de lecture – pas de cours\n\n\n\n\n[Séance 7 : 28/10] EXAMEN\n\n\n\n\n\n\nImportant\n\n\n\nExamen de mi-session\n\n\n\n\n[Séance 8 : 04/11] BIBLIOGRAPHIER: citations, identifiants, interopérabilité\n\n\n\n\n\n\nNote\n\n\n\n[07/11] Date limite pour l’abandon d’un cours\n\n\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nTBD\nTBD\nBibTeX, CSL\nZotero\n\n\n\n\n\n[Séance 9 : 11/11] NETTOYER les données textuelles\n\n\n\n\n\n\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nTBD (data captcha?)\nTBD\nOCR, HTR, dirty OCR\nIntroduction à eScriptorium (?)\n\n\n\n\n\n[Séance 10 : 18/11] ANALYSER: textométrie, stylométrie et TAL\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nTBD\nTBD\nCe que nous disent les mots\nVoyant + Notebook Python\n\n\n\n\n\n[Séance 11 : 25/11] VISUALIER: vers une autre lecture\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nTBD\nD. Keim et al., « Visual Analytics: Definition, Process, and Challenges »Drucker, Humanities Approaches to Graphical Display\nLes différents types de visualisation\nTimeLineJS, StoryMapJS\n\n\n\n\n\n[Séance 12 : 02/12] ÉCRIRE & PUBLIER\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nTBD\nFauchié, The Importance of Single Source Publishing in Scientific Publishing\nLe SSP et les chaînes de publication + introduction à Git\nMise en place d’un workflow éditorial\n\n\n\n\n\n[Séance 13 : 09/12] IA\n\n\n\n\n\n\n\n\n\nLecture obligatoire\nLecture optionnelle\nThéorie\nOutil\n\n\n\n\nTBD\nTBD\nDéfinition, panorama (algorithmes, modèles de langage, IA générative)\nDiscussion?\n\n\n\n\n\n[Séance 14 : 16/12]\n\n\n\n\n\n\nImportant\n\n\n\nExamen final",
+    "crumbs": [
+      "Plan du cours"
+    ]
+  },
+  {
+    "objectID": "Plan-Cours.html#modalités-dévaluation",
+    "href": "Plan-Cours.html#modalités-dévaluation",
+    "title": "Plan du cours",
+    "section": "Modalités d’évaluation",
+    "text": "Modalités d’évaluation\n\nParticipation & Implication dans les exercices et travaux non évalués : 25%;\nExamen de mi-session (théorie) : 25%\nExamen final (théorie) : 25%\nTravail final (pratique) : 25%\n\nL’examen est composé de deux parties :\n\ndeux examens écrits, qui consistent en un QCM et des questions ouvertes portant sur la théorie vue en cours et dans les lectures ;\nun travail portant sur la rédaction d’un projet en utilisant au moins deux des outils vus en cours.\n\n\n\n\n\n\n\nTODO\n\n\n\nJoin class prepared to discuss the readings due that day and having explored the tools we will be learning. Plan on expressing your ideas, frustrations, questions, and confusions using your voice during class whenever possible. This is a discussion-based class, so we have the opportunity to delve deeply into issues.",
+    "crumbs": [
+      "Plan du cours"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
