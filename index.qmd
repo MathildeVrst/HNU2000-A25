@@ -89,7 +89,7 @@ Le cours de cette année sera axé sur le cycle de vie du texte savant en contex
 
 - <https://whatisdigitalhumanities.com/> 
 
-**Lectures supplémentaires** 
+**Lectures et bibliographie supplémentaires** 
 
 - [@dacosHumanitesNumeriques2015] 
 - [@dacosManifesteDigitalHumanities2011a]
@@ -102,10 +102,13 @@ Le cours de cette année sera axé sur le cycle de vie du texte savant en contex
 | --- | --- | --- | --- | 
 | TBD | TBD | Bibliothèques numériques, archives ouvertes, écosystèmes des ressources numériques | Moteurs de recherche (+regex?) | 
 
-**Lectures supplémentaires** 
+**Lectures et bibliographie supplémentaires** 
 
 - [@franceinterFrancaisQuiVu2021] (podcast)
-- [@cardonDansLespritPageRank2013]
+- [@cardonDansLespritPageRank2013] 
+- [@larsonneurRechercheInternetLettres2008] (sur la question des navigateurs et moteurs de recherche, notamment)
+- [@ochigameSearchAtlasVisualizing2021] (sur les biais géographiques des résutlats aux recherches sur Google)
+
 
 ### [Séance 3 : 16/09] ORGANISER: métadonnées et formats 
 

@@ -1,0 +1,11 @@
+# [Séance 3 : 16/09] ORGANISER: métadonnées et formats
+
+## Les métadonnées 
+
+## Les différents formats textuels 
+
+Un format = la mise en forme d'une donnée 
+
+## Les traitements vs éditeurs de texte 
+
+## Exercice : Manipuler Pandoc 

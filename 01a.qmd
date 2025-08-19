@@ -1,4 +1,4 @@
-# [Séance 1 : 02/09] Introduction 
+# [Séance 1 : 02/09] Introduction {.unnumbered}
 
 ## Bienvenue ! 
 
