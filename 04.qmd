@@ -1,0 +1,39 @@
+# [Séance 4 : 23/09] REPRÉSENTER le texte (I): formats légers
+
+## Qu'est-ce que l'écriture numérique ? 
+
+## Les langages interprétés 
+
+## .txt 
+
+## .md 
+
+### Exercice 
+
+Réalisez ce [tuto Markdown](https://www.arthurperret.fr/tutomd/)
+
+## .html 
+
+## Mise en pratique: Stylo 
+
+- Discussion autour de [@rosatiRevueIntelligibiliteNumerique2020] 
+- [Accédez à Stylo (via votre compte HumanID)](https://stylo.huma-num.fr/) 
+- Créez un nouvel article:  
+  - Idéalement, ajoutez un travail réalisé dans le cadre d'un autre cours 
+  - Si vous n'en avez pas, ajoutez n'importe quel article comprenant au moins deux niveaux de titre, des liens, une citation, plusieurs paragraphes, une référence bibliographique 
+- [Envoyez-moi](mailto:mathilde.verstraete@umontreal.ca) le lien de prévisualisation lorsque vous avez terminé 
+
+Nous n'avons pas encore vu comment réaliser une bibliographie. Vous pouvez dès lors utiliser cette référence (format BibTeX) 
+
+```
+@article{vitali-rosati_ecrire_2020,
+	title = {Écrire les {SHS} en environnement numérique. {L}’éditeur de texte {Stylo}},
+	url = {http://intelligibilite-numerique.numerev.com/numeros/n-1-2020/18-ecrire-les-shs-en-environnement-numerique-l-editeur-de-texte-stylo},
+	abstract = {Résumé : L’écriture et l’édition scientifiques en contexte numérique sont relativement peu interrogées ou remises en cause. Quelques outils, qui...},
+	language = {fr-fr},
+	urldate = {2020-10-08},
+	journal = {Revue Intelligibilité du Numérique},
+	author = {Vitali-Rosati, Marcello and Sauret, Nicolas and Fauchié, Antoine and Mellet, Margot},
+	year = {2020},
+}
+```

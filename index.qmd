@@ -31,7 +31,6 @@ Parmi les thématiques abordées durant le cours:
 - Le traitement et la gestion des références bibliographiques; 
 - La fouille et l’analyse de textes;  
 - La reconnaissance automatique d’écritures manuscrites; 
-- La programmation (introduction); 
 - etc. 
 
 <!-- MV:
@@ -67,11 +66,82 @@ L’*outillage* est souvent un aspect mal considéré en humanités, pourtant c�
 
 Le cours alterna entre théorie et pratique. De manière générale, chaque cours sera l’occasion d’étudier un outil. À cette fin, il sera demandé à l’étudiant⸱e de préparer la séance par une ou des lecture(s) et/ou des manipulations sur son ordinateur personnel  (installation de logiciel, création de compte, etc.). Le cours sera l’occasion d’étudier -- d’un point de vue pratique, mais aussi théorique -- l’outil en question. Il pourra être demandé à l’étudiant⸱e de terminer des manipulations après la séance de cours et pour le cours suivant. 
 
+::: {.callout-important}
+
 Il est impératif que l’étudiant⸱e possède un ordinateur. 
+
+:::
+
+## Modalités d'évaluation 
+
+::: {.callout-important}
+
+Rappel : 1h de cours = 1,5h de travail hors cours
+
+:::
+
+- Participation^[Par participation, j'entends la préparation, la concentration lors des séances, l'écoute active, l'implication lors des échanges.] & Implication dans les exercices et travaux non évalués : 25%; 
+- **28/10** Examen de mi-session (théorie): 25%
+- **28/10** Travail complémentaire: Apprenez-moi quelque chose (bonus) 
+- **09/12** Travail final: 25%
+- **16/12** Présentation finale: 25%
+
+### Examen de mi-session (théorie)
+
+- En classe, à classeurs fermés  
+- Durée: environ 2h; 
+- Forme: 
+  - Questions à choix multiple; 
+  - Questions ouvertes; 
+- Contenu: questions théoriques portant sur: 
+  - le cours; 
+  - les lectures obligatoires.
+
+### Travail complémentaire: *Apprenez-moi quelque chose* (facultatif, bonus)
+
+- Ce travail n’est pas obligatoire: 
+ - Si vous ne le rendez pas → aucune pénalité; 
+ - Si vous le rendez → possibilité de gagner des points supplémentaires sur la note globale du cours. 
+- Consignes:
+  - Longueur: entre 1.5 et 3 pages; 
+  - Sujet: description d’un outil, projet ou actualité de votre choix, en lien avec les humanités numériques; 
+  - Contraintes techniques: doit être rédigé avec Stylo ou LaTeX; 
+- Éléments évalués: 
+  - Qualité de la présentation générale (orthographe, structure, mise en page, ajout de liens, bibliographie minimale); 
+  - Clarté et pertinence de la description du projet choisi; 
+  - Force de l’argumentation qui doit donner envie d’en savoir plus
+- Impact sur la note finale: 
+  - En fonction de la qualité du travail, votre note peut monter de deux niveaux (ex. : un B+ peut devenir un A- ou un A).
+- Date de remise: 28 octobre 
+
+### Examen final 
+
+#### Travail écrit 
+
+- Date de remise: au plus tard le lundi 9 décembre; 
+- Format attendu:
+  - Analyse d’un outil présenté en classe ou d’un autre outil (avec approbation préalable de la chargée de cours); 
+  - Présentation soignée: orthographe, mise en page, ajout éventuel d'images, bibliographie, liens utiles; 
+  - PDF ou HTML (évitez les traitements de texte!); 
+  - Environ 5 à 7 pages (hors bibliographie).
+- Contenu attendu: 
+  - Présentation de l’outil (objectifs, fonctionnement, contexte d’utilisation); 
+  - Analyse critique (points forts, limites, potentiel pour les humanités numériques); 
+  - Éventuelle mise en dialogue avec des articles évoquant l'outil en question; 
+  - Mise en perspective par rapport aux thématiques du cours. 
+
+#### Présentation orale et discussion en classe
+
+- Date: lundi 16 décembre
+- Durée: environ 10 minutes de présentation + 5 minutes de discussion
+- Contenu attendu: 
+  - Présentation synthétique de l’outil analysé dans votre travail écrit; 
+  - Mise en avant des aspects les plus intéressants pour susciter l’échange avec vos collègues; 
+  - Ouverture à la discussion : préparez une ou deux questions pour la classe
 
 ## Calendrier des séances et des lectures 
 
-Le cours de cette année sera axé sur le cycle de vie du texte savant en contexte numérique. On abordera le texte source (séances 1-7), son analyse (8-10) et sa publication et diffusion (11-13). 
+Le cours de cette année sera axé sur le cycle de vie du texte savant en contexte numérique. Nous aborderons le texte source (séances 2-7), son analyse (8-10) et sa publication et diffusion (11-13). 
 
 ### [Séance 1 : 02/09] Introduction 
 
@@ -98,9 +168,16 @@ Le cours de cette année sera axé sur le cycle de vie du texte savant en contex
 
 ### [Séance 2 : 09/09] CHERCHER: corpus et ressources numériques 
 
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| TBD | TBD | Bibliothèques numériques, archives ouvertes, écosystèmes des ressources numériques | Moteurs de recherche (+regex?) | 
+- Internet et le Web 
+- Les navigateurs et moteurs de recherche 
+- Une recherche efficace
+- *Manipulation*: Isidore 
+
+**Lectures obligatoires** 
+
+**Outils** 
+
+- [Isidore](https://isidore.science/)
 
 **Lectures et bibliographie supplémentaires** 
 
@@ -108,20 +185,31 @@ Le cours de cette année sera axé sur le cycle de vie du texte savant en contex
 - [@cardonDansLespritPageRank2013] 
 - [@larsonneurRechercheInternetLettres2008] (sur la question des navigateurs et moteurs de recherche, notamment)
 - [@ochigameSearchAtlasVisualizing2021] (sur les biais géographiques des résutlats aux recherches sur Google)
-
+- [@huma-numISIDORE10Ans2021]
 
 ### [Séance 3 : 16/09] ORGANISER: métadonnées et formats 
+
+- Les métadonnées 
+- Les différents formats textuels 
+- Traitements *vs* Éditeurs de texte 
+- *Manipulation*: Pandoc  
+
+**Lectures obligatoires** 
+
+[@schrijverCultureHackerPeur2017]
+
+**Outils** 
+
+- [Pandoc](https://pandoc.org/)
+
+**Lectures et bibliographie supplémentaires** 
+
 
 ::: callout-note
 
 [17/09] Date limite pour la modification des choix de cours
 
 :::
-
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| TBD | TBD | Les différents formats textuels<br>Les traitements *vs* éditeurs de texte | Pandoc | 
-
 
 <!--
 - Le texte et sa saisie 
@@ -134,11 +222,27 @@ Le cours de cette année sera axé sur le cycle de vie du texte savant en contex
 - Stylo ? 
 -->
 
-### [Séance 4 : 23/09] ANNOTER: des *marginalia* à l'annotation numérique 
+### [Séance 4 : 23/09] REPRÉSENTER le texte (I): formats légers  
 
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| TBD | TBD | Typologie de l’annotation, enjeux collaboratifs, question de la trace | Hypothes.is | 
+- Qu'est-ce que l'écriture numérique ? 
+- Introduction à .txt, .md, .html 
+- *Manipulation*: 
+  - [Markdown](https://www.arthurperret.fr/tutomd/)
+  - [Stylo](https://stylo.huma-num.fr/)
+
+**Lectures obligatoires** 
+
+- [@coombsMarkupSystemsFuture1987a] 
+- [@vitalirosatiEcrireSHSEnvironnement2020]
+
+**Outils** 
+
+- [Tuto markdown](https://www.arthurperret.fr/tutomd/)
+- [Stylo](https://stylo.huma-num.fr/)
+
+**Lectures et bibliographie supplémentaires** 
+
+- [@vitali-rosatiChercheursSHSSaventils2018] 
 
 ### [30/09]  
 
@@ -148,17 +252,50 @@ Congé universitaire -- Journée nationale de la vérité et de la réconciliati
 
 :::
 
-### [Séance 5 : 07/10] REPRÉSENTER le texte (I): formats légers  
+### [Séance 5 : 07/10] REPRÉSENTER le texte (II): formats riches et normés   
 
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| J. H. Coombs, Allen H Renear, et Steven J DeRose. « Markup Systems and the Future of Scholarly Text Processing » | TBD | Introduction à .txt, .md, .html | Prise en main de Markdown<br>Stylo | 
+- Les langages interprétés: l'exemple de LaTeX 
+- Introduction à la TEI 
+- Quelques considérations sur l'interopérabilité des formats 
+- *Manipulations*: 
+  - [LaTeX (via Overleaf)](https://fr.overleaf.com/) 
+  - [Écrire en TEI-XML (via LeafWriter)](https://leaf-writer.leaf-vre.org/)
 
-### [Séance 6 : 14/10] REPRÉSENTER le texte (II): formats riches et normés   
+**Lectures obligatoires** 
 
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| LaTeX + Introduction à la TEI | TBD | Baliser son texte | Prise en main de LaTeX (OverLeaf)<br>Observation d'un document en XML-TEI (LeafWriter)<br>Interopérabilité des formats (ekdosis) | 
+**Outils** 
+
+- [LaTeX (via Overleaf)](https://fr.overleaf.com/)
+
+**Lectures et bibliographie supplémentaires** 
+
+### [Séance 6 : 14/10] BIBLIOGRAPHIER: citations, identifiants, interopérabilité
+
+::: callout-note
+
+[07/11] Date limite pour l'abandon d'un cours
+
+:::
+
+- Qu’est-ce qu’une bibliographie ?
+- Les contraintes de l’édition scientifique
+- Structurer une bibliographie: une nécessité 
+- Zotero et Stylo 
+- Zotero et LaTeX 
+- *Manipulation*: [Zotero](https://www.zotero.org/) 
+
+**Lectures obligatoires** 
+
+- [@collectifPourquoiZotero2018a]
+
+**Outils** 
+
+- [Zotero](https://www.zotero.org/)
+
+**Lectures et bibliographie supplémentaires** 
+
+- [@danielOdeZoteroDecennie2022a]
+
 
 ### [21/10] 
 
@@ -176,47 +313,119 @@ Examen de mi-session
 
 :::
 
-### [Séance 8 : 04/11] BIBLIOGRAPHIER: citations, identifiants, interopérabilité
+### [Séance 8 : 04/11] ANNOTER: des *marginalia* à l'annotation numérique 
 
-::: callout-note
+- Typologie de l’annotation, 
+- Enjeux collaboratifs, 
+- Question de la trace
+- *Manipulation*: Hypothes.is  
+- Les protocoles de communication 
 
-[07/11] Date limite pour l'abandon d'un cours
+**Lectures obligatoires** 
+
+**Outils** 
+
+- [Hypothes.is](https://web.hypothes.is/)
+
+**Lectures et bibliographie supplémentaires** 
+
+### [Séance 9 : 11/11] ÉCRIRE & PUBLIER 
+
+- Introduction au *Single Source Publishing*
+- Introduction au système de versionnement 
+- *Manipulation*: Git et GitHub 
+
+**Lectures obligatoires** 
+
+- [@fauchieImportanceSingleSource2023a]
+
+**Outils** 
+
+- [GIT](https://git-scm.com/) 
+- [GitHub](https://github.com/)
+
+**Lectures et bibliographie supplémentaires** 
+
+- [@fredrikssonEcrireCommunsAudevant2019]
+
+### [Séance 10 : 18/11] NETTOYER les données textuelles  
+
+::: {.callout-important}
+
+- Conférence A. Chagué ? À confirmer 
 
 :::
 
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| TBD | TBD | BibTeX, CSL | Zotero | 
+- Ça veut dire quoi, *data*? 
+- La numérisation des corpus: qui, quoi, comment ?
+- Une petite histoire de l'OCR à l'HTR 
+- eScriptorium 
 
-### [Séance 9 : 11/11] NETTOYER les données textuelles  
+**Lectures obligatoires** 
 
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| TBD (data captcha?) | TBD | OCR, HTR, dirty OCR | Introduction à eScriptorium (?) | 
 
-### [Séance 10 : 18/11] ANALYSER: textométrie, stylométrie et TAL 
+**Outils** 
 
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| TBD | TBD | Ce que nous disent les mots | Voyant + Notebook Python | 
+- [eScriptorium](https://escriptorium.inria.fr/)
 
-### [Séance 11 : 25/11] VISUALIER: vers une autre lecture 
+**Lectures et bibliographie supplémentaires** 
 
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| TBD | [D. Keim et al., « Visual Analytics: Definition, Process, and Challenges »](https://faculty.cc.gatech.edu/~stasko/7450/Papers/keim-va08.pdf)<br>Drucker, [Humanities Approaches to Graphical Display](https://dhq.digitalhumanities.org/vol/5/1/000091/000091.html) | Les différents types de visualisation | TimeLineJS, StoryMapJS | 
 
-### [Séance 12 : 02/12] ÉCRIRE & PUBLIER 
+### [Séance 11 : 25/11] ANALYSER: textométrie, stylométrie et TAL 
 
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| TBD | Fauchié,  [The Importance of Single Source Publishing in Scientific Publishing](https://www.digitalstudies.org/article/id/9655/) | Le SSP et les chaînes de publication + introduction à Git | Mise en place d'un workflow éditorial | 
+- Qu’est-ce que la fouille de textes ?
+- *Manipulations*: 
+  - [Ngram Viewer](https://books.google.com/ngrams/) 
+  - [Voyant Tools](https://voyant-tools.org/) 
+
+**Lectures obligatoires** 
+
+
+**Outils** 
+
+- [Ngram Viewer](https://books.google.com/ngrams/) 
+- [Voyant Tools](https://voyant-tools.org/) 
+
+**Lectures et bibliographie supplémentaires** 
+
+
+### [Séance 12 : 02/12] VISUALISER: vers une autre lecture 
+
+- Les graphes : quelques éléments théoriques
+- *Manipulations*: 
+  - [TimeLineJS](https://timeline.knightlab.com/) 
+  - [StoryMapJS](https://storymap.knightlab.com/) 
+
+**Lectures obligatoires** 
+
+- [@robichaudPrendreTournantSpatial2019]
+
+**Outils** 
+
+- [TimeLineJS](https://timeline.knightlab.com/) 
+- [StoryMapJS](https://storymap.knightlab.com/) 
+
+**Lectures et bibliographie supplémentaires** 
+
+- [@keimVisualAnalyticsDefinition2008] 
+- [@druckerHumanitiesApproachesGraphical2011] 
 
 ### [Séance 13 : 09/12] IA 
 
-| Lecture obligatoire | Lecture optionnelle | Théorie | Outil | 
-| --- | --- | --- | --- | 
-| TBD | TBD | Définition, panorama (algorithmes, modèles de langage, IA générative) | Discussion? | 
+- Définition 
+- Un bref historique 
+- Panorama actuel
+- Discussion 
+
+**Lectures obligatoires** 
+
+
+**Outils** 
+
+**Lectures et bibliographie supplémentaires** 
+
+- [@chagueIntelligenceArtificielleIntelligence2022]
+- [@smitsMultimodalTurnDigital2023]
 
 ### [Séance 14 : 16/12] 
 
@@ -225,24 +434,6 @@ Examen de mi-session
 Examen final
 
 :::
-
-## Modalités d'évaluation 
-
-::: {.callout-important}
-
-Rappel : 1h de cours = 1,5h de travail hors cours
-
-:::
-
-- Participation^[Par participation, j'entends la préparation, la concentration lors des séances, l'écoute active, l'implication lors des échanges.] & Implication dans les exercices et travaux non évalués : 25%; 
-- Examen de mi-session (théorie) : 25%
-- Examen final (théorie) : 25% 
-- Travail final (pratique) : 25% 
-
-L'examen est composé de deux parties : 
-
-1. deux examens écrits, qui consistent en un QCM et des questions ouvertes portant sur la théorie vue en cours et dans les lectures ; 
-2.  un travail portant sur la rédaction d'un projet en utilisant au moins deux des outils vus en cours. 
 
 ## Ressources utilisées dans le cadre de ce cours 
 

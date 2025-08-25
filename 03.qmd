@@ -1,5 +1,7 @@
 # [Séance 3 : 16/09] ORGANISER: métadonnées et formats
 
+<!-- https://hnu2000.quaternum.net/seance-05-ecrire/ --> 
+
 ## Les métadonnées 
 
 ## Les différents formats textuels 

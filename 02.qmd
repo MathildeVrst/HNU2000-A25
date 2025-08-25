@@ -10,8 +10,6 @@ Nous avons évoqué, la semaine passée, Internet le Web. Qu'en avez-vous retenu
 
 > Ce ne sont pas tant les « nouvelles technologies » en général, mais le réseau en lui-même qui a bouleversé notre rapport à la connaissance. [@milleChapitre2DInternet2014]
 
-- Dimension physique de l'infrastructure d'Internet qui permet la possibilité de l'existence du Web. Voir le documentaire *World Brain* par Stéphane Degoutin et Gwenola Wagon, visible [ici](https://vimeo.com/381166153).
-
 ### Origines 
 
 - 1962-1968 : ARPAnet
