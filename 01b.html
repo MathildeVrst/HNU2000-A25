@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR" xml:lang="fr-FR"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; [Séance 1 : 02/09] Introduction aux Humanités Numériques – HNU2000-A25</title>
+<title>[Séance 1 : 02/09] Introduction aux Humanités Numériques – HNU2000-A25</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,17 +50,22 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02.html" rel="next">
+<link href="./references.html" rel="next">
 <link href="./01a.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,19 +80,25 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -121,19 +132,19 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01b.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">[Séance 1 : 02/09] Introduction aux Humanités Numériques</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01b.html">[Séance 1&nbsp;: 02/09] Introduction aux Humanités Numériques</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -142,15 +153,19 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">HNU2000-A25</a> 
+        <div class="sidebar-tools-main">
+    <a href="./HNU2000-A25.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Recherche"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -163,20 +178,20 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./calendrier.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calendrier des séances et des lectures</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./01a.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">[Séance 1 : 02/09] Introduction</span></a>
+ <span class="menu-text">Introduction au cours</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01b.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">[Séance 1 : 02/09] Introduction aux Humanités Numériques</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">[Séance 2 : 09/09] CHERCHER: corpus et ressources numériques</span></span></a>
+ <span class="menu-text">[Séance 1&nbsp;: 02/09] Introduction aux Humanités Numériques</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -192,21 +207,26 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Contenu</h2>
    
   <ul>
-  <li><a href="#définitions" id="toc-définitions" class="nav-link active" data-scroll-target="#définitions"><span class="header-section-number">1.1</span> Définitions</a></li>
-  <li><a href="#humanités" id="toc-humanités" class="nav-link" data-scroll-target="#humanités"><span class="header-section-number">1.2</span> Humanités…</a></li>
-  <li><a href="#numériques" id="toc-numériques" class="nav-link" data-scroll-target="#numériques"><span class="header-section-number">1.3</span> …Numérique(s)</a></li>
-  <li><a href="#les-trois-moments-des-humanités-numériques" id="toc-les-trois-moments-des-humanités-numériques" class="nav-link" data-scroll-target="#les-trois-moments-des-humanités-numériques"><span class="header-section-number">1.4</span> Les trois moments des Humanités Numériques</a>
+  <li><a href="#définitions" id="toc-définitions" class="nav-link active" data-scroll-target="#définitions">Définitions</a></li>
+  <li><a href="#humanités" id="toc-humanités" class="nav-link" data-scroll-target="#humanités">Humanités…</a></li>
+  <li><a href="#numériques" id="toc-numériques" class="nav-link" data-scroll-target="#numériques">…Numérique(s)</a></li>
+  <li><a href="#les-trois-moments-des-humanités-numériques" id="toc-les-trois-moments-des-humanités-numériques" class="nav-link" data-scroll-target="#les-trois-moments-des-humanités-numériques">Les trois moments des Humanités Numériques</a>
   <ul class="collapse">
-  <li><a href="#env.-1970-literary-and-linguistic-computing" id="toc-env.-1970-literary-and-linguistic-computing" class="nav-link" data-scroll-target="#env.-1970-literary-and-linguistic-computing"><span class="header-section-number">1.4.1</span> env. 1970 : <em>Literary and Linguistic Computing</em></a></li>
-  <li><a href="#env.-1980-lhumanities-computing" id="toc-env.-1980-lhumanities-computing" class="nav-link" data-scroll-target="#env.-1980-lhumanities-computing"><span class="header-section-number">1.4.2</span> env. 1980 : L’<em>humanities computing</em></a></li>
-  <li><a href="#env.-1990-digital-humanities" id="toc-env.-1990-digital-humanities" class="nav-link" data-scroll-target="#env.-1990-digital-humanities"><span class="header-section-number">1.4.3</span> env. 1990 : <em>Digital Humanities</em></a></li>
+  <li><a href="#env.-1970-literary-and-linguistic-computing" id="toc-env.-1970-literary-and-linguistic-computing" class="nav-link" data-scroll-target="#env.-1970-literary-and-linguistic-computing">env. 1970 : <em>Literary and Linguistic Computing</em></a></li>
+  <li><a href="#env.-1980-lhumanities-computing" id="toc-env.-1980-lhumanities-computing" class="nav-link" data-scroll-target="#env.-1980-lhumanities-computing">env. 1980 : L’<em>humanities computing</em></a></li>
+  <li><a href="#env.-1990-digital-humanities" id="toc-env.-1990-digital-humanities" class="nav-link" data-scroll-target="#env.-1990-digital-humanities">env. 1990 : <em>Digital Humanities</em></a></li>
   </ul></li>
-  <li><a href="#quelques-repères-historiques" id="toc-quelques-repères-historiques" class="nav-link" data-scroll-target="#quelques-repères-historiques"><span class="header-section-number">1.5</span> Quelques repères historiques</a>
+  <li><a href="#quelques-repères-historiques" id="toc-quelques-repères-historiques" class="nav-link" data-scroll-target="#quelques-repères-historiques">Quelques repères historiques</a>
   <ul class="collapse">
-  <li><a href="#les-prémices-mécaniques" id="toc-les-prémices-mécaniques" class="nav-link" data-scroll-target="#les-prémices-mécaniques"><span class="header-section-number">1.5.1</span> Les prémices mécaniques</a></li>
+  <li><a href="#les-prémices-mécaniques" id="toc-les-prémices-mécaniques" class="nav-link" data-scroll-target="#les-prémices-mécaniques">Les prémices mécaniques</a></li>
+  <li><a href="#les-concepts-fondateurs" id="toc-les-concepts-fondateurs" class="nav-link" data-scroll-target="#les-concepts-fondateurs">Les concepts fondateurs</a></li>
+  <li><a href="#vers-lordinateur-moderne" id="toc-vers-lordinateur-moderne" class="nav-link" data-scroll-target="#vers-lordinateur-moderne">Vers l’ordinateur moderne</a></li>
+  <li><a href="#linformatique-et-les-sciences-humaines" id="toc-linformatique-et-les-sciences-humaines" class="nav-link" data-scroll-target="#linformatique-et-les-sciences-humaines">L’informatique et les sciences humaines</a></li>
+  <li><a href="#démocratisation-et-réseau" id="toc-démocratisation-et-réseau" class="nav-link" data-scroll-target="#démocratisation-et-réseau">Démocratisation et réseau</a></li>
+  <li><a href="#vers-les-humanités-numériques-contemporaines" id="toc-vers-les-humanités-numériques-contemporaines" class="nav-link" data-scroll-target="#vers-les-humanités-numériques-contemporaines">Vers les humanités numériques contemporaines</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -216,7 +236,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">[Séance 1 : 02/09] Introduction aux Humanités Numériques</span></h1>
+<h1 class="title">[Séance 1&nbsp;: 02/09] Introduction aux Humanités Numériques</h1>
 </div>
 
 
@@ -233,25 +253,33 @@ window.Quarto = {
 </header>
 
 
-<section id="définitions" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="définitions"><span class="header-section-number">1.1</span> Définitions</h2>
-<p>Comment définiriez-vous, en vos mots, les <em>Humanités Numériques</em> ?</p>
+<iframe src="_slides/01b.html"></iframe>
+<p><a href="_slides/01b.html" target="_blank">Ouvrir dans mon navigateur</a></p>
+<section id="définitions" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="définitions">Définitions</h2>
+<p>Comment définiriez-vous, en vos mots, les <em>Humanités Numériques</em>?</p>
 <!-- MV: 
 
 Quand il s'agit de qualifier l'informatique appliquée aux lettres et sciences huamines, c'est aujourd'hui l'expression d'Humanités Numériques qui nous vient à l'esprit. 
 
 -->
+</section>
+<section>
 <blockquote class="blockquote">
-<p>D’une part, les humanités numériques pourraient être définies comme l’application d’une méthode d’analyse informatique aux sciences humaines. En d’autres mots, l’approche des DH consiste à prendre en compte le fait que la puissance ne doit pas être limitée aux sciences dures, mais peut et doit aussi être employée pour des recherches en sciences humaines. D’autre part, les humanités numériques transcendent cet aspect technique et peuvent être pensées comme un regard global posé sur les changements culturels déterminés par le numérique ; en ce sens, les humanités numériques pourraient conduire à une sorte d’« humanisme numérique ». <span class="citation" data-cites="sinatraChapitre3Histoire2014">(<a href="references.html#ref-sinatraChapitre3Histoire2014" role="doc-biblioref">Sinatra and Vitali-Rosati 2014</a>)</span></p>
+<p>D’une part, les humanités numériques pourraient être définies comme l’application d’une méthode d’analyse informatique aux sciences humaines. En d’autres mots, l’approche des DH consiste à prendre en compte le fait que la puissance ne doit pas être limitée aux sciences dures, mais peut et doit aussi être employée pour des recherches en sciences humaines. D’autre part, les humanités numériques transcendent cet aspect technique et peuvent être pensées comme un regard global posé sur les changements culturels déterminés par le numérique ; en ce sens, les humanités numériques pourraient conduire à une sorte d’« humanisme numérique ». <span class="citation" data-cites="sinatraChapitre3Histoire2014">(<a href="references.html#ref-sinatraChapitre3Histoire2014" role="doc-biblioref">Sinatra et Vitali-Rosati 2014</a>)</span></p>
 </blockquote>
 <!-- MV: 
 
 Avec cette définition, les auteurs remettent en question l'opposition entre une approche du numérique reposant sur le développement d'outils techniques et une approche théorique car pour eux les deux sont liées : les choix techniques, qui sont à la base de la structuration de contenus, témoignent et promeuvent des valeurs particulières. 
 
 -->
+</section>
+<section>
 <blockquote class="blockquote">
-<p>Domaine de recherche et d’enseignement au croisement de l’informatique et des lettres, des arts, des sciences humaines et des sciences sociales, visant à produire et à partager des savoirs, des méthodes et de nouveaux objets de connaissance à partir d’un corpus de données numériques.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a><span class="citation" data-cites="commissiondenrichissementdelalanguefrancaiseJournalOfficielElectronique2019">(<a href="references.html#ref-commissiondenrichissementdelalanguefrancaiseJournalOfficielElectronique2019" role="doc-biblioref">Commission d’enrichissement de la langue française 2019</a>)</span></p>
+<p>Domaine de recherche et d’enseignement au croisement de l’informatique et des lettres, des arts, des sciences humaines et des sciences sociales, visant à produire et à partager des savoirs, des méthodes et de nouveaux objets de connaissance à partir d’un corpus de données numériques.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <span class="citation" data-cites="commissiondenrichissementdelalanguefrancaiseJournalOfficielElectronique2019">(<a href="references.html#ref-commissiondenrichissementdelalanguefrancaiseJournalOfficielElectronique2019" role="doc-biblioref">Commission d’enrichissement de la langue française 2019</a>)</span></p>
 </blockquote>
+</section>
+<section>
 <ul>
 <li><em>Quelques</em> autres définitions <a href="https://archive.artsrn.ualberta.ca/day-of-dh/define-dh.html">ici</a> ou <a href="https://whatisdigitalhumanities.com/">ici</a>.</li>
 </ul>
@@ -261,11 +289,11 @@ Les HN s'étendent à un vaste domaine de recherche au croisement de plusieurs d
 
 -->
 </section>
-<section id="humanités" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="humanités"><span class="header-section-number">1.2</span> Humanités…</h2>
+<section id="humanités" class="level2">
+<h2 class="anchored" data-anchor-id="humanités">Humanités…</h2>
 <ul>
-<li>Traditionnellement : lettres classiques ;</li>
-<li>Aujourd’hui (et surtout en Amérique du nord) : les sciences humaines ;</li>
+<li>Traditionnellement&nbsp;: lettres classiques&nbsp;;</li>
+<li>Aujourd’hui (et surtout en Amérique du nord)&nbsp;: les sciences humaines&nbsp;;</li>
 <li>Littérature, philosophie, histoire, arts vivants, linguistiques, etc.</li>
 </ul>
 <!-- MV: 
@@ -278,12 +306,12 @@ Cela comprend la littérature, la philosophie, l’histoire, mais aussi les arts
 Donc quand on dit humanités numériques, il faut avoir à l’esprit que le terme “humanités” est polysémique : il n’a pas forcément le même contenu si l’on se place en Europe continentale ou en Amérique du Nord.
 -->
 </section>
-<section id="numériques" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="numériques"><span class="header-section-number">1.3</span> …Numérique(s)</h2>
+<section id="numériques" class="level2">
+<h2 class="anchored" data-anchor-id="numériques">…Numérique(s)</h2>
 <ul>
-<li>Représentation par nombre ;</li>
-<li>Discrétisation ;</li>
-<li>Numérisation du monde ;</li>
+<li>Représentation par nombre&nbsp;;</li>
+<li>Discrétisation&nbsp;;</li>
+<li>Numérisation du monde&nbsp;;</li>
 <li>Culture numérique.</li>
 </ul>
 <!-- MV:
@@ -297,44 +325,51 @@ Enfin, au-delà de l’aspect technique, le mot numérique renvoie aussi à une 
 
 C’est donc dans cette rencontre entre les humanités et le numérique qu’émergent les humanités numériques, un domaine à la fois interdisciplinaire et en constante évolution.
 -->
+<blockquote class="blockquote">
+<p>Pour en savoir un peu plus sur l’encodage des caractères&nbsp;:</p>
+</blockquote>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/MijmeoH9LT4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="les-trois-moments-des-humanités-numériques" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="les-trois-moments-des-humanités-numériques"><span class="header-section-number">1.4</span> Les trois moments des Humanités Numériques</h2>
+<section id="les-trois-moments-des-humanités-numériques" class="level2">
+<h2 class="anchored" data-anchor-id="les-trois-moments-des-humanités-numériques">Les trois moments des Humanités Numériques</h2>
+<!-- Discussion -->
 <p>Lou Burnard <span class="citation" data-cites="burnardLiteraryLinguisticComputing2012">(<a href="references.html#ref-burnardLiteraryLinguisticComputing2012" role="doc-biblioref">2012</a>)</span> distingue trois moments des humanités numériques :</p>
-<section id="env.-1970-literary-and-linguistic-computing" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="env.-1970-literary-and-linguistic-computing"><span class="header-section-number">1.4.1</span> env. 1970 : <em>Literary and Linguistic Computing</em></h3>
+<section id="env.-1970-literary-and-linguistic-computing" class="level3">
+<h3 class="anchored" data-anchor-id="env.-1970-literary-and-linguistic-computing">env. 1970 : <em>Literary and Linguistic Computing</em></h3>
 <ul>
-<li>Déjà vers la fin des années 1940 avec l’<em>Index Thomisticus</em> de R. Busa</li>
-<li>Puissance de calcul des ordinateurs afin d’<em>automatiser</em> la création d’index, le repérage de concordances, le calcul de fréquences …</li>
-<li>Ex.: British National Corpus, Thesaurus Linguae Graecae</li>
+<li>Déjà vers la fin des années 1940 avec l’<em>Index Thomisticus</em> de R. Busa&nbsp;;</li>
+<li>Puissance de calcul des ordinateurs afin d’<em>automatiser</em> la création d’index, le repérage de concordances, le calcul de fréquences …&nbsp;;</li>
+<li>Ex.&nbsp;: <em>British National Corpus</em>, <em>Thesaurus Linguae Graecae</em>.</li>
 </ul>
 </section>
-<section id="env.-1980-lhumanities-computing" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="env.-1980-lhumanities-computing"><span class="header-section-number">1.4.2</span> env. 1980 : L’<em>humanities computing</em></h3>
+<section id="env.-1980-lhumanities-computing" class="level3">
+<h3 class="anchored" data-anchor-id="env.-1980-lhumanities-computing">env. 1980 : L’<em>humanities computing</em></h3>
 <ul>
-<li>Compréhension et maîtrise du programme informatique qui devient à proprement parler l’instrument d’une méthode de recherche et ce, dans une perspective interdisciplinaire.</li>
-<li>Ex.: la TEI (<em>Text Encoding Initiative</em>)</li>
+<li>Compréhension et maîtrise du programme informatique qui devient à proprement parler l’instrument d’une méthode de recherche et ce, dans une perspective interdisciplinaire&nbsp;;</li>
+<li>Ex. : la TEI (<em>Text Encoding Initiative</em>).</li>
 </ul>
 <!-- MV: 
 TEI: norme d'encodage en xml utilisable opur toute source textuelle numérisée, qui apparaît donc comme un métalangage commun 
 -->
 </section>
-<section id="env.-1990-digital-humanities" class="level3" data-number="1.4.3">
-<h3 data-number="1.4.3" class="anchored" data-anchor-id="env.-1990-digital-humanities"><span class="header-section-number">1.4.3</span> env. 1990 : <em>Digital Humanities</em></h3>
+<section id="env.-1990-digital-humanities" class="level3">
+<h3 class="anchored" data-anchor-id="env.-1990-digital-humanities">env. 1990 : <em>Digital Humanities</em></h3>
 <ul>
 <li>Apparition du Web → disponibilité des corpus numériques → nécessité de penser des interface pour consulter les corpus. Nouveaux rythmes de publication, modes de diffusions, formats.</li>
 <li><blockquote class="blockquote">
-<p>« On est passés de l’ninformatique comme outil au service de la recherche au numérique comme environnement global au sein duquel s’effectue la recherche. » <span class="citation" data-cites="debouyVademecumInformatiquePour2025">(<a href="references.html#ref-debouyVademecumInformatiquePour2025" role="doc-biblioref">Debouy 2025, 15</a>)</span></p>
+<p>« On est passés de l’informatique comme outil au service de la recherche au numérique comme environnement global au sein duquel s’effectue la recherche. » <span class="citation" data-cites="debouyVademecumInformatiquePour2025">(<a href="references.html#ref-debouyVademecumInformatiquePour2025" role="doc-biblioref">Debouy 2025, 15</a>)</span></p>
 </blockquote></li>
-<li>Ex.: la <em>William Blake Archive</em></li>
+<li>Ex. : la <a href="https://blakearchive.org/"><em>William Blake Archive</em></a>.</li>
 </ul>
 </section>
 </section>
-<section id="quelques-repères-historiques" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="quelques-repères-historiques"><span class="header-section-number">1.5</span> Quelques repères historiques</h2>
+<section id="quelques-repères-historiques" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="quelques-repères-historiques">Quelques repères historiques</h2>
 <ul>
-<li>Aujourd’hui, l’informatique est partout → gain de temps, facilité de traitement ; accès aux informations ; …</li>
-<li>Nouvelles questions : où sont stockées les données ? quelle confidentialité ? quelle est notre relation aux outils que nous utilisons tous les jours ? …</li>
+<li>Aujourd’hui, l’informatique est partout → gain de temps, facilité de traitement&nbsp;; accès aux informations&nbsp;;<br>
+</li>
+<li>Nouvelles questions&nbsp;: où sont stockées les données&nbsp;? Quelle confidentialité&nbsp;? Quelle est notre relation aux outils que nous utilisons tous les jours&nbsp;?<br>
+</li>
 <li><blockquote class="blockquote">
 <p>« Le citoyen du XXI<sup>e</sup> siècle en est bien souvent réduit à être de plus en plus un consommateur et non un utilisateur averti et libre de ces technologies numériques. » <span class="citation" data-cites="debouyVademecumInformatiquePour2025">(<a href="references.html#ref-debouyVademecumInformatiquePour2025" role="doc-biblioref">Debouy 2025, 17</a>)</span></p>
 </blockquote></li>
@@ -348,14 +383,14 @@ TEI: norme d'encodage en xml utilisable opur toute source textuelle numérisée,
 ! Tout objet numérique résulte certes de croisement entre les techniques mais révèle aussi les intérêts économiques et les visions politiques d'une société !  
 Avoir des repères historiques précis permet de comprendre son environnement informatique et d'être en mesure de le reprendre en main. 
 -->
-<section id="les-prémices-mécaniques" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="les-prémices-mécaniques"><span class="header-section-number">1.5.1</span> Les prémices mécaniques</h3>
+<section id="les-prémices-mécaniques" class="level3 scrollable">
+<h3 class="scrollable anchored" data-anchor-id="les-prémices-mécaniques">Les prémices mécaniques</h3>
 <ul>
 <li>II<sup>e</sup> s. av. J.-C. : le mécanisme d’Anticythère peut être considéré comme le premier calculateur analogique (connu). Il permettait de modéliser la course des astres grâce à une trentaine d’engrenage. Il faudra attendre près d’un millénaire pour les prochains systèmes comparables, dans les horloges de Moyen Âge. La reconstruction de ce mécanisme intéresse toujours les chercheurs aujourd’hui.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/Anticythere.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/Anticythere.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Le fragment principal de la machine d’Anticythère"><img src="img/Anticythere.jpg" height="350" alt="Le fragment principal de la machine d’Anticythère" class="figure-img"></a></p>
 <figcaption>Le fragment principal de la machine d’Anticythère</figcaption>
 </figure>
 </div>
@@ -364,44 +399,56 @@ Avoir des repères historiques précis permet de comprendre son environnement in
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/Pascaline.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/Pascaline.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Pascaline, conservée au musée des Arts et Métiers, Paris"><img src="img/Pascaline.jpg" height="350" alt="Pascaline, conservée au musée des Arts et Métiers, Paris" class="figure-img"></a></p>
 <figcaption>Pascaline, conservée au musée des Arts et Métiers, Paris</figcaption>
 </figure>
 </div>
 <ul>
-<li>XVII<sup>e</sup> s. – fin du XX<sup>e</sup> s. : la règle à calcul, un instrument mécanique utilisé massivement jusqu’aux années 1970 pour faire des opérations arithmétiques et trigonométriques. Elle sera préférée à la Pascaline notamment en raison de son prix, sa facilité d’utilisation et de fabrication.</li>
+<li>XVII<sup>e</sup> s. – fin du XX<sup>e</sup> s.&nbsp;: la règle à calcul, un instrument mécanique utilisé massivement jusqu’aux années 1970 pour faire des opérations arithmétiques et trigonométriques. Elle sera préférée à la Pascaline notamment en raison de son prix, sa facilité d’utilisation et de fabrication.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/RegleCalcul.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/RegleCalcul.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Règle à calcul scolaire, 10 pouces (Pickett N902-T simplex trig)."><img src="img/RegleCalcul.jpg" height="350" alt="Règle à calcul scolaire, 10 pouces (Pickett N902-T simplex trig)." class="figure-img"></a></p>
 <figcaption>Règle à calcul scolaire, 10 pouces (Pickett N902-T simplex trig).</figcaption>
 </figure>
 </div>
 <ul>
-<li>1801 : le métier à tisser de Jacquard, système mécanique programmable par l’utilisation de cartes perforées, introduit l’idée d’un programme externe pour automatiser des opérations.</li>
+<li>1801&nbsp;: le métier à tisser de Jacquard, système mécanique programmable par l’utilisation de cartes perforées, introduit l’idée d’un programme externe pour automatiser des opérations.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/Jacquard.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/Jacquard.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Métier à tisser de J.-M. Jacquard"><img src="img/Jacquard.jpg" height="350" alt="Métier à tisser de J.-M. Jacquard" class="figure-img"></a></p>
 <figcaption>Métier à tisser de J.-M. Jacquard</figcaption>
 </figure>
 </div>
-<section id="les-concepts-fondateurs" class="level4" data-number="1.5.1.1">
-<h4 data-number="1.5.1.1" class="anchored" data-anchor-id="les-concepts-fondateurs"><span class="header-section-number">1.5.1.1</span> Les concepts fondateurs</h4>
+</section>
+<section id="les-concepts-fondateurs" class="level3 scrollable">
+<h3 class="scrollable anchored" data-anchor-id="les-concepts-fondateurs">Les concepts fondateurs</h3>
 <ul>
 <li>Env. 1830 : Charles Babbage conçoit la machine analytique, un ordinateur programmable universel avant l’heure, inspiré du métier à tisser de Jacquard. Elle ne sera jamais construite faute de moyens techniques et financiers, mais ses plans étaient fonctionnels. Ada Lovelace y voit la possibilité d’écrire de véritables programmes (une suite d’instructions à mémoriser, exécuter et produire un résultat) et imagine déjà que la machine pourrait manipuler n’importe quel type de symbole — anticipant l’usage des ordinateurs pour le texte, la musique ou les arts: elle conçoit le premier algorithme en plus d’élargir la portée conceptuelle de la machine.</li>
 </ul>
+<div>
+
+</div>
+<div id="Babbage" class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/Babbage.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/Babbage.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Prototype (1871) non terminé de la machine analytique de Babbage"><img src="img/Babbage.jpg" height="200" alt="Prototype (1871) non terminé de la machine analytique de Babbage" class="figure-img"></a></p>
 <figcaption>Prototype (1871) non terminé de la machine analytique de Babbage</figcaption>
 </figure>
 </div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/Algorithme_Bernoulli.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/Algorithme_Bernoulli.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="« Programme » de calcul des nombres de Bernoulli dans une note d’A. Lovelace (1843)"><img src="img/Algorithme_Bernoulli.jpg" height="200" alt="« Programme » de calcul des nombres de Bernoulli dans une note d’A. Lovelace (1843)" class="figure-img"></a></p>
 <figcaption>« Programme » de calcul des nombres de Bernoulli dans une note d’A. Lovelace (1843)</figcaption>
 </figure>
+</div>
+</div>
+</div>
 </div>
 <!-- MV: 
 
@@ -417,80 +464,113 @@ Dans les humanités numériques, cette histoire est importante car elle montre t
 
 -->
 <ul>
-<li><p>1890 : Développement (par Herman Hollerith) des machines à cartes perforées pour le recensement américain, à l’origine d’IBM.</p></li>
-<li><p>1936 : Alan Turing formalise, dans son article <em>On Computable Numbers</em>, la notion de <em>machine universelle</em>, un modèle théorique capable d’exécuter tout algorithme. Turing est ainsi une figure primordiale de l’histoire de l’informatique. Durant la Seconde Guerre mondiale, il contribue également au déchiffrement des codes secrets allemands (notamment <em>Enigma</em>)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p></li>
+<li>1890&nbsp;: Développement (par Herman Hollerith) des machines à cartes perforées pour le recensement américain, à l’origine d’IBM.</li>
+</ul>
+<ul>
+<li>1936&nbsp;: Alan Turing formalise, dans son article <em>On Computable Numbers</em>, la notion de <em>machine universelle</em>, un modèle théorique capable d’exécuter tout algorithme. Turing est ainsi une figure primordiale de l’histoire de l’informatique. Durant la Seconde Guerre mondiale, il contribue également au déchiffrement des codes secrets allemands (notamment <em>Enigma</em>)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</li>
 </ul>
 </section>
-<section id="vers-lordinateur-moderne" class="level4" data-number="1.5.1.2">
-<h4 data-number="1.5.1.2" class="anchored" data-anchor-id="vers-lordinateur-moderne"><span class="header-section-number">1.5.1.2</span> Vers l’ordinateur moderne</h4>
+<section id="vers-lordinateur-moderne" class="level3 scrollable">
+<h3 class="scrollable anchored" data-anchor-id="vers-lordinateur-moderne">Vers l’ordinateur moderne</h3>
 <ul>
 <li>1945 : John von Neumann formalise l’architecture du <em>programme enregistré</em>, où instructions et données sont stockées dans une même mémoire.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/OppenheimerNeumann.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/OppenheimerNeumann.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Oppenheimer et von Neumann à l’inauguration en 1952 de l’ordinateur construit pour l’Institute for Advanced Study."><img src="img/OppenheimerNeumann.jpg" height="350" alt="Oppenheimer et von Neumann à l’inauguration en 1952 de l’ordinateur construit pour l’Institute for Advanced Study." class="figure-img"></a></p>
 <figcaption>Oppenheimer et von Neumann à l’inauguration en 1952 de l’ordinateur construit pour l’<em>Institute for Advanced Study</em>.</figcaption>
 </figure>
 </div>
 <ul>
-<li>Années 1950 : IBM commercialise ses premiers ordinateurs ; FORTRAN<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> (FORmula TRANslator) devient le premier langage de haut niveau utilisé massivement pour le calcul scientifique et l’ingénierie.</li>
+<li>Années 1950&nbsp;: IBM commercialise ses premiers ordinateurs&nbsp;; FORTRAN<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> (FORmula TRANslator) devient le premier langage de haut niveau utilisé massivement pour le calcul scientifique et l’ingénierie.</li>
 </ul>
 </section>
-<section id="linformatique-et-les-sciences-humaines" class="level4" data-number="1.5.1.3">
-<h4 data-number="1.5.1.3" class="anchored" data-anchor-id="linformatique-et-les-sciences-humaines"><span class="header-section-number">1.5.1.3</span> L’informatique et les sciences humaines</h4>
+<section id="linformatique-et-les-sciences-humaines" class="level3 scrollable">
+<h3 class="scrollable anchored" data-anchor-id="linformatique-et-les-sciences-humaines">L’informatique et les sciences humaines</h3>
 <ul>
-<li>1949 : le jésuite Roberto Busa, avec IBM, lance le projet de l’<em>Index Thomisticus</em> (analyse assistée par ordinateur de l’œuvre de Thomas d’Aquin), considéré comme l’acte fondateur des humanités numériques.</li>
+<li>1949&nbsp;: le jésuite Roberto Busa, avec IBM, lance le projet de l’<em>Index Thomisticus</em> (analyse assistée par ordinateur de l’œuvre de Thomas d’Aquin), considéré comme l’acte fondateur des humanités numériques.</li>
 </ul>
 </section>
-<section id="démocratisation-et-réseau" class="level4" data-number="1.5.1.4">
-<h4 data-number="1.5.1.4" class="anchored" data-anchor-id="démocratisation-et-réseau"><span class="header-section-number">1.5.1.4</span> Démocratisation et réseau</h4>
+<section id="démocratisation-et-réseau" class="level3 scrollable">
+<h3 class="scrollable anchored" data-anchor-id="démocratisation-et-réseau">Démocratisation et réseau</h3>
 <ul>
-<li><p>Années 1960–1970 : naissance d’Internet, à la suite de projets militaires et universitaires (comme ARPANET, financé par le Department of Defense américain) qui mettent au point un réseau de communication décentralisé, capable de transmettre des paquets d’informations entre ordinateurs.</p></li>
-<li><p>Années 1980 : diffusion des micro-ordinateurs personnels, qui ouvrent l’informatique à la recherche, l’enseignement et le grand public.</p></li>
+<li>Années 1960–1970&nbsp;: naissance d’Internet, à la suite de projets militaires et universitaires (comme ARPANET, financé par le Department of Defense américain) qui mettent au point un réseau de communication décentralisé, capable de transmettre des paquets d’informations entre ordinateurs.</li>
+</ul>
+<ul>
+<li>Années 1980&nbsp;: diffusion des micro-ordinateurs personnels, qui ouvrent l’informatique à la recherche, l’enseignement et le grand public.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/IBM5150.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/IBM5150.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="IBM PC 5150 avec clavier"><img src="img/IBM5150.jpg" height="350" alt="IBM PC 5150 avec clavier" class="figure-img"></a></p>
 <figcaption>IBM PC 5150 avec clavier</figcaption>
 </figure>
 </div>
 <ul>
-<li>1990 : Tim Berners-Lee invente le World Wide Web au CERN, rendant possible la circulation mondiale des textes numériques. Les concepts d’Internet et du Web sont complètement différents ! Le Web repose sur Internet, mais il en est une application.</li>
+<li>1990&nbsp;: Tim Berners-Lee (avec la collaboration de Robert Cailliau) invente le World Wide Web au CERN, rendant possible la circulation mondiale des textes numériques.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les concepts d’Internet et du Web sont complètement différents&nbsp;! Le Web repose sur Internet, mais il en est une application.</p>
+</div>
+</div>
+<div>
+
+</div>
+<div id="www" class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/BernersLee.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/BernersLee.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Tim Berners-Lee"><img src="img/BernersLee.jpg" height="200" alt="Tim Berners-Lee" class="figure-img"></a></p>
 <figcaption>Tim Berners-Lee</figcaption>
 </figure>
 </div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/Cailliau.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Robert Cailliau"><img src="img/Cailliau.jpg" height="200" alt="Robert Cailliau" class="figure-img"></a></p>
+<figcaption>Robert Cailliau</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 <ul>
-<li><p>Années 1990-2000 : grands projets de bibliothèques numériques (Gutenberg, Perseus, Gallica) et standardisation de l’encodage de texte (TEI).</p></li>
-<li><p>1998 : Google est créé par Larry Page et Sergey Brin. Il s’agit d’un moteur de recherche qui classe les pages Web selon leur popularité (PageRank).</p></li>
+<li><p>Années 1990-2000&nbsp;: grands projets de bibliothèques numériques (Gutenberg, Perseus, Gallica) et standardisation de l’encodage de texte (TEI).</p></li>
+<li><p>1998&nbsp;: Google est créé par Larry Page et Sergey Brin. Il s’agit d’un moteur de recherche qui classe les pages Web selon leur popularité (PageRank).</p></li>
 </ul>
 </section>
-<section id="vers-les-humanités-numériques-contemporaines" class="level4" data-number="1.5.1.5">
-<h4 data-number="1.5.1.5" class="anchored" data-anchor-id="vers-les-humanités-numériques-contemporaines"><span class="header-section-number">1.5.1.5</span> Vers les humanités numériques contemporaines</h4>
+<section id="vers-les-humanités-numériques-contemporaines" class="level3 scrollable">
+<h3 class="scrollable anchored" data-anchor-id="vers-les-humanités-numériques-contemporaines">Vers les humanités numériques contemporaines</h3>
 <ul>
-<li>Années 2000-2010 : massification du numérique en SHS : OCR3HTR, bases textuelles, textométrie, fouille de texte.</li>
-<li>Années 2010-2020 : montée en puissance de l’IA et des grands modèles de langage, offrant de nouvelles méthodes d’analyse, mais aussi de nouveaux enjeux critiques.</li>
+<li><p>Années 2000-2010&nbsp;: massification du numérique en SHS&nbsp;: OCR → HTR, bases textuelles, textométrie, fouille de texte&nbsp;;</p></li>
+<li><p>Années 2010-2020&nbsp;: montée en puissance de l’IA et des grands modèles de langage, offrant de nouvelles méthodes d’analyse, mais aussi de nouveaux enjeux critiques.</p></li>
 </ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-burnardLiteraryLinguisticComputing2012" class="csl-entry" role="listitem">
-Burnard, Lou. 2012. <span>“<span>Du literary and linguistic computing aux digital humanities&nbsp;: retour sur 40&nbsp;ans de relations entre sciences humaines et informatique</span>.”</span> In <em><span>Read/Write Book 2 : Une introduction aux humanit<span>é</span>s num<span>é</span>riques</span></em>, edited by Pierre Mounier, 45–58. <span>Read/Write Book</span>. Marseille: OpenEdition Press. <a href="https://doi.org/10.4000/books.oep.242">https://doi.org/10.4000/books.oep.242</a>.
+Burnard, Lou. 2012. <span>«&nbsp;<span>Du literary and linguistic computing aux digital humanities&nbsp;: retour sur 40&nbsp;ans de relations entre sciences humaines et informatique</span>&nbsp;»</span>. In <em><span>Read/Write Book 2 : Une introduction aux humanit<span>é</span>s num<span>é</span>riques</span></em>, édité par Pierre Mounier, 45‑58. <span>Read/Write Book</span>. Marseille: OpenEdition Press. <a href="https://doi.org/10.4000/books.oep.242">https://doi.org/10.4000/books.oep.242</a>.
 </div>
 <div id="ref-commissiondenrichissementdelalanguefrancaiseJournalOfficielElectronique2019" class="csl-entry" role="listitem">
-Commission d’enrichissement de la langue française. 2019. <span>“Journal Officiel <span>É</span>lectronique Authentifi<span>é</span> n<span><span class="math inline">\(^\circ\)</span></span> 0157.”</span>
+Commission d’enrichissement de la langue française. 2019. <span>«&nbsp;Journal Officiel <span>É</span>lectronique Authentifi<span>é</span> N<span><span class="math inline">\(^\circ\)</span></span> 0157&nbsp;»</span>.
 </div>
 <div id="ref-debouyVademecumInformatiquePour2025" class="csl-entry" role="listitem">
-Debouy, Estelle. 2025. <em>Vade-Mecum Informatique Pour Lettres Et Sciences Humaines</em>. Edited by Presses universitaires de Rennes. Didact <span class="nocase">M<span class="nocase">é</span>thodes</span>.
+Debouy, Estelle. 2025. <em>Vade-Mecum Informatique Pour Lettres et Sciences Humaines</em>. Édité par Presses universitaires de Rennes. Didact <span>M<span>é</span>thodes</span>.
 </div>
 <div id="ref-sinatraChapitre3Histoire2014" class="csl-entry" role="listitem">
-Sinatra, Michaël E., and Marcello Vitali-Rosati. 2014. <span>“<span>Chapitre 3. Histoire des humanit<span>é</span>s num<span>é</span>riques</span>.”</span> In <em><span>Pratiques de l’<span>é</span>dition num<span>é</span>rique</span></em>, edited by Michael E. Sinatra, 49–60. <span>Parcours num<span>é</span>rique</span>. Montr<span>é</span>al: Presses de l’Universit<span>é</span> de Montr<span>é</span>al. <a href="https://doi.org/10.4000/books.pum.317">https://doi.org/10.4000/books.pum.317</a>.
+Sinatra, Michaël E., et Marcello Vitali-Rosati. 2014. <span>«&nbsp;<span>Chapitre 3. Histoire des humanit<span>é</span>s num<span>é</span>riques</span>&nbsp;»</span>. In <em><span>Pratiques de l’<span>é</span>dition num<span>é</span>rique</span></em>, édité par Michael E. Sinatra, 49‑60. <span>Parcours num<span>é</span>rique</span>. Montr<span>é</span>al: Presses de l’Universit<span>é</span> de Montr<span>é</span>al. <a href="https://doi.org/10.4000/books.pum.317">https://doi.org/10.4000/books.pum.317</a>.
 </div>
 </div>
-</section>
 </section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
@@ -523,6 +603,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -546,12 +770,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copié");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copié");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -925,17 +1149,62 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01a.html" class="pagination-link" aria-label="[Séance 1 : 02/09] Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">[Séance 1 : 02/09] Introduction</span>
+      <a href="./01a.html" class="pagination-link" aria-label="Introduction au cours">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction au cours</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02.html" class="pagination-link" aria-label="[Séance 2 : 09/09] CHERCHER: corpus et ressources numériques">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">[Séance 2 : 09/09] CHERCHER: corpus et ressources numériques</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Références">
+        <span class="nav-page-text">Références</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>HNU2000-A25, Mathilde Verstraete</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
