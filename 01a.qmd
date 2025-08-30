@@ -1,17 +1,26 @@
-# [Séance 1 : 02/09] Introduction {.unnumbered}
+# Introduction au cours {.unnumbered}
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+```{=html}
+<iframe src="_slides/01a.html"></iframe>
+```
+[Ouvrir dans mon navigateur](_slides/01a.html){target="_blank"} 
+
+::: 
 
 ## Bienvenue ! 
 
-Cette séance est dédiée d'une part à la présentation du cours, son déroulement et autres détails utiles, d'autre part à un bref panorama des Humanités Numériques. 
+Cette séance est dédiée d'une part à la présentation du cours, son déroulement et autres détails utiles, d'autre part à un (bref) panorama des Humanités Numériques. 
 
 ## Tour de table 
 
 Quelques questions :
 
-- quel est votre nom ? 
-- quel est votre parcours académique ? 
-- qu’attendez-vous de ce cours ? 
-- que savez-vous des Humanités Numériques ? 
+- Quel est votre prénom ? 
+- Quel est votre parcours académique ? 
+- Qu’attendez-vous de ce cours ? 
+- Que savez-vous des Humanités Numériques ? 
 
 <!-- 
 MV: 
@@ -22,26 +31,29 @@ Je donne ce cours parce qu’il m’a été attribué par le Département de lit
 
 --> 
 
-## Déroulement du cours 
+## Déroulement du cours {.smaller}
 
 - Cours en présentiel = présence requise ; 
-- Lectures obligatoires avant chaque séance ; 
-- Support/ressources disponibles à la fin de chaque cours (site web dédié) ; 
-- Pendant les séances : partie théorique, manipulations, échanges ; 
-- Exposés à prévoir sur certaines séances. 
-
-Pour chaque séance vous devez lire un texte, souvent de quelques pages. Ce texte servira de base à une discussion pendant la séance, vous aurez par ailleurs besoin de les connaître pour les différents travaux à réaliser.
-
-Les supports de cours, y compris une partie de mes notes, seront placés à la suite de chaque séance sur un site web dédié. Vous pourrez donc les consulter à tout moment. Attention, cela ne vous dispense pas de prendre des notes pendant le cours !
+- Lectures obligatoires avant chaque séance : 
+  - Les lectures qui ne sont pas encore précisées le seront au moins une semaine avant la semaine concernée ; 
+  - Les lectures obligatoires serviront de base à des discussions pendant le cours et sont à connaître pour les divers examens ; 
+- Support/ressources disponibles à la fin de chaque cours (sur ce site web) : 
+  - Ce qui ne dispense aucunement la prise de note durant le cours ; 
+- Pendant les séances : partie théorique, manipulations, échanges. 
 
 ## Objectifs du cours 
 
-Cf. le [Plan de cours](Plan-Cours.html#objectifs-et-contenu-du-cours)
+Cf. le [Plan de cours](Plan-Cours.html#objectifs-et-contenu-du-cours). 
 
 ## Présentation des séances 
 
-Cf. le [Plan de cours](Plan-Cours.html#calendrier-des-séances-et-des-lectures)
+Cf. le [Plan de cours](Plan-Cours.html#calendrier-des-séances-et-des-lectures). 
+
+<!-- 
+Est-ce que vous êtes disponibles pour les ateliers IA ?
+
+-->
 
 ## Modalités d'évaluation 
 
-Cf. le [Plan de cours](Plan-Cours.html#modalités-dévaluation)
+Cf. le [Plan de cours](Plan-Cours.html#modalités-dévaluation). 

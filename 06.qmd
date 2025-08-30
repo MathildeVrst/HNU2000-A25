@@ -1,0 +1,13 @@
+# [Séance 6 : 14/10] REPRÉSENTER le texte (II): formats riches et normés {.unnumbered}
+
+## Les langages interprétés : l’exemple de LaTeX
+
+## Exercice : Prise en main d'OverLeaf 
+
+## Introduction à la TEI
+
+## Exercice : Écrire en TEI-XML (avec Leaf writer)
+
+## Quelques considérations sur l’interopérabilité des formats
+
+## Exercice : Manipuler Pandoc 

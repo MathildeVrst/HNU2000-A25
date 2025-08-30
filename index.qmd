@@ -1,12 +1,12 @@
 # Plan du cours {.unnumbered} 
 
-- *Sigle du cours* : HNU2000 
+- *Sigle du cours* : HNU2000 
 - *Titre du cours* : Humanités numériques : technologies 
 - *Trimestre* : Automne 2025 
-- *Titulaire du cours* : Mathilde Verstraete 
+- *Titulaire du cours* : Mathilde Verstraete 
 - *Coordonnées* : [mathilde.verstraete@umontreal.ca](mailto:mathilde.verstraete@umontreal.ca)
 - *Horaire* : Mardi 08h30-11h30 (du 02/09 au 09/12/2025) 
-- *Lieu* : À confirmer 
+- *Lieu* : Cf. votre centre étudiant  
 
 ## Description du cours 
 
@@ -20,17 +20,17 @@ Espace de formation pratique basée sur des compétences pour les méthodes de b
 
 Les disciplines humanistes au sens large s’appuient de plus en plus sur des outils informatiques pour explorer, traiter, analyser, diffuser leurs objets d’étude. Cette irruption des outils issus des sciences dites dures dans les sciences humaines a donné naissance à un nouveau champ interdisciplinaire, celui dit des *humanités numériques*.  
 
-L’objectif principal du cours ***HU2000 -- Humanités numériques : technologies*** est de familiariser les étudiant·e·s aux principaux outils, technologies, logiciels, utilisés dans ce champ. Cette familiarisation passera par la manipulation concrète d’outils numériques et par la réalisation de projets pratiques.
+L’objectif principal du cours ***HNU2000 -- Humanités numériques : technologies*** est de familiariser les étudiant·e·s aux principaux outils, technologies, logiciels, utilisés dans ce champ. Cette familiarisation passera par la manipulation concrète d’outils numériques et par la réalisation de projets pratiques.
  
 Parmi les thématiques abordées durant le cours: 
 
-- La connaissance de son ordinateur; 
-- L’encodage et la structure de fichiers numériques; 
-- Les formats d’écriture; 
-- Le versionnement de ses données; 
-- Le traitement et la gestion des références bibliographiques; 
-- La fouille et l’analyse de textes;  
-- La reconnaissance automatique d’écritures manuscrites; 
+- La connaissance de son ordinateur ; 
+- L’encodage et la structure de fichiers numériques ; 
+- Les formats d’écriture ; 
+- Le versionnement de ses données ; 
+- Le traitement et la gestion des références bibliographiques ; 
+- La fouille et l’analyse de textes ; 
+- La reconnaissance automatique d’écritures manuscrites ; 
 - etc. 
 
 <!-- MV:
@@ -44,11 +44,11 @@ En résumé:
 
 --> 
 
-Que sont les humanités numériques et quelles technologies sont utilisées dans cette approche scientifique ? Les « humanités numériques » sont à la fois une méthode scientifique, un programme de recherche ou une approche pluridisciplinaire : elles offrent de nouvelles perspectives pour appréhender, lire et comprendre le monde qui nous entoure. Depuis l’avènement du numérique, la compréhension des écosystèmes technologiques devient une nécessité dans le champ des sciences humaines. Le cours HNU 2000 « Humanités numériques : technologies » est une opportunité pour explorer de façon originale les outils théoriques et pratiques utilisés dans les humanités numériques : lire, écrire, chercher, explorer, visualiser, analyser, publier, etc. Ce cours est un espace de formation pratique et de découverte des méthodes de base en humanités numériques, avec une orientation vers les démarches d’écriture, d’édition et de publication.
+Les « humanités numériques » sont à la fois une méthode scientifique, un programme de recherche ou une approche pluridisciplinaire : elles offrent de nouvelles perspectives pour appréhender, lire et comprendre le monde qui nous entoure. Depuis l’avènement du numérique, la compréhension des écosystèmes technologiques devient une nécessité dans le champ des sciences humaines. Le cours HNU2000 « Humanités numériques : technologies » est une opportunité pour explorer de façon originale les outils théoriques et pratiques utilisés dans les humanités numériques : lire, écrire, chercher, explorer, visualiser, analyser, publier, etc. Ce cours est un espace de formation pratique et de découverte des méthodes de base en humanités numériques, avec une orientation vers les démarches d’écriture, d’édition et de publication.
 
-Ce cours est une initiation aux technologies utilisées dans les humanités numériques, les étudiant·e·s devront comprendre, explorer, manipuler et expérimenter des outils, des logiciels, des méthodes et des programmes informatiques. Le cours HNU 1000 « Humanités numériques : théories » est un compagnon adéquat pour ce cours pratique.
+Ce cours est une initiation aux technologies utilisées dans les humanités numériques, les étudiant·e·s devront comprendre, explorer, manipuler et expérimenter des outils, des logiciels, des méthodes et des programmes informatiques. Le cours HNU1000 « Humanités numériques : théories » est un compagnon adéquat pour ce cours pratique.
 
-À l’issue du cours les étudiant·e·s seront en mesure de comprendre les enjeux technologiques des humanités numériques, de réutiliser des concepts liés aux humanités numériques, d’appréhender des méthodes utilisées dans les humanités numériques et d’utiliser des outils/applications.
+À l’issue du cours les étudiant·e·s seront en mesure de comprendre les enjeux technologiques des humanités numériques, de réutiliser des concepts liés aux humanités numériques, d’appréhender des méthodes utilisées dans les humanités numériques et d’utiliser une multitude d'outils/applications.
 
 <!-- MV:
 
@@ -60,15 +60,17 @@ Quelques moyens pour remplir ces objectifs :
 
 --> 
 
-L’*outillage* est souvent un aspect mal considéré en humanités, pourtant c’est la condition même de la possibilité de nos recherches : nos outils de collecte, d’enregistrement, de traitement, de prise de notes, de rédaction et de publication sont ce par quoi tout commence. 
+L’*outillage* est souvent un aspect mal considéré en humanités, pourtant c’est la condition même de la possibilité de nos recherches : nos outils de collecte, d’enregistrement, de traitement, de prise de notes, de rédaction et de publication sont ce par quoi tout commence. 
 
 ## Organisation du cours 
 
 Le cours alterna entre théorie et pratique. De manière générale, chaque cours sera l’occasion d’étudier un outil. À cette fin, il sera demandé à l’étudiant⸱e de préparer la séance par une ou des lecture(s) et/ou des manipulations sur son ordinateur personnel  (installation de logiciel, création de compte, etc.). Le cours sera l’occasion d’étudier -- d’un point de vue pratique, mais aussi théorique -- l’outil en question. Il pourra être demandé à l’étudiant⸱e de terminer des manipulations après la séance de cours et pour le cours suivant. 
 
+Dans le [calendrier](calendrier.qmd), vous trouverez sous chaque séance ce qui sera abordé, les lectures et actions (téléchargement, création de compte, etc.) à faire [avant la séance]{.text-primary} ainsi que des lectures suggérées. 
+
 ::: {.callout-important}
 
-Il est impératif que l’étudiant⸱e possède un ordinateur. 
+Il est impératif que l’étudiant·e possède un ordinateur et l'apporte en cours. 
 
 :::
 
@@ -76,373 +78,84 @@ Il est impératif que l’étudiant⸱e possède un ordinateur.
 
 ::: {.callout-important}
 
-Rappel : 1h de cours = 1,5h de travail hors cours
+Rappel : 1h de cours = 1,5h de travail hors cours
 
 :::
 
-- Participation^[Par participation, j'entends la préparation, la concentration lors des séances, l'écoute active, l'implication lors des échanges.] & Implication dans les exercices et travaux non évalués : 25%; 
-- **28/10** Examen de mi-session (théorie): 25%
-- **28/10** Travail complémentaire: Apprenez-moi quelque chose (bonus) 
-- **09/12** Travail final: 25%
-- **16/12** Présentation finale: 25%
+- Participation^[Par participation, j'entends la préparation, la concentration lors des séances, l'écoute active, l'implication lors des échanges.] & Implication dans les exercices et travaux non évalués : 25% ; 
+- **28/10** [Examen de mi-session](index.qmd#examen-de-mi-session) : 25% ; 
+- **28/10** [Travail bonus : Apprenez-moi quelque chose](index.qmd#travail-bonus--apprenez-moi-quelque-chose) ; 
+- **09/12** [Travail final](index.qmd#travail-écrit) : 25% ; 
+- **16/12** [Présentation finale](index.qmd#présentation-orale-et-discussion-en-classe) : 25%. 
 
-### Examen de mi-session (théorie)
+### Examen de mi-session
 
-- En classe, à classeurs fermés  
-- Durée: environ 2h; 
-- Forme: 
-  - Questions à choix multiple; 
-  - Questions ouvertes; 
-- Contenu: questions théoriques portant sur: 
-  - le cours; 
-  - les lectures obligatoires.
+- *Modalités* : examen sur table ; 
+- *Durée* : environ 2h ; 
+- *Forme* : 
+  - Questions à choix multiple ; 
+  - Questions ouvertes ; 
+- *Contenu* : questions théoriques portant sur : 
+  - Le cours ; 
+  - Les lectures obligatoires. 
 
-### Travail complémentaire: *Apprenez-moi quelque chose* (facultatif, bonus)
+### Travail bonus : *Apprenez-moi quelque chose* 
 
-- Ce travail n’est pas obligatoire: 
- - Si vous ne le rendez pas → aucune pénalité; 
- - Si vous le rendez → possibilité de gagner des points supplémentaires sur la note globale du cours. 
-- Consignes:
-  - Longueur: entre 1.5 et 3 pages; 
-  - Sujet: description d’un outil, projet ou actualité de votre choix, en lien avec les humanités numériques; 
-  - Contraintes techniques: doit être rédigé avec Stylo ou LaTeX; 
-- Éléments évalués: 
-  - Qualité de la présentation générale (orthographe, structure, mise en page, ajout de liens, bibliographie minimale); 
-  - Clarté et pertinence de la description du projet choisi; 
-  - Force de l’argumentation qui doit donner envie d’en savoir plus
-- Impact sur la note finale: 
-  - En fonction de la qualité du travail, votre note peut monter de deux niveaux (ex. : un B+ peut devenir un A- ou un A).
-- Date de remise: 28 octobre 
+- Ce travail n’est pas obligatoire : 
+  - Si vous ne le rendez pas → aucune pénalité ; 
+  - Si vous le rendez → possibilité de gagner des points supplémentaires sur la note globale du cours. 
+- Consignes :
+  - Longueur : entre 1.5 et 3 pages ; 
+  - Sujet : description d’un outil, projet ou actualité de votre choix, en lien avec les humanités numériques ; 
+  - Contraintes techniques : doit être rédigé avec Stylo ou LaTeX ; 
+- Éléments évalués : 
+  - Qualité de la présentation générale (orthographe, structure, mise en page, ajout de liens, bibliographie minimale) ; 
+  - Clarté et pertinence de la description du projet choisi ; 
+  - Force de l’argumentation qui doit donner envie d’en savoir plus ; 
+- Impact sur la note finale : 
+  - En fonction de la qualité du travail, votre note peut monter de deux niveaux (ex. : un B+ peut devenir un A- ou un A) ; 
+- Date de remise : [28 octobre]{.text-primary} (aucun délai ne sera accordé). 
 
 ### Examen final 
 
 #### Travail écrit 
 
-- Date de remise: au plus tard le lundi 9 décembre; 
-- Format attendu:
-  - Analyse d’un outil présenté en classe ou d’un autre outil (avec approbation préalable de la chargée de cours); 
-  - Présentation soignée: orthographe, mise en page, ajout éventuel d'images, bibliographie, liens utiles; 
-  - PDF ou HTML (évitez les traitements de texte!); 
-  - Environ 5 à 7 pages (hors bibliographie).
-- Contenu attendu: 
-  - Présentation de l’outil (objectifs, fonctionnement, contexte d’utilisation); 
-  - Analyse critique (points forts, limites, potentiel pour les humanités numériques); 
-  - Éventuelle mise en dialogue avec des articles évoquant l'outil en question; 
+- *Date de remise* : au plus tard le lundi 9 décembre ; 
+  - Une pénalité de 5% sera appliquée par jour de retard ; 
+- *Format attendu* :
+  - Analyse d’un outil présenté en classe ou d’un autre outil (avec approbation préalable de la chargée de cours) ; 
+  - Présentation soignée : orthographe, mise en page, ajout éventuel d'images, bibliographie, liens utiles ; 
+  - PDF, HTML ou autre -- soyez créatifs (évitez les traitements de texte!) ; 
+  - Environ 5 à 7 pages (hors bibliographie) ; 
+- *Contenu attendu* : 
+  - Présentation de l’outil (objectifs, fonctionnement, contexte d’utilisation) ; 
+  - Analyse critique (points forts, limites, potentiel pour les humanités numériques) ; 
+  - Éventuelle mise en dialogue avec des articles évoquant l'outil en question ; 
   - Mise en perspective par rapport aux thématiques du cours. 
 
 #### Présentation orale et discussion en classe
 
-- Date: lundi 16 décembre
-- Durée: environ 10 minutes de présentation + 5 minutes de discussion
-- Contenu attendu: 
-  - Présentation synthétique de l’outil analysé dans votre travail écrit; 
-  - Mise en avant des aspects les plus intéressants pour susciter l’échange avec vos collègues; 
-  - Ouverture à la discussion : préparez une ou deux questions pour la classe
+- *Date* : lundi 16 décembre ; 
+- *Durée* : environ 10 minutes de présentation + 5 minutes de discussion ; 
+- *Contenu attendu* : 
+  - Présentation synthétique de l’outil analysé dans votre travail écrit ; 
+  - Mise en avant des aspects les plus intéressants pour susciter l’échange avec vos collègues ; 
+  - Ouverture à la discussion : préparez une ou deux questions pour la classe. 
 
 ## Calendrier des séances et des lectures 
 
-Le cours de cette année sera axé sur le cycle de vie du texte savant en contexte numérique. Nous aborderons le texte source (séances 2-7), son analyse (8-10) et sa publication et diffusion (11-13). 
+Le cours de cette année sera axé sur le cycle de vie du texte savant en contexte numérique. Nous aborderons le texte source (séances 2-6), son analyse (8-10) et sa publication et diffusion (11-13). 
 
-### [Séance 1 : 02/09] Introduction 
-
-- Présentation de l'enseignante 
-- Présentation des étudiant·e·s 
-- Présentation du cours : déroulement, courte présentation des séances, participation, évaluations ;
-- Introduction aux Humanités Numériques
-
-**Lectures obligatoires** 
-
-- [@sinatraChapitre3Histoire2014]
-- [@underwoodWhyAgeMachine2018] 
-
-**Outils** 
-
-- <https://whatisdigitalhumanities.com/> 
-
-**Lectures et bibliographie supplémentaires** 
-
-- [@dacosHumanitesNumeriques2015] 
-- [@dacosManifesteDigitalHumanities2011a]
-- [@burdickHumanitiesDigitalHumanities2012] 
-
-
-### [Séance 2 : 09/09] CHERCHER: corpus et ressources numériques 
-
-- Internet et le Web 
-- Les navigateurs et moteurs de recherche 
-- Une recherche efficace
-- *Manipulation*: Isidore 
-
-**Lectures obligatoires** 
-
-**Outils** 
-
-- [Isidore](https://isidore.science/)
-
-**Lectures et bibliographie supplémentaires** 
-
-- [@franceinterFrancaisQuiVu2021] (podcast)
-- [@cardonDansLespritPageRank2013] 
-- [@larsonneurRechercheInternetLettres2008] (sur la question des navigateurs et moteurs de recherche, notamment)
-- [@ochigameSearchAtlasVisualizing2021] (sur les biais géographiques des résutlats aux recherches sur Google)
-- [@huma-numISIDORE10Ans2021]
-
-### [Séance 3 : 16/09] ORGANISER: métadonnées et formats 
-
-- Les métadonnées 
-- Les différents formats textuels 
-- Traitements *vs* Éditeurs de texte 
-- *Manipulation*: Pandoc  
-
-**Lectures obligatoires** 
-
-[@schrijverCultureHackerPeur2017]
-
-**Outils** 
-
-- [Pandoc](https://pandoc.org/)
-
-**Lectures et bibliographie supplémentaires** 
-
-
-::: callout-note
-
-[17/09] Date limite pour la modification des choix de cours
-
-:::
-
-<!--
-- Le texte et sa saisie 
-  - ASCII à Unicode, Mufi 
-  - De l'encodage au format 
-  - ... 
-- Éditeur de texte vs Traitement de Texte
-- Point sur le libre 
-
-- Stylo ? 
--->
-
-### [Séance 4 : 23/09] REPRÉSENTER le texte (I): formats légers  
-
-- Qu'est-ce que l'écriture numérique ? 
-- Introduction à .txt, .md, .html 
-- *Manipulation*: 
-  - [Markdown](https://www.arthurperret.fr/tutomd/)
-  - [Stylo](https://stylo.huma-num.fr/)
-
-**Lectures obligatoires** 
-
-- [@coombsMarkupSystemsFuture1987a] 
-- [@vitalirosatiEcrireSHSEnvironnement2020]
-
-**Outils** 
-
-- [Tuto markdown](https://www.arthurperret.fr/tutomd/)
-- [Stylo](https://stylo.huma-num.fr/)
-
-**Lectures et bibliographie supplémentaires** 
-
-- [@vitali-rosatiChercheursSHSSaventils2018] 
-
-### [30/09]  
-
-::: callout-note
-
-Congé universitaire -- Journée nationale de la vérité et de la réconciliation
-
-:::
-
-### [Séance 5 : 07/10] REPRÉSENTER le texte (II): formats riches et normés   
-
-- Les langages interprétés: l'exemple de LaTeX 
-- Introduction à la TEI 
-- Quelques considérations sur l'interopérabilité des formats 
-- *Manipulations*: 
-  - [LaTeX (via Overleaf)](https://fr.overleaf.com/) 
-  - [Écrire en TEI-XML (via LeafWriter)](https://leaf-writer.leaf-vre.org/)
-
-**Lectures obligatoires** 
-
-**Outils** 
-
-- [LaTeX (via Overleaf)](https://fr.overleaf.com/)
-
-**Lectures et bibliographie supplémentaires** 
-
-### [Séance 6 : 14/10] BIBLIOGRAPHIER: citations, identifiants, interopérabilité
-
-::: callout-note
-
-[07/11] Date limite pour l'abandon d'un cours
-
-:::
-
-- Qu’est-ce qu’une bibliographie ?
-- Les contraintes de l’édition scientifique
-- Structurer une bibliographie: une nécessité 
-- Zotero et Stylo 
-- Zotero et LaTeX 
-- *Manipulation*: [Zotero](https://www.zotero.org/) 
-
-**Lectures obligatoires** 
-
-- [@collectifPourquoiZotero2018a]
-
-**Outils** 
-
-- [Zotero](https://www.zotero.org/)
-
-**Lectures et bibliographie supplémentaires** 
-
-- [@danielOdeZoteroDecennie2022a]
-
-
-### [21/10] 
-
-::: callout-note
-
-Semaine de lecture -- pas de cours
-
-:::
-
-### [Séance 7 : 28/10] EXAMEN  
-
-::: callout-important
-
-Examen de mi-session
-
-:::
-
-### [Séance 8 : 04/11] ANNOTER: des *marginalia* à l'annotation numérique 
-
-- Typologie de l’annotation, 
-- Enjeux collaboratifs, 
-- Question de la trace
-- *Manipulation*: Hypothes.is  
-- Les protocoles de communication 
-
-**Lectures obligatoires** 
-
-**Outils** 
-
-- [Hypothes.is](https://web.hypothes.is/)
-
-**Lectures et bibliographie supplémentaires** 
-
-### [Séance 9 : 11/11] ÉCRIRE & PUBLIER 
-
-- Introduction au *Single Source Publishing*
-- Introduction au système de versionnement 
-- *Manipulation*: Git et GitHub 
-
-**Lectures obligatoires** 
-
-- [@fauchieImportanceSingleSource2023a]
-
-**Outils** 
-
-- [GIT](https://git-scm.com/) 
-- [GitHub](https://github.com/)
-
-**Lectures et bibliographie supplémentaires** 
-
-- [@fredrikssonEcrireCommunsAudevant2019]
-
-### [Séance 10 : 18/11] NETTOYER les données textuelles  
-
-::: {.callout-important}
-
-- Conférence A. Chagué ? À confirmer 
-
-:::
-
-- Ça veut dire quoi, *data*? 
-- La numérisation des corpus: qui, quoi, comment ?
-- Une petite histoire de l'OCR à l'HTR 
-- eScriptorium 
-
-**Lectures obligatoires** 
-
-
-**Outils** 
-
-- [eScriptorium](https://escriptorium.inria.fr/)
-
-**Lectures et bibliographie supplémentaires** 
-
-
-### [Séance 11 : 25/11] ANALYSER: textométrie, stylométrie et TAL 
-
-- Qu’est-ce que la fouille de textes ?
-- *Manipulations*: 
-  - [Ngram Viewer](https://books.google.com/ngrams/) 
-  - [Voyant Tools](https://voyant-tools.org/) 
-
-**Lectures obligatoires** 
-
-
-**Outils** 
-
-- [Ngram Viewer](https://books.google.com/ngrams/) 
-- [Voyant Tools](https://voyant-tools.org/) 
-
-**Lectures et bibliographie supplémentaires** 
-
-
-### [Séance 12 : 02/12] VISUALISER: vers une autre lecture 
-
-- Les graphes : quelques éléments théoriques
-- *Manipulations*: 
-  - [TimeLineJS](https://timeline.knightlab.com/) 
-  - [StoryMapJS](https://storymap.knightlab.com/) 
-
-**Lectures obligatoires** 
-
-- [@robichaudPrendreTournantSpatial2019]
-
-**Outils** 
-
-- [TimeLineJS](https://timeline.knightlab.com/) 
-- [StoryMapJS](https://storymap.knightlab.com/) 
-
-**Lectures et bibliographie supplémentaires** 
-
-- [@keimVisualAnalyticsDefinition2008] 
-- [@druckerHumanitiesApproachesGraphical2011] 
-
-### [Séance 13 : 09/12] IA 
-
-- Définition 
-- Un bref historique 
-- Panorama actuel
-- Discussion 
-
-**Lectures obligatoires** 
-
-
-**Outils** 
-
-**Lectures et bibliographie supplémentaires** 
-
-- [@chagueIntelligenceArtificielleIntelligence2022]
-- [@smitsMultimodalTurnDigital2023]
-
-### [Séance 14 : 16/12] 
-
-::: callout-important
-
-Examen final
-
-:::
+Pour une description détaillée des séances, lectures obligatoires et conseillées, cf. [le calendrier des séances](calendrier.qmd). 
 
 ## Ressources utilisées dans le cadre de ce cours 
 
-- Le présent site contient l'ensemble des informations dont vous aurez besoin pour ce cours. 
-- Lorsque les références sont disponibles en ligne le lien est indiqué sur le site du cours. Attention, certaines ressources en ligne nécessitent une connexion UdeM : soit depuis l’Université, soit en passant par le VPN.
+- Le présent site/syllabus contient l'ensemble des informations dont vous aurez besoin pour ce cours. 
+- Lorsque les références sont disponibles en ligne le lien est indiqué sur le site du cours. Attention, certaines ressources en ligne nécessitent une connexion UdeM : soit depuis l’Université, soit en passant par le VPN.
 
 ## Plagiat et fraude 
 
-« Tout acte de plagiat, fraude, copiage, tricherie ou falsification de document commis par une étudiante, un étudiant, de même que toute participation à ces actes ou tentative de les commettre, à l’occasion d’un examen ou d’un travail faisant l’objet d’une évaluation ou dans toute autre circonstance, constituent une infraction. Vous trouverez à l’adresse suivante les différentes formes de fraude et de plagiat ainsi que les sanctions prévues par l’Université : https://integrite.umontreal.ca » 
+« Tout acte de plagiat, fraude, copiage, tricherie ou falsification de document commis par une étudiante, un étudiant, de même que toute participation à ces actes ou tentative de les commettre, à l’occasion d’un examen ou d’un travail faisant l’objet d’une évaluation ou dans toute autre circonstance, constituent une infraction. Vous trouverez à l’adresse suivante les différentes formes de fraude et de plagiat ainsi que les sanctions prévues par l’Université : [https://integrite.umontreal.ca](https://integrite.umontreal.ca) » 
 
 ## Crédits 
 

@@ -1,15 +1,26 @@
-# [Séance 1 : 02/09] Introduction aux Humanités Numériques
+# [Séance 1 : 02/09] Introduction aux Humanités Numériques {.unnumbered}
 
-## Définitions 
+::: {.content-visible when-format="html" unless-format="revealjs"}
 
-Comment définiriez-vous, en vos mots, les *Humanités Numériques* ?
+```{=html}
+<iframe src="_slides/01b.html"></iframe>
+```
+[Ouvrir dans mon navigateur](_slides/01b.html){target="_blank"} 
 
+::: 
+
+## Définitions {.smaller}
+
+Comment définiriez-vous, en vos mots, les *Humanités Numériques*?
 
 <!-- MV: 
 
 Quand il s'agit de qualifier l'informatique appliquée aux lettres et sciences huamines, c'est aujourd'hui l'expression d'Humanités Numériques qui nous vient à l'esprit. 
 
 --> 
+
+</section>
+<section>
 
 > D’une part, les humanités numériques pourraient être définies comme l’application d’une méthode d’analyse informatique aux sciences humaines. En d’autres mots, l’approche des DH consiste à prendre en compte le fait que la puissance ne doit pas être limitée aux sciences dures, mais peut et doit aussi être employée pour des recherches en sciences humaines. D’autre part, les humanités numériques transcendent cet aspect technique et peuvent être pensées comme un regard global posé sur les changements culturels déterminés par le numérique ; en ce sens, les humanités numériques pourraient conduire à une sorte d’« humanisme numérique ». [@sinatraChapitre3Histoire2014]
 
@@ -19,9 +30,13 @@ Avec cette définition, les auteurs remettent en question l'opposition entre une
 
 --> 
 
-> Domaine de recherche et d’enseignement au croisement de l’informatique et des lettres, des arts, des
-sciences humaines et des sciences sociales, visant à produire et à partager des savoirs, des méthodes et de
-nouveaux objets de connaissance à partir d’un corpus de données numériques.^[Cette définition a été réutilisée [sur le site de l'OQLF](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26557956/humanites-numeriques).][@commissiondenrichissementdelalanguefrancaiseJournalOfficielElectronique2019]
+</section>
+<section>
+
+> Domaine de recherche et d’enseignement au croisement de l’informatique et des lettres, des arts, des sciences humaines et des sciences sociales, visant à produire et à partager des savoirs, des méthodes et de nouveaux objets de connaissance à partir d’un corpus de données numériques.^[Cette définition a été réutilisée [sur le site de l'OQLF](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26557956/humanites-numeriques).] [@commissiondenrichissementdelalanguefrancaiseJournalOfficielElectronique2019]
+
+</section>
+<section>
 
 - *Quelques* autres définitions [ici](https://archive.artsrn.ualberta.ca/day-of-dh/define-dh.html) ou [ici](https://whatisdigitalhumanities.com/).
 
@@ -33,8 +48,8 @@ Les HN s'étendent à un vaste domaine de recherche au croisement de plusieurs d
 
 ## Humanités...
 
-- Traditionnellement : lettres classiques ; 
-- Aujourd’hui (et surtout en Amérique du nord) : les sciences humaines ; 
+- Traditionnellement : lettres classiques ; 
+- Aujourd’hui (et surtout en Amérique du nord) : les sciences humaines ; 
 - Littérature, philosophie, histoire, arts vivants, linguistiques, etc.
 
 <!-- MV: 
@@ -49,9 +64,9 @@ Donc quand on dit humanités numériques, il faut avoir à l’esprit que le ter
 
 ## ...Numérique(s)
 
-- Représentation par nombre ; 
-- Discrétisation ; 
-- Numérisation du monde ; 
+- Représentation par nombre ; 
+- Discrétisation ; 
+- Numérisation du monde ; 
 - Culture numérique.
 
 <!-- MV:
@@ -66,20 +81,29 @@ Enfin, au-delà de l’aspect technique, le mot numérique renvoie aussi à une 
 C’est donc dans cette rencontre entre les humanités et le numérique qu’émergent les humanités numériques, un domaine à la fois interdisciplinaire et en constante évolution.
 -->
 
+::: {.content-visible unless-format="revealjs"}
+
+> Pour en savoir un peu plus sur l'encodage des caractères : 
+{{< video https://www.youtube.com/watch?v=MijmeoH9LT4&list=PLzH6n4zXuckqmf_xUcvU5caZVoctP2ehL >}}
+
+:::
+
 ## Les trois moments des Humanités Numériques 
+
+<!-- Discussion -->
 
 Lou Burnard [-@burnardLiteraryLinguisticComputing2012] distingue trois moments des humanités numériques : 
 
 ### env. 1970 : *Literary and Linguistic Computing* 
 
-- Déjà vers la fin des années 1940 avec l'*Index Thomisticus* de R. Busa 
-- Puissance de calcul des ordinateurs afin d'*automatiser* la création d'index, le repérage de concordances, le calcul de fréquences ... 
-- Ex.: British National Corpus, Thesaurus Linguae Graecae 
+- Déjà vers la fin des années 1940 avec l'*Index Thomisticus* de R. Busa ; 
+- Puissance de calcul des ordinateurs afin d'*automatiser* la création d'index, le repérage de concordances, le calcul de fréquences ... ; 
+- Ex. : *British National Corpus*, *Thesaurus Linguae Graecae*. 
 
 ### env. 1980 : L’*humanities computing*
 
-- Compréhension et maîtrise du programme informatique qui devient à proprement parler l'instrument d'une méthode de recherche et ce, dans une perspective interdisciplinaire. 
-- Ex.: la TEI (*Text Encoding Initiative*)
+- Compréhension et maîtrise du programme informatique qui devient à proprement parler l'instrument d'une méthode de recherche et ce, dans une perspective interdisciplinaire ; 
+- Ex. : la TEI (*Text Encoding Initiative*).
 
 <!-- MV: 
 TEI: norme d'encodage en xml utilisable opur toute source textuelle numérisée, qui apparaît donc comme un métalangage commun 
@@ -88,13 +112,13 @@ TEI: norme d'encodage en xml utilisable opur toute source textuelle numérisée,
 ### env. 1990 : *Digital Humanities* 
 
 - Apparition du Web → disponibilité des corpus numériques → nécessité de penser des interface pour consulter les corpus. Nouveaux rythmes de publication, modes de diffusions, formats. 
-- > « On est passés de l'ninformatique comme outil au service de la recherche au numérique comme environnement global au sein duquel s'effectue la recherche. » [@debouyVademecumInformatiquePour2025, p. 15] 
-- Ex.: la *William Blake Archive* 
+- > « On est passés de l'informatique comme outil au service de la recherche au numérique comme environnement global au sein duquel s'effectue la recherche. » [@debouyVademecumInformatiquePour2025, p. 15] 
+- Ex. : la [*William Blake Archive*](https://blakearchive.org/). 
 
-## Quelques repères historiques 
+## Quelques repères historiques {.smaller .scrollable}
 
-- Aujourd'hui, l'informatique est partout → gain de temps, facilité de traitement ; accès aux informations ; ... 
-- Nouvelles questions : où sont stockées les données ? quelle confidentialité ? quelle est notre relation aux outils que nous utilisons tous les jours ? ... 
+- Aujourd'hui, l'informatique est partout → gain de temps, facilité de traitement ; accès aux informations ;  
+- Nouvelles questions : où sont stockées les données ? Quelle confidentialité ? Quelle est notre relation aux outils que nous utilisons tous les jours ?  
 - > « Le citoyen du XXI^e^ siècle en est bien souvent réduit à être de plus en plus un consommateur et non un utilisateur averti et libre de ces technologies numériques. » [@debouyVademecumInformatiquePour2025, p. 17]
  
 <!-- MV (Debouy 2025, p. 17)
@@ -107,31 +131,69 @@ TEI: norme d'encodage en xml utilisable opur toute source textuelle numérisée,
 Avoir des repères historiques précis permet de comprendre son environnement informatique et d'être en mesure de le reprendre en main. 
 -->
 
-### Les prémices mécaniques
+### Les prémices mécaniques {.scrollable}
+
+::: {.content-visible unless-format="revealjs"}
 
 - II^e^ s. av. J.-C. : le mécanisme d'Anticythère peut être considéré comme le premier calculateur analogique (connu). Il permettait de modéliser la course des astres grâce à une trentaine d'engrenage. Il faudra attendre près d'un millénaire pour les prochains systèmes comparables, dans les horloges de Moyen Âge. La reconstruction de ce mécanisme intéresse toujours les chercheurs aujourd'hui. 
 
-![Le fragment principal de la machine d'Anticythère](img/Anticythere.jpg) 
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+- II^e^ s. av. J.-C. : le mécanisme d'Anticythère, premier calculateur analogique connu. 
+
+:::
+
+![Le fragment principal de la machine d'Anticythère](img/Anticythere.jpg){.lightbox height="350"}
+
 
 - Env. 1640 : la *Pascaline* de Blaise Pascal, calculatrice mécanique capable d’additionner et de soustraire, conçue pour assister son père percepteur d’impôts.
 
-![Pascaline, conservée au musée des Arts et Métiers, Paris](img/Pascaline.jpg)
+![Pascaline, conservée au musée des Arts et Métiers, Paris](img/Pascaline.jpg){.lightbox height="350"}
 
-- XVII^e^ s. -- fin du XX^e^ s. : la règle à calcul, un instrument mécanique utilisé massivement jusqu'aux années 1970 pour faire des opérations arithmétiques et trigonométriques. Elle sera préférée à la Pascaline notamment en raison de son prix, sa facilité d'utilisation et de fabrication. 
 
-![Règle à calcul scolaire, 10 pouces (Pickett N902-T simplex trig).](img/RegleCalcul.jpg)
+::: {.content-visible unless-format="revealjs"}
 
-- 1801 : le métier à tisser de Jacquard, système mécanique programmable par l'utilisation de cartes perforées, introduit l’idée d’un programme externe pour automatiser des opérations. 
+- XVII^e^ s. -- fin du XX^e^ s. : la règle à calcul, un instrument mécanique utilisé massivement jusqu'aux années 1970 pour faire des opérations arithmétiques et trigonométriques. Elle sera préférée à la Pascaline notamment en raison de son prix, sa facilité d'utilisation et de fabrication. 
 
-![Métier à tisser de J.-M. Jacquard](img/Jacquard.jpg)
+:::
 
-#### Les concepts fondateurs 
+::: {.content-visible when-format="revealjs"}
+
+- XVII^e^ s. -- fin du XX^e^ s. : la règle à calcul, instrument mécanique destiné aux opérations arithmétiques et trigonométriques. 
+
+:::
+
+![Règle à calcul scolaire, 10 pouces (Pickett N902-T simplex trig).](img/RegleCalcul.jpg){.lightbox height="350"}
+
+
+- 1801 : le métier à tisser de Jacquard, système mécanique programmable par l'utilisation de cartes perforées, introduit l’idée d’un programme externe pour automatiser des opérations. 
+
+![Métier à tisser de J.-M. Jacquard](img/Jacquard.jpg){.lightbox height="350"}
+
+### Les concepts fondateurs {.scrollable}
+
+::: {.content-visible unless-format="revealjs"}
 
 - Env. 1830 : Charles Babbage conçoit la machine analytique, un ordinateur programmable universel avant l’heure, inspiré du métier à tisser de Jacquard. Elle ne sera jamais construite faute de moyens techniques et financiers, mais ses plans étaient fonctionnels. Ada Lovelace y voit la possibilité d’écrire de véritables programmes (une suite d’instructions à mémoriser, exécuter et produire un résultat) et imagine déjà que la machine pourrait manipuler n’importe quel type de symbole — anticipant l’usage des ordinateurs pour le texte, la musique ou les arts: elle conçoit le premier algorithme en plus d'élargir la portée conceptuelle de la machine. 
 
-![Prototype (1871) non terminé de la machine analytique de Babbage](img/Babbage.jpg)
+:::
 
-![« Programme » de calcul des nombres de Bernoulli dans une note d'A. Lovelace (1843)](img/Algorithme_Bernoulli.jpg)
+::: {.content-visible when-format="revealjs"}
+
+- Env. 1830 : Charles Babbage conçoit la machine analytique, un ordinateur programmable universel avant l’heure ; Ada Lovelace conçoit le premier algorithme et élargit la portée conceptuelle de la machine. 
+
+:::
+
+::: {#Babbage layout-ncol=2}
+
+![Prototype (1871) non terminé de la machine analytique de Babbage](img/Babbage.jpg){.lightbox height="200"}
+
+![« Programme » de calcul des nombres de Bernoulli dans une note d'A. Lovelace (1843)](img/Algorithme_Bernoulli.jpg){.lightbox height="200"}
+
+:::
+
 
 <!-- MV: 
 
@@ -147,39 +209,87 @@ Dans les humanités numériques, cette histoire est importante car elle montre t
 
 -->
 
-- 1890 : Développement (par Herman Hollerith) des machines à cartes perforées pour le recensement américain, à l’origine d’IBM. 
+- 1890 : Développement (par Herman Hollerith) des machines à cartes perforées pour le recensement américain, à l’origine d’IBM. 
 
-- 1936 : Alan Turing formalise, dans son article *On Computable Numbers*, la notion de *machine universelle*, un modèle théorique capable d’exécuter tout algorithme. Turing est ainsi une figure primordiale de l’histoire de l’informatique. Durant la Seconde Guerre mondiale, il contribue également au déchiffrement des codes secrets allemands (notamment *Enigma*)^[C’est sur cet épisode que porte le film *The Imitation Game* (2014).].
+::: {.content-visible unless-format="revealjs"}
+
+- 1936 : Alan Turing formalise, dans son article *On Computable Numbers*, la notion de *machine universelle*, un modèle théorique capable d’exécuter tout algorithme. Turing est ainsi une figure primordiale de l’histoire de l’informatique. Durant la Seconde Guerre mondiale, il contribue également au déchiffrement des codes secrets allemands (notamment *Enigma*)^[C’est sur cet épisode que porte le film *The Imitation Game* (2014).].
  
-#### Vers l'ordinateur moderne 
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+- 1936 : Alan Turing, *On Computable Numbers* : formalisation de la notion de *machine universelle*. 
+
+:::
+
+### Vers l'ordinateur moderne {.scrollable}
 
 - 1945 : John von Neumann formalise l’architecture du *programme enregistré*, où instructions et données sont stockées dans une même mémoire. 
 
-![Oppenheimer et von Neumann à l'inauguration en 1952 de l'ordinateur construit pour l'*Institute for Advanced Study*.](img/OppenheimerNeumann.jpg)
+![Oppenheimer et von Neumann à l'inauguration en 1952 de l'ordinateur construit pour l'*Institute for Advanced Study*.](img/OppenheimerNeumann.jpg){.lightbox height="350"}
 
-- Années 1950 : IBM commercialise ses premiers ordinateurs ; FORTRAN^[Un bac à sable est disponible [ici](https://dev.lfortran.org/).] (FORmula TRANslator) devient le premier langage de haut niveau utilisé massivement pour le calcul scientifique et l’ingénierie. 
+- Années 1950 : IBM commercialise ses premiers ordinateurs ; FORTRAN^[Un bac à sable est disponible [ici](https://dev.lfortran.org/).] (FORmula TRANslator) devient le premier langage de haut niveau utilisé massivement pour le calcul scientifique et l’ingénierie. 
 
-#### L’informatique et les sciences humaines
+### L’informatique et les sciences humaines {.scrollable}
 
-- 1949 : le jésuite Roberto Busa, avec IBM, lance le projet de l'*Index Thomisticus* (analyse assistée par ordinateur de l’œuvre de Thomas d’Aquin), considéré comme l’acte fondateur des humanités numériques.
+::: {.content-visible unless-format="revealjs"}
 
-#### Démocratisation et réseau
+- 1949 : le jésuite Roberto Busa, avec IBM, lance le projet de l'*Index Thomisticus* (analyse assistée par ordinateur de l’œuvre de Thomas d’Aquin), considéré comme l’acte fondateur des humanités numériques.
 
-- Années 1960–1970 : naissance d’Internet, à la suite de projets militaires et universitaires (comme ARPANET, financé par le Department of Defense américain) qui mettent au point un réseau de communication décentralisé, capable de transmettre des paquets d’informations entre ordinateurs. 
+:::
 
-- Années 1980 : diffusion des micro-ordinateurs personnels, qui ouvrent l’informatique à la recherche, l’enseignement et le grand public. 
+::: {.content-visible when-format="revealjs"}
 
-![IBM PC 5150 avec clavier](img/IBM5150.jpg)
+- 1949 : Roberto Busa (avec IBM) lance le projet de l'*Index Thomisticus*. 
 
-- 1990 : Tim Berners-Lee invente le World Wide Web au CERN, rendant possible la circulation mondiale des textes numériques. Les concepts d'Internet et du Web sont complètement différents ! Le Web repose sur Internet, mais il en est une application.
+:::
 
-![Tim Berners-Lee](img/BernersLee.jpg)
+### Démocratisation et réseau {.scrollable}
 
-- Années 1990-2000 : grands projets de bibliothèques numériques (Gutenberg, Perseus, Gallica) et standardisation de l’encodage de texte (TEI).
+::: {.content-visible unless-format="revealjs"}
 
-- 1998 : Google est créé par Larry Page et Sergey Brin. Il s'agit d'un moteur de recherche qui classe les pages Web selon leur popularité (PageRank).  
+- Années 1960–1970 : naissance d’Internet, à la suite de projets militaires et universitaires (comme ARPANET, financé par le Department of Defense américain) qui mettent au point un réseau de communication décentralisé, capable de transmettre des paquets d’informations entre ordinateurs. 
 
-#### Vers les humanités numériques contemporaines 
+:::
 
-- Années 2000-2010 : massification du numérique en SHS : OCR3HTR, bases textuelles, textométrie, fouille de texte.
-- Années 2010-2020 : montée en puissance de l’IA et des grands modèles de langage, offrant de nouvelles méthodes d’analyse, mais aussi de nouveaux enjeux critiques. 
+::: {.content-visible when-format="revealjs"}
+
+- Années 1960–1970 : naissance d’Internet (< projets militaires et universitaires) ; 
+  - ARPANET 
+
+:::
+
+- Années 1980 : diffusion des micro-ordinateurs personnels, qui ouvrent l’informatique à la recherche, l’enseignement et le grand public. 
+
+![IBM PC 5150 avec clavier](img/IBM5150.jpg){.lightbox height="350"}
+
+- 1990 : Tim Berners-Lee (avec la collaboration de Robert Cailliau) invente le World Wide Web au CERN, rendant possible la circulation mondiale des textes numériques. 
+
+::: {.callout-note}
+Les concepts d'Internet et du Web sont complètement différents ! Le Web repose sur Internet, mais il en est une application.
+:::
+
+::: {#www layout-ncol=2}
+
+![Tim Berners-Lee](img/BernersLee.jpg){.lightbox height="200"}
+
+![Robert Cailliau](img/Cailliau.jpg){.lightbox height="200"}
+
+:::
+
+- Années 1990-2000 : grands projets de bibliothèques numériques (Gutenberg, Perseus, Gallica) et standardisation de l’encodage de texte (TEI).
+
+- 1998 : Google est créé par Larry Page et Sergey Brin. Il s'agit d'un moteur de recherche qui classe les pages Web selon leur popularité (PageRank).  
+
+### Vers les humanités numériques contemporaines {.scrollable}
+
+- Années 2000-2010 : massification du numérique en SHS : OCR → HTR, bases textuelles, textométrie, fouille de texte ; 
+
+- Années 2010-2020 : montée en puissance de l’IA et des grands modèles de langage, offrant de nouvelles méthodes d’analyse, mais aussi de nouveaux enjeux critiques. 
+
+::: {.content-visible when-format="revealjs"}
+
+## Travaux cités 
+
+:::

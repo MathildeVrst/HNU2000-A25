@@ -1,13 +1,322 @@
-# [Séance 3 : 16/09] ORGANISER: métadonnées et formats
+# [Séance 3 : 16/09] CHERCHER: corpus et ressources numériques {.unnumbered}
 
-<!-- https://hnu2000.quaternum.net/seance-05-ecrire/ --> 
+## Une histoire d'internet et du Web 
 
-## Les métadonnées 
+Nous avons évoqué, la semaine passée, Internet le Web. Qu'en avez-vous retenu ? S'agit-il de la même chose ? 
 
-## Les différents formats textuels 
+<!-- MV: 
+- S'agit-il de la même chose ? 
+--> 
 
-Un format = la mise en forme d'une donnée 
+> Ce ne sont pas tant les « nouvelles technologies » en général, mais le réseau en lui-même qui a bouleversé notre rapport à la connaissance. [@milleChapitre2DInternet2014]
 
-## Les traitements vs éditeurs de texte 
+### Origines 
 
-## Exercice : Manipuler Pandoc 
+- 1962-1968 : ARPAnet
+- 1969-1978 : Internet
+- années 1970 et 1980 : accès aux machines
+- 1984 : un réseau fonctionnel
+
+Plus de détails dans [@milleChapitre2DInternet2014]. 
+
+### Principes : TCP/IP 
+
+TCP/IP : TCP (Transmission Control Protocol) et IP (Internet Protocol).
+
+Une pile de protocoles :
+
+- physique : les câbles (cuivre ou fibre), éventuellement radio ; ; 
+- liaison : Ethernet ou Wireless Ethernet (Wifi), il s’agit de déterminer comment les paquets sont acheminés ; 
+- réseau : c’est la partie IP qui permet d’acheminer des paquets en donnant des adresses à toutes les machines connectées sur un réseau ;
+- transport : c’est la partie TCP, pour transférer les informations découpées en paquets et reconstituées en vérifiant qu’il ne manque rien (c’est ce qui permet à Internet d’être un réseau fiable) ;
+- application : il s’agit du Web, mais aussi d’autres applications comme le partage de fichiers (FTP) ou le courriel (IMAP et SMTP).
+
+
+::: {.callout-tip}
+
+Pour en savoir plus sur Internet et ses protocoles, voici une série de vidéos très complètes : <https://iletaitunefoisinternet.fr/>.
+
+:::
+
+### Expérimentation 
+
+Découvrir la *route* pour accéder à un serveur :
+
+- utiliser tracepath (ou traceroute) en ligne de commande
+- lancer la commande `tracepath umontreal.ca` ou `traceroute umontreal.ca`
+- analyser les résultats
+
+<!-- MV:  
+La commande va afficher une liste de “sauts” (hops), c’est-à-dire les routeurs par lesquels passent les paquets pour atteindre le serveur de l’Université de Montréal.
+Chaque ligne montre :
+
+le numéro du saut (1, 2, 3, …)
+
+l’adresse IP (et parfois le nom) du routeur
+
+le temps de réponse en millisecondes (3 mesures par défaut).
+
+En gros, tu “vois” ton paquet passer de ta box à ton FAI, puis dans le réseau canadien, jusqu’au serveur cible.
+
+=== 
+
+- pmtu 1500 : path MTU (valeur Ethernet) 
+- 1: _gateway ~2 ms : ta box/routeur local.
+- 2: modemcable001.140-59-74.mc.videotron.ca 239 ms : premier équipement de ton FAI (Vidéotron), typiquement le CMTS.
+- 3: 10.170.160.106 56 ms asymm 4 : adresse privée (10.x) à l’intérieur du réseau du FAI (lien intermédiaire). 
+- 4: 192.77.55.229 13.8 ms : encore un routeur d’agrégation/peering (toujours côté FAI ou proche du point d’échange).
+- 5–7: no reply : un ou plusieurs routeurs ne renvoient pas de message “TTL exceeded” (ICMP filtré/limité). Rien d’anormal. 
+- 8: umontreal2-contenu-membre.risq.net 16.1 ms : tu es maintenant sur le RISQ (Réseau d’informatique des institutions du Québec), proche de la destination (UdeM y est connectée). 
+- 9–30: no reply puis Too many hops : au-delà de ce point, les équipements n’envoient plus de réponses ICMP (politiques de filtrage), donc tracepath ne voit pas la fin du trajet, même si, en pratique, la ressource est probablement joignable.
+
+Le trafic part de chez toi → Vidéotron → (quelques sauts internes) → peering vers le RISQ → un nœud proche de l’UdeM.
+
+L’absence de réponse après le RISQ est courante : beaucoup d’équipements filtrent le TTL Exceeded (ICMP) ou la destination n’envoie pas le “port unreachable” attendu par tracepath.
+
+Le PMTU 1500 indique que tu n’as pas de fragmentation problématique sur le chemin.
+
+Les latences “bizarres” (239 ms au hop 2) sont probablement du policing des réponses ICMP, pas un vrai indicateur de lenteur utilisateur.
+
+--> 
+
+### Le Web 
+
+- Internet ≠ Web
+- le Web = une application d’Internet
+- un protocole (HTTP) et des langages (HTML/CSS/JavaScript)
+
+Le Web est une application d’Internet permettant de publier et de consulter facilement des informations.
+
+### Exercice
+
+- comment lire une page web via un autre outil qu’un navigateur ?
+- utiliser la commande curl dans le terminal 
+- exemple 1 : `curl https://mathildevrst.github.io/HNU2000-A25/Plan-Cours.html`
+- exemple 2 : `curl https://theread.me/raw-permalinks-for-accessibility/`
+
+<!-- MV: 
+Il est intéressant de noter que l’accès à un document disponible via Internet et le Web peut se faire via différentes façons, et pas uniquement avec un navigateur web. 
+--> 
+
+## Les navigateurs et moteurs de recherche 
+
+> Au principe d’autorité qui a fait la force du PageRank, Google substitue de plus en plus un principe d’efficacité qui renvoie de manière toujours plus appropriée vers l’internaute les choix que l’algorithme a appris de ses comportements. [@cardonDansLespritPageRank2013]
+
+- Navigateur ≠ moteur de recherche^[Les deux définitions ci-dessous sont issues de [@debouyVademecumInformatiquePour2025, p. 125].] ! 
+  - Navigateur : application, installée sur l'ordinateur, qui permet d'afficher les informations contenues sur les sites Web ; 
+  - Moteur de recherche : application qui permet de localiser des informations sur le Web, [...] outil devenu indispensable à partir du moment où les ressources Web, devenues trop nombreuses, ont rendu difficile l'indexation des contenus en ligne. 
+
+Quels navigateurs utilisez-vous ? Pourquoi ? 
+
+<!-- MV: (Debouy 2025, 125-128)
+
+- Internet Explorer : pendant longtemps, navigateur le plus utilisé car installé par défaut sur tous les ordinateurs équipés de Windows. mauvaise réputation car ne respectait pas les standards du Web et embarquait des failles de sécurité importantes 
+- Microsoft Edge : remplace Internet Explorer à partir de Windows 10 ; loin d'être respectueux de la vie privée 
+- Chrome : navigateur de Google, navigateur le plus utilisé au monde (merci la publicitié massive faite sur le moteur de recherche Google) ; lui non plus pas très respectueux de la vie privée 
+- Chromium : projet open source lancé par Google Chrome, davantage respectueux de la vie privée 
+- Firefox : Très répandu ; met l'accent sur le respect de la vie privée (cf. page d'accueil) ; il y est proposé de bloquer plus de 2000 traqueurs, de recevoir des alertes en cas d'attaque, de gérer les mdp de manière sécurisée 
+- Tor : 1995, United States Naval Research Laboratory puis développé en collaboration avec le MIT; objectif = naviguer anonymement sur le Web (= sans que nos publications en ligne, messages instantanés, etc ne puisse être rattachés à notre identité). Pour ce faire, routage en oignon qui s'appuie sur un réseau décentralisé de relais maintenus par des bénévoles : ce procédé consiste à acheminer l'information via plusieurs serveurs et à la chiffrer à chaque étape. Après un certain temps, le circuit change aléatoirement. D'abord réservé à quelques technophiles puis connait un vrai essor en 2008. Navigateur basé sur Firefox créé dans le but de faciliter l'accès au réseau. Tor contribua au printemps arabe de 2010 en protégeant l'identité des personnes sur Internet et en leur permettant d'accéder à des ressources essentielles, aux réseaux sociaux et aux sites Web bloqués par les gouvernements. Reçut le prix du logiciel libre en 2010 (catégorie projet d'intérêt social). 
+
+TODO : le cas de TOR ? 
+--> 
+
+### Le Web, au commencent étaient les annuaires
+
+- Dans les années 1990, les premiers répertoires (Yahoo!, DMOZ) proposaient une liste classée de sites web sous forme d’une arborescence thématique.
+- La démarche est différente d’aujourd’hui : on naviguait dans une hiérarchie, on ne formulait pas encore une requête.
+
+- Avantages : navigation linéaire par thématiques, parcours dans une arborescence logique, aperçu potentiellement exhaustif de l’existant. 
+- Inconvénients : parfois une seule entrée pour un résultat qui concerne plusieurs thématiques, recherche fastidieuse ; explosion du Web rendant le modèle vite obsolète.
+
+![Yahoo! en 2001](img/yahoo-en-2001.jpg)
+
+### Constituer des index 
+
+Un moteur de recherche recense et référence des pages Internet : pour cela, il utilise un logiciel, un robot d'indexation (dits *crawlers* ou *spiders*) qui parcourt l'ensemble du Web : 
+
+1. Exploration : exploration régulière du Web par le *crawler* qui suit tous les liens trouvés puis analyse les pages jugées intéressantes ; 
+2. Indexation : extraction de mots-clés des pages visitées et conservation d'une copie (= cache) de ces pages ; 
+3. Classement : classement, par le moteur de recherche, des pages selon leur pertinence par rapport à une série de mots-clés, permettant, à partir des mots d'une recherche, de retrouver le contenu recherché. Ce classement est lié notamment à la popularité de chaque page et au nombre de liens qui dirigent vers celle-ci. 
+
+> Sundar Pichai, président-directeur général de Google, tente d'explique au Congrès Américain comment fonctionne Google
+{{< video https://www.youtube.com/watch?v=8fP95zyPePU >}}
+
+### Quelques moteurs de recherche 
+
+#### Google 
+
+- Le plus utilisé, merci le *PageRank*, algorithme mathématique utilisé pour déterminer la pertinence des pages Web 
+- Attention aux premiers liens qui peuvent être sponsorisés 
+- Personnalisation des résultats : deux utilisateurs effectuant la même requête n'obtiendront pas les mêmes résultats (prise en compte des recherches et activités passées, ainsi que du profil des utilisateurs (situation géographique, âge, langue, etc) [@ochigameSearchAtlasVisualizing2021]) 
+- Quid des données personnelles ?  
+
+#### Alternatives  
+
+Quelques moteurs de recherche n'enregistrent pas les recherches effectuées et n'exploitent pas les données personnelles à des fins publicitaires ; ne filtrent pas les résultats de recherche en fonction des profils des utilisateurs → neutralité des recherches 
+
+- Qwant : 
+  - Moteur de recherche français, se pose en défense de la vie privée sur le Web 
+  - Simple système qui exploite les banques de données réalisées par les *crawlers* 
+- DuckDuckGo : 
+  - "Le moteur de recherche qui ne vous espionne pas"
+  - métamoteur : ne possède pas sa propre base de données et interroge celles des moteurs de recherche
+    - Gain de temps (recherche sur plusieurs moteurs à la fois) 
+    - Garantie de la protection des données <!-- MV: puisque les métamoteurs font la recherche à la place de l'utilisateur sur les moteurs de recherche qui, de ce fait, n'ont plus accès à ses informations personnelles --> 
+- Startpage : 
+  - "Le moteur de recherche le plus privé au monde"
+  - métamoteur (idem DuckDuckGo)
+
+#### Google Scholar 
+
+- Moteur de recherche généraliste ≠ Moteur de recherche d'articles scientifiques 
+- Généralement, accès au texte intégral 
+- Mais, pas de possibilité de tri/filtre des résultats 
+- Pas de vérification du caractère scientifique des articles 
+
+#### Isidore 
+
+- Projet de recherche, 2011 < TGIR Huma-Num 
+- objectifs : mettre à disposition un outil de recherche adapté aux sciences humaines
+- ambition : proposer des fonctionnalités pour faciliter la recherche documentaire
+- S'appuie sur le principe du Web de données 
+- Se distingue des autres moteurs de recherche : 
+  - Moissonage ciblé et des métadonnées et données scientifiques structurées selon des standards internationaux et dsponibles en accès libre 
+  - Indexation des données non structurées et structurées <!-- MV: données non structurées = texte intégral d'un article ; données structurées = métaonndées documentaires --> 
+  - Normalisation des métadonnées et enrichissement des données en s'appuyant sur des référentiels reconnus 
+  - Mise en évidence des sources de données indexées 
+  - Récupération des actualités 
+  - Algorithmes basés sur des référentiels selon des techniques documentaires ≠ PageRank 
+
+<!-- MV: 
+Initialement, ISIDORE est un moteur de recherche permettant de découvrir et de trouver des publications, des données numériques et profils de chercheur·e·s en sciences humaines et sociales (SHS) venant du monde entier.
+Il permet de rechercher dans le texte intégral de plusieurs millions de documents (articles, thèses et mémoires, rapports, jeux de données, pages Web, notices de bases de données, description de fonds d’archives, etc.) des signalements d’événements (séminaires, colloques, etc.). De plus, ISIDORE relie entre eux ces millions de documents en les enrichissant à l’aide de concepts scientifiques issus des travaux des communautés de recherche des SHS.
+
+Exam: Différence entre Isidore et Google, Isidore et Google Scholar 
+Isidore se démarque donc à la fois des moteurs de recherche dits généralistes (comme Google), mais aussi d’autres outils de recherche ou de collecte comme Google Scholar (qui propose moins de fonctionnalités et dont le classement documentaire est assez flou ou inexistant), de plateformes spécialisées comme Cairn.info ou OpenEdition (bien moins exhaustifs), ou encore de Zotero (un outil de collecte et de partage, complémentaire d’Isidore).
+
+Isidore construit son index en allant moissonner des entrepôts de données, ces données sont enrichies à partir de référentiels et de thésaurus. Les documents indexés peuvent être recherchés via l’interface de recherche, mais une API est aussi disponible pour que d’autres sites web ou des applications puissent utiliser ces données (principalement les interroger). Isidore n’est pas qu’un moteur de recherche, c’est aussi un espace de travail proposant plusieurs fonctionnalités :
+-->
+
+#### Exercice 
+
+- constituez une bibliographie dans Isidore.science sur les humanités numériques ; 
+- pour cela vous devez vous créer un compte Isidore (et donc [HumanID](https://documentation.huma-num.fr/humanid/)) ; 
+- utilisez les fonctionnalités de la recherche avancée ;
+- utilisez les fonctions de tris et de facettes ;
+- partagez avec moi votre « bibliothèque ».
+
+Discussion :  Que manque-t-il à Isidore ? Quels sont ses défauts ? 
+
+### Google et le PageRank
+
+En 1998, Google introduit le PageRank, qui attribue une importance à une page selon le nombre et la qualité des liens qui pointent vers elle (= système de mesure quantitative de popularité d’une page web). C'est inspiré par la mesure des articles académiques (Science Citation Index). 
+
+![Schéma du PageRank](img/pagerank.png) 
+
+<!-- MV: 
+Le système du PageRank, conçu et utilisé par Google, est relativement complexe. Ce que l’on peut retenir c’est qu’il s’agit d’un système inspiré des publications académiques. Le fonctionnement est le suivant : la popularité d’une page web A est mesurée en fonction du nombre de pages web qui pointent vers cette page web A. Si les pages web qui pointent vers la page web A, alors la popularité sera d’autant plus importante. Il s’agit donc de la prise en compte du nombre de pages web qui pointent vers la page, mais également indirectement du nombre de pages web qui pointent vers les pages web qui pointent vers la page web A. (mes excuses pour ces répétitions)
+--> 
+
+Cela fonde un principe d’autorité : les pages citées par beaucoup d’autres deviennent les plus visibles.
+
+Progressivement, Google combine ce principe avec d’autres critères (localisation, personnalisation).
+
+Pour en savoir plus sur le PageRank, écouter le podcast [@franceinterFrancaisQuiVu2021] (à partir de la 21e mn.) ou lisez [@cardonDansLespritPageRank2013]
+
+### Les évolutions des moteurs de recherche 
+
+Il y a plusieurs évolutions majeures des moteurs de recherche ces dernières années :
+
+- Interface utilisateur (UI) : simplification radicale de la page Google, disparition progressive des options avancées. 
+- Aide à la formulation : autocomplétion, suggestions liées aux recherches fréquentes.
+- Web sémantique et Knowledge Graph (2012–) : affichage de données structurées (fiche Wikipédia, horaires, météo,...) directement dans les résultats.
+- Personnalisation : traçage des comportements, adaptation aux historiques et aux contextes.
+- SEO (Search Engine Optimization) : pratiques d’optimisation par les sites pour “plaire” à Google.
+- IA générative (2023–) : moteurs qui ne se contentent plus de lister des pages, mais produisent directement des résumés de réponse (Google SGE, Perplexity).
+
+Phénomène de simplification : 
+
+- Suppression des options → interface minimale, recherche “intuitive” ; 
+- Autocomplétion → orientation subtile des requêtes ; 
+- Pertinence des premiers résultats → effet d’écrasement : très peu d’utilisateurs consultent la deuxième page ; 
+- Affichage de données liées (web sémantique) → l’utilisateur n’a plus besoin de cliquer sur les sites sources ; 
+- IA générative → bascule majeure : le moteur devient assistant ou agent conversationnel, qui filtre et reformule le Web au lieu de seulement l’indexer ; 
+- Tendance globale → l’information va de plus en plus vers l’utilisateur, au risque de réduire sa diversité d’accès.
+
+![Outil de réservation SNCF, capture d'écran, 18 août 2025](img/SNCF.png)
+
+Fonctionnement d’un moteur de recherche : 
+
+- Des robots parcourent le Web, de liens en liens ; 
+- Les données sont indexées et classées.
+- L’utilisateur formule une requête.
+- Le moteur sélectionne et hiérarchise les résultats grâce à des algorithmes.
+- Les requêtes influencent à leur tour les robots et les algorithmes (boucle d’apprentissage).
+
+### Vade-Mecum d'une recherche efficace 
+
+1. Commencer simple
+
+- Tapez quelques mots-clés principaux de votre sujet.
+- Utilisez des mots précis plutôt que des phrases longues.
+- Google ignore généralement les mots très fréquents (le, la, de…).
+
+2. Utiliser les guillemets pour les expressions exactes
+
+- `"expression exacte"` → Google recherche ces mots dans cet ordre précis.
+- e.g. : `"humanités numériques"` ne retournera que les pages contenant exactement cette expression.
+
+3. Limiter la recherche à un site ou un domaine
+
+- `site:lesite.com requête` → Recherche uniquement sur ce site.
+- e.g`: `site:umontreal.ca "humanités numériques"` → pages sur l’Université de Montréal concernant les humanités numériques.
+
+4. Chercher un type de fichier spécifique
+
+- `filetype:pdf requête` → Cherche des fichiers PDF uniquement.
+- e.g. : `filetype:pdf "édition numérique"` → documents PDF sur l’édition numérique.
+
+5. Chercher dans le titre d’une page
+
+- `intitle:mot` → Page dont le titre contient ce mot.
+- e.g. : `intitle:"humanités numériques"` → pages dont le titre contient l’expression exacte.
+
+6. Les opérateurs 
+
+- `AND`^[Si les mots-clés ne sont pas reliés par un opérateur, la plupart des outils de recherche considèrent que les termes sont reliés par `AND`.], `OR`,`NOT` permettent de préciser la recherche. Des parenthèses servent à grouper des termes ou des opérateurs. <!--MV: AND: traite obligatoirement de deux sujets ; OR : permet de trouver tous les documents qui traitent des deux sujets, indépendemment ou ensemble ; NOT : Collecte tous les documents traitement d'un sujet à l'exclusion de l'autre (ex.: carnaval NOT Venise peut être utile) 
+  - e.g. : `"humanités numériques" AND "édition" -cours` → pages sur l’édition dans les humanités numériques mais sans cours. 
+  - e.g. : `("humanités numériques" OR "digital humanities") AND "édition"` → pages qui contiennent soit "humanités numériques", soit "digital humanities", mais qui contiennent aussi "édition".
+- `?` : Remplace un caractère 
+  - e.g. : `econom?` recherche `économie`, `economic`, `economia` 
+- `*` : Élargit la recherche aux variantes d'un même mot 
+  - e.g. : `pers*` recherche `personnage`, `personnalité`, `persona`, ... 
+- `>  < = :` : précise une période chronologique 
+
+::: {.callout-tip}
+Les formulaire de recherche avancée des bibliothèques utilisent ces opérateurs! 
+:::
+
+### Exercice
+
+Dans votre moteur de recherche favori : 
+
+- Cherchez une expression exacte ; 
+- Cherchez là uniquement sur un site spécifique ; 
+- Cherchez un type de fichier particulier ; 
+- Cherchez des pages dont le titre contient un mot clé ; 
+- Combinez plusieurs opérateurs pour affiner la recherche ; 
+- Cherchez toutes les pages qui parlent d’humanités numériques et d’édition sur le site web de l’Université de Montréal 
+
+<!-- MV: 
+
+("humanités numériques" AND "édition") site:umontreal.ca
+
+--> 
+
+### Une alternative aux moteurs de recherche : les flux RSS 
+
+- *Really Simple Syndication* 
+- Ressources dont le contenu est mis à jour de manière automatique selon les modifications d'un site Web 
+- On s'*abonne* à un flux en l'ajoutant dans un *agrégateur* qui vérifiera automatiquement si de nouveaux contenus ont été mis en ligne. 
+  - Parmi les agrégateurs, des applications Web (Netvibes, Feedly, Inoreader, FreshRSS,...) ou des extensions de navigateur (Feedbro,...)
+- Avantage : on suit les actualités d'un site sans devoir s'y redre manuellement 

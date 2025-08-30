@@ -1,0 +1,391 @@
+# Calendrier des séances et des lectures {.unnumbered}
+
+## [Séance 1 : 02/09] Introduction au cours et aux Humanités Numériques 
+
+- Présentation de l'enseignante et des étudiant·e·s ; 
+- Présentation du cours : déroulement, courte présentation des séances, participation, évaluations ; 
+- Introduction aux Humanités Numériques.  
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @dacosHumanitesNumeriques2015 
+- @dacosManifesteDigitalHumanities2011a 
+- @burdickHumanitiesDigitalHumanities2012 
+- @burnardLiteraryLinguisticComputing2012 
+- @underwoodWhyAgeMachine2018
+
+:::
+
+\newpage 
+
+## [Séance 2 : 09/09] COMPRENDRE son environnement 
+
+- Prise en main de son ordinateur : fichiers, terminal, ligne de commande ; 
+- Bash ; 
+- L'éditeur *vs* le traitement de texte. 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @sinatraChapitre3Histoire2014 
+
+:::
+
+::: {.callout-important collapse="true"}
+## Outils à télécharger 
+
+- <https://code.visualstudio.com/>. 
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @schmidtDigitalHumanistsNeed2016
+
+:::
+
+\newpage 
+
+## [Séance 3 : 16/09] CHERCHER : corpus et ressources numériques 
+
+::: callout-note
+
+[17/09] Date limite pour la modification des choix de cours. 
+
+:::
+
+- Internet et le Web ; 
+- Les navigateurs et moteurs de recherche ; 
+- Une recherche efficace ; 
+- [Manipulation]{.text-danger} : Isidore. 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @franceinterFrancaisQuiVu2021 (podcast) 
+- @huma-numISIDORE10Ans2021
+
+:::
+
+::: {.callout-important collapse="true"}
+## Outils à télécharger 
+
+- Créez-vous un compte [HumanID](https://humanid.huma-num.fr/) 
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @cardonDansLespritPageRank2013 
+- @larsonneurRechercheInternetLettres2008, sur la question des navigateurs et moteurs de recherche, notamment
+- @ochigameSearchAtlasVisualizing2021, sur les biais géographiques des résutlats aux recherches sur Google 
+
+:::
+
+\newpage 
+
+## [Séance 4 : 23/09] ORGANISER & BIBLIOGRAPHIER : métadonnées et formats 
+
+- Les métadonnées ; 
+- Les différents formats textuels ; 
+- La bibliographie : définition, intérêts, mode d'emploi ; 
+- [Manipulation]{.text-danger} : Zotero. <!-- et pandoc -->
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @collectifPourquoiZotero2018a
+
+:::
+
+::: {.callout-important collapse="true"}
+## Outils à télécharger 
+
+- Téléchargez [Zotero](https://www.zotero.org/download/) (Zotero & l'extension *Zotero Connector*) ; 
+- [Créez-vous un compte Zotero](https://www.zotero.org/user/register)
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @schrijverCultureHackerPeur2017 
+- @danielOdeZoteroDecennie2022a
+
+:::
+
+
+<!--
+- Le texte et sa saisie 
+  - ASCII à Unicode, Mufi 
+  - De l'encodage au format 
+  - ... 
+- Éditeur de texte vs Traitement de Texte
+- Point sur le libre 
+
+- Stylo ? 
+-->
+
+## [30/09]  
+
+::: callout-note
+
+Congé universitaire -- Journée nationale de la vérité et de la réconciliation. 
+
+:::
+
+\newpage 
+
+## [Séance 5 : 07/10] REPRÉSENTER le texte (I) : formats légers  
+
+- L'écriture numérique ; 
+- Les formats légers : .txt, .md, .html ; <!-- tuto md!!-->
+- [Manipulation]{.text-danger} : [Stylo](https://stylo.huma-num.fr/). 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @vitalirosatiEcrireSHSEnvironnement2020
+  
+:::
+
+::: {.callout-important collapse="true"}
+## Outils à télécharger 
+
+- Créez-vous un compte/connectez-vous à [Stylo](https://stylo.huma-num.fr/) via votre HumanID (cf. la [Séance 3](calendrier.qmd#séance-3--1609-chercher--corpus-et-ressources-numériques))
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @vitali-rosatiChercheursSHSSaventils2018 
+
+:::
+
+\newpage 
+
+## [Séance 6 : 14/10] REPRÉSENTER le texte (II) : formats riches et normés   
+
+::: callout-note
+
+[07/11] Date limite pour l'abandon d'un cours. 
+
+:::
+
+- Les langages interprétés : l'exemple de LaTeX ; 
+- Introduction à la TEI ; 
+- [Manipulations]{.text-danger} : 
+  - [LaTeX (via Overleaf)](https://fr.overleaf.com/) ; 
+  - [Écrire en TEI-XML (via LeafWriter)](https://leaf-writer.leaf-vre.org/) ;
+  - [Pandoc](https://pandoc.org/) -- si le temps le permet. 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @coombsMarkupSystemsFuture1987a 
+  
+:::
+
+::: {.callout-important collapse="true"}
+## Outils à télécharger 
+
+- Créez-vous un compte [Overleaf](https://fr.overleaf.com/) 
+- Téléchargez [Pandoc](https://pandoc.org/) : [Nous le ferons ensemble en classe]{.text-primary}
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @burnardQuestceQueText2015, lecture vivement conseillée 
+- @JustWhatTeX2023, lecture vivement conseillée 
+- @andrePetitesLeconsTypographie1990 
+
+:::
+
+## [21/10] 
+
+::: callout-note
+
+Semaine de lecture -- pas de cours. 
+
+:::
+
+\newpage 
+
+## [Séance 7 : 28/10] EXAMEN  
+
+::: callout-important
+
+- [Examen de mi-session](index.qmd#examen-de-mi-session) ; 
+- [Remise du travail facultatif](index.qmd#travail-bonus--apprenez-moi-quelque-chose). 
+
+:::
+
+\newpage 
+
+## [Séance 8 : 04/11] ANNOTER : des *marginalia* à l'annotation numérique 
+
+- Historique ; <!-- Typologie de l’annotation, -->
+- Le Web : enjeux collaboratifs ; <!-- Question de la trace ; protocoles de communications ?--> 
+- [Manipulation]{.text-danger} : [Hypothes.is](https://web.hypothes.is/). 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @fredrikssonEcrireCommunsAudevant2019a 
+  
+:::
+
+::: {.callout-important collapse="true"}
+## Outils à télécharger 
+
+- Créez-vous un compte [Hypothes.is](https://hypothes.is/signup) 
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @jahjahAnnoterMondeAmeliorer2017 
+
+:::
+
+\newpage 
+
+## [Séance 9 : 11/11] ÉCRIRE & PUBLIER 
+
+- Le *Single Source Publishing* ; 
+- La gestion de versions ; 
+- [Manipulation]{.text-danger} : Git et GitHub. 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @fauchieImportanceSingleSource2023a 
+  
+:::
+
+::: {.callout-important collapse="true"}
+## Outils à télécharger 
+
+- Créez-vous un compte [GitHub](https://github.com/) 
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @turbiauRedactionGererDifferences2023
+
+:::
+
+\newpage 
+
+## [Séance 10 : 18/11] NETTOYER & EXPLOITER les données textuelles  
+
+::: {.callout-warning}
+
+- Conférence & Workshop, A. Chagué, « De l’OCR à l’HTR : panorama général, suivi d’un workshop introductif à eScriptorium » -- À confirmer !  
+
+:::
+
+- La notion de *data* ; 
+- La numérisation des corpus : qui, quoi, comment ? ; 
+- Une petite histoire de l'OCR à l'HTR.
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @bermesTrenteAnsNumerique2023
+  
+:::
+
+\newpage 
+
+## [Séance 11 : 25/11] ANALYSER : textométrie, stylométrie et TAL 
+
+- Humanités Numériques et Texte ; 
+- [Manipulations]{.text-danger} : 
+  - [Ngram Viewer](https://books.google.com/ngrams/) ; 
+  - [Voyant Tools](https://voyant-tools.org/).
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @reboulMesuresSavoirsQuelles2019
+  
+:::
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @botContributionLhistoireDun2012 
+
+:::
+
+
+\newpage 
+
+## [Séance 12 : 02/12] VISUALISER : vers une autre lecture 
+
+- Les graphes : quelques éléments théoriques ; 
+- [Manipulations]{.text-danger} : 
+  - [TimeLineJS](https://timeline.knightlab.com/) ; 
+  - [StoryMapJS](https://storymap.knightlab.com/). 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @robichaudPrendreTournantSpatial2019
+  
+:::
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @perretQuoiSertVue2022 
+- @perretAnalyserSynthetiserVisualiser2022 
+- @druckerHumanitiesApproachesGraphical2011
+
+:::
+
+\newpage 
+
+## [Séance 13 : 09/12] IA 
+
+::: callout-important
+
+- [Remise de l'examen final (écrit)](index.qmd#travail-écrit). 
+
+:::
+
+::: {.callout-important}
+Cette séance est remplacée par les deux [Ateliers *IA pour les SHS*](https://alexiaschn.github.io/ateliers_ia/) : 
+
+- jeudi 11 septembre 2025 15:30 : [Introduction : comment distinguer l’IA de ChatGPT](https://alexiaschn.github.io/ateliers_ia/seances/intro.html#/title-slide) ; 
+- jeudi 09 octobre 2025 15:30 : [IA et la correction textuelle automatique : quels outils et quelles limites ?](https://alexiaschn.github.io/ateliers_ia/seances/correction.html) 
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Lectures supplémentaires
+
+- @chagueIntelligenceArtificielleIntelligence2022 
+- @smitsMultimodalTurnDigital2023
+
+:::
+
+\newpage 
+
+## [Séance 14 : 16/12] 
+
+::: callout-important
+
+[Examen final](index.qmd#présentation-orale-et-discussion-en-classe).
+
+:::

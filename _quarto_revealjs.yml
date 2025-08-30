@@ -1,0 +1,19 @@
+project:
+  output-dir: _book/_slides
+  render:
+    - index.qmd
+    - introduction.qmd
+    - 01a.qmd 
+    - 01b.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format: 
+  revealjs: 
+    footer: HNU2000-A25
+    theme: ["slides.scss"]
+    slide-number: true
+    slide-level: 3
+#filters: 
+#  - relevel_headings.lua

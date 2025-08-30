@@ -2,24 +2,56 @@ project:
   type: book
 
 book:
-  language: "fr"
   title: "HNU2000-A25"
   subtitle: "Humanités Numériques : technologies"
   author: "[Mathilde Verstraete](mailto:mathilde.verstraete@umontreal.ca)"
-  date: "[Automne] 2024"
+  date: "[Automne] 2025"
   date-format: "[Automne] YYYY"
   search: true
+  page-navigation: true
+  downloads: pdf 
+  sidebar: 
+    style: docked 
+    background: light 
+  page-footer: "HNU2000-A25, Mathilde Verstraete"
   chapters:
     - index.qmd
+    - calendrier.qmd
+    - 01a.qmd
+    - 01b.qmd 
     - references.qmd
+
+lang: fr-FR
 
 bibliography: references.bib
 
+language: 
+  title-block-author-single: "Chargée de cours" 
+  toc-title-document: "Contenu" 
+  title-block-published: "Session"
+
+comments:
+  hypothesis: true
+
 format:
   html:
-    theme: cosmo
+    respect-user-color-scheme: true
+    theme:
+      light: minty 
+      dark: superhero
   pdf:
+    pdf-engine: xelatex
     documentclass: scrreprt
-
+    mainfont: EB Garamond  
+    link-citations: true
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhf{} 
+        \fancyfoot[C]{\thepage}
+        \fancyhead[L]{HNU2000-A25} 
+        \fancyhead[R]{\leftmark}
+        \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
 
