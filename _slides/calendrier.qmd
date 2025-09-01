@@ -1,6 +1,19 @@
-# Calendrier des séances et des lectures {.unnumbered}
+---
+scrollable: true
+---
 
-## [Séance 1 : 02/09] Introduction au cours et aux Humanités Numériques 
+# Calendrier des séances et des lectures {.unnumbered .scrollable}
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+```{=html}
+<iframe src="_slides/calendrier.html"></iframe>
+```
+[Ouvrir dans mon navigateur](_slides/calendrier.html){target="_blank"} 
+
+::: 
+
+## [Séance 1 : 02/09] Introduction au cours et aux Humanités Numériques {.smaller}
 
 - Présentation de l'enseignante et des étudiant·e·s ; 
 - Présentation du cours : déroulement, courte présentation des séances, participation, évaluations ; 
@@ -19,7 +32,7 @@
 
 \newpage 
 
-## [Séance 2 : 09/09] COMPRENDRE son environnement 
+## [Séance 2 : 09/09] COMPRENDRE son environnement {.smaller}
 
 - Prise en main de son ordinateur : fichiers, terminal, ligne de commande ; 
 - Bash ; 
@@ -28,14 +41,14 @@
 ::: {.callout-important collapse="true"}
 ## Lectures obligatoires
 
-- @sinatraChapitre3Histoire2014 
+- @sinatraHistoireHumanitesNumeriques2014
 
 :::
 
 ::: {.callout-important collapse="true"}
 ## Outils à télécharger 
 
-- <https://code.visualstudio.com/>. 
+- <https://vscodium.com/#install>. 
 
 :::
 
@@ -48,7 +61,7 @@
 
 \newpage 
 
-## [Séance 3 : 16/09] CHERCHER : corpus et ressources numériques 
+## [Séance 3 : 16/09] CHERCHER : corpus et ressources numériques {.smaller .scrollable}
 
 ::: callout-note
 
@@ -87,7 +100,7 @@
 
 \newpage 
 
-## [Séance 4 : 23/09] ORGANISER & BIBLIOGRAPHIER : métadonnées et formats 
+## [Séance 4 : 23/09] ORGANISER & BIBLIOGRAPHIER : métadonnées et formats {.smaller}
 
 - Les métadonnées ; 
 - Les différents formats textuels ; 
@@ -139,7 +152,7 @@ Congé universitaire -- Journée nationale de la vérité et de la réconciliati
 
 \newpage 
 
-## [Séance 5 : 07/10] REPRÉSENTER le texte (I) : formats légers  
+## [Séance 5 : 07/10] REPRÉSENTER le texte (I) : formats légers {.smaller}
 
 - L'écriture numérique ; 
 - Les formats légers : .txt, .md, .html ; <!-- tuto md!!-->
@@ -168,7 +181,7 @@ Congé universitaire -- Journée nationale de la vérité et de la réconciliati
 
 \newpage 
 
-## [Séance 6 : 14/10] REPRÉSENTER le texte (II) : formats riches et normés   
+## [Séance 6 : 14/10] REPRÉSENTER le texte (II) : formats riches et normés {.smaller}
 
 ::: callout-note
 
@@ -228,7 +241,7 @@ Semaine de lecture -- pas de cours.
 
 \newpage 
 
-## [Séance 8 : 04/11] ANNOTER : des *marginalia* à l'annotation numérique 
+## [Séance 8 : 04/11] ANNOTER : des *marginalia* à l'annotation numérique {.smaller}
 
 - Historique ; <!-- Typologie de l’annotation, -->
 - Le Web : enjeux collaboratifs ; <!-- Question de la trace ; protocoles de communications ?--> 
@@ -257,7 +270,7 @@ Semaine de lecture -- pas de cours.
 
 \newpage 
 
-## [Séance 9 : 11/11] ÉCRIRE & PUBLIER 
+## [Séance 9 : 11/11] ÉCRIRE & PUBLIER {.smaller}
 
 - Le *Single Source Publishing* ; 
 - La gestion de versions ; 
@@ -286,7 +299,7 @@ Semaine de lecture -- pas de cours.
 
 \newpage 
 
-## [Séance 10 : 18/11] NETTOYER & EXPLOITER les données textuelles  
+## [Séance 10 : 18/11] NETTOYER & EXPLOITER les données textuelles {.smaller}
 
 ::: {.callout-warning}
 
@@ -307,7 +320,7 @@ Semaine de lecture -- pas de cours.
 
 \newpage 
 
-## [Séance 11 : 25/11] ANALYSER : textométrie, stylométrie et TAL 
+## [Séance 11 : 25/11] ANALYSER : textométrie, stylométrie et TAL {.smaller}
 
 - Humanités Numériques et Texte ; 
 - [Manipulations]{.text-danger} : 
@@ -331,7 +344,7 @@ Semaine de lecture -- pas de cours.
 
 \newpage 
 
-## [Séance 12 : 02/12] VISUALISER : vers une autre lecture 
+## [Séance 12 : 02/12] VISUALISER : vers une autre lecture {.smaller}
 
 - Les graphes : quelques éléments théoriques ; 
 - [Manipulations]{.text-danger} : 
@@ -356,7 +369,7 @@ Semaine de lecture -- pas de cours.
 
 \newpage 
 
-## [Séance 13 : 09/12] IA 
+## [Séance 13 : 09/12] IA {.smaller}
 
 ::: callout-important
 
@@ -387,5 +400,11 @@ Cette séance est remplacée par les deux [Ateliers *IA pour les SHS*](https://a
 ::: callout-important
 
 [Examen final](index.qmd#présentation-orale-et-discussion-en-classe).
+
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+## Travaux cités 
 
 :::
