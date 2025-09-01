@@ -22,7 +22,7 @@ Quand il s'agit de qualifier l'informatique appliquée aux lettres et sciences h
 </section>
 <section>
 
-> D’une part, les humanités numériques pourraient être définies comme l’application d’une méthode d’analyse informatique aux sciences humaines. En d’autres mots, l’approche des DH consiste à prendre en compte le fait que la puissance ne doit pas être limitée aux sciences dures, mais peut et doit aussi être employée pour des recherches en sciences humaines. D’autre part, les humanités numériques transcendent cet aspect technique et peuvent être pensées comme un regard global posé sur les changements culturels déterminés par le numérique ; en ce sens, les humanités numériques pourraient conduire à une sorte d’« humanisme numérique ». [@sinatraChapitre3Histoire2014]
+> D’une part, les humanités numériques pourraient être définies comme l’application d’une méthode d’analyse informatique aux sciences humaines. En d’autres mots, l’approche des DH consiste à prendre en compte le fait que la puissance ne doit pas être limitée aux sciences dures, mais peut et doit aussi être employée pour des recherches en sciences humaines. D’autre part, les humanités numériques transcendent cet aspect technique et peuvent être pensées comme un regard global posé sur les changements culturels déterminés par le numérique ; en ce sens, les humanités numériques pourraient conduire à une sorte d’« humanisme numérique ». [@sinatraHistoireHumanitesNumeriques2014]
 
 <!-- MV: 
 
@@ -106,7 +106,7 @@ Lou Burnard [-@burnardLiteraryLinguisticComputing2012] distingue trois moments d
 - Ex. : la TEI (*Text Encoding Initiative*).
 
 <!-- MV: 
-TEI: norme d'encodage en xml utilisable opur toute source textuelle numérisée, qui apparaît donc comme un métalangage commun 
+TEI: norme d'encodage en xml utilisable pour toute source textuelle numérisée, qui apparaît donc comme un métalangage commun 
 --> 
 
 ### env. 1990 : *Digital Humanities* 
@@ -145,12 +145,12 @@ Avoir des repères historiques précis permet de comprendre son environnement in
 
 :::
 
-![Le fragment principal de la machine d'Anticythère](img/Anticythere.jpg){.lightbox height="350"}
+![Le fragment principal de la machine d'Anticythère](img/Anticythere.jpg){.lightbox height="200"}
 
 
 - Env. 1640 : la *Pascaline* de Blaise Pascal, calculatrice mécanique capable d’additionner et de soustraire, conçue pour assister son père percepteur d’impôts.
 
-![Pascaline, conservée au musée des Arts et Métiers, Paris](img/Pascaline.jpg){.lightbox height="350"}
+![Pascaline, conservée au musée des Arts et Métiers, Paris](img/Pascaline.jpg){.lightbox height="200"}
 
 
 ::: {.content-visible unless-format="revealjs"}
@@ -165,12 +165,12 @@ Avoir des repères historiques précis permet de comprendre son environnement in
 
 :::
 
-![Règle à calcul scolaire, 10 pouces (Pickett N902-T simplex trig).](img/RegleCalcul.jpg){.lightbox height="350"}
+![Règle à calcul scolaire, 10 pouces (Pickett N902-T simplex trig).](img/RegleCalcul.jpg){.lightbox height="200"}
 
 
 - 1801 : le métier à tisser de Jacquard, système mécanique programmable par l'utilisation de cartes perforées, introduit l’idée d’un programme externe pour automatiser des opérations. 
 
-![Métier à tisser de J.-M. Jacquard](img/Jacquard.jpg){.lightbox height="350"}
+![Métier à tisser de J.-M. Jacquard](img/Jacquard.jpg){.lightbox height="200"}
 
 ### Les concepts fondateurs {.scrollable}
 
@@ -227,7 +227,7 @@ Dans les humanités numériques, cette histoire est importante car elle montre t
 
 - 1945 : John von Neumann formalise l’architecture du *programme enregistré*, où instructions et données sont stockées dans une même mémoire. 
 
-![Oppenheimer et von Neumann à l'inauguration en 1952 de l'ordinateur construit pour l'*Institute for Advanced Study*.](img/OppenheimerNeumann.jpg){.lightbox height="350"}
+![Oppenheimer et von Neumann à l'inauguration en 1952 de l'ordinateur construit pour l'*Institute for Advanced Study*.](img/OppenheimerNeumann.jpg){.lightbox height="200"}
 
 - Années 1950 : IBM commercialise ses premiers ordinateurs ; FORTRAN^[Un bac à sable est disponible [ici](https://dev.lfortran.org/).] (FORmula TRANslator) devient le premier langage de haut niveau utilisé massivement pour le calcul scientifique et l’ingénierie. 
 
@@ -262,7 +262,7 @@ Dans les humanités numériques, cette histoire est importante car elle montre t
 
 - Années 1980 : diffusion des micro-ordinateurs personnels, qui ouvrent l’informatique à la recherche, l’enseignement et le grand public. 
 
-![IBM PC 5150 avec clavier](img/IBM5150.jpg){.lightbox height="350"}
+![IBM PC 5150 avec clavier](img/IBM5150.jpg){.lightbox height="200"}
 
 - 1990 : Tim Berners-Lee (avec la collaboration de Robert Cailliau) invente le World Wide Web au CERN, rendant possible la circulation mondiale des textes numériques. 
 

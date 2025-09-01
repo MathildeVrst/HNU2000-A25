@@ -44,6 +44,7 @@ format:
     documentclass: scrreprt
     mainfont: EB Garamond  
     link-citations: true
+    toc: false
     include-in-header:
       text: |
         \usepackage{fancyhdr}
@@ -53,5 +54,6 @@ format:
         \fancyhead[L]{HNU2000-A25} 
         \fancyhead[R]{\leftmark}
         \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-
-
+    include-after-body: 
+      text: | 
+        \tableofcontents

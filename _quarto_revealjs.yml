@@ -2,7 +2,7 @@ project:
   output-dir: _book/_slides
   render:
     - index.qmd
-    - introduction.qmd
+    - calendrier.qmd
     - 01a.qmd 
     - 01b.qmd
     - references.qmd

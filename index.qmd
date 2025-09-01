@@ -16,7 +16,7 @@ Espace de formation pratique basée sur des compétences pour les méthodes de b
 
 > Le numérique habite l’ensemble de nos vies et touche aussi, et surtout, à nos activités purement « humanistes », ou même « humaines ». 
 >
-> [@sinatraChapitre3Histoire2014] 
+> [@sinatraHistoireHumanitesNumeriques2014] 
 
 Les disciplines humanistes au sens large s’appuient de plus en plus sur des outils informatiques pour explorer, traiter, analyser, diffuser leurs objets d’étude. Cette irruption des outils issus des sciences dites dures dans les sciences humaines a donné naissance à un nouveau champ interdisciplinaire, celui dit des *humanités numériques*.  
 
@@ -64,7 +64,7 @@ L’*outillage* est souvent un aspect mal considéré en humanités, pourtant c�
 
 ## Organisation du cours 
 
-Le cours alterna entre théorie et pratique. De manière générale, chaque cours sera l’occasion d’étudier un outil. À cette fin, il sera demandé à l’étudiant⸱e de préparer la séance par une ou des lecture(s) et/ou des manipulations sur son ordinateur personnel  (installation de logiciel, création de compte, etc.). Le cours sera l’occasion d’étudier -- d’un point de vue pratique, mais aussi théorique -- l’outil en question. Il pourra être demandé à l’étudiant⸱e de terminer des manipulations après la séance de cours et pour le cours suivant. 
+Le cours alterna entre théorie et pratique. De manière générale, chaque cours sera l’occasion d’étudier un outil. À cette fin, il sera demandé à l’étudiant·e de préparer la séance par une ou des lecture(s) et/ou des manipulations sur son ordinateur personnel  (installation de logiciel, création de compte, etc.). Le cours sera l’occasion d’étudier -- d’un point de vue pratique, mais aussi théorique -- l’outil en question. Il pourra être demandé à l’étudiant·e de terminer des manipulations après la séance de cours et pour le cours suivant. 
 
 Dans le [calendrier](calendrier.qmd), vous trouverez sous chaque séance ce qui sera abordé, les lectures et actions (téléchargement, création de compte, etc.) à faire [avant la séance]{.text-primary} ainsi que des lectures suggérées. 
 
@@ -121,7 +121,7 @@ Rappel : 1h de cours = 1,5h de travail hors cours
 #### Travail écrit 
 
 - *Date de remise* : au plus tard le lundi 9 décembre ; 
-  - Une pénalité de 5% sera appliquée par jour de retard ; 
+  - Une pénalité de 10% sera appliquée par jour de retard ; 
 - *Format attendu* :
   - Analyse d’un outil présenté en classe ou d’un autre outil (avec approbation préalable de la chargée de cours) ; 
   - Présentation soignée : orthographe, mise en page, ajout éventuel d'images, bibliographie, liens utiles ; 
