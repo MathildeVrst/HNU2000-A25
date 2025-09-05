@@ -94,7 +94,7 @@ scrollable: true
 
 - @cardonDansLespritPageRank2013 
 - @larsonneurRechercheInternetLettres2008, sur la question des navigateurs et moteurs de recherche, notamment
-- @ochigameSearchAtlasVisualizing2021, sur les biais géographiques des résutlats aux recherches sur Google 
+- @ochigameSearchAtlasVisualizing2021, sur les biais géographiques des résultats aux recherches sur Google 
 
 :::
 
@@ -110,7 +110,7 @@ scrollable: true
 ::: {.callout-important collapse="true"}
 ## Lectures obligatoires
 
-- @collectifPourquoiZotero2018a
+- @collectifPourquoiZotero2018
 
 :::
 
@@ -250,7 +250,7 @@ Semaine de lecture -- pas de cours.
 ::: {.callout-important collapse="true"}
 ## Lectures obligatoires
 
-- @fredrikssonEcrireCommunsAudevant2019a 
+- @fredrikssonEcrireCommunsAudevant2019 
   
 :::
 

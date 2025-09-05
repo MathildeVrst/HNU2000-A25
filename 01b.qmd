@@ -111,7 +111,7 @@ TEI: norme d'encodage en xml utilisable pour toute source textuelle numérisée,
 
 ### env. 1990 : *Digital Humanities* 
 
-- Apparition du Web → disponibilité des corpus numériques → nécessité de penser des interface pour consulter les corpus. Nouveaux rythmes de publication, modes de diffusions, formats. 
+- Apparition du Web → disponibilité des corpus numériques → nécessité de penser des interfaces pour consulter les corpus. Nouveaux rythmes de publication, modes de diffusions, formats. 
 - > « On est passés de l'informatique comme outil au service de la recherche au numérique comme environnement global au sein duquel s'effectue la recherche. » [@debouyVademecumInformatiquePour2025, p. 15] 
 - Ex. : la [*William Blake Archive*](https://blakearchive.org/). 
 
