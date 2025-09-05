@@ -19,11 +19,13 @@ book:
     - calendrier.qmd
     - 01a.qmd
     - 01b.qmd 
+    - 02.qmd
     - references.qmd
 
 lang: fr-FR
 
-bibliography: references.bib
+bibliography: ref.bib
+csl: apa.csl
 
 language: 
   title-block-author-single: "Chargée de cours" 

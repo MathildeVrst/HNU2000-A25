@@ -1,49 +1,138 @@
-# [Séance 2 : 09/09] COMPRENDRE son environnement {.unnumbered}
+# [Séance 2 : 09/09] COMPRENDRE son environnement {.unnumbered .scrollable}
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+```{=html}
+<iframe src="_slides/02.html"></iframe>
+```
+[Ouvrir dans mon navigateur](_slides/02.html){target="_blank"} 
+
+::: 
+
+## Retour sur la lecture 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @sinatraHistoireHumanitesNumeriques2014
+
+:::
+
+## Terminal, ligne de commande 
+
+### La ligne de commande {.scrollable}
+
+- *Interfaces graphiques* = couche superposée à une interface de communication fondamentale : la commande ; <!-- la seule comprise par l'ordinateur ; les interfaces graphiques sont elles aussi des interfaces de communication vec l'ordinateur (Bureau sous Windows ou Finder sous Mac) -->
+- Le *Terminal* que nous allons manipuler fait référence au logiciel avec lequel nous pouvons taper des lignes de commandes afin d’interagir avec le *système d’exploitation* ; 
+- *Shell* : interpréteur de commandes qui sert d'intermédiaire entre les utilisateur·ices et le système d'exploitation ; <!-- = coquille : utilisateurs, shell, noyau ; il interprète le résultat de la commande, l'exécute et retourne le résultat à l'utilisateur. -->
+  - Différents *shells* existent, le shell par défaut de la plupart des distributions Linux & MacOS X se nomme [Bash]{.text-primary}. <!--Bash, c’est le nom d’un interpréteur de commandes (ou shell) très utilisé dans les systèmes Linux et macOS. En gros : 1) C’est un programme qui lit ce que tu tapes dans le terminal et exécute les commandes correspondantes. 2) Il permet de lancer des logiciels, de naviguer dans les dossiers, de manipuler des fichiers, etc. 3) On peut aussi écrire des scripts bash (fichiers contenant une suite de commandes) pour automatiser des tâches. 4) 👉 En résumé : Bash = un langage + un outil pour dialoguer avec ton ordinateur via le terminal. depuis quelques années, macOS utilise Zsh par défaut à la place de Bash. En résumé : Zsh = Bash + plein d’améliorations pratiques pour rendre le terminal plus sympa et efficace.-->
+- Les interfaces graphiques "traduisent" en lignes de commande les opérations que nous faisons (mais nous le cachent). 
+- Avantage : la ligne de commande est + rapide et + sûre.  
+
+> *OS* : « logiciel faisant office d’interface [(graphique)] entre les composants informatiques et l’utilisateur, qui assure notamment l’exécution des programmes, l’allocation des ressources matérielles et le contrôle des opérations d’entrée-sortie sur les périphériques. » ([OQLF 2022](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8358548/systeme-dexploitation)).
+
+### Exemple
+
+Création d'un répertoire (= Dossier) sur le Bureau puis y déplacer un fichier que l'on vient de créer : 
+
+1. Clic droit, Dossier > Nouveau → une fenêtre apparaît ; 
+2. Saisir le nom du répertoire (`Test`) > cliquer sur `OK` ; 
+3. Déplacer le fichier `exemple.pdf` en le faisant glisser avec le bouton gauche de la souris sur l'icône du répertoire puis relâcher le bouton. 
+
+Création d'un répertoire (= Dossier) puis y déplacer un fichier que l'on vient de créer avec la ligne de commande :  
+
+1. ouvrir le terminal ; 
+2. `mkdir Test` → *Enter* ; 
+3. `mv exemple.pdf Test` → *Enter*. 
+
+<!-- 
+Il faut bien comprendre que le rôle de l'interface graphique n'est que de traduire en lignes de commande les opérations que nous effectuons à l'aide de la souris. 
+
+Explications: 
+- mkdir = nom d'un programme fait pour créer des répertoire (= make directory) → nom du programme 
+- travail = nom du répertoire → argument passé au programme (à séparer par un espace)
+- Entrée = commande l'exécution du programme. 
+- mv = *move*, programme dont la fonction est de déplacer des fichiers ou des répertoires ; accepte 2 arguments: 1) nom du fichier que l'on souhaite déplacer, 2) répertoire de destination de ce fichier. 
+
+Si la syntaxe de la ligne de commande peut paraître au premier abord difficile à maîtriser, elle permet aussi, par sa sobriiété même, de réaliser de manière bien + rapide et bien + sûre les opérations que l'on fait grâce à la souris. 
+--> 
+
+### La ligne de commande, plus rapide et plus sûre ? 
+
+- Interface graphique = surcouche logicielle → ralentit le système d'exploitation ; 
+- Interface graphique = logiciel complexe → *bugs* ; 
+- Interface graphique ne contient pas *tous* les équivalents qu'a la ligne de commande -- certaines opérations ont été laissées de côté et ne pourront être effectuées par l'utilisateur·ice ; 
+- Séquence de lignes de commande, *e.g.*: `mkdir Test ; mv exemple.pdf Test` ; 
+- Présence de *wildcards* dans les lignes de commande, permettant de déclencher des opérations complexes sur un grand nombre de fichiers, *e.g.*: `mv *.pdf Test` déplacera tous les fichiers PDF dans le répertoire `Test`. 
+
+<!-- En d'autres termes, en passant par la ligne de commande, l'utilisateur gagne en sécurité, en rapidité et en maîtrise du système ce qu'il perd en ergonomie. Rapidité et efficacité ; Automatisation (scripts) ; Contrôle avancé --> 
+
+### Testons 
+
+- Linux : chercher *terminal* dans les *outils système* (raccourci : `CTRL+ALT+t`) ; 
+- MacOS : chercher *terminal* dans les applications (toutes les commandes ne sont pas présentes) ; 
+- Windows : [installer Cygwin](https://x.cygwin.com/docs/ug/setup.html). <!-- Cygwin est un logiciel qui permet d’utiliser un environnement Linux (ou Unix) sur Windows. car windows n'a pas nativement bash; fait le pont entre windows et linux pour pouvoir travailler avec les outils unix sur du windows ; si ça marche pas, plan B: démarrer > "cmd" > invite de commandes avec des commandes un peu différentes. Sous Windows, activez le terminal/bash en suivant [ces instructions](https://korben.info/installer-shell-bash-linux-windows-10.html) ou [celles-ci](https://blog.ineat-group.com/2020/02/utiliser-le-terminal-bash-natif-dans-windows-10/). -->  
+
+<!--
+### Définition 
+
+Le ***terminal*** que nous allons manipuler fait référence au logiciel avec lequel nous pouvons taper des lignes de commandes afin d’interagir avec le *système d’exploitation*.  
+
+> Un terminal est un programme qui émule une console dans une interface graphique, il permet de lancer des commandes. ([Doc. Ubuntu](https://doc.ubuntu-fr.org/terminal))
+
+→ Soit, l’*OS*, le « logiciel faisant office d’interface [(graphique)] entre les composants informatiques et l’utilisateur, qui assure notamment l’exécution des programmes, l’allocation des ressources matérielles et le contrôle des opérations d’entrée-sortie sur les périphériques. » ([OQLF 2022](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8358548/systeme-dexploitation)).
+--> 
 
 ## Où sont les fichiers sur un ordinateur ? 
 
 - Pourquoi c'est important ? 
-  - Interactions facilités avec les différents fichiers constituant un projet; 
-  - Liens (relatifs et/ou absolus) entre fichiers 
+  - Interactions facilités avec les différents fichiers constituant un projet ; 
+  - Liens (relatifs et/ou absolus) entre fichiers. 
 
-### Arborescence 
+<!-- Il est nécessaire d'organiser les fichiers de son ordinateur. Il faut donc, pour cela, créer des répertoires ou des dossiers qui pourraient être comparés à des boîtes de rangement. Les répertoires sont organisés en arbre, tous contenus dans un répertoire (la "racine") et séparés les uns des autres par un antislash sous windows ou u slash sous linuex -> passage d'un répertoire donné à l'un de ses sous-répertoire --> 
 
-- Chaque système d’exploitation a son propre système d’organisation ; 
-- Il faut comprendre les systèmes de chemin ; 
+### Arborescence {.scrollable}
+
+- Chaque système d’exploitation a son propre système d’organisation ; 
+- Il faut comprendre les systèmes de chemin ; 
 - Tout est arborescence 
 
-![Arborescence sur un système Ubuntu](img/tree.jpg)
+![Arborescence sur un système Ubuntu](img/tree.jpg){.lightbox height="200"}
 
+- Votre disque dur = sorte de grande boîte où se trouvent d'autres boîtes (= répertoires/dossiers) ; 
+- *Racine* = boite principale contenant toutes les autres ; 
+  - Mac, Linux : `/` ; 
+  - Widows : `C:\`. 
 
-Il faut d’abord comprendre comment est organisé votre ordinateur et où se trouvent vos fichiers. Votre disque dur peut être compris comme une grande boîte dans laquelle se trouvent d’autres boîtes (dossiers). La boîte principale est ce qu’on appelle « racine ». Dans un ordinateur Unix (Mac ou Linux) la racine est /. Dans un ordinateur Windows, la racine est C:/. Dans la racine vous trouvez plusieurs « boîtes ».
+<!--Il faut d’abord comprendre comment est organisé votre ordinateur et où se trouvent vos fichiers. Votre disque dur peut être compris comme une grande boîte dans laquelle se trouvent d’autres boîtes (dossiers). La boîte principale est ce qu’on appelle « racine ». Dans un ordinateur Unix (Mac ou Linux) la racine est `/`. Dans un ordinateur Windows, la racine est `C:\`. Dans la racine vous trouvez plusieurs « boîtes ».--> 
 
 L’emplacement du Dossier correspond à ce qu’on appelle son « chemin » (*path*).
 
 Exemple d’un dossier « Vacances » :
 
 - Unix : `/Document Personnel/Images/Vacances` 
-- Windows : `C:/Dossier Personnel/Images/Vacances` 
+- Windows : `C:\Dossier Personnel\Images\Vacances` 
 
 Comprendre le fonctionnement global de l’arborescence permet de se repérer dans son ordinateur.
 
 ### Nommer ses fichiers 
 
-- Quelques bonnes pratiques : 
-    - Les noms de fichier ne doivent pas contenir des caractères spéciaux, ni des accents, ni des espaces : l’ordintateur ne les reconnaît pas immédiatement, il doit les convertir, ce qui peut provoquer des erreurs ; 
-    - Les noms des fichiers doivent être significatifs ; 
-    - Les noms des fichiers ne doivent pas dépasser 80 caractères ; 
-    - Faites attention aux extensions de fichiers ! Il est préférable de ne pas les masquer : information primordiale pour la machine ET les utilisateurs.
-    - Exemple : 2024-10-04-hnu2000-seance02.md
+- Quelques bonnes pratiques : 
+    - Les noms de fichier ne doivent pas contenir des caractères spéciaux, ni des accents, ni des espaces : l’ordintateur ne les reconnaît pas immédiatement, il doit les convertir, ce qui peut provoquer des erreurs ; 
+    - Les noms des fichiers doivent être significatifs ; 
+    - Les noms des fichiers ne doivent pas dépasser 80 caractères ; 
+    - Faites attention aux extensions de fichiers ! Il est préférable de ne pas les masquer : information primordiale pour la machine ET les utilisateurs ; 
+    - Exemple : `2025-09-09-hnu2000-seance02.md`. 
 
-Cette question pas si banale que ça. Il existe des règles qui sont fondamentales pour :
+<!--
+Cette question pas si banale que ça. Il existe des règles qui sont fondamentales pour :
     - Classer un fichier ; 
     - Le retrouver facilement ; 
     - Partager ses fichiers avec d’autres personnes ; 
     - Éviter des problèmes de comptabilité d’un système à un autre.
+--> 
 
-### Stockage 
-
-### Chemins relatifs et chemins absolus 
+### Chemins relatifs et chemins absolus {.scrollable}
 
 Il est possible d’indiquer à la fois un chemin relatif, donc sans commencer par une barre oblique, ou en commençant par une barre oblique pour un chemin absolu.
 
@@ -52,86 +141,94 @@ Il est possible d’indiquer à la fois un chemin relatif, donc sans commencer p
 | /Users/Mathilde/Documents/Projet/index.html | ./Documents/Projet/index.html |
 | Emplacement complet à partir de la racine du système de fichiers | Chemin vers un fichier à partir du répertoire actul (```pwd```) | 
 | Toujours valide, qu'importe le répertoire | Change selon où je me situe dans mes fichiers |
+| Commence nécessairement par `/` | Ne commence pas par `/` | 
 
-### Bonnes pratiques 
+Astuces : 
 
-## Usages basiques d'un terminal 
+- `/` : on descend d'un niveau dans la hiérarchie des répertoires ; 
+- `..` : on remonte vers un répertoire parent. 
 
-### Définition 
+<!-- Un chemin d'accès est dit absolu quand il est donné à partir de la racine du dique dur; il est dit relatif quand il est donné à partir de tout autre endroit du disque dur. -->
 
-Le ***terminal*** que nous allons manipuler fait référence au logiciel avec lequel nous pouvons taper des lignes de commandes afin d’interagir avec le *système d’exploitation*.  
+## Les premières commandes 
 
-> Un terminal est un programme qui émule une console dans une interface graphique, il permet de lancer des commandes. ([Doc. Ubuntu](https://doc.ubuntu-fr.org/terminal))
+Quand je lance mon terminal, une invite de commande (*prompt*) apparaît, 
 
-→ Soit, l’*OS*, le « logiciel faisant office d’interface [(graphique)] entre les composants informatiques et l’utilisateur, qui assure notamment l’exécution des programmes, l’allocation des ressources matérielles et le contrôle des opérations d’entrée-sortie sur les périphériques. » ([OQLF 2022](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8358548/systeme-dexploitation)).
+> *e.g.* `mathilde@crcen-mathilde-xps-13-7390:~` : 
 
-### Intérêts 
-
-- Rapidité et efficacité 
-- Automatisation (scripts) 
-- Contrôle avancé 
-
-### Ouvrir un terminal 
-
-Sous Linux ou Mac : chercher « Terminal » parmi les applications.
-
-Sous Windows, activez le terminal/bash en suivant [ces instructions](https://korben.info/installer-shell-bash-linux-windows-10.html) ou [celles-ci](https://blog.ineat-group.com/2020/02/utiliser-le-terminal-bash-natif-dans-windows-10/). 
+- l'utilisateur `mathilde` est connectée sur l'ordinateur `crcen-mathilde-xps-13-7390` ; 
+- le `~` indique qu'on se trouve dans le *home directory*. 
 
 ### Où suis-je ? 
 
 - pour savoir où l'on se trouve : ```pwd```  
+<!-- print working directory--> 
 
 ::: {.callout-note}
 `pwd` nous retourne un chemin absolu: le chemin indiqué commence en effet par une barre oblique. 
 :::
 
-### Lister des fichiers 
+### Déplacer un fichier 
 
-- pour lister les fichiers : ```ls``` 
-- pour lister les fichiers, dont les fichiers cachés : ```ls -a```
+- La commande ```mv <source> <destination>``` permet de renommer ou de déplacer un fichier (dans le terminal, c’est la même chose!) ; 
+- ```mv mon-fichier.txt fichier.txt``` renomme le fichier `mon-fichier.txt` en `fichier.txt` ; 
+- ```mv /home/utilisateur/hnu2000/mon-fichier.txt /home/utilisateur/Documents/``` déplace le fichier `mon-fichier.txt`dans le dossier `Documents` (il doit exister préalablement!). 
+
+<!-- windows: move --> 
+<!-- `mv hnu2000/mon-fichier.txt . = dans répertoire courant-->
 
 ### Naviguer dans ses fichiers 
 
-- pour naviguer : ```cd``` suivi du chemin, 
-- exemple : ```cd Documents/cours/hnu2000```  
+- pour naviguer : ```cd``` suivi du chemin, 
+- exemple : 
+  - ```cd Documents/cours/hnu2000``` ; 
+  - `cd` : retour au *home directory*. 
 
 ::: {.callout-note}
 Il est possible d’indiquer à la fois un chemin relatif, donc sans commencer par une barre oblique, ou en commençant par une barre oblique pour un chemin absolu. 
 :::
 
-### Comprendre une commande 
+Remarquez le changement de l'invite après l'exécution de la commande. 
 
-- pour comprendre à quoi sert une commande : ```man nom-de-la-commande``` (ex. : ```man rm```)
+<!-- change directory --> 
 
-### Quelques réflexes 
+### Lister des fichiers 
 
-- La touche `TAB` complète une commande ; 
-- La flèche du haut parcourt les dernières commandes utilisées ; 
-- CTRL + R pour rechercher une commande précédemment tapée ; la recherche se mettra à jour au fur et à mesure que vous tapez les premières lettres de la commande ; 
-- CTRL + L ou ```clear``` pour repartir sur un *nouveau* terminal. 
+- pour lister les fichiers : ```ls``` ; 
+  - ex. : `ls Test/`> `fichier.txt` ; 
+- pour lister les fichiers, dont les fichiers cachés : ```ls -a```.
 
-### Déplacer un fichier 
-
-- La commande ```mv``` permet de renommer ou de déplacer un fichier (dans le terminal, c’est la même chose!) ; 
-- ```mv mon-fichier.txt fichier.txt``` renomme le fichier `mon-fichier.txt` en `fichier.txt` ; 
-- ```mv /home/utilisateur/hnu2000/mon-fichier.txt /home/utilisateur/Documents/mon-fichier.txt``` déplace le fichier `mon-fichier.txt`dans le dossier `Documents` (il doit exister préalablement!). 
+<!-- windows: dir --> 
+<!-- list ; affiche à l'écran tous les fichiers et les répertoires contenus dans un répertoire donné. Si on ne précise pas le répertoire, liste les fichiers du répertoire courant. --> 
 
 ### Créer un dossier 
 
-- `mkdir` + le nom du dossier (*MaKe DIRectory*) 
+- `mkdir` + le nom du dossier (*MaKe DIRectory*).
 
 ### Créer un fichier 
 
-- `touch` + le nom du fichier  
+- `touch` + le nom du fichier. 
 
 ### Supprimer un fichier 
 
-- `rm mon-fichier.md` ; 
+- `rm mon-fichier.md` ; 
 - `rm -R mon-dossier` supprime le dossier et tout ce qu'il contient.
 
 ### Afficher le contenu d'un fichier 
 
-- `cat mon-fichier.md` 
+- `cat mon-fichier.md`. 
+
+
+### Comprendre une commande 
+
+- pour comprendre à quoi sert une commande : ```man nom-de-la-commande``` (ex. : ```man rm```). 
+
+### Quelques réflexes 
+
+- La touche `TAB` complète une commande ; 
+- La flèche du haut parcourt les dernières commandes utilisées ; 
+- CTRL + R pour rechercher une commande précédemment tapée ; la recherche se mettra à jour au fur et à mesure que vous tapez les premières lettres de la commande ; 
+- CTRL + L ou ```clear``` pour repartir sur un *nouveau* terminal. 
 
 ### Exercice 
 
@@ -142,27 +239,206 @@ Il est possible d’indiquer à la fois un chemin relatif, donc sans commencer p
 - renommez le fichier `exemple.txt` en `02_exercice1.txt` ; 
 - supprimez le dossier `02-exercice`.  
 
+### Quelques commandes avancées {.scrollable}
 
-### Quelques commandes avancées 
-
-- `history` : Pour afficher et parcourir l’historique des commandes que vous avez utilisées (seulement les commandes, pas les résultats de ces commandes) ; 
-- `less` + fichier : Affiche le contenu d'un fichier page à page (similaire à `cat`, plus lisible), 
-  - pour quitter: `q` ! 
-- `cp` copie un fichier ou un dossier : 
-  - `cp HNU2000/texte.txt Documents/divers/textes/texte.txt` ;  
-  - `cp -r textes Documents/divers` ;
-- `wc` permet de compter le nombre de lignes, de mots et de caractères dans un fichier texte ; 
-- `find` permet de chercher dans les noms de fichiers et dossiers, et dans les fichiers eux-mêmes ;  
+- `history` : Pour afficher et parcourir l’historique des commandes que vous avez utilisées (seulement les commandes, pas les résultats de ces commandes) ; 
+- `less` + fichier : Affiche le contenu d'un fichier page à page (similaire à `cat`, plus lisible), 
+  - pour quitter : `q` ! 
+- `cp <source> <destination>` copie un fichier ou un dossier : 
+  - `cp HNU2000/texte.txt Documents/divers/textes/texte.txt` ; 
+  - `cp -r textes Documents/divers` ;
+- `wc` permet de compter le nombre de lignes, de mots et de caractères dans un fichier texte ; 
+- `find` permet de chercher dans les noms de fichiers et dossiers, et dans les fichiers eux-mêmes ; 
 - `&&` pour enchaîner les commandes. 
+
+<!-- windows: copy --> 
 
 ::: {.callout-tip}
 Testez la commande suivante : ```curl http://wttr.in/Montréal\?lang\=fr```. Nous y reviendrons plus tard dans la session. 
 :::
 
-### Bash 
+## Bash 
+
+- Interpréteur en ligne de commande d'Unix (= Linux, Mac) ; 
+- Un *script* Bash (ou *shell*) est un fichier (en `.sh`) comportant plusieurs instructions/commandes ; 
+- Celles-ce seront exécutées les unes après les autres ; 
+- → Automatisation des tâches. 
+
+<!--
+Pour nous entraîner, nous utiliserons Bash en ligne, [à cette adresse](https://www.onlinegdb.com/online_bash_shell).
+--> 
+
+### Exercices 
+
+
+#### Renommer tous ses fichiers automatiquement 
+
+Si vous désirez ajouter `HNU` ou `vacances2025` devant chaque nom de fichier dans un dossier donné, créez un script : 
+
+- Créez (en ligne de commande), un fichier intitulé `rename.sh` ; 
+- Ajoutez-y le script suivant : 
+
+```
+#!/bin/bash
+# Ajoute "hnu_" devant chaque fichier
+
+for file in *; do
+    if [ -f "$file" ]; then
+        mv "$file" "hnu_$file"
+    fi
+done
+```
+
+- Créez quelques fichiers de test (`touch test1.txt test2.txt`) ; 
+- Faites tourner le script : `bash rename.sh`. 
+
+</section>
+<section>
+
+#### Changer l'extension automatiquement 
+
+Le script : 
+
+```
+#!/bin/bash
+# Change l'extension .md en .txt pour tous les fichiers
+
+for file in *.md; do
+    if [ -f "$file" ]; then
+        mv "$file" "${file%.md}.txt"
+    fi
+done
+```
+
+</section>
+<section>
+
+#### Générer du texte 
+
+Testez plusieurs scripts Bash. Pour ce faire, créez des fichiers `nom-du-fichier.sh`, ajoutez-y le contenu indiqué ci-dessous, et faites les tourner en tapant, dans votre terminal, `bash nom-du-fichier.sh` : 
+
+`echo "texte";` 
+
+``` 
+valeur="texte";
+echo ${valeur}
+``` 
+
+``` 
+valeur="texte";
+echo "je suis du ${valeur}"
+``` 
+
+</section>
+<section>
+
+#### Jouer avec les commandes de bases {.smaller}
+
+- Afficher la date : 
+
+```
+horaire=`date`
+echo "Jounal de bord du $horaire" 
+```
+
+- Afficher la situation : 
+
+```
+lieu=`pwd`
+echo "Je me trouve toujours à bord du $lieu"
+```
+
+- Demander mon identité : (hors interface en ligne) 
+
+```
+identite=`whoami`
+echo "Je me prénomme $identite"
+```
+
+- Aligner du texte : 
+
+```
+T[0]='texte1'
+T[1]='texte2'
+echo ${T[0]} ${T[1]}
+```
+
+</section>
+<section>
+
+- Création d'une interaction : 
+
+```
+echo "To be or not to be ?"
+            select i in être non-être; do
+                if [ "$i" = "être" ]; then
+                    echo "Sois";
+                    break
+                elif [ "$i" = "non-être" ]; then
+                    echo "Tant pis"
+                    break
+                else
+                    echo "Pas de troisième choix dans ce script"
+                fi
+        done
+```
+
+::: {.callout-tip}
+D'autres exemples [ici](https://frederic-junier.gitlab.io/parc-nsi/chapitre9/memento-shell/memento-shell-.pdf). 
+:::
 
 ## WYSIWYM >< WYSIWYG ? 
 
-### Définitions 
+Deux grandes familles de systèmes de saisie de documents testuels : 
 
-### VSCodium : installation et manipulations 
+| WYSIWYM | WYSIWYG | 
+| --- | --- | 
+| *What You See Is What You Mean* | *What You See Is What You Get* | 
+| éditeur de texte qui présente le texte et ses informations de mise en forme sans les interpréter | éditeur de texte quie présente un texte enrichi **avec** sa mise en forme, de manière simultanée | 
+
+> Le logiciel de traitement de texte *Word* est-il WYSIWYM ou WYSIWYG ? 
+
+<!-- 
+WYSIWYG: traitements de texte permettant de visualiser le résultat produit au fur et à mesure de leur édition ; 
+WYSIWYM: ou plutot les systèmes non WYSIWYG qui nécessitent une interprétation (md html) ouune compilation pour produire un document final.
+-->
+
+### WYSIWYM {.scrollable}
+
+- Moindre confusion entre mise en forme et indication de la structure logique ; 
+- La mise en forme apparaît après *parsing* du document (création d'un PDF ou ouverture dans un navigateur) ; 
+- Le paramétrage de la mise en forme peut être géré dans un fichier externe (ex: CSS pour HTML). 
+
+![](img/wysiwym_styles.png){.lightbox height="200"}
+
+::: {.callout-note}
+Si nous avons le temps, lecture en classe de [ce billet](https://eriac.hypotheses.org/80). 
+:::
+
+## Mettre en forme =/= structurer 
+
+| Mise en forme | Structure logique | 
+| --- | --- | 
+| Du texte en gras | Un titre | 
+| Du texte en italique | Un titre, un mot étranger | 
+| Du texte entre guillements | Une citation | 
+
+## VSCodium : installation et manipulations 
+
+### C’est quoi Codium ? 
+
+- Version open source de Visual Studio Code (VS Code)
+
+> VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.
+
+- VS Code : éditeur de code développé par Microsoft. Gratuit, léger et puissant. Largement utilisé par la communauté des développeur·ses pour faire de la programmation.
+
+### Extensions 
+
+Suivre [ce tutoriel](https://fchambon.forge.apps.education.fr/classe/2-%C3%89diteurs/4-vscodium/#menus-en-francais) (pour installer ```French Language Pack for VS Code```, ```French - Code Spell Checker``` et ```LTeX```, à configurer en français). 
+
+::: {.content-visible when-format="revealjs"}
+
+## Travaux cités 
+
+:::

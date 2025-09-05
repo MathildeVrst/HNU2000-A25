@@ -5,9 +5,10 @@ project:
     - calendrier.qmd
     - 01a.qmd 
     - 01b.qmd
+    - 02.qmd 
     - references.qmd
 
-bibliography: references.bib
+bibliography: ref.bib
 
 format: 
   revealjs: 
