@@ -230,7 +230,7 @@ Et pour lancer la discussion : Quels navigateurs utilisez-vous ? Et pourquoi ? C
 - Avantages : navigation linéaire par thématiques, parcours dans une arborescence logique, aperçu potentiellement exhaustif de l’existant. 
 - Inconvénients : parfois une seule entrée pour un résultat qui concerne plusieurs thématiques, recherche fastidieuse ; explosion du Web rendant le modèle vite obsolète.
 
-![Yahoo! en 2001](img/yahoo-en-2001.jpg)
+![Yahoo! en 2001](img/yahoo-en-2001.jpg){.lightbox height="200"}
 
 <!-- 
 
@@ -355,7 +355,7 @@ Outils analytiques et export : certaines fonctionnalités utiles pour la recherc
 
 En 1998, Google introduit le PageRank, qui attribue une importance à une page selon le nombre et la qualité des liens qui pointent vers elle (= système de mesure quantitative de popularité d’une page web). C'est inspiré par la mesure des articles académiques (Science Citation Index). 
 
-![Schéma du PageRank](img/pagerank.png) 
+![Schéma du PageRank](img/pagerank.png){.lightbox height="200"}
 
 <!-- MV: 
 Le système du PageRank, conçu et utilisé par Google, est relativement complexe. Ce que l’on peut retenir c’est qu’il s’agit d’un système inspiré des publications académiques. Le fonctionnement est le suivant : la popularité d’une page web A est mesurée en fonction du nombre de pages web qui pointent vers cette page web A. Si les pages web qui pointent vers la page web A, alors la popularité sera d’autant plus importante. Il s’agit donc de la prise en compte du nombre de pages web qui pointent vers la page, mais également indirectement du nombre de pages web qui pointent vers les pages web qui pointent vers la page web A. (mes excuses pour ces répétitions)
@@ -386,7 +386,7 @@ Phénomène de simplification :
 - IA générative → bascule majeure : le moteur devient assistant ou agent conversationnel, qui filtre et reformule le Web au lieu de seulement l’indexer ; 
 - Tendance globale → l’information va de plus en plus vers l’utilisateur, au risque de réduire sa diversité d’accès.
 
-![Outil de réservation SNCF, capture d'écran, 18 août 2025](img/SNCF.png)
+![Outil de réservation SNCF, capture d'écran, 18 août 2025](img/SNCF.png){.lightbox}
 
 <!--
 Fonctionnement d’un moteur de recherche : 
