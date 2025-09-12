@@ -6,6 +6,7 @@ project:
     - 01a.qmd 
     - 01b.qmd
     - 02.qmd 
+    - 03.qmd
     - references.qmd
 
 bibliography: ref.bib

@@ -147,7 +147,6 @@ Avoir des repères historiques précis permet de comprendre son environnement in
 
 ![Le fragment principal de la machine d'Anticythère](img/Anticythere.jpg){.lightbox height="200"}
 
-
 - Env. 1640 : la *Pascaline* de Blaise Pascal, calculatrice mécanique capable d’additionner et de soustraire, conçue pour assister son père percepteur d’impôts.
 
 ![Pascaline, conservée au musée des Arts et Métiers, Paris](img/Pascaline.jpg){.lightbox height="200"}

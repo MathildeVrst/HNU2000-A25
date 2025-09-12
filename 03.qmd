@@ -1,36 +1,113 @@
 # [Séance 3 : 16/09] CHERCHER: corpus et ressources numériques {.unnumbered}
 
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+```{=html}
+<iframe src="_slides/03.html"></iframe>
+```
+[Ouvrir dans mon navigateur](_slides/03.html){target="_blank"} 
+
+::: 
+
+## Retour sur les lectures et écoutes 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @franceinterFrancaisQuiVu2021 
+- @huma-numISIDORE10Ans2021
+
+:::
+
 ## Une histoire d'internet et du Web 
 
-Nous avons évoqué, la semaine passée, Internet le Web. Qu'en avez-vous retenu ? S'agit-il de la même chose ? 
+Nous avons évoqué, lors de la première séance, Internet et le Web. Qu'en avez-vous retenu ? S'agit-il de la même chose ? 
 
 <!-- MV: 
 - S'agit-il de la même chose ? 
+
+🌐 Internet
+
+C’est l’infrastructure technique : un immense réseau mondial d’ordinateurs et de serveurs interconnectés.
+
+Il relie entre eux des millions de machines grâce à des câbles, des ondes, des routeurs…
+
+Internet sert de support pour faire circuler des données.
+
+Exemples de services qui utilisent Internet : le Web, mais aussi les courriels (email), la messagerie instantanée, les appels en visioconférence, le FTP (transfert de fichiers), etc.
+
+🕸️ Le Web (World Wide Web)
+
+C’est une application qui fonctionne sur Internet.
+
+Inventé en 1989-1990 par Tim Berners-Lee.
+
+Il repose sur :
+
+des pages liées entre elles par des hyperliens,
+
+un langage de description (HTML),
+
+et un protocole de communication (HTTP/HTTPS).
+
+Le Web, ce sont donc les sites et pages web que l’on consulte avec un navigateur (Chrome, Firefox, Safari…).
+
+⚖️ La différence en une phrase
+
+👉 Internet est le réseau, le Web est un service qui l’utilise.
+On peut comparer à une autoroute :
+
+Internet = les routes, tunnels et ponts.
+
+Le Web = un type de véhicule qui circule dessus (aux côtés d’autres, comme les emails ou les jeux en ligne).
+
 --> 
 
-> Ce ne sont pas tant les « nouvelles technologies » en général, mais le réseau en lui-même qui a bouleversé notre rapport à la connaissance. [@milleChapitre2DInternet2014]
+> Ce ne sont pas tant les « nouvelles technologies » en général, mais le réseau en lui-même qui a bouleversé notre rapport à la connaissance. [@milleChapitre2DInternet2014]
 
 ### Origines 
 
-- 1962-1968 : ARPAnet
-- 1969-1978 : Internet
+- 1962-1968 : ARPAnet
+- 1969-1978 : Internet
 - années 1970 et 1980 : accès aux machines
-- 1984 : un réseau fonctionnel
+- 1984 : un réseau fonctionnel
 
 Plus de détails dans [@milleChapitre2DInternet2014]. 
 
-### Principes : TCP/IP 
+<!-- 
 
-TCP/IP : TCP (Transmission Control Protocol) et IP (Internet Protocol).
+Tout commence dans les années 1960, dans un contexte très particulier : la Guerre froide. Aux États-Unis, le ministère de la Défense finance l’ARPA, une agence qui soutient la recherche scientifique et technologique. C’est là qu’apparaît le projet ARPAnet, entre 1962 et 1968. L’idée ? Créer un réseau capable de relier plusieurs ordinateurs distants, de manière décentralisée, pour qu’une panne ou même une attaque ne coupe pas complètement la communication.
 
-Une pile de protocoles :
+En 1969, ARPAnet devient réalité : les premières machines sont interconnectées, et on parle des débuts d’Internet. La première connexion a eu lieu entre l’Université de Californie à Los Angeles et Stanford. Petite anecdote : le premier message devait être "LOGIN", mais le système a planté après les deux premières lettres… Résultat : le tout premier mot échangé sur ce qui deviendrait Internet, c’est "LO" ! (comme un petit "coucou" du futur).
 
-- physique : les câbles (cuivre ou fibre), éventuellement radio ; ; 
-- liaison : Ethernet ou Wireless Ethernet (Wifi), il s’agit de déterminer comment les paquets sont acheminés ; 
-- réseau : c’est la partie IP qui permet d’acheminer des paquets en donnant des adresses à toutes les machines connectées sur un réseau ;
-- transport : c’est la partie TCP, pour transférer les informations découpées en paquets et reconstituées en vérifiant qu’il ne manque rien (c’est ce qui permet à Internet d’être un réseau fiable) ;
-- application : il s’agit du Web, mais aussi d’autres applications comme le partage de fichiers (FTP) ou le courriel (IMAP et SMTP).
+Dans les années 1970 et 1980, l’enjeu devient d’accéder aux machines et de rendre les réseaux interopérables. Jusque-là, chaque système avait son langage et ses protocoles. C’est à cette époque que naissent les protocoles TCP/IP, qui sont encore aujourd’hui la base de tout Internet.
 
+Et en 1984, on peut dire que le réseau est vraiment fonctionnel à grande échelle, avec une organisation claire, des protocoles unifiés et des milliers de machines connectées. C’est le point de départ d’Internet tel qu’on le connaît, même si le Web n’arrivera que plus tard, à la fin des années 1980.
+
+--> 
+
+### Principes : TCP/IP {.scrollable}
+
+TCP/IP : 
+  - TCP (*Transmission Control Protocol*) ; 
+  - IP (*Internet Protocol*).
+
+Une pile de protocoles :
+
+- **physique** : les câbles (cuivre ou fibre), éventuellement radio ; <!-- c’est la base, les câbles en cuivre, la fibre optique, ou même les ondes radio pour le WiFi. Sans ce support matériel, aucun échange n’est possible. -->
+- **liaison** : Ethernet ou Wireless Ethernet (Wifi), il s’agit de déterminer comment les paquets sont acheminés ; <!-- là, on organise la circulation. Par exemple, avec Ethernet ou WiFi. C’est un peu comme la signalisation routière qui permet aux voitures de circuler sans se rentrer dedans.-->
+- **réseau** : c’est la partie IP qui permet d’acheminer des paquets en donnant des adresses à toutes les machines connectées sur un réseau ; <!--Chaque machine reçoit une adresse unique, comme une adresse postale. C’est ce qui permet de savoir à qui envoyer les paquets de données.-->
+- **transport** : c’est la partie TCP, pour transférer les informations découpées en paquets et reconstituées en vérifiant qu’il ne manque rien ; <!--Lui, il s’occupe de découper les messages en paquets, de les envoyer un par un, et surtout de vérifier qu’ils arrivent bien tous, dans le bon ordre. Si un paquet se perd en route, il le redemande. C’est grâce à TCP qu’Internet est considéré comme un réseau fiable.-->
+- **application** : c’est là qu’apparaissent les services qu’on connaît : le Web avec HTTP, les emails avec SMTP ou IMAP, ou encore le FTP pour partager des fichiers. 
+
+
+<!--
+
+pour comprendre comment fonctionne Internet, il faut parler de ce qu’on appelle la pile TCP/IP. C’est un ensemble de règles et de protocoles qui permettent à tous les ordinateurs du monde de communiquer entre eux.
+
+On peut l’imaginer comme un voyage en plusieurs étapes, depuis le câble jusqu’à l’application qu’on utilise. 
+
+--> 
 
 ::: {.callout-tip}
 
@@ -40,9 +117,9 @@ Pour en savoir plus sur Internet et ses protocoles, voici une série de vidéos 
 
 ### Expérimentation 
 
-Découvrir la *route* pour accéder à un serveur :
+Découvrir la *route* pour accéder à un serveur :
 
-- utiliser tracepath (ou traceroute) en ligne de commande
+- utiliser `tracepath` (ou `traceroute`) en ligne de commande
 - lancer la commande `tracepath umontreal.ca` ou `traceroute umontreal.ca`
 - analyser les résultats
 
@@ -87,18 +164,29 @@ Les latences “bizarres” (239 ms au hop 2) sont probablement du policing des 
 
 Le Web est une application d’Internet permettant de publier et de consulter facilement des informations.
 
+::: {.callout-note}
+[Le CERN a restauré la première page du Web](https://info.cern.ch/hypertext/WWW/TheProject.html). 
+:::
+<!-- 
+Internet, c’est le grand réseau mondial, l’infrastructure, les câbles, les protocoles de communication… et le Web, c’est seulement une application d’Internet, parmi d’autres. On pourrait dire que le Web circule sur Internet comme une voiture circule sur une route. Mais sur la même route, il y a aussi d’autres véhicules : le courrier électronique, les visioconférences, les jeux en ligne…
+
+Le Web, inventé par Tim Berners-Lee à la fin des années 1980, repose sur un protocole et des langages. Le protocole, c’est HTTP (HyperText Transfer Protocol), qui permet d’échanger des pages entre un serveur et votre navigateur. Et pour construire ces pages, on utilise des langages comme HTML (le squelette de la page), CSS (l’habillage, la mise en forme) et JavaScript (les interactions dynamiques).
+
+Petite anecdote : la toute première page web, mise en ligne en 1991, expliquait… ce qu’était le World Wide Web et comment l’utiliser. Et elle existe toujours ! Si vous allez sur le site du CERN, vous pouvez encore voir cette toute première page, qui est l’ancêtre de tout ce qu’on consulte aujourd’hui. »
+-->
+
 ### Exercice
 
-- comment lire une page web via un autre outil qu’un navigateur ?
-- utiliser la commande curl dans le terminal 
-- exemple 1 : `curl https://mathildevrst.github.io/HNU2000-A25/Plan-Cours.html`
-- exemple 2 : `curl https://theread.me/raw-permalinks-for-accessibility/`
+- comment lire une page web via un autre outil qu’un navigateur ?
+- utiliser la commande curl dans le terminal ; 
+- exemple 1 : `curl https://mathildevrst.github.io/HNU2000-A25/Plan-Cours.html` ; 
+- exemple 2 : `curl https://theread.me/raw-permalinks-for-accessibility/`. 
 
 <!-- MV: 
 Il est intéressant de noter que l’accès à un document disponible via Internet et le Web peut se faire via différentes façons, et pas uniquement avec un navigateur web. 
 --> 
 
-## Les navigateurs et moteurs de recherche 
+## Les navigateurs et moteurs de recherche {.smaller}
 
 > Au principe d’autorité qui a fait la force du PageRank, Google substitue de plus en plus un principe d’efficacité qui renvoie de manière toujours plus appropriée vers l’internaute les choix que l’algorithme a appris de ses comportements. [@cardonDansLespritPageRank2013]
 
@@ -108,7 +196,21 @@ Il est intéressant de noter que l’accès à un document disponible via Intern
 
 Quels navigateurs utilisez-vous ? Pourquoi ? 
 
-<!-- MV: (Debouy 2025, 125-128)
+<!-- MV: 
+
+La citation de Dominique Cardon nous rappelle que Google a commencé avec le PageRank, un algorithme basé sur un principe d’autorité : plus un site recevait de liens d’autres sites, plus il était jugé important. Mais, aujourd’hui, Google mise de plus en plus sur un principe d’efficacité : l’algorithme apprend de vos comportements et personnalise les résultats. En clair, deux personnes ne verront pas forcément la même page en tapant la même recherche.
+
+===
+
+Un navigateur, c’est une application installée sur votre ordinateur ou votre téléphone — par exemple Chrome, Firefox, Safari, Edge… Son rôle, c’est simplement d’afficher les informations qui se trouvent sur le Web. Sans navigateur, on ne pourrait pas "voir" les pages web, un peu comme si on avait les livres mais pas de lunettes pour les lire.
+
+===
+
+Un moteur de recherche, en revanche, c’est un service en ligne qui vous aide à trouver ces informations parmi l’immensité du Web. Le plus connu, bien sûr, c’est Google, mais il y en a d’autres comme Bing, Qwant ou DuckDuckGo. Ces moteurs sont devenus indispensables dès que le Web est devenu trop vaste pour être parcouru "à la main".
+
+=== 
+
+(Debouy 2025, 125-128)
 
 - Internet Explorer : pendant longtemps, navigateur le plus utilisé car installé par défaut sur tous les ordinateurs équipés de Windows. mauvaise réputation car ne respectait pas les standards du Web et embarquait des failles de sécurité importantes 
 - Microsoft Edge : remplace Internet Explorer à partir de Windows 10 ; loin d'être respectueux de la vie privée 
@@ -117,75 +219,98 @@ Quels navigateurs utilisez-vous ? Pourquoi ?
 - Firefox : Très répandu ; met l'accent sur le respect de la vie privée (cf. page d'accueil) ; il y est proposé de bloquer plus de 2000 traqueurs, de recevoir des alertes en cas d'attaque, de gérer les mdp de manière sécurisée 
 - Tor : 1995, United States Naval Research Laboratory puis développé en collaboration avec le MIT; objectif = naviguer anonymement sur le Web (= sans que nos publications en ligne, messages instantanés, etc ne puisse être rattachés à notre identité). Pour ce faire, routage en oignon qui s'appuie sur un réseau décentralisé de relais maintenus par des bénévoles : ce procédé consiste à acheminer l'information via plusieurs serveurs et à la chiffrer à chaque étape. Après un certain temps, le circuit change aléatoirement. D'abord réservé à quelques technophiles puis connait un vrai essor en 2008. Navigateur basé sur Firefox créé dans le but de faciliter l'accès au réseau. Tor contribua au printemps arabe de 2010 en protégeant l'identité des personnes sur Internet et en leur permettant d'accéder à des ressources essentielles, aux réseaux sociaux et aux sites Web bloqués par les gouvernements. Reçut le prix du logiciel libre en 2010 (catégorie projet d'intérêt social). 
 
-TODO : le cas de TOR ? 
+Et pour lancer la discussion : Quels navigateurs utilisez-vous ? Et pourquoi ? Certains vont privilégier la rapidité, d’autres la protection de la vie privée, d’autres encore la compatibilité avec leurs outils du quotidien. 
 --> 
 
 ### Le Web, au commencent étaient les annuaires
 
-- Dans les années 1990, les premiers répertoires (Yahoo!, DMOZ) proposaient une liste classée de sites web sous forme d’une arborescence thématique.
-- La démarche est différente d’aujourd’hui : on naviguait dans une hiérarchie, on ne formulait pas encore une requête.
+- Dans les années 1990, les premiers répertoires (Yahoo!, DMOZ) proposaient une liste classée de sites web sous forme d’une arborescence thématique ; 
+- La démarche est différente d’aujourd’hui : on naviguait dans une hiérarchie, on ne formulait pas encore une requête.
 
-- Avantages : navigation linéaire par thématiques, parcours dans une arborescence logique, aperçu potentiellement exhaustif de l’existant. 
-- Inconvénients : parfois une seule entrée pour un résultat qui concerne plusieurs thématiques, recherche fastidieuse ; explosion du Web rendant le modèle vite obsolète.
+- Avantages : navigation linéaire par thématiques, parcours dans une arborescence logique, aperçu potentiellement exhaustif de l’existant. 
+- Inconvénients : parfois une seule entrée pour un résultat qui concerne plusieurs thématiques, recherche fastidieuse ; explosion du Web rendant le modèle vite obsolète.
 
 ![Yahoo! en 2001](img/yahoo-en-2001.jpg)
 
-### Constituer des index 
+<!-- 
 
-Un moteur de recherche recense et référence des pages Internet : pour cela, il utilise un logiciel, un robot d'indexation (dits *crawlers* ou *spiders*) qui parcourt l'ensemble du Web : 
+Aux débuts du Web, dans les années 1990, il n’y avait pas encore de moteurs de recherche comme Google. Concrètement, ça ressemblait à un grand répertoire thématique. Vous vouliez chercher quelque chose sur, disons, la littérature ? Vous cliquiez d’abord sur “Arts”, puis “Littérature”, puis “Auteurs”, et ainsi de suite. C’était une navigation hiérarchique, comme feuilleter les catégories d’une bibliothèque ou d’un catalogue. Ce modèle avait des avantages : il donnait une impression de logique, d’organisation, et parfois même d’exhaustivité. Mais il avait aussi de gros défauts. D’abord, un site pouvait appartenir à plusieurs thématiques — par exemple, une page sur “l’histoire des mathématiques” : vous la mettez dans “Histoire” ou dans “Mathématiques” ? Ensuite, parcourir ces hiérarchies pouvait être très fastidieux. Et surtout, avec l’explosion du Web au milieu des années 1990, cette approche est vite devenue obsolète : il y avait tout simplement trop de sites à classer à la main. C’est à ce moment-là que les moteurs de recherche, avec leur logique de requêtes, se sont imposés.
 
-1. Exploration : exploration régulière du Web par le *crawler* qui suit tous les liens trouvés puis analyse les pages jugées intéressantes ; 
-2. Indexation : extraction de mots-clés des pages visitées et conservation d'une copie (= cache) de ces pages ; 
-3. Classement : classement, par le moteur de recherche, des pages selon leur pertinence par rapport à une série de mots-clés, permettant, à partir des mots d'une recherche, de retrouver le contenu recherché. Ce classement est lié notamment à la popularité de chaque page et au nombre de liens qui dirigent vers celle-ci. 
+-->
+
+### Explorer, indexer, classer {.scrollable}
+
+Un moteur de recherche recense et référence des pages Internet : pour cela, il utilise un logiciel, un robot d'indexation (dits *crawlers* ou *spiders*) qui parcourt l'ensemble du Web : <!-- araignée qui tisse sa toile en suivant tous les liens d'une page à l'autre -->
+
+1. Exploration : exploration régulière du Web par le *crawler* qui suit tous les liens trouvés puis analyse les pages jugées intéressantes ; 
+2. Indexation : extraction de mots-clés des pages visitées et conservation d'une copie (= *cache*) de ces pages ; <!--Comme ça, quand vous tapez une recherche, il n’a pas besoin de retourner sur le Web en temps réel : il va chercher dans sa propre base.-->
+3. Classement : classement, par le moteur de recherche, des résultats en fonction de leur pertinence. C’est là qu’interviennent les algorithmes, qui tiennent compte par exemple de la popularité d’une page (combien d’autres sites font un lien vers elle), mais aussi de centaines d’autres critères que Google garde secrets.
 
 > Sundar Pichai, président-directeur général de Google, tente d'explique au Congrès Américain comment fonctionne Google
 {{< video https://www.youtube.com/watch?v=8fP95zyPePU >}}
 
-### Quelques moteurs de recherche 
+### Quelques moteurs de recherche {.scrollable}
 
-#### Google 
+#### Google {.scrollable}
 
-- Le plus utilisé, merci le *PageRank*, algorithme mathématique utilisé pour déterminer la pertinence des pages Web 
-- Attention aux premiers liens qui peuvent être sponsorisés 
-- Personnalisation des résultats : deux utilisateurs effectuant la même requête n'obtiendront pas les mêmes résultats (prise en compte des recherches et activités passées, ainsi que du profil des utilisateurs (situation géographique, âge, langue, etc) [@ochigameSearchAtlasVisualizing2021]) 
+- Le plus utilisé, merci le *PageRank*, algorithme mathématique utilisé pour déterminer la pertinence des pages Web ; 
+- Attention aux premiers liens qui peuvent être sponsorisés ; 
+- Personnalisation des résultats : deux utilisateurs effectuant la même requête n'obtiendront pas les mêmes résultats (prise en compte des recherches et activités passées, ainsi que du profil des utilisateurs (situation géographique, âge, langue, etc) [@ochigameSearchAtlasVisualizing2021]) ; 
 - Quid des données personnelles ?  
 
-#### Alternatives  
+</section>
+<section>
 
-Quelques moteurs de recherche n'enregistrent pas les recherches effectuées et n'exploitent pas les données personnelles à des fins publicitaires ; ne filtrent pas les résultats de recherche en fonction des profils des utilisateurs → neutralité des recherches 
+#### Alternatives  {.scrollable .smaller}
 
-- Qwant : 
-  - Moteur de recherche français, se pose en défense de la vie privée sur le Web 
-  - Simple système qui exploite les banques de données réalisées par les *crawlers* 
-- DuckDuckGo : 
-  - "Le moteur de recherche qui ne vous espionne pas"
-  - métamoteur : ne possède pas sa propre base de données et interroge celles des moteurs de recherche
-    - Gain de temps (recherche sur plusieurs moteurs à la fois) 
-    - Garantie de la protection des données <!-- MV: puisque les métamoteurs font la recherche à la place de l'utilisateur sur les moteurs de recherche qui, de ce fait, n'ont plus accès à ses informations personnelles --> 
-- Startpage : 
-  - "Le moteur de recherche le plus privé au monde"
-  - métamoteur (idem DuckDuckGo)
+Quelques moteurs de recherche n'enregistrent pas les recherches effectuées et n'exploitent pas les données personnelles à des fins publicitaires ; ne filtrent pas les résultats de recherche en fonction des profils des utilisateurs → neutralité des recherches : 
 
-#### Google Scholar 
+| *Qwant* | *DuckDuckGo* | *Startpage* | 
+| --- | --- | --- | 
+| "Le moteur de recherche dont vous êtes l'utilisateur, pas le produit" | "Le moteur de recherche qui ne vous espionne pas" | "Le moteur de recherche le plus privé au monde" | 
+| Exploite simplement les banques de données réalisées par les *crawlers* | Métamoteur qui interroge les banques de données des autres moteurs de recherche | ← Idem | 
+| Français<br>Vie privée | Gain de temps<br>Protection des données | ← Idem | 
 
-- Moteur de recherche généraliste ≠ Moteur de recherche d'articles scientifiques 
-- Généralement, accès au texte intégral 
-- Mais, pas de possibilité de tri/filtre des résultats 
-- Pas de vérification du caractère scientifique des articles 
+<!--
+- *Qwant* : 
+  - Moteur de recherche français, se pose en défense de la vie privée sur le Web ; 
+  - Simple système qui exploite les banques de données réalisées par les *crawlers* ; 
+- DuckDuckGo : 
+  - "Le moteur de recherche qui ne vous espionne pas" ; 
+  - métamoteur : ne possède pas sa propre base de données et interroge celles des moteurs de recherche : 
+    - Gain de temps (recherche sur plusieurs moteurs à la fois) 
+    - Garantie de la protection des données ; 
+  - "Le moteur de recherche le plus privé au monde" ; 
+  - métamoteur (idem DuckDuckGo). 
+-->
+<!-- MV: puisque les métamoteurs font la recherche à la place de l'utilisateur sur les moteurs de recherche qui, de ce fait, n'ont plus accès à ses informations personnelles -->
 
-#### Isidore 
+</section>
+<section>
 
-- Projet de recherche, 2011 < TGIR Huma-Num 
-- objectifs : mettre à disposition un outil de recherche adapté aux sciences humaines
-- ambition : proposer des fonctionnalités pour faciliter la recherche documentaire
-- S'appuie sur le principe du Web de données 
-- Se distingue des autres moteurs de recherche : 
+#### Google Scholar {.scrollable}
+
+- Moteur de recherche généraliste ≠ Moteur de recherche d'articles scientifiques ; 
+- Généralement, accès au texte intégral ; 
+- Mais, pas de possibilité de tri/filtre des résultats ; 
+- Pas de vérification du caractère scientifique des articles ; 
+
+</section>
+<section>
+
+#### Isidore {.scrollable}
+
+- Projet de recherche, 2011 < TGIR Huma-Num ; 
+- objectifs : mettre à disposition un outil de recherche adapté aux sciences humaines ; 
+- ambition : proposer des fonctionnalités pour faciliter la recherche documentaire ; 
+- S'appuie sur le principe du Web de données ; 
+- Se distingue des autres moteurs de recherche : 
   - Moissonage ciblé et des métadonnées et données scientifiques structurées selon des standards internationaux et dsponibles en accès libre 
-  - Indexation des données non structurées et structurées <!-- MV: données non structurées = texte intégral d'un article ; données structurées = métaonndées documentaires --> 
-  - Normalisation des métadonnées et enrichissement des données en s'appuyant sur des référentiels reconnus 
-  - Mise en évidence des sources de données indexées 
-  - Récupération des actualités 
-  - Algorithmes basés sur des référentiels selon des techniques documentaires ≠ PageRank 
+  - Indexation des données non structurées et structurées ; <!-- MV: données non structurées = texte intégral d'un article ; données structurées = métaonndées documentaires -->
+  - Normalisation des métadonnées et enrichissement des données en s'appuyant sur des référentiels reconnus ; 
+  - Mise en évidence des sources de données indexées ; 
+  - Récupération des actualités ; 
+  - Algorithmes basés sur des référentiels selon des techniques documentaires ≠ PageRank. 
 
 <!-- MV: 
 Initialement, ISIDORE est un moteur de recherche permettant de découvrir et de trouver des publications, des données numériques et profils de chercheur·e·s en sciences humaines et sociales (SHS) venant du monde entier.
@@ -197,15 +322,34 @@ Isidore se démarque donc à la fois des moteurs de recherche dits généraliste
 Isidore construit son index en allant moissonner des entrepôts de données, ces données sont enrichies à partir de référentiels et de thésaurus. Les documents indexés peuvent être recherchés via l’interface de recherche, mais une API est aussi disponible pour que d’autres sites web ou des applications puissent utiliser ces données (principalement les interroger). Isidore n’est pas qu’un moteur de recherche, c’est aussi un espace de travail proposant plusieurs fonctionnalités :
 -->
 
+</section>
+<section>
+
 #### Exercice 
 
-- constituez une bibliographie dans Isidore.science sur les humanités numériques ; 
-- pour cela vous devez vous créer un compte Isidore (et donc [HumanID](https://documentation.huma-num.fr/humanid/)) ; 
-- utilisez les fonctionnalités de la recherche avancée ;
-- utilisez les fonctions de tris et de facettes ;
+- constituez une bibliographie dans Isidore.science sur les humanités numériques ; 
+- pour cela vous devez vous créer un compte Isidore (et donc [HumanID](https://documentation.huma-num.fr/humanid/)) ; 
+- utilisez les fonctionnalités de la recherche avancée ;
+- utilisez les fonctions de tris et de facettes ;
 - partagez avec moi votre « bibliothèque ».
 
-Discussion :  Que manque-t-il à Isidore ? Quels sont ses défauts ? 
+Discussion : Que manque-t-il à Isidore ? Quels sont ses défauts ? 
+
+<!-- Pistes, à vérifier : 
+
+Quelques pistes pour réfléchir :
+
+Couverture limitée : Isidore se concentre sur certaines disciplines et certaines sources. Contrairement à Google, il ne trouve pas tout sur le Web, donc certaines informations peuvent lui échapper.
+
+Interface et ergonomie : certains utilisateurs trouvent que la navigation ou la recherche avancée n’est pas toujours intuitive ou très moderne comparé aux moteurs grand public.
+
+Actualisation des données : comme tous les moteurs spécialisés, il peut y avoir un délai dans l’indexation des nouvelles publications ou des ressources récemment mises en ligne.
+
+Personnalisation limitée : il ne prend pas autant en compte l’utilisateur ou ses habitudes, contrairement à Google qui adapte les résultats selon vos recherches précédentes.
+
+Outils analytiques et export : certaines fonctionnalités utiles pour la recherche académique (export des métadonnées, visualisation des résultats) peuvent être absentes ou moins avancées.
+
+--> 
 
 ### Google et le PageRank
 
@@ -217,34 +361,34 @@ En 1998, Google introduit le PageRank, qui attribue une importance à une page s
 Le système du PageRank, conçu et utilisé par Google, est relativement complexe. Ce que l’on peut retenir c’est qu’il s’agit d’un système inspiré des publications académiques. Le fonctionnement est le suivant : la popularité d’une page web A est mesurée en fonction du nombre de pages web qui pointent vers cette page web A. Si les pages web qui pointent vers la page web A, alors la popularité sera d’autant plus importante. Il s’agit donc de la prise en compte du nombre de pages web qui pointent vers la page, mais également indirectement du nombre de pages web qui pointent vers les pages web qui pointent vers la page web A. (mes excuses pour ces répétitions)
 --> 
 
-Cela fonde un principe d’autorité : les pages citées par beaucoup d’autres deviennent les plus visibles.
+Cela fonde un principe d’autorité : les pages citées par beaucoup d’autres deviennent les plus visibles. Progressivement, Google combine ce principe avec d’autres critères (localisation, personnalisation).
 
-Progressivement, Google combine ce principe avec d’autres critères (localisation, personnalisation).
+### Les évolutions des moteurs de recherche {.scrollable}
 
-Pour en savoir plus sur le PageRank, écouter le podcast [@franceinterFrancaisQuiVu2021] (à partir de la 21e mn.) ou lisez [@cardonDansLespritPageRank2013]
+Il y a plusieurs évolutions majeures des moteurs de recherche ces dernières années : 
 
-### Les évolutions des moteurs de recherche 
+- Interface utilisateur (UI) : simplification radicale de la page Google, disparition progressive des options avancées ; 
+- Aide à la formulation : autocomplétion, suggestions liées aux recherches fréquentes ; 
+- Web sémantique et Knowledge Graph (2012–) : affichage de données structurées (fiche Wikipédia, horaires, météo,...) directement dans les résultats ; 
+- Personnalisation : traçage des comportements, adaptation aux historiques et aux contextes ; 
+- SEO (Search Engine Optimization) : pratiques d’optimisation par les sites pour “plaire” à Google ; 
+- IA générative (2023–) : moteurs qui ne se contentent plus de lister des pages, mais produisent directement des résumés de réponse (Google SGE, Perplexity).
 
-Il y a plusieurs évolutions majeures des moteurs de recherche ces dernières années :
+</section>
+<section>
 
-- Interface utilisateur (UI) : simplification radicale de la page Google, disparition progressive des options avancées. 
-- Aide à la formulation : autocomplétion, suggestions liées aux recherches fréquentes.
-- Web sémantique et Knowledge Graph (2012–) : affichage de données structurées (fiche Wikipédia, horaires, météo,...) directement dans les résultats.
-- Personnalisation : traçage des comportements, adaptation aux historiques et aux contextes.
-- SEO (Search Engine Optimization) : pratiques d’optimisation par les sites pour “plaire” à Google.
-- IA générative (2023–) : moteurs qui ne se contentent plus de lister des pages, mais produisent directement des résumés de réponse (Google SGE, Perplexity).
-
-Phénomène de simplification : 
+Phénomène de simplification : 
 
 - Suppression des options → interface minimale, recherche “intuitive” ; 
-- Autocomplétion → orientation subtile des requêtes ; 
-- Pertinence des premiers résultats → effet d’écrasement : très peu d’utilisateurs consultent la deuxième page ; 
-- Affichage de données liées (web sémantique) → l’utilisateur n’a plus besoin de cliquer sur les sites sources ; 
-- IA générative → bascule majeure : le moteur devient assistant ou agent conversationnel, qui filtre et reformule le Web au lieu de seulement l’indexer ; 
+- Autocomplétion → orientation subtile des requêtes ; 
+- Pertinence des premiers résultats → effet d’écrasement : très peu d’utilisateurs consultent la deuxième page ; 
+- Affichage de données liées (web sémantique) → l’utilisateur n’a plus besoin de cliquer sur les sites sources ; 
+- IA générative → bascule majeure : le moteur devient assistant ou agent conversationnel, qui filtre et reformule le Web au lieu de seulement l’indexer ; 
 - Tendance globale → l’information va de plus en plus vers l’utilisateur, au risque de réduire sa diversité d’accès.
 
 ![Outil de réservation SNCF, capture d'écran, 18 août 2025](img/SNCF.png)
 
+<!--
 Fonctionnement d’un moteur de recherche : 
 
 - Des robots parcourent le Web, de liens en liens ; 
@@ -253,59 +397,61 @@ Fonctionnement d’un moteur de recherche :
 - Le moteur sélectionne et hiérarchise les résultats grâce à des algorithmes.
 - Les requêtes influencent à leur tour les robots et les algorithmes (boucle d’apprentissage).
 
-### Vade-Mecum d'une recherche efficace 
+-->
+
+### Vade-Mecum d'une recherche efficace {.scrollable .smaller}
 
 1. Commencer simple
 
-- Tapez quelques mots-clés principaux de votre sujet.
-- Utilisez des mots précis plutôt que des phrases longues.
+- Tapez quelques mots-clés principaux de votre sujet ; 
+- Utilisez des mots précis plutôt que des phrases longues ; 
 - Google ignore généralement les mots très fréquents (le, la, de…).
 
 2. Utiliser les guillemets pour les expressions exactes
 
-- `"expression exacte"` → Google recherche ces mots dans cet ordre précis.
-- e.g. : `"humanités numériques"` ne retournera que les pages contenant exactement cette expression.
+- `"expression exacte"` → Google recherche ces mots dans cet ordre précis ; 
+- e.g. : `"humanités numériques"` ne retournera que les pages contenant exactement cette expression. 
 
 3. Limiter la recherche à un site ou un domaine
 
-- `site:lesite.com requête` → Recherche uniquement sur ce site.
+- `site:lesite.com requête` → Recherche uniquement sur ce site ; 
 - e.g`: `site:umontreal.ca "humanités numériques"` → pages sur l’Université de Montréal concernant les humanités numériques.
 
 4. Chercher un type de fichier spécifique
 
-- `filetype:pdf requête` → Cherche des fichiers PDF uniquement.
+- `filetype:pdf requête` → Cherche des fichiers PDF uniquement ; 
 - e.g. : `filetype:pdf "édition numérique"` → documents PDF sur l’édition numérique.
 
 5. Chercher dans le titre d’une page
 
-- `intitle:mot` → Page dont le titre contient ce mot.
+- `intitle:mot` → Page dont le titre contient ce mot ; 
 - e.g. : `intitle:"humanités numériques"` → pages dont le titre contient l’expression exacte.
 
 6. Les opérateurs 
 
-- `AND`^[Si les mots-clés ne sont pas reliés par un opérateur, la plupart des outils de recherche considèrent que les termes sont reliés par `AND`.], `OR`,`NOT` permettent de préciser la recherche. Des parenthèses servent à grouper des termes ou des opérateurs. <!--MV: AND: traite obligatoirement de deux sujets ; OR : permet de trouver tous les documents qui traitent des deux sujets, indépendemment ou ensemble ; NOT : Collecte tous les documents traitement d'un sujet à l'exclusion de l'autre (ex.: carnaval NOT Venise peut être utile) 
-  - e.g. : `"humanités numériques" AND "édition" -cours` → pages sur l’édition dans les humanités numériques mais sans cours. 
+- `AND`^[Si les mots-clés ne sont pas reliés par un opérateur, la plupart des outils de recherche considèrent que les termes sont reliés par `AND`.], `OR`,`NOT` permettent de préciser la recherche. Des parenthèses servent à grouper des termes ou des opérateurs ;  <!--MV: AND: traite obligatoirement de deux sujets ; OR : permet de trouver tous les documents qui traitent des deux sujets, indépendemment ou ensemble ; NOT : Collecte tous les documents traitement d'un sujet à l'exclusion de l'autre (ex.: carnaval NOT Venise peut être utile)
+  - e.g. : `"humanités numériques" AND "édition" -cours` → pages sur l’édition dans les humanités numériques mais sans cours ; 
   - e.g. : `("humanités numériques" OR "digital humanities") AND "édition"` → pages qui contiennent soit "humanités numériques", soit "digital humanities", mais qui contiennent aussi "édition".
-- `?` : Remplace un caractère 
-  - e.g. : `econom?` recherche `économie`, `economic`, `economia` 
-- `*` : Élargit la recherche aux variantes d'un même mot 
-  - e.g. : `pers*` recherche `personnage`, `personnalité`, `persona`, ... 
-- `>  < = :` : précise une période chronologique 
+- `?` : Remplace un caractère ; 
+  - e.g. : `econom?` recherche `économie`, `economic`, `economia`. 
+- `*` : Élargit la recherche aux variantes d'un même mot ; 
+  - e.g. : `pers*` recherche `personnage`, `personnalité`, `persona`,... 
+- `>  < = :` : précise une période chronologique. 
 
 ::: {.callout-tip}
 Les formulaire de recherche avancée des bibliothèques utilisent ces opérateurs! 
 :::
 
-### Exercice
+### Exercice 
 
 Dans votre moteur de recherche favori : 
 
-- Cherchez une expression exacte ; 
-- Cherchez là uniquement sur un site spécifique ; 
-- Cherchez un type de fichier particulier ; 
-- Cherchez des pages dont le titre contient un mot clé ; 
-- Combinez plusieurs opérateurs pour affiner la recherche ; 
-- Cherchez toutes les pages qui parlent d’humanités numériques et d’édition sur le site web de l’Université de Montréal 
+- Cherchez une expression exacte ; 
+- Cherchez là uniquement sur un site spécifique ; 
+- Cherchez un type de fichier particulier ; 
+- Cherchez des pages dont le titre contient un mot-clé ; 
+- Combinez plusieurs opérateurs pour affiner la recherche ; 
+- Cherchez toutes les pages qui parlent d’humanités numériques et d’édition sur le site web de l’Université de Montréal. 
 
 <!-- MV: 
 
@@ -313,10 +459,16 @@ Dans votre moteur de recherche favori :
 
 --> 
 
-### Une alternative aux moteurs de recherche : les flux RSS 
+### Une alternative aux moteurs de recherche : les flux RSS 
 
-- *Really Simple Syndication* 
-- Ressources dont le contenu est mis à jour de manière automatique selon les modifications d'un site Web 
-- On s'*abonne* à un flux en l'ajoutant dans un *agrégateur* qui vérifiera automatiquement si de nouveaux contenus ont été mis en ligne. 
-  - Parmi les agrégateurs, des applications Web (Netvibes, Feedly, Inoreader, FreshRSS,...) ou des extensions de navigateur (Feedbro,...)
-- Avantage : on suit les actualités d'un site sans devoir s'y redre manuellement 
+- *Really Simple Syndication* ; 
+- Ressources dont le contenu est mis à jour de manière automatique selon les modifications d'un site Web ; 
+- On s'*abonne* à un flux en l'ajoutant dans un *agrégateur* qui vérifiera automatiquement si de nouveaux contenus ont été mis en ligne ; 
+  - Parmi les agrégateurs, des applications Web (Netvibes, Feedly, Inoreader, FreshRSS,...) ou des extensions de navigateur (Feedbro,...) ; 
+- Avantage : on suit les actualités d'un site sans devoir s'y redre manuellement. 
+
+::: {.content-visible when-format="revealjs"}
+
+## Travaux cités 
+
+:::
