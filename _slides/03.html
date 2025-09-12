@@ -7,10 +7,13 @@
 <link href="03_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="03_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="03_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="03_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="03_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="03_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="03_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="03_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <title>quarto-input748fd27f43c3e726</title>
+  <title>quarto-inputb48f4bad75cbd451</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -599,13 +602,18 @@ Et pour lancer la discussion : Quels navigateurs utilisez-vous ? Et pourquoi ? C
 <li><p>Avantages&nbsp;: navigation linéaire par thématiques, parcours dans une arborescence logique, aperçu potentiellement exhaustif de l’existant.</p></li>
 <li><p>Inconvénients&nbsp;: parfois une seule entrée pour un résultat qui concerne plusieurs thématiques, recherche fastidieuse&nbsp;; explosion du Web rendant le modèle vite obsolète.</p></li>
 </ul>
-
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/yahoo-en-2001.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Yahoo! en 2001"><img data-src="img/yahoo-en-2001.jpg" height="200" alt="Yahoo! en 2001"></a></p>
+<figcaption>Yahoo! en 2001</figcaption>
+</figure>
+</div>
 <!-- 
 
 Aux débuts du Web, dans les années 1990, il n’y avait pas encore de moteurs de recherche comme Google. Concrètement, ça ressemblait à un grand répertoire thématique. Vous vouliez chercher quelque chose sur, disons, la littérature ? Vous cliquiez d’abord sur “Arts”, puis “Littérature”, puis “Auteurs”, et ainsi de suite. C’était une navigation hiérarchique, comme feuilleter les catégories d’une bibliothèque ou d’un catalogue. Ce modèle avait des avantages : il donnait une impression de logique, d’organisation, et parfois même d’exhaustivité. Mais il avait aussi de gros défauts. D’abord, un site pouvait appartenir à plusieurs thématiques — par exemple, une page sur “l’histoire des mathématiques” : vous la mettez dans “Histoire” ou dans “Mathématiques” ? Ensuite, parcourir ces hiérarchies pouvait être très fastidieux. Et surtout, avec l’explosion du Web au milieu des années 1990, cette approche est vite devenue obsolète : il y avait tout simplement trop de sites à classer à la main. C’est à ce moment-là que les moteurs de recherche, avec leur logique de requêtes, se sont imposés.
 
 -->
-<img data-src="img/yahoo-en-2001.jpg" class="r-stretch quarto-figure-center"><p class="caption">Yahoo! en 2001</p></section>
+</section>
 <section id="explorer-indexer-classer" class="slide level3 scrollable">
 <h3>Explorer, indexer, classer</h3>
 <p>Un moteur de recherche recense et référence des pages Internet&nbsp;: pour cela, il utilise un logiciel, un robot d’indexation (dits <em>crawlers</em> ou <em>spiders</em>) qui parcourt l’ensemble du Web : <!-- araignée qui tisse sa toile en suivant tous les liens d'une page à l'autre --></p>
@@ -742,11 +750,16 @@ Outils analytiques et export : certaines fonctionnalités utiles pour la recherc
 <section id="google-et-le-pagerank" class="slide level3">
 <h3>Google et le PageRank</h3>
 <p>En 1998, Google introduit le PageRank, qui attribue une importance à une page selon le nombre et la qualité des liens qui pointent vers elle (= système de mesure quantitative de popularité d’une page web). C’est inspiré par la mesure des articles académiques (Science Citation Index).</p>
-
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/pagerank.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Schéma du PageRank"><img data-src="img/pagerank.png" height="200" alt="Schéma du PageRank"></a></p>
+<figcaption>Schéma du PageRank</figcaption>
+</figure>
+</div>
 <!-- MV: 
 Le système du PageRank, conçu et utilisé par Google, est relativement complexe. Ce que l’on peut retenir c’est qu’il s’agit d’un système inspiré des publications académiques. Le fonctionnement est le suivant : la popularité d’une page web A est mesurée en fonction du nombre de pages web qui pointent vers cette page web A. Si les pages web qui pointent vers la page web A, alors la popularité sera d’autant plus importante. Il s’agit donc de la prise en compte du nombre de pages web qui pointent vers la page, mais également indirectement du nombre de pages web qui pointent vers les pages web qui pointent vers la page web A. (mes excuses pour ces répétitions)
 -->
-<img data-src="img/pagerank.png" class="r-stretch quarto-figure-center"><p class="caption">Schéma du PageRank</p><p>Cela fonde un principe d’autorité&nbsp;: les pages citées par beaucoup d’autres deviennent les plus visibles. Progressivement, Google combine ce principe avec d’autres critères (localisation, personnalisation).</p>
+<p>Cela fonde un principe d’autorité&nbsp;: les pages citées par beaucoup d’autres deviennent les plus visibles. Progressivement, Google combine ce principe avec d’autres critères (localisation, personnalisation).</p>
 </section>
 <section id="les-évolutions-des-moteurs-de-recherche" class="slide level3 scrollable">
 <h3>Les évolutions des moteurs de recherche</h3>
@@ -772,7 +785,7 @@ Le système du PageRank, conçu et utilisé par Google, est relativement complex
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/SNCF.png"></p>
+<p><a href="img/SNCF.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Outil de réservation SNCF, capture d’écran, 18 août 2025"><img data-src="img/SNCF.png" alt="Outil de réservation SNCF, capture d’écran, 18 août 2025"></a></p>
 <figcaption>Outil de réservation SNCF, capture d’écran, 18 août 2025</figcaption>
 </figure>
 </div>
@@ -1300,6 +1313,38 @@ Ochigame, Rodrigo, and Katherine Ye. 2021. <span>“Search <span>Atlas</span>: <
       }
     });
     </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>

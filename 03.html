@@ -63,6 +63,9 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -487,7 +490,7 @@ Et pour lancer la discussion : Quels navigateurs utilisez-vous ? Et pourquoi ? C
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/yahoo-en-2001.jpg" class="img-fluid figure-img"></p>
+<p><a href="img/yahoo-en-2001.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Yahoo! en 2001"><img src="img/yahoo-en-2001.jpg" height="200" alt="Yahoo! en 2001" class="figure-img"></a></p>
 <figcaption>Yahoo! en 2001</figcaption>
 </figure>
 </div>
@@ -645,7 +648,7 @@ Outils analytiques et export : certaines fonctionnalités utiles pour la recherc
 <p>En 1998, Google introduit le PageRank, qui attribue une importance à une page selon le nombre et la qualité des liens qui pointent vers elle (= système de mesure quantitative de popularité d’une page web). C’est inspiré par la mesure des articles académiques (Science Citation Index).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/pagerank.png" class="img-fluid figure-img"></p>
+<p><a href="img/pagerank.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Schéma du PageRank"><img src="img/pagerank.png" height="200" alt="Schéma du PageRank" class="figure-img"></a></p>
 <figcaption>Schéma du PageRank</figcaption>
 </figure>
 </div>
@@ -678,7 +681,7 @@ Le système du PageRank, conçu et utilisé par Google, est relativement complex
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/SNCF.png" class="img-fluid figure-img"></p>
+<p><a href="img/SNCF.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Outil de réservation SNCF, capture d’écran, 18 août 2025"><img src="img/SNCF.png" class="img-fluid figure-img" alt="Outil de réservation SNCF, capture d’écran, 18 août 2025"></a></p>
 <figcaption>Outil de réservation SNCF, capture d’écran, 18 août 2025</figcaption>
 </figure>
 </div>
@@ -1400,6 +1403,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
