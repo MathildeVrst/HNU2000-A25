@@ -89,6 +89,7 @@ Et en 1984, on peut dire que le réseau est vraiment fonctionnel à grande éche
 ### Principes : TCP/IP {.scrollable}
 
 TCP/IP : 
+
   - TCP (*Transmission Control Protocol*) ; 
   - IP (*Internet Protocol*).
 
@@ -269,7 +270,7 @@ Quelques moteurs de recherche n'enregistrent pas les recherches effectuées et n
 | --- | --- | --- | 
 | "Le moteur de recherche dont vous êtes l'utilisateur, pas le produit" | "Le moteur de recherche qui ne vous espionne pas" | "Le moteur de recherche le plus privé au monde" | 
 | Exploite simplement les banques de données réalisées par les *crawlers* | Métamoteur qui interroge les banques de données des autres moteurs de recherche | ← Idem | 
-| Français<br>Vie privée | Gain de temps<br>Protection des données | ← Idem | 
+| Français <br>& Vie privée | Gain de temps <br>& Protection des données | ← Idem | 
 
 <!--
 - *Qwant* : 
@@ -401,7 +402,7 @@ Fonctionnement d’un moteur de recherche :
 
 ### Vade-Mecum d'une recherche efficace {.scrollable .smaller}
 
-1. Commencer simple
+1. Commencer simple 
 
 - Tapez quelques mots-clés principaux de votre sujet ; 
 - Utilisez des mots précis plutôt que des phrases longues ; 
@@ -429,7 +430,7 @@ Fonctionnement d’un moteur de recherche :
 
 6. Les opérateurs 
 
-- `AND`^[Si les mots-clés ne sont pas reliés par un opérateur, la plupart des outils de recherche considèrent que les termes sont reliés par `AND`.], `OR`,`NOT` permettent de préciser la recherche. Des parenthèses servent à grouper des termes ou des opérateurs ;  <!--MV: AND: traite obligatoirement de deux sujets ; OR : permet de trouver tous les documents qui traitent des deux sujets, indépendemment ou ensemble ; NOT : Collecte tous les documents traitement d'un sujet à l'exclusion de l'autre (ex.: carnaval NOT Venise peut être utile)
+- `AND`^[Si les mots-clés ne sont pas reliés par un opérateur, la plupart des outils de recherche considèrent que les termes sont reliés par `AND`.], `OR`,`NOT` permettent de préciser la recherche. Des parenthèses servent à grouper des termes ou des opérateurs ;  
   - e.g. : `"humanités numériques" AND "édition" -cours` → pages sur l’édition dans les humanités numériques mais sans cours ; 
   - e.g. : `("humanités numériques" OR "digital humanities") AND "édition"` → pages qui contiennent soit "humanités numériques", soit "digital humanities", mais qui contiennent aussi "édition".
 - `?` : Remplace un caractère ; 
@@ -441,6 +442,8 @@ Fonctionnement d’un moteur de recherche :
 ::: {.callout-tip}
 Les formulaire de recherche avancée des bibliothèques utilisent ces opérateurs! 
 :::
+
+<!--MV: AND: traite obligatoirement de deux sujets ; OR : permet de trouver tous les documents qui traitent des deux sujets, indépendemment ou ensemble ; NOT : Collecte tous les documents traitement d'un sujet à l'exclusion de l'autre (ex.: carnaval NOT Venise peut être utile)-->
 
 ### Exercice 
 
