@@ -13,7 +13,7 @@
 <link href="03_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <title>quarto-inputb48f4bad75cbd451</title>
+  <title>quarto-input518f5a0424842ae8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -442,7 +442,11 @@ Et en 1984, on peut dire que le réseau est vraiment fonctionnel à grande éche
 </section>
 <section id="principes-tcpip" class="slide level3 scrollable">
 <h3>Principes : TCP/IP</h3>
-<p>TCP/IP&nbsp;: - TCP (<em>Transmission Control Protocol</em>)&nbsp;; - IP (<em>Internet Protocol</em>).</p>
+<p>TCP/IP&nbsp;:</p>
+<ul>
+<li>TCP (<em>Transmission Control Protocol</em>)&nbsp;;</li>
+<li>IP (<em>Internet Protocol</em>).</li>
+</ul>
 <p>Une pile de protocoles&nbsp;:</p>
 <ul>
 <li><strong>physique</strong> : les câbles (cuivre ou fibre), éventuellement radio&nbsp;; <!-- c’est la base, les câbles en cuivre, la fibre optique, ou même les ondes radio pour le WiFi. Sans ce support matériel, aucun échange n’est possible. --></li>
@@ -665,8 +669,8 @@ Aux débuts du Web, dans les années 1990, il n’y avait pas encore de moteurs 
 <td>← Idem</td>
 </tr>
 <tr class="odd">
-<td>Français<br>Vie privée</td>
-<td>Gain de temps<br>Protection des données</td>
+<td>Français <br>&amp; Vie privée</td>
+<td>Gain de temps <br>&amp; Protection des données</td>
 <td>← Idem</td>
 </tr>
 </tbody>
@@ -842,37 +846,53 @@ Fonctionnement d’un moteur de recherche :
 <li>Les opérateurs</li>
 </ol>
 <ul>
-<li><code>AND</code><sup>1</sup>, <code>OR</code>,<code>NOT</code> permettent de préciser la recherche. Des parenthèses servent à grouper des termes ou des opérateurs&nbsp;; <!--MV: AND: traite obligatoirement de deux sujets ; OR : permet de trouver tous les documents qui traitent des deux sujets, indépendemment ou ensemble ; NOT : Collecte tous les documents traitement d'un sujet à l'exclusion de l'autre (ex.: carnaval NOT Venise peut être utile)
-  - e.g. : `"humanités numériques" AND "édition" -cours` → pages sur l’édition dans les humanités numériques mais sans cours ; 
-  - e.g. : `("humanités numériques" OR "digital humanities") AND "édition"` → pages qui contiennent soit "humanités numériques", soit "digital humanities", mais qui contiennent aussi "édition".
-- `?` : Remplace un caractère ; 
-  - e.g. : `econom?` recherche `économie`, `economic`, `economia`. 
-- `*` : Élargit la recherche aux variantes d'un même mot ; 
-  - e.g. : `pers*` recherche `personnage`, `personnalité`, `persona`,... 
-- `>  < = :` : précise une période chronologique. 
-
-::: {.callout-tip}
-Les formulaire de recherche avancée des bibliothèques utilisent ces opérateurs! 
-:::
-
-### Exercice 
-
-Dans votre moteur de recherche favori : 
-
-- Cherchez une expression exacte ; 
-- Cherchez là uniquement sur un site spécifique ; 
-- Cherchez un type de fichier particulier ; 
-- Cherchez des pages dont le titre contient un mot-clé ; 
-- Combinez plusieurs opérateurs pour affiner la recherche ; 
-- Cherchez toutes les pages qui parlent d’humanités numériques et d’édition sur le site web de l’Université de Montréal. 
-
+<li><code>AND</code><sup>1</sup>, <code>OR</code>,<code>NOT</code> permettent de préciser la recherche. Des parenthèses servent à grouper des termes ou des opérateurs&nbsp;;
+<ul>
+<li>e.g.&nbsp;: <code>"humanités numériques" AND "édition" -cours</code> → pages sur l’édition dans les humanités numériques mais sans cours&nbsp;;</li>
+<li>e.g.&nbsp;: <code>("humanités numériques" OR "digital humanities") AND "édition"</code> → pages qui contiennent soit “humanités numériques”, soit “digital humanities”, mais qui contiennent aussi “édition”.</li>
+</ul></li>
+<li><code>?</code> : Remplace un caractère&nbsp;;
+<ul>
+<li>e.g.&nbsp;: <code>econom?</code> recherche <code>économie</code>, <code>economic</code>, <code>economia</code>.</li>
+</ul></li>
+<li><code>*</code> : Élargit la recherche aux variantes d’un même mot&nbsp;;
+<ul>
+<li>e.g.&nbsp;: <code>pers*</code> recherche <code>personnage</code>, <code>personnalité</code>, <code>persona</code>,…</li>
+</ul></li>
+<li><code>&gt;  &lt; = :</code> : précise une période chronologique.</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Les formulaire de recherche avancée des bibliothèques utilisent ces opérateurs!</p>
+</div>
+</div>
+</div>
+<!--MV: AND: traite obligatoirement de deux sujets ; OR : permet de trouver tous les documents qui traitent des deux sujets, indépendemment ou ensemble ; NOT : Collecte tous les documents traitement d'un sujet à l'exclusion de l'autre (ex.: carnaval NOT Venise peut être utile)-->
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Si les mots-clés ne sont pas reliés par un opérateur, la plupart des outils de recherche considèrent que les termes sont reliés par <code>AND</code>.</p></li></ol></aside></section>
+<section id="exercice-2" class="slide level3">
+<h3>Exercice</h3>
+<p>Dans votre moteur de recherche favori :</p>
+<ul>
+<li>Cherchez une expression exacte&nbsp;;</li>
+<li>Cherchez là uniquement sur un site spécifique&nbsp;;</li>
+<li>Cherchez un type de fichier particulier&nbsp;;</li>
+<li>Cherchez des pages dont le titre contient un mot-clé&nbsp;;</li>
+<li>Combinez plusieurs opérateurs pour affiner la recherche&nbsp;;</li>
+<li>Cherchez toutes les pages qui parlent d’humanités numériques et d’édition sur le site web de l’Université de Montréal.</li>
+</ul>
 <!-- MV: 
 
 ("humanités numériques" AND "édition") site:umontreal.ca
 
---></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>Si les mots-clés ne sont pas reliés par un opérateur, la plupart des outils de recherche considèrent que les termes sont reliés par <code>AND</code>.</p></li></ol></aside></section>
+-->
+</section>
 <section id="une-alternative-aux-moteurs-de-recherche-les-flux-rss" class="slide level3">
 <h3>Une alternative aux moteurs de recherche&nbsp;: les flux RSS</h3>
 <ul>
@@ -1313,7 +1333,7 @@ Ochigame, Rodrigo, and Katherine Ye. 2021. <span>“Search <span>Atlas</span>: <
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});
     (function() {
       let previousOnload = window.onload;
       window.onload = () => {
