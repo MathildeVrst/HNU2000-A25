@@ -125,7 +125,7 @@ scrollable: true
 ::: {.callout-tip collapse="true"}
 ## Lectures supplémentaires
 
-- @schrijverCultureHackerPeur2017 
+- @schrijverCultureHackerPeur2017
 - @danielOdeZoteroDecennie2022a
 
 :::

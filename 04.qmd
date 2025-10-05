@@ -1,16 +1,515 @@
 # [Séance 4 : 23/09] ORGANISER & BIBLIOGRAPHIER: métadonnées et formats {.unnumbered}
 
-<!-- https://hnu2000.quaternum.net/seance-05-ecrire/ --> 
+::: {.content-visible when-format="html" unless-format="revealjs"}
 
-## Les métadonnées 
+```{=html}
+<iframe src="_slides/04.html"></iframe>
+```
+[Ouvrir dans mon navigateur](_slides/04.html){target="_blank"} 
+
+::: 
+
+## Retour sur les lectures 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @collectifPourquoiZotero2018
+
+:::
+
+## Les métadonnées {.smaller}
+
+- Données sur des données ; 
+- Sont des métadonnées les notices bibliographiques, le format d'un fichier, la date, la géolocalisation d'une photo,... 
+
+> Composé à l'aide du préfixe grec *meta*, le terme désigne à proprement parler les données à propos des données : elles servent à référencer, identifier et partager un document. Elles indiquent notamment comment, quand, où et par qui les données ont été recueillies, mentionnent leur disponibilité et leur mode de distribution, leur taille, etc. [@debouyVademecumInformatiquePour2025, p. 160]
+
+<!-- Dans la musique numérique, les métadonnées mal remplies sont responsables d’innombrables “Unknown artist / Track 01” dans nos lecteurs MP3.
+
+Les bibliothèques et archives produisent des métadonnées depuis des siècles, avant même l’informatique : fiches de catalogues, inventaires, index.
+
+-->
+
+### Pourquoi les métadonnées ? 
+
+- Trouver : elles rendent les données repérables (moteurs de recherche, catalogues) ; 
+- Comprendre : elles donnent du contexte (qui a produit la donnée, quand, dans quelles conditions) ; 
+- Réutiliser : elles précisent les droits, les formats, les relations avec d’autres données ; 
+- Préserver : elles facilitent l’archivage et l’interopérabilité à long terme. 
 
 ## Les différents formats textuels 
 
-Un format = la mise en forme d'une donnée 
+### Les formats : un peu d'étymologie 
+
+- Dimensions d'une feuille de papier, d'un feuillet ; 
+- Du latin *formare* : donner une forme, former, conformer ; arranger, organiser, régler ; façonner ; 
+- Extension à de nombreux domaines : imprimerie, photographie, cinéma, **informatique**. 
+
+<!-- 
+
+- Ce à quoi vous pensez quand je vous dit format 
+- En latin, forme générale, beauté, mais aussi ce qui donne la forme, à une pièce de monaie par exemple, ou à un fromage, soit le moule à fromage -> d'ou le mot fourme, et oui, format et fromage sont reliés (par une méthathèse de qualité). 
+- De la même manière, un format, c’est quelque chose qui met en forme d’une manière conventionnelle des données destinées à représenter du texte (formats de fichier), du son, de l’image (formats de pellicule), de la vidéo (formats de projection), ou une combinaison des quatre.
+
+--> 
+
+### Vers une définition du format {.scrollable}
+
+- Ce qui donne une forme et un ensemble de caractéristiques à un ensemble d'informations (image, écriture, son, etc.) ; 
+- La dimension (format A4 ou *letter* par ex.) qui va impliquer un agencement ; 
+- Une manière de représenter des données (pdf, docx) qui impose une structure ; 
+- **interopérabilité**. 
+
+> Structure définie de données contenues dans un fichier, établie selon des règles qui régissent notamment leur sauvegarde, leur affichage et leur manipulation par un logiciel compatible. ([OQLF, 2022](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8368613/format-de-fichier?)). 
+
+
+> En informatique, au niveau le plus fondamental, tout est exprimé dans un alphabet numérique binaire : 0 et 1. Un format, c’est une convention qui établit la correspondance entre une certaine succession de 0 et de 1, et quelque chose d’autre : par exemple une couleur, ou une lettre de l’alphabet, ou la position d’un pixel sur un écran. L’expression « format texte » désigne une catégorie de formats pour lesquels le contenu en binaire des fichiers encode des caractères textuels uniquement. ([Arthur Perret](https://www.arthurperret.fr/cours/2021-09-21-ecriture-academique-format-texte.html))
+
+
+<!-- 
+
+- Office québécois de la langue française
+- Interopérabilité : L’interopérabilité est un principe qui permet à plusieurs machines de dialoguer : 
+    - en s’accordant sur des règles pour définir une série d’informations, les machines peuvent lire et écrire un fichier ;
+    - si ces spécifications sont clairement énoncées, il n’y a alors plus de dépendance vis-à-vis d’un logiciel spécifique ;
+    - la question de l’interopérabilité est intimement liée à la standardisation et à l’ouverture du format.
+--> 
+
+### Format et édition savante 
+
+- Production de documents scientifiques qui ont des caractéristiques exigées par les normes de l'édition savante : 
+  - appareil critique accompagnant le texte (notes de bas de page, bibliographie, index, etc.) ; 
+  - citabilité (métadonnées → identification) ; 
+  - structuration (normalement) rigoureuse (balisage sémantique, non ambigu) ; 
+  - pérennité ; 
+- Les formats utilisés doivent répondre à ces exigences, permettant notamment d'expliciter la fonction de chaque élément du document (titre, citation, métadonnées, références bibliographiques,...)
+
+<!--
+Dans cet atelier, nous nous intéresserons aux formats d'écriture informatique, aux formats des données que nous encodons lorsque nous écrivons. Dans la plupart des cas, nous écrivons pour produire des documents scientifiques. Ces documents ont plusieurs caractéristiques, exigées par les normes de l'édition savante
+L'objectif principal de cet atelier est de vous fournir les bonnes pratiques à adopter pour être conscient des matériels sur et avec lesquels on travaille.  
+
+Les balises sémantiques permettent de renseigner les robots des moteurs de recherche quant à l'importance et la nature des éléments d'une page. Le balisage sémantique répond surtout au besoin de hiérarchisation de l'information. Une balise qui donne une indication sur le contenu qu'elle entoure. 
+
+Là aussi, on y reviendra plus tard et on fera des petits exercices. 
+--> 
+
+### Format et extension 
+
+> À chaque format de fichier est associée une extension de nom de fichier qui permet de l'identifier. [Cette] extension de nom de fichier indique au système d'exploitation quel logiciel d'application peut ouvrir le fichier et quelle icône afficher. ([OQLF, 2022](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8382262/extension-de-nom-de-fichier))
+
+L'extension d'un fichier texte indique à l'utilisateur et à l'ordinateur quel est son format, c'est-à-dire :
+
+- Comment sont organisées les informations relatives au fichiers et les métadonnées ; 
+- Avec quel logiciel l'ouvrir ; 
+- S'il contient ou non des informations de mise en page qu'il faut interpréter. 
+
+<!--
+
+- un format n'est pas une extension : c'est pas en changeant l'extension, qu'on change le format 
+- Lorsqu’on parle de format de fichier, il est important de ne pas le confondre avec son extension. L'extension est simplement une étiquette qui indique quel logiciel peut potentiellement ouvrir le fichier, mais elle ne reflète pas nécessairement ce qu'il contient. 
+- Prenons l'exemple de Windows, qui attribue une icône en fonction de l'extension du fichier. Si vous avez un fichier .txt, .docx, ou .pdf, Windows va choisir une icône en fonction du programme **par défaut**. Le problème, c'est que cela donne l'impression que l'icône et l'extension sont une description complète du format, puis que c'est un tout homogène, voire indiscutable. L'extension ne fait qu’indiquer un possible programme pour ouvrir le fichier, mais elle ne vous dit pas comment les données sont réellement organisées à l'intérieur.
+- L'extension indique à quel logiciel faire appel, mais le format précise comment ce logiciel va lire les données. 
+- Un fichier (vidéo, image ou texte) peut être produit, transmis ou lu par l’ordinateur en raison du fait qu’il est encodé dans un format numérique. 
+- Un format informatique est le lien entre l’infrastructure et l’agent (humain ou programme) qui utilise cette infrastructure.
+- Le choix des formats informatiques détermine la manière dont les informations sont créés, stockées, envoyées, reçues, interprétées, affichées. Aujourd’hui les formats prennent une place importante dans notre environnement, et leur incidence dépasse le domaine de l’informatique, leur étude a pourtant été longtemps délaissée dans le champ des médias.
+- Exemple du format DOC ou .doc : le logiciel Microsoft Word ne peut pas lire n’importe quel format informatique, les données doivent être structurées d’une façon précise pour que le logiciel puisse les interpréter, et ensuite les modifier, et enfin produire une nouvelle version du fichier. Ici le format DOC a été créé pour les besoins d’un logiciel spécifique.
+- Dans cet exemple c’est le format informatique qui est le résultat du logiciel, mais d’autres fonctionnement sont possibles. Par ailleurs, le format DOC est longtemps resté propriétaire (jusqu’à l’arrivée du format DOCX), ses spécifications n’étaient pas publiques et des brevets empêchaient toute initiative de développement d’un logiciel autre que Word capable de lire ou de modifier des fichiers .doc.
+
+--> 
+
+### Formats libres, formats propriétaires
+
+| Formats libres | Formats propriétaires | 
+| --- | --- | 
+| ouverts | fermés (parfois ouverts) | 
+| spécifications techniques publiques | spécifications techniques contrôlées par une entité privée  |
+| pas de restriction d'accès | usage limité |
+| définis par les pratiques | conditionnés par les pratiques |
+| exigences de recherche | exigences commerciales | 
+| .txt ; .odt ; .tex ; .html ; .svg ; .png ; .epub ; .zip | .pdf ; .docx ; .pptx ; .xlsx ; .ai ; .jpeg ; .psd ; .mp3 | 
+
+<!-- 
+
+- Ces spécifications ne sont pas diffusées, on parle alors de « format opaque » ; les données ne peuvent donc être utilisées que par leur application d’origine, ce qui pose de nombreux problèmes de compatibilité et de portabilité. 
+- Ces spécifications ont été publiées, mais sont associées à des autorisations d’utilisation liées aux brevets. Dans ce cas, les données sont la plupart du temps exploitables par d’autres applications, mais le risque de perte d’information existe et ne doit pas être négligé.
+- Un format fermé est nécessairement un format propriétaire, mais le contraire n'est pas forcément vrai. En effet, un format propriétaire peut être fermé (par exemple, le format.DOC) ou ouvert (par exemple, le format DOCX).
+- les standards ouverts et libres permettent de se libérer de l’outil, de la chaîne, etc. ; les standards propriétaires ont tendance à enfermer les pratiques dans une chaîne et dans un outil.
+- Dans le cas des formats privés, les motivations ne relèvent pas de la recherche, ce sont des motivations commerciales, on est pas sur le principe de médiation du savoir en premier, on est sur l'idée d'abord de monnayer le savoir. On est sur un Produit. Ça ne veut pas dire que ce produit ne sera pas bon, il peut au contraire si il y a des moyens employés, être très performant, mais il n'est pas soutenu par la communauté qui l'utilise mais par l'entreprise qui la vend.
+- Donc les formats libres sont pensés au sein d'une communauté de recherche, d'individus, de pratiques et se trouvent protégés par cette assise justement : d'abord parce qu'ils deviennent des standards sans être au centre d'un monopole, ils sont pensés en terme d'évolution en cohérence avec l'évolution des pratiques, ils sont donc pensés dans un temps long, avec un critère de pérennité
+- PDF est propriétaire et ouvert, donc il est une propriété de Adobe mais les spécifications de son modèle ont été publiées. 
+
+--> 
+
+### Le format n'est pas neutre ! 
+
+Le format est politique en ce qu'il porte un modèle de l'information. 
+
+<!--
+**Notes :**
+
+- on est pas juste sur j'ai un contenu et je le mets dans un contenant, qui ne va pas altérer ou déterminer ce contenu. Le format est politique parce qu'il porte un modèle de l'information : 
+- Exemple entre deux formats : 
+  - Le txt est un format pour texte brut ou le plein texte, il n'y a que du texte, on est sur la vue séquentielle, sans style ni enrichissement, il est pérenne, lisible par tous types d'éditeurs de texte et convertisable. Épuré 
+  - Le docx est pour format pour texte stylisé, et il a été conçu par des informaticiens et programmeurs qui ne l'utilisent pas, et qui ne sont pas en contact avec la communauté qui l'utilise. 
+- D'un format à l'autre, il n'y a pas les mêmes caractéristiques, pas la même définition et utilisabilité du texte, cela n'implique pas les mêmes pratiques d'édition. 
+- Avec le choix d'un format propriétaire, on forme des savoirs qui sont aussi propriétaires, qui sont dépendants d'une industrie et de sa prospérité économique, et qui sont définis à l'origine par cette industrie. Les textes écrits en docx sont dépositaires de Microsoft, ils ne sont pas portés par une communauté de recherche, mais pas seulement les objets textes : aussi les pratiques d'écriture. 
+--> 
+
+### Zoom sur le libre 
+
+- Discussion : Qu'en savez-vous ? Intérêts, avantages, inconvénients,... ?
+- Quid des productions scientifiques des chercheurs publiées dans des revues scientifiques en limitant l'accès ? 
+- Question du partage et de la diffusion des connaissances scientifiques ; 
+- Question de la possibilité du lien entre les données 
+
+> En agrégeant des contenus, en lian les publications avec les données de la recherche et à bien d'autres objets, les techologies du Web sémantique permettent la construction de nouveaux savoirs. [@debouyVademecumInformatiquePour2025, p. 153]
+
+</section>
+<section>
+
+**Le cas des revues** 
+
+- Depuis les années 2000, développement des revues en accès ouvert : plus de 10.000 à ce jour ! 
+  - ex. : [OpenEdition](https://www.openedition.org/) : portail (français) de ressources électroniques en SHS ; 
+  - ou [HAL](https://hal.science/) : archive ouverte pluridisciplinaire. 
+
+Différentes voies possibles : 
+
+1. *green open access* : 
+  
+  - autoarchivage permettant l'accès libre et gratuit aux articles scientifiques ; 
+  - si l'article a déjà été publié par un éditeur : 
+    - celui-ci le libère 
+    - mais, souvent, période d'embargo afin d'inciter les utilistaeurs à continuer à souscrire des abonement 
+
+2. *gold open access* : 
+
+  - l'auteur (ou son institution d'appartenance) paie pour sa publication ; 
+    - // auteur-payeur 
+
+</section>
+<section>
+
+3. les *épi-revues* : 
+
+  - Voie dorée par l'hébergement de revues en *open access*, et 
+  - Voie verte via le processus de soumission des articles qui se fait sur une archive ouverte ; 
+  - Pas de frais d'accès pour les lecteurs ni de frais de publication pour les auteurs ; 
+  - Les articles sont immédiatement consultables en accès ouverts (avant même l'évaluation par les pairs) ; 
+  - Finalement, validation de l'article pour publication dans la revue : nouvelle version soumise sur l'archive +  label de la revue ; 
+  - Ex. : <https://open-research-europe.ec.europa.eu/articles/5-16/v1>. 
 
 ## Qu'est-ce qu'une bibliographie ? 
 
+### L'importance de structurer ses références bibliographiques 
+
+- Communauté scientifique & standards : inscrire votre travail dans les standards scientifiques d’une communauté ; 
+- Éthique : qui réfère bien respecte le travail cité ; 
+- Pérennité : pour retrouver vos sources – médiation d’un travail de sources à la base de votre recherche ; 
+- Esthétique : une bibliographie imparfaite fait tâche dans un travail de recherche ; 
+- Personnel : vous avez le choix de structurer ces références selon le type de style bibliographique.
+
+### Style de citation vs style bibliographique 
+
+| Style de citation | Style bibliographique | 
+| --- | --- | 
+| règles utilisées pour citer des sources dans le texte | présentation complète des sources dans une bibliographie ou une liste de références | 
+| ```APA``` : (Dupont, 2020, p. 45) | ```APA``` : Dupont, J. (2020). Titre du livre. Éditeur. | 
+| ```Vancouver``` : (1) | ```Vancouver``` : Dupont J. Titre du livre. Lieu de publication: Éditeur; 2020. 1000p. | 
+
+Répertoire des styles : <https://www.zotero.org/styles> 
+
+<!--
+
+Un style de citation se réfère aux règles utilisées pour citer des sources dans le texte d'un document ou d'un article. Il indique comment insérer des références à des œuvres consultées directement dans le corps du texte. Voici quelques types courants de styles de citation :
+
+Un style bibliographique concerne la présentation complète des sources dans une bibliographie ou une liste de références à la fin d’un document. Il indique comment les informations complètes sur les œuvres citées (auteur, titre, année de publication, éditeur, etc.) doivent être formatées. Cela inclut des détails comme l'ordre des éléments, la ponctuation, et l'usage de l'italique ou des guillemets.
+
+En ccl, Le style de citation régit comment on se réfère aux sources dans le texte. Le style bibliographique régit comment on présente les informations complètes sur les sources à la fin du document dans une liste. 
+
+-->
+
+### Exemple 
+
+| | | 
+| -- | ------ | 
+| APA 7th - anglophone | Merzeau, L. (2013). Éditorialisation collaborative d’un événement. *Communication et organisation. Revue scientifique francophone en Communication organisationnelle, 43*, Article 43.  | 
+| APA 7th - francophone | Merzeau, L. (2013). Éditorialisation collaborative d’un événement. *Communication et organisation. Revue scientifique francophone en Communication organisationnelle*, (43), 105-22. | 
+| Modern Language Association 9th edition | Merzeau, Louise. "Éditorialisation collaborative d’un événement." *Communication et organisation. Revue scientifique francophone en Communication organisationnelle*, no 43, June 2013, pp. 105-22. | 
+| Chicago Manual of Style 17th edition | Merzeau, Louise. 2013. "Éditorialisation collaborative d’un événement." *Communication et organisation. Revue scientifique francophone en Communication organisationnelle*, no 43 (June): 105-22. | 
+
+Ensemble de données ! 
+
+<!--
+</section>
+<section>
+
+```
+<div id="merzeau_editorialisation_2013">
+                    <dt>Merzeau (2013)</dt>
+                    <dd><span itemscope itemtype="https://schema.org/Article" data-type="article">
+                        <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <span itemprop="familyName">Merzeau</span>,
+                            <meta itemprop="givenName" content="Louise" /> L.</span>
+                            (<span itemprop="datePublished">2013</span>).
+                            <span itemprop="name">
+                                "Éditorialisation collaborative d'un événement"
+                            </span>.
+                        <meta itemprop="journal" <i>Communication et organisation. Revue scientifique francophone en Communication organisationnelle</i>
+                       </span>.
+                        </span>
+                    </dd>
+                </div>
+```
+-->
+<!--
+Ce code est un extrait de HTML qui représente une référence bibliographique au format structuré avec l'utilisation de microdonnées basées sur le schéma Schema.org. Les microdonnées sont des balises HTML spéciales utilisées pour fournir des informations supplémentaires sur les éléments de contenu, souvent pour l'optimisation des moteurs de recherche (SEO) ou pour la structuration des données sur une page.
+
+Décomposons ce qu'il signifie :
+Structure principale :
+
+    <div id="merzeau_editorialisation_2013"> : Un conteneur HTML avec un identifiant unique qui sert à marquer ou à référencer une source précise (ici, une publication de Merzeau en 2013).
+
+    <dt>Merzeau (2013)</dt> : Il s'agit d'une balise HTML "definition term" qui présente le terme, ici le nom de l'auteur et l'année de la publication.
+
+    <dd> : "Definition Description", une balise qui contient la description détaillée de la référence, c'est-à-dire toutes les informations bibliographiques.
+
+Microdonnées (Schema.org):
+
+    <span itemscope itemtype="https://schema.org/Article" data-type="article"> : Ceci indique que la balise contient les informations sur un article scientifique (type "Article" dans Schema.org). L'attribut itemscope définit le début d'une entité, et itemtype indique le type d'entité (un article dans ce cas).
+
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person"> : Cela précise que l'auteur de l'article est une personne. L'attribut itemprop="author" spécifie que l'entité contenue ici est l'auteur de l'article.
+
+    <span itemprop="familyName">Merzeau</span> et <meta itemprop="givenName" content="Louise" /> : Ici, le nom de famille de l'auteur est "Merzeau" et son prénom est "Louise", mais seul le nom de famille est affiché, avec la première lettre du prénom.
+
+    <span itemprop="datePublished">2013</span> : L'année de publication est 2013.
+
+    <span itemprop="name">"Éditorialisation collaborative d'un événement"</span> : C'est le titre de l'article.
+
+    <meta itemprop="journal" ...> : Cette balise semble mal formée, mais elle est censée indiquer le nom de la revue dans laquelle l'article a été publié. Il manque probablement une balise <span> ou <i> correctement fermée pour indiquer le nom de la revue.
+--> 
+
+###  Comment créer une bibliographie ? 
+
+- Plusieurs milliers de styles bibliographiques : https://www.zotero.org/styles (choisir la *norme* que l'on va utiliser) ; 
+- Exemple : « Université de Montréal - APA (Français -- Canada) » ; 
+  - Pour modifier le style par défaut de Zotero : Édition > Préférences > Citer ; 
+- Création d’une bibliographie : chaque référence ou groupe de références peut être récupéré sous différents formats pour être intégré dans un document via un traitement de texte par exemple. 
+
+> Plus d’informations : https://www.zotero.org/support/fr/creating_bibliographies
+
+
 ## Zotero 
+
+### Qu’est-ce que Zotero ?
+
+- Un logiciel et un service qui permet de gérer des références bibliographiques : conserver, organiser, citer et créer des bibliographies ; 
+- Un logiciel libre, et gratuit ;  
+- Un outil qui peut être collaboratif ; 
+- Un logiciel + une extension de navigateur pour récupérer des références. 
+
+### Fonctionnalités
+
+- Collecter : collecter des références bibliographiques en ligne et les conserver ; 
+- Organiser : organiser ses références en collections et sous-collections, et en attribuant des tags et des marqueurs ; 
+- Citer : citer ses références facilement et les exporter/intégrer dynamiquement dans des documents ; 
+- Synchroniser : synchroniser ses références avec un compte en ligne ; 
+- Collaborer : échanger ses références avec d’autres utilisateurs.
+
+### Un logiciel libre 
+
+Zotero est logiciel libre qui peut être téléchargé puis installé sur tous les ordinateurs.
+
+Il faut également utiliser un connecteur pour récupérer des références sur le web puis faire le lien avec le logiciel qui les conserve. 
+
+### Utilisation générale
+
+- Récupérer des références depuis un navigateur web (grâce à l’extension Zotero) ; 
+- Une icône apparaît pour enregistrer une référence (plusieurs types de documents) ; 
+- La référence est enregistrée dans le logiciel Zotero sous la forme d’une notice ; 
+- Il est possible de compléter la notice s’il manque des informations ; 
+- La synchronisation permet de sauvegarder les données en ligne (pour cela il faut créer un compte Zotero).
+
+### Fonctionnalités proposées avec un compte 
+
+- Synchronisation : vos références sont sauvegardées et disponibles en se connectant depuis n’importe quel ordinateur ; 
+- Sauvegarde ; 
+- Interface web : un peu moins pratique que le logiciel ; 
+- Afficher ses références ; 
+- Créer ou participer à des groupes ; 
+- Etc. 
+
+###  À quoi sert un groupe ?
+
+Un groupe est une collection à laquelle plusieurs personnes peuvent participer :
+
+- Partager des références ;
+- Ouvrir les contributions ;
+- Afficher les contributions ; 
+- Plusieurs rôles dans un même groupe : consulter, créer, modifier, administrer ; 
+- Le groupe peut être public avec des permissions plus ou moins ouvertes
+
+### Installation 
+
+- Installer le logiciel Zotero en suivant les recommandations du site web officiel ; 
+- Installer l’extension pour Firefox/Chrome/Safari ; 
+- Créer un compte en ligne ; 
+- Connecter votre logiciel à ce compte (Édition > Préférence > Synchronisation).
+
+### De nombreuses bases de données compatibles
+
+De nombreux catalogues, bases de données, revues en ligne, journaux, blog, réseaux sociaux proposent des références :
+
+- Sudoc ; 
+- Gallica ; 
+- OpenEdition, revues.org, Hypothèses ; 
+- Érudit ; 
+- Google Livres, Google Scholar, YouTube ; 
+- Internet Archive ; 
+- Cairn.info ; 
+- etc. 
+
+### Description d’une utilisation classique
+
+Prérequis : logiciel installé et extension installée (par exemple dans Firefox).
+
+- Ouvrir le logiciel (Zotero Standalone) ; 
+- Rechercher un document sur le web ; 
+- Enregistrer la référence via l’extension du navigateur ; 
+- Vérifier dans le logiciel si la référence convient (et si elle est placée au bon endroit) ; 
+- Compléter les informations.
+
+### Quelques points importants 
+
+- Pas besoin d’être en ligne pour utiliser Zotero (mais vous ne pourrez pas afficher de pages web ou synchroniser vos collections) ; 
+- Les fonctions de Zotero sont nombreuses, n’hésitez pas à les tester et à les utiliser ! 
+- Zotero permet de conserver et de gérer des références de pages web, mais ce n’est pas sa fonction première ; 
+- N’oubliez pas d’ouvrir le logiciel Zotero pour enregistrer vos références. 
+
+### Collecter
+
+- Via la navigateur en cliquant sur l’icône : Zotero récupère les métadonnées de la page web (page web qui présente un document) ; 
+- Si le texte intégral est disponible en PDF, Zotero le récupère et le sauvegarde ; 
+- Si la page web contient plusieurs références (par exemple une page de résultats), alors l’icône est un dossier et il est possible de sélectionner les résultats que vous souhaitez conserver ; 
+- Zotero peut ajouter une référence automatiquement grâce à un identifiant – ISBN ou DOI : cliquez sur « Ajouter un élément par son identifiant » dans la barre d’outils Zotero, puis tapez le numéro d’identification, l’élément sera ajouté à votre bibliothèque.
+
+### Créer 
+
+Vous pouvez aussi créer manuellement des références en sélectionnant le type de document que vous souhaitez référencer et en remplissant les champs de la notice. 
+
+### Organiser {.scrollable}
+
+**Collections** : 
+
+- Dans colonne de gauche, « Mes collections » ou « Ma bibliothèque », il est possible de créer plusieurs collections ; 
+- Créez une nouvelle collection en cliquant sur le bouton « Nouvelle collection » ; 
+- Il est possible de créer, renommer ou supprimer une collection (via un clic droit sur une collection) ; 
+- Pour organiser vos références il suffit de les déplacer d’un dossier d’une collection à une autre ; 
+- Les collections peuvent comprendre des sous-collections !
+
+**Tags et marqueurs** : 
+ 
+- Les tags et les marqueurs servent à ajouter des informations de description ; 
+- Vous pouvez vous créer votre propre système de marqueurs et de tags pour organiser plus finement vos références ; 
+- Certaines références importées comportent parfois des marqueurs, vous pouvez vous en inspirer ou les supprimer ; 
+- Une recherche dans Zotero interroge tous les champs, y compris les marqueurs et les tags ! 
+
+**Champ « note »** : 
+
+- Il permet de saisir du texte libre lié à une référence précise ; 
+- Il peut y avoir plusieurs notes pour une même référence ; 
+- Il est possible de les visualiser rapidement, de les supprimer, et elles sont synchronisées si vous avez un compte Zotero ; 
+- Une recherche dans Zotero interroge tous les champs, y compris les notes !
 
 ## Exercice : Zotero 
 
+### Exercice 1 
+
+- Créer une référence depuis Zotero : un livre de votre choix (titre, auteur·trice, maison d’édition, lieu, date, langue, ISBN) ; 
+- Intégrer 4 références : un article, un livre, un chapitre et une thèse  ; 
+- Déplacer toutes vos références dans une sous-collection "HNU2000".
+
+### Exercice 2 : Traitement de texte 
+
+- Citations et bibliographies dynamiques dans des outils de traitement de texte (Word ou LibreOffice) : 
+
+    - Ouvrez LibreOffice/Word et vérifiez que vous disposez bien des options de Zotero (dans la partie supérieure gauche) ; 
+    - si vous n’avez pas l’extension Zotero pour LibreOffice, installez là via le logiciel Zotero : Édition > Préférences > Citer > Traitements de texte > Installer le module LibreOffice 
+    - vous pouvez ajouter une citation d’une référence préalablement enregistrée dans Zotero ; 
+    - une fois des citations ajoutées, vous pouvez créer une bibliographie de ces citations ; 
+    - si vous modifier vos références dans Zotero, vous pouvez mettre à jour votre document LibreOffice. 
+
+## BibTeX {.smaller}
+
+BibTeX est un format de fichier structurant une bibliographie :
+
+- Format qui a été créé en 1985 pour gérer les bases de données bibliographiques dans des fichier LaTeX ;
+- Le format BibTeX fonctionne par entrée bibliographiques : chaque entrée correspond à une description d’un document avec des items « mot-clef = valeur ».
+
+Fichier ```ref.bib``` contenant autant d'entrées que de références : 
+
+```
+@article{merzeauEditorialisationCollaborativeDun2013a,
+	title = {Éditorialisation collaborative d'un événement :{L}'exemple des {Entretiens} du nouveau monde industriel 2012},
+	volume = {43},
+	issn = {1168-5549},
+	shorttitle = {Éditorialisation collaborative d'un événement},
+	url = {https://shs.cairn.info/revue-communication-et-organisation-2013-1-page-105},
+	doi = {10.4000/communicationorganisation.4158},
+	language = {fr},
+	number = {1},
+	urldate = {2024-10-10},
+	journal = {Communication \& Organisation},
+	author = {Merzeau, Louise},
+	year = {2013},
+	note = {Publisher: Presses universitaires de Bordeaux
+Section: Info, Communication},
+	pages = {105--122},
+}
+```
+
+<!--
+
+BibTeX est un outil utilisé en combinaison avec LaTeX pour gérer les références bibliographiques dans les documents scientifiques.
+Il permet d'automatiser l'insertion des citations et la création des bibliographies dans des formats prédéfinis (comme APA, Chicago, etc.).
+En utilisant des formats prédéfinis, vous pouvez facilement adapter votre document aux exigences des revues académiques en changeant simplement le style BibTeX sans modifier le contenu.
+Les accolades {} autour des lettres ou des mots dans un fichier BibTeX sont utilisées pour préserver la mise en majuscule ou la casse d’un mot ou d’un caractère. BibTeX applique automatiquement des conventions de typographie et de capitalisation en fonction du style bibliographique utilisé. Cela peut parfois entraîner la conversion de certains mots ou lettres en minuscules, ce qui n'est pas toujours souhaité, notamment pour :
+
+    Les noms propres : Si BibTeX formate un titre, il pourrait mettre en minuscule des noms qui devraient rester en majuscules, comme "L" ou "Entretiens". L'ajout d'accolades garantit que les majuscules restent intactes. Exemple : {L}'exemple des {Entretiens} garde le "L" et "Entretiens" en majuscules, même si le style bibliographique choisi demande une capitalisation standard.
+
+    Acronymes ou initiales : Les accolades sont aussi utiles pour empêcher la mise en minuscule d'acronymes ou d'initiales, comme {NASA} ou {AI}.
+
+--> 
+
+## Better BibTeX 
+
+
+Better BibTex (https://retorque.re/zotero-better-bibtex/installation/) ajoute à Zotero des fonctionnalités très pratiques :
+
+- Affichage des clés de citation (identifiants BibTeX uniques et stables) ; 
+- Nouveaux formats d’export ; 
+- **Exports dynamiques** de bibliographies (synchronisation automatique des fichiers ```.bib```).
+
+<!-- 
+
+Il résout les principales limites de BibTeX en offrant des fonctionnalités telles que l'exportation automatique et la gestion d'identifiants stables. Au lieu de devoir gérer manuellement votre fichier BibTeX, Better BibTeX synchronise automatiquement votre bibliothèque Zotero avec un fichier .bib, vous permettant de garder vos références à jour sans effort. Cela est particulièrement utile dans des environnements collaboratifs où plusieurs personnes doivent contribuer aux mêmes références. 
+
+--> 
+
+### Installez Better BibTeX 
+
+https://retorque.re/zotero-better-bibtex/installation/
+
+## Exercices 
+
+- Créez une collection avec plusieurs références que vous exportez au format BetterBibTeX avec l’option « Garder à jour » ; 
+- Ajouter une référence à cette collection ; 
+- Est-ce que le fichier BibTeX a été modifié ? ; 
+- Verrouillez une clé de citation d’une référence de ce export. 
+
+::: {.content-visible when-format="revealjs"}
+
+## Travaux cités 
+
+:::

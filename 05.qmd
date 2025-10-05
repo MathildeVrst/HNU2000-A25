@@ -1,39 +1,409 @@
 # [Séance 5 : 07/10] REPRÉSENTER le texte (I): formats légers {.unnumbered}
- 
-## Qu'est-ce que l'écriture numérique ? 
 
-## Les langages interprétés 
+::: {.content-visible when-format="html" unless-format="revealjs"}
 
-## .txt 
+```{=html}
+<iframe src="_slides/05.html"></iframe>
+```
+[Ouvrir dans mon navigateur](_slides/05.html){target="_blank"} 
 
-## .md 
+::: 
 
-### Exercice 
+## Retour sur les lectures 
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @vitalirosatiEcrireSHSEnvironnement2020
+
+:::
+
+Nous le ferons dans la deuxième partie du cours. 
+
+## Objectifs de la séance 
+
+**Théorie** : 
+
+- Comment représenter, sous forme numérique, un texte ? 
+- Les avantages des formats légers ? 
+- Principes du balisage. 
+
+**Pratique** : 
+
+- Tuto Markdown ; 
+- Tuto Stylo ; 
+- Bonus : un peu de HTML. 
+
+## Représenter le texte ? 
+
+- Représenter >< Montrer ? <!--Quand on parle de représenter un texte, on pourrait penser qu’il s’agit simplement de le montrer — de l’afficher sur un écran ou de le reproduire sur papier. Mais en réalité, représenter un texte, c’est choisir une manière de le faire exister dans un certain environnement : matériel, technique, intellectuel.-->
+- Le texte et son support ! <!-- Le texte n’existe jamais “nu”. Il passe toujours par un support : un manuscrit, un livre imprimé, un fichier Word, un site web… Et chaque support impose une forme de représentation particulière, c’est-à-dire une traduction entre ce que nous percevons comme “texte” et la façon dont la machine, ou le support, le comprend.-->
+
+### Ce poème est-il le même ?
+
+![](img/Catullus-all.png){.lightbox height="400"} 
+
+<!--
+
+Prenons un exemple concret.
+Imaginons un même poème :
+
+Copié à la main dans un cahier ;
+
+Tapé dans Word avec des polices et des marges ;
+
+Sauvegardé en .txt sur un ordinateur.
+
+À nos yeux, c’est “le même” poème. Mais pour la machine, ces trois objets sont radicalement différents.
+Dans le premier cas, le texte est de l’encre sur du papier.
+Dans le second, c’est un ensemble d’objets formatés, enregistrés dans un fichier complexe.
+Dans le troisième, ce ne sont que des caractères codés selon une norme (souvent UTF-8), interprétés à l’écran.
+
+-->
+
+### Le texte et l'ordinateur 
+
+- Une suite de symboles ; 
+- Qui peuvent être structurés ; 
+  - À nous de définir cette structure ! 
+- Dont il ne comprend pas le sens. 
+
+Comment choisir un format, une syntaxe, qui rende justice à un texte donné ?
+
+<!-- 
+
+c’est-à-dire de représenter le texte d’une manière que la machine puisse lire, et que nous puissions ensuite exploiter, transformer, partager.
+
+--> 
+
+## Encodage, format, balisage 
+
+- **Encodage** : façon dont les caractères sont traduits en nombres (binaires), où chaque *encodage* correspond à une *norme* (ASCII, UTF-8, etc). [Plus d'informations ici](https://mathildevrst.github.io/hnu6051-a24/encodage.html) ; <!--L’encodage, donc, ne concerne pas la structure du texte, mais sa lisibilité technique. Il répond à la question : comment la machine interprète-t-elle les symboles ?-->
+- **Format** : organisation du contenu à l'intérieur d'un fichier (cf. séance précédente) ; 
+- **Langage de balisage** : façon dont le texte lui-même est structuré par des signes visibles. <!-- Les deux exemples produisent visuellement la même chose, mais ils traduisent deux philosophies : 1) Markdown : syntaxe légère, pensée pour être lisible par un humain. 2) HTML : syntaxe plus formelle, pensée pour être interprétée par une machine. Dans les deux cas, on représente non seulement le texte, mais sa structure : titres, paragraphes, emphases, citations, liens, etc.-->
+
+Chaque format et langage impose une manière de penser le texte : .docx pour la mise en page (et encore...), .html pour la hiérarchie entre les éléments, .md pour la lisibilité et interopérabilité. 
+
+<!-- en résumé: 
+Encodage: manière dont les caractères sont traduits en nombres, 
+Format: type de fichier et organisation interne, 
+Langage de balisage: structure sémantique du texte.
+--> 
+## Une courte histoire du balisage 
+
+```
+<chapter><title>Introduction to SGML</title>
+<section><title>The SGML Declaration</title>
+<subsection>
+```
+
+### SGML, HTML et XML
+
+- **SGML** : décrire avec des balises ; 
+- **HTML** : structurer pour afficher ; 
+- **XML** : l’arbre sémantique ; 
+
+L’histoire des langages de balisage est une histoire longue, passionnante et complexe. Sans rentrer dans tous les détails, nous pouvons observer plusieurs évolutions et divergences intéressantes.
+
+</section>
+<section>
+
+**SGML** est d’abord conçu pour résoudre un problème lié la représentation et la reproduction des documents. Jusqu’ici basé sur le langage Script pensé pour l’impression, les formats de document ne sont pas structuré (à part quelques exceptions comme TeX). SGML (précédé par GML), pour Standard Generalized Markup Language, introduit donc le balisage déclaratif permettant de générer des documents graphiques.
+
+</section>
+<section>
+
+**HTML** est une application de SGML, plus simple et plus adapté à un affichage graphique qui ne dépend pas du système de la page imprimée. Il y a plusieurs versions successives de HTML, il faut retenir qu’il s’agit d’un ensemble d’éléments qui prennent en compte l’hypertexte. Le langage HTML est accompagné de HTTP et du système d’adresses web (les URLs).
+
+</section>
+<section>
+
+Enfin **XML** est développé à partir des années 1990 dans un objectif de rendre plus générique un langage de balisage. XML est une suite de spécifications qui peuvent ensuite être implémentées dans des schémas, comme la TEI qui a d’ailleurs précédé XML. XML est puissant mais aussi complexe à utiliser, il est aujourd’hui très éloigné de la version actuelle de HTML. Ou disons que les choix techniques de HTML fait que ce langage est très permissif, ne respectant pas certaines prérogatives de SGML ou de XML.
+
+
+## Les formats légers 
+
+Le qualificatif « léger » permet de comprendre de quoi il s’agit face aux autres langages précédemment cités qui peuvent être jugés lourds. Grâce à une économie de caractères ou de signes pour baliser le texte, certains langages de balisage sont humainement lisibles (contrairement à HTML ou XML qui sont très verbeux). Avec quelques signes typographiques, des langages comme Markdown ou AsciiDoc permettent de faire de la sémantique avec un apprentissage minime. 
+
+<!--
+
+On a vu que pour représenter un texte, il faut choisir à la fois un format (le type de fichier) et un langage de balisage (la manière d’organiser le texte à l’intérieur).
+Mais ces formats peuvent être plus ou moins complexes : certains sont très détaillés et rigides, d’autres beaucoup plus simples.
+C’est là qu’intervient la notion de format léger.
+
+-->
+
+### Définition 
+
+Un format léger est un format : 
+
+- Textuel ; 
+- Lisible à l'œil nu, directement dans le code (sans besoin de passer par un logiciel spécialisé) ; 
+- Non verbeux (utilise peu de signers pour représenter la structure du texte).  
+
+La structure accompagne le texte, qui reste l'élément premier. 
+
+<!--Par contraste, un format lourd (comme XML, ou un .docx) met la structure au premier plan : il ajoute beaucoup d’éléments techniques, parfois invisibles à l’œil nu, pour encadrer le contenu.--> 
+
+### Exemples 
+
+- .txt — texte brut, sans balisage ;
+- .md — Markdown : un format minimaliste pour structurer le texte ;
+- .rst — reStructuredText, souvent utilisé dans la documentation Python ;
+- .html — parfois considéré comme “semi-léger”, car il est textuel mais plus verbeux.
+
+### Une philosophie éditoriale 
+
+Trois principes : 
+
+- **Lisibilité** : un humain peut lire le fichier directement, sans le “compiler” ni l’ouvrir dans un logiciel particulier ; 
+- **Simplicité** : la syntaxe est minimale ; on n’a pas besoin de connaître la structure interne du document ; 
+- **Convertibilité** : le format léger sert souvent de point de départ vers d’autres formats (Word, HTML, PDF, LaTeX) — grâce à des outils comme Pandoc ou Quarto.
+
+
+<!--
+Dans les humanités numériques, les formats légers jouent un rôle clé :
+
+ils encouragent la transparence (on voit la structure du texte) ;
+
+ils favorisent la pérennité (pas besoin de logiciel propriétaire) ;
+
+ils facilitent la collaboration (le texte peut être versionné sur GitHub) ;
+
+ils s’intègrent dans des chaînes de production éditoriale (par exemple : écrire en Markdown sur Stylo, publier en HTML ou en PDF).
+
+En d’autres termes, les formats légers permettent d’écrire en pensant déjà à la transformation, sans jamais perdre la lisibilité humaine.
+--> 
+
+### Le format texte 
+
+> Un fichier au format texte est un fichier dont le code binaire (suite de 0 et de 1) se traduit par des caractères textuels uniquement (par opposition à des pixels ou des sons par exemple). Dit de manière encore plus courte : c’est un fichier qui ne contient des caractères. (Arthur Perret, Format texte, <https://www.arthurperret.fr/cours/format-texte.html>) 
+
+<!-- Arthur Perret propose une fiche très synthétique et très complète qui définit le format texte. --> 
+
+Le terme *plein text*, largement utilisé, est une mauvaise traduction du terme anglais *plain text*. On préférera l’appellation *texte brut* en français.
+
+</section>
+<section>
+
+**Caractéristiques** : 
+
+- Fichier texte non formaté qui ne nécessite aucun programme spécial pour être créé et ouvert ; 
+- Format extrêment simple ; 
+- Stockage d’information en texte brut ; 
+- Pas de mise en forme, pas d’images, pas d’éléments multimédia ; 
+- Utile pour documents simples, prise de notes,... 
+
+Quelques exemples d'utilisation sur le site [The Plain Text Project](https://plaintextproject.online/articles.html)
+
+</section>
+<section>
+
+**Avantages** : 
+
+
+- la **lisibilité** : contrairement aux formats binaires qui ne sont lisibles que grâce à un logiciel spécifique (comme le format .doc, et non le format .docx) ; <!--je peux comprendre le contenu sans passer par un logiciel particulier-->
+- la **légèreté** : les fichiers au format texte sont souvent très légers, ne dépassant pas quelques kilo-octets (car ne comporte que du texte). De là : rapide à lire par un programme, peu de place sur un support de stockage, utilisable par n’importe quel système d’exploitation ; <!--Le poids d’un fichier texte ne dépend que du nombre de caractères. Il ne contient ni mise en page, ni métadonnées lourdes, ni images intégrées.-->
+- la **pérennité** : un fichier informatique au format texte sera toujours lisible dans 10 ans, quand bien même les applications dédiées à son interprétation ne seront plus disponibles ; <!--→ Pérennité = indépendance logicielle et durabilité de l’accès.--> 
+- et dans une certaine mesure l’**interopérabilité** : un format texte est dépendant d’une spécification qu’il est possible d’implémenter ; <!--standardisation; spécification ouverte (md, html, xml) donc n’importe qui peut écrire un programme pour lire ou générer ce format. Tous ces outils (Github, obsidian, quarto) interprètent la même “grammaire”. L’interopérabilité, c’est ce qui permet de faire circuler un même fichier entre plusieurs environnements (d’un éditeur de texte à un site web, d’un dépôt Git à un PDF, etc.). -->
+- enfin, le format texte est libre : pour l’ouvrir, le lire, le modifier ou le transmettre il n’est pas nécessaire de payer une licence. 
+
+### .md 
+
+- Minimise l'impact des instructions de balisage dans le document, en insistant sur la lisibilité du texte par un être humain. 
+- Le document peut ensuite être traité par un algorithme pour un produire un export (HTML, PDF, DOCX, etc.) 
+
+Plus d'informations [sur le blog](https://daringfireball.net/projects/markdown/) du créateur de .md, John Gruber. 
+
+<!-- À partir de là, on va s’intéresser à ce qu’on appelle les formats légers, comme Markdown : des formats textuels très simples, lisibles à l’œil nu, qui rendent visibles les structures de base du texte — sans toute la complexité d’un XML ou d’un Word.
+
+Le md fait partie de ce qu'on appelle les langages de balisage légers. Ils sont conçus dans le but explicite de minimiser l'impact des instructions de balisage dans le document, en insistant sur la lisibilité du texte pour un être humain.
+
+--> 
+
+### Markdown : exercice 
 
 Réalisez ce [tuto Markdown](https://www.arthurperret.fr/tutomd/)
 
-## .html 
+## Stylo : mise en pratique  
 
-## Mise en pratique: Stylo 
+### C'est quoi ? {.scrollable}
+
+- Éditeur de texte sémantique pour la rédaction scientifique ; 
+- Créé à l'UdeM par Marcello Vitali-Rosati et son équipe ; 
+- Destiné aux chercheur·e·s en sciences humaines ; 
+- Accessible en ligne uniquement (après création d'un compte) ; <!-- pas d'installation requise ; partage des documents possible -->
+- Pour écrire, structurer, prévisualiser, réviser, exporter (pdf, html, xml, odt, tei, etc.) ; 
+- Utilisation d’un langage de balisage léger (Markdown), d’un langage de description de métadonnées (YAML) et d’un langage de  description bibliographique (BibTeX) ; 
+- Utilisation de briques logicielles existantes (et libres). 
+
+
+> Le grand intérêt de Stylo est de permettre aux auteurs de saisir facilement leur texte dans un éditeur de texte. Ils en deviennent donc à la fois les auteurs et les encodeurs. Les concepteurs de Stylo ont souhaité construire un outil *open source* capable de garantir la bonne structuration des textes, et donc leur pérennité, leur indexation efficace, etc., sans demander aux auteurs de développer des compétences informatiques trop complexes. [@debouyVademecumInformatiquePour2025, p. 79]
+
+<!-- Cet éditeur dispose donc d'un environnement d'écriture très simple: l'auteur structure l'ensemble des informations qu'il produit (titres, sous-titres, références bibliographiques, notes, index) simplement en utilisant Md qui repose sur une syntaxe simple d'usage autant en lecture qu'écriture. 
+
+Multiples sorties car intègre une chaîne éditoriale complète basée sur Pandoc. 
+
+La suite de la chaîne éditoriale (évaluation, édition, diffusion) est assurée au sein du même outil ; texte enrichi par l'ajout de métadonnées (mots-clés, nom de l'auteur, de la revue)
+
+--> 
+ 
+### Discussion 
 
 - Discussion autour de [@vitalirosatiEcrireSHSEnvironnement2020] 
-- [Accédez à Stylo (via votre compte HumanID)](https://stylo.huma-num.fr/) 
-- Créez un nouvel article:  
+
+### Exercice 1 
+
+1. Création d'un compte stylo : <https://stylo.huma-num.fr> ; 
+2. Reprenez le texte de Catulle vu plus haut, il se trouve aussi [ici]([plein-texte.qmd#poids](https://scaife.perseus.org/reader/urn:cts:latinLit:phi0472.phi001.perseus-lat2:5)) ; 
+3. Ajoutez-le à votre document Stylo ; ajoutez-lui un titre, éventuellement des titres de deuxième niveau, mettez des passages en italique, cherchez-lui une traduction et ajoutez des métadonnées ; 
+4. Partagez le document avec moi : (<mathilde.verstraete@umontreal.ca>) ; 
+5. Testez la *preview* et faites différents exports (.html, .pdf, .docx), comparez les résultats obtenus. 
+
+> Alors *Stylo*, WYSIWYM ou WYSIWYG ? 
+
+### Exercice 2  
+
+- Créez un nouvel article : 
   - Idéalement, ajoutez un travail réalisé dans le cadre d'un autre cours 
-  - Si vous n'en avez pas, ajoutez n'importe quel article comprenant au moins deux niveaux de titre, des liens, une citation, plusieurs paragraphes, une référence bibliographique 
-- [Envoyez-moi](mailto:mathilde.verstraete@umontreal.ca) le lien de prévisualisation lorsque vous avez terminé 
+  - Si vous n'en avez pas, ajoutez n'importe quel article comprenant au moins : 
+    - deux niveaux de titre, 
+    - des liens, 
+    - une citation, 
+    - plusieurs paragraphes, 
+    - une référence bibliographique 
+- [Envoyez-moi](mailto:mathilde.verstraete@umontreal.ca) le lien de prévisualisation lorsque vous avez terminé. 
 
-Nous n'avons pas encore vu comment réaliser une bibliographie. Vous pouvez dès lors utiliser cette référence (format BibTeX) 
+## HTML  
+
+- HyperText Markup Language ; 
+- Inventé au tout début des années 1990 par Tim Berners-Lee, dans le même contexte que la création du World Wide Web ; 
+- L’idée de départ : permettre à des chercheurs de publier et relier des documents scientifiques en ligne, grâce à des liens hypertextes ; 
+- Premier format de publication du Web : toutes les pages web, sans exception, reposent sur du HTML (cf. `ctrl-u`) ; 
+- HTML sert à décrire la structure et le sens du contenu d’une page, pas sa mise en forme. <!--il indique ce quest chaque élément, pas comment il sear affiché (css); squelette sémantique du web-->
+
+### Exercice HTML
+
+Nous allons essayer de comprendre la structure minimale d'une page html, rendez-vous ici <https://codepen.io/pen> 
+
+Template de départ (à copier-coller) : 
 
 ```
-@article{vitali-rosati_ecrire_2020,
-	title = {Écrire les {SHS} en environnement numérique. {L}’éditeur de texte {Stylo}},
-	url = {http://intelligibilite-numerique.numerev.com/numeros/n-1-2020/18-ecrire-les-shs-en-environnement-numerique-l-editeur-de-texte-stylo},
-	abstract = {Résumé : L’écriture et l’édition scientifiques en contexte numérique sont relativement peu interrogées ou remises en cause. Quelques outils, qui...},
-	language = {fr-fr},
-	urldate = {2020-10-08},
-	journal = {Revue Intelligibilité du Numérique},
-	author = {Vitali-Rosati, Marcello and Sauret, Nicolas and Fauchié, Antoine and Mellet, Margot},
-	year = {2020},
-}
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Représenter le texte : HTML</title>
+</head>
+<body>
+  <!-- Travaillez ici -->
+</body>
+</html>
 ```
+
+### Ex. 1 : Structure minimale & typographie 
+
+Dans `<body>`, créez :
+
+- un en-tête avec un titre principal `<h1>` et un sous-titre `<h2>`,
+- deux paragraphes `<p>` (un court, un long),
+- un mot en emphase (`<em>`) et un mot en fort (`<strong>`).
+
+<!-- 
+
+<header>
+  <h1>REPRÉSENTER le texte (I)</h1>
+  <h2>Formats légers — atelier</h2>
+</header>
+
+<main>
+  <p>Voici un court paragraphe d'introduction.</p>
+
+  <p>Ce paragraphe est un peu plus long. Il contient un mot en <em>italique</em> 
+  et un mot en <strong>gras</strong> pour montrer la différence sémantique.</p>
+</main>
+
+-> <em> donne de l’emphase (sémantique), <i> est juste stylistique ; <strong> est sémantique pour l'importance, <b> pour le style.
+
+Le navigateur affiche directement les balises.
+--> 
+
+### Ex. 2 : Liens, images, listes  
+
+- Ajoutez une liste à puces (trois éléments) avec `<ul><li>...</li></ul>`, 
+- Ajoutez un lien vers un site externe qui s’ouvre dans un nouvel onglet, 
+- Ajoutez une image (utilise une URL publique). 
+
+<!-- 
+
+<section>
+  <h3>Ressources</h3>
+  <ul>
+    <li>Markdown — introduction</li>
+    <li>Stylo — atelier pratique</li>
+    <li>CodePen — essai HTML</li>
+  </ul>
+
+  <p>Voir la documentation : 
+    <a href="https://fr.wikipedia.org/wiki/Hypertexte" target="_blank" rel="noopener">Hypertexte (Wikipédia)</a>
+  </p>
+
+  <figure>
+    <img src="https://via.placeholder.com/150" alt="Image de remplacement">
+    <figcaption>Exemple d'image (placeholder)</figcaption>
+  </figure>
+</section>
+ 
+-> target="_blank" ouvre un nouvel onglet ; rel="noopener" est une bonne pratique de sécurité.
+alt est essentiel pour l’accessibilité — toujours l’expliquer aux étudiants. 
+-->
+
+### Ex. 3 : Balises sémantiques & mini défi Markdown→HTML 
+
+- Plus compliqué : à partir de ce fragment Markdown, écrivez-en l’équivalent HTML 
+
+```
+Catullus 
+Ad Lesbiam (V)
+    Vivamus mea Lesbia, atque amemus, 
+    rumoresque senum seueriorum 
+    omnes unius aestimemus assis! 
+    soles occidere et redire possunt: 
+(5) nobis cum semel occidit breuis lux, 
+    nox est perpetua una dormienda.
+```
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="la">
+<head>
+  <meta charset="UTF-8">
+  <title>Catullus – Ad Lesbiam (V)</title>
+</head>
+<body>
+
+  <h1>Ad Lesbiam (V)</h1>
+  <h2>Catullus</h2>
+
+  <p>
+    Vivamus mea Lesbia, atque amemus,<br>
+    rumoresque senum seueriorum<br>
+    omnes unius aestimemus assis!<br>
+    soles occidere et redire possunt:<br>
+    <span class="line-number">(5)</span> nobis cum semel occidit breuis lux,<br>
+    nox est perpetua una dormienda.
+  </p>
+
+</body>
+</html>
+
+
+--> 
+
+
+::: {.content-visible when-format="revealjs"}
+
+## Travaux cités 
+
+:::

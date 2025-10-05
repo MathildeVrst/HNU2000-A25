@@ -306,7 +306,7 @@ Quelques moteurs de recherche n'enregistrent pas les recherches effectuées et n
 - ambition : proposer des fonctionnalités pour faciliter la recherche documentaire ; 
 - S'appuie sur le principe du Web de données ; 
 - Se distingue des autres moteurs de recherche : 
-  - Moissonage ciblé et des métadonnées et données scientifiques structurées selon des standards internationaux et dsponibles en accès libre 
+  - Moissonage ciblé et des métadonnées et données scientifiques structurées selon des standards internationaux et disponibles en accès libre 
   - Indexation des données non structurées et structurées ; <!-- MV: données non structurées = texte intégral d'un article ; données structurées = métaonndées documentaires -->
   - Normalisation des métadonnées et enrichissement des données en s'appuyant sur des référentiels reconnus ; 
   - Mise en évidence des sources de données indexées ; 

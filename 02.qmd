@@ -22,7 +22,7 @@
 
 ### La ligne de commande {.scrollable}
 
-- *Interfaces graphiques* = couche superposée à une interface de communication fondamentale : la commande ; <!-- la seule comprise par l'ordinateur ; les interfaces graphiques sont elles aussi des interfaces de communication vec l'ordinateur (Bureau sous Windows ou Finder sous Mac) -->
+- *Interfaces graphiques* = couche superposée à une interface de communication fondamentale : la commande ; <!-- la seule comprise par l'ordinateur ; les interfaces graphiques sont elles aussi des interfaces de communication avec l'ordinateur (Bureau sous Windows ou Finder sous Mac) -->
 - Le *Terminal* que nous allons manipuler fait référence au logiciel avec lequel nous pouvons taper des lignes de commandes afin d’interagir avec le *système d’exploitation* ; 
 - *Shell* : interpréteur de commandes qui sert d'intermédiaire entre les utilisateur·ices et le système d'exploitation ; <!-- = coquille : utilisateurs, shell, noyau ; il interprète le résultat de la commande, l'exécute et retourne le résultat à l'utilisateur. -->
   - Différents *shells* existent, le shell par défaut de la plupart des distributions Linux & MacOS X se nomme [Bash]{.text-primary}. <!--Bash, c’est le nom d’un interpréteur de commandes (ou shell) très utilisé dans les systèmes Linux et macOS. En gros : 1) C’est un programme qui lit ce que tu tapes dans le terminal et exécute les commandes correspondantes. 2) Il permet de lancer des logiciels, de naviguer dans les dossiers, de manipuler des fichiers, etc. 3) On peut aussi écrire des scripts bash (fichiers contenant une suite de commandes) pour automatiser des tâches. 4) 👉 En résumé : Bash = un langage + un outil pour dialoguer avec ton ordinateur via le terminal. depuis quelques années, macOS utilise Zsh par défaut à la place de Bash. En résumé : Zsh = Bash + plein d’améliorations pratiques pour rendre le terminal plus sympa et efficace.-->
@@ -388,7 +388,7 @@ D'autres exemples [ici](https://frederic-junier.gitlab.io/parc-nsi/chapitre9/mem
 
 ## WYSIWYM >< WYSIWYG ? 
 
-Deux grandes familles de systèmes de saisie de documents testuels : 
+Deux grandes familles de systèmes de saisie de documents textuels : 
 
 | WYSIWYM | WYSIWYG | 
 | --- | --- | 
