@@ -101,7 +101,7 @@ Langage de balisage: structure sémantique du texte.
 
 - **SGML** : décrire avec des balises ; 
 - **HTML** : structurer pour afficher ; 
-- **XML** : l’arbre sémantique ; 
+- **XML** : l’arbre sémantique.  
 
 L’histoire des langages de balisage est une histoire longue, passionnante et complexe. Sans rentrer dans tous les détails, nous pouvons observer plusieurs évolutions et divergences intéressantes.
 
@@ -139,7 +139,7 @@ Un format léger est un format :
 
 - Textuel ; 
 - Lisible à l'œil nu, directement dans le code (sans besoin de passer par un logiciel spécialisé) ; 
-- Non verbeux (utilise peu de signers pour représenter la structure du texte).  
+- Non verbeux (utilise peu de signes pour représenter la structure du texte).  
 
 La structure accompagne le texte, qui reste l'élément premier. 
 
@@ -177,7 +177,7 @@ En d’autres termes, les formats légers permettent d’écrire en pensant déj
 
 ### Le format texte 
 
-> Un fichier au format texte est un fichier dont le code binaire (suite de 0 et de 1) se traduit par des caractères textuels uniquement (par opposition à des pixels ou des sons par exemple). Dit de manière encore plus courte : c’est un fichier qui ne contient des caractères. (Arthur Perret, Format texte, <https://www.arthurperret.fr/cours/format-texte.html>) 
+> Un fichier au format texte est un fichier dont le code binaire (suite de 0 et de 1) se traduit par des caractères textuels uniquement (par opposition à des pixels ou des sons par exemple). Dit de manière encore plus courte : c’est un fichier qui ne contient que des caractères. (Arthur Perret, Format texte, <https://www.arthurperret.fr/cours/format-texte.html>) 
 
 <!-- Arthur Perret propose une fiche très synthétique et très complète qui définit le format texte. --> 
 
@@ -237,8 +237,9 @@ Réalisez ce [tuto Markdown](https://www.arthurperret.fr/tutomd/)
 - Utilisation d’un langage de balisage léger (Markdown), d’un langage de description de métadonnées (YAML) et d’un langage de  description bibliographique (BibTeX) ; 
 - Utilisation de briques logicielles existantes (et libres). 
 
-
 > Le grand intérêt de Stylo est de permettre aux auteurs de saisir facilement leur texte dans un éditeur de texte. Ils en deviennent donc à la fois les auteurs et les encodeurs. Les concepteurs de Stylo ont souhaité construire un outil *open source* capable de garantir la bonne structuration des textes, et donc leur pérennité, leur indexation efficace, etc., sans demander aux auteurs de développer des compétences informatiques trop complexes. [@debouyVademecumInformatiquePour2025, p. 79]
+
+[La documentation](https://stylo-doc.ecrituresnumeriques.ca/fr/) et des [tutos en vidéo](https://video.mshparisnord.fr/c/stylo/videos). 
 
 <!-- Cet éditeur dispose donc d'un environnement d'écriture très simple: l'auteur structure l'ensemble des informations qu'il produit (titres, sous-titres, références bibliographiques, notes, index) simplement en utilisant Md qui repose sur une syntaxe simple d'usage autant en lecture qu'écriture. 
 
@@ -255,7 +256,7 @@ La suite de la chaîne éditoriale (évaluation, édition, diffusion) est assur�
 ### Exercice 1 
 
 1. Création d'un compte stylo : <https://stylo.huma-num.fr> ; 
-2. Reprenez le texte de Catulle vu plus haut, il se trouve aussi [ici]([plein-texte.qmd#poids](https://scaife.perseus.org/reader/urn:cts:latinLit:phi0472.phi001.perseus-lat2:5)) ; 
+2. Reprenez le texte de Catulle vu plus haut, il se trouve aussi [ici](https://scaife.perseus.org/reader/urn:cts:latinLit:phi0472.phi001.perseus-lat2:5) ; 
 3. Ajoutez-le à votre document Stylo ; ajoutez-lui un titre, éventuellement des titres de deuxième niveau, mettez des passages en italique, cherchez-lui une traduction et ajoutez des métadonnées ; 
 4. Partagez le document avec moi : (<mathilde.verstraete@umontreal.ca>) ; 
 5. Testez la *preview* et faites différents exports (.html, .pdf, .docx), comparez les résultats obtenus. 

@@ -1,13 +1,556 @@
-# [Séance 6 : 14/10] REPRÉSENTER le texte (II): formats riches et normés {.unnumbered}
+# [Séance 6 : 14/10\] REPRÉSENTER le texte (II): formats riches et normés {.unnumbered}
 
-## Les langages interprétés : l’exemple de LaTeX
+::: {.content-visible when-format="html" unless-format="revealjs"}
+```{=html}
+<iframe src="_slides/06.html"></iframe>
+```
 
-## Exercice : Prise en main d'OverLeaf 
+[Ouvrir dans mon navigateur](_slides/06.html){target="_blank"}
+:::
 
-## Introduction à la TEI
+## Retour sur les lectures
 
-## Exercice : Écrire en TEI-XML (avec Leaf writer)
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
 
-## Quelques considérations sur l’interopérabilité des formats
+-   @coombsMarkupSystemsFuture1987a
 
-## Exercice : Manipuler Pandoc 
+:::
+
+## De quoi parle-t-on ? {.scrollable .smaller}
+
+Certains langages de balisage permettent d’aller plus loin dans la structuration du texte :
+
+- LaTeX :
+  - langage de composition et de structuration du texte ; <!-- axé sur la strcuture et non la mise en page directe, même si très performant à ce niveau. Sépare le fond de la forme-->
+  - très utilisé dans les sciences dites *dures* ;
+  - langage interprété : un compilateur traduit le source (`.tex`) en une sortie (généralement `.pdf`) ;
+-   XML(-TEI) :
+  - XML (*Extensible Markup Language*) : langage de balisage hiérarchique conçu pour représenter la structure logique d’un document ;
+  - TEI (*Text Encoding Initiative*) : ensemble de balises et de recommandations pour la représentation numérique des textes (littéraires, historiques, scientifiques, etc.).
+  - Utilisé dans les humanités numériques pour rendre les textes lisibles par la machine tout en conservant leur richesse sémantique et critique.
+
+## (La)TeX : un peu de contexte
+
+- Créé par Donald E. Knuth (1938 --), mathématicien et informaticien à l'Université de Stanford et considéré comme l'un des pionniers de l’algorithmique ;
+- 1977 : *The Art of Computer Programming* : mise en forme de l'éditeur ne lui plaisait pas, décide alors de développer un programme visant à rendre la composition typographique possible sur ordinateur et à modéliser le savoir-faire du typographe (6 mois → 10 ans) ; <!-- The Art of Computer Programming commence à paraître en 1968, mais que c’est en 1977 qu’il entreprend de créer TeX (lors de la préparation du volume 2) -->
+- < τέχνη, « l'art », nom choisi car mise en page des textes techniques tout en portant sur la technique/l'art de la composition typographique. <!--art de la composition et le lien avec la technique.-->
+
+</section>
+<section>
+
+> Un an après avoir commencé, Knuth présenta l’état de son travail lors d’une conférence donnée devant les membres de l’*American Mathematical Society*, à savoir non pas un mais deux programmes : TeX pour la saisie de textes et de commandes informatiques, et METAFONT pour les fontes, un programme utilisant les courbes de Bézier pour dessiner les glyphes. Lors de cette conférence, Knuth posa également les principes suivants :
+>
+> (a) TEX était fait pour être utilisé par les auteurs des textes eux-mêmes, les mieux à même de maîtriser les normes scientifiques de leur discipline ;
+>
+> (b) Le programme, conçu dans le milieu universitaire, devait être libre et gratuit ;
+>
+> (c) Il devait fonctionner de façon strictement identique sur tous les systèmes informatiques.
+>
+> (@alessiInitiationLaTeX2022, p. iv)
+
+## TeX ou LaTeX ?
+
+- TeX : environ 900 commandes, dont 300 sont dites *primitives* (= non décomposables) = Plain TeX  ;
+- 1985, Leslie **La**mport écrit une série de macros pour TeX et crée **La**TeX : nouveaux jeux d'instructions sous la forme de commandes simples à exécuter ; <!--LaTeX 2.09 en 1989. (LaTeX 2ε date de 1994-->
+- Aujourd'hui, la très grande majorité des utilisateurs utilisent LaTeX plutôt que TeX
+
+> The LaTeX program is a special version of TeX that understands LaTeX commands. Think of LaTeX as a house built with the lumber and nails provided by TeX. You don't need lumber and nails to live in a house, but they are handy for adding an extra room.
+>
+> [@lamportLaTeXDocumentPreparation1994]
+
+<!--Imaginez LaTeX comme une maison dont la charpente et les clous seraient fournis par TeX. Vous n’en avez pas besoin pour vivre dans la maison, mais ils sont pratiques pour y ajouter une nouvelle pièce. En gros, il faut parfois revenir a tex si on veut modifier le comportement de certaines fonctinos ou créer des packages. -->
+
+## (La)TeX, concrètement
+
+- Système de composition et de mise en page très puissant ;
+- on peut TOUT faire avec LaTeX (du texte dans toutes les langues -- vivantes ou anciennes --, des documents techniques ou scientifiques de qualité typographique professionnelle ; des éditions critiques ; des partitions musicales, etc).
+
+<!-- LaTeX dépasse donc de très loin les possibilités des traitements de texte ou des logiciels de PAO mais aussi évidemment celles des langages de balisage léger comme le md -->
+
+TeX n’est ni un traitement de texte (Knuth le nomme « typesetting system » que l’on pourrait traduire par système de composition) ni un langage de programmation compilé, c’est un langage de balisage interprété.
+
+## Esprit LaTeX {.scrollable .smaller}
+
+> Il faut voir LaTeX comme un typographe professionnel à qui l’on confierait un manuscrit. L’homme de l’art connaît les règles de présentation et de typographie en usage. Quant à l’auteur, il ne se soucie que de son texte, laissant au typographe le soin de le composer.
+>
+> (@alessiInitiationLaTeX2022, p. vi)
+
+Le fait de ne pas s’occuper de la forme ne signifie pas que la forme n’est pas importante: au contraire! Cela signifie justement que la forme est tellement importante qu’il faut qu’un professionnel s’en occupe. LaTeX est le professionnel en question!
+
+**WYSIWYM** ?
+
+- Plus ou moins... Clairement pas WYSIWYG mais pas tout à fait WYSIWYM non plus. Mise en page *logique* plutôt que *visuelle*, selon Lamport ;
+- @lozanoToutCeQue2013, p. xii, le qualifie de Wywsiewyg ("what you will see is exactly what you get")
+
+<!--puisqu’après compilation on peut visualiser à l’écran une image exacte du document futur sur papier
+Autrement dit, LaTeX privilégie la logique du document (titres, citations, notes, références, etc.) plutôt que son apparence immédiate à l’écran. -->
+
+
+<!--
+Un autre exemple : imaginons que votre document comporte beaucoup de mots techniques que vous voulez mettre en évidence d’une manière particulière. Vous écrirez alors dans votre document \jargon{implémentation} en ayant préalablement défini la macro \jargon de manière à ce qu’elle mette en italique le mot du vocabulaire technique. Les 235 mots de jargon auxquels vous faîtes référence dans votre document pourront être mis en évidence autrement qu’en italique si vous changez d’avis, et cela sans avoir à passer sur les 235 occurrences des mots du jargon, mais juste en changeant la définition de la macro \jargon. Avec un peu d’entraînement vous arriverez même à faire en sorte que cette macro insère automatiquement le mot du jargon dans l’index de votre document...
+-->
+
+<!--On touche sans doute ici à un des défauts de LATEX : si d’autres logiciels sont incapables de faire des choses compliquées, il est parfois difficile de faire faire à LATEX des choses simples (vous en serez probablement convaincu après la lecture de la deuxième partie de ce manuel).
+-->
+
+## Pourquoi LaTeX ? {.scrollable .smaller}
+
+La réponse de Robert Alessi :
+
+> La question mérite en effet d’être posée, même si, s’agissant de travaux universitaires, il peut sembler paradoxal de préférer à un système de composition directement issu de la recherche universitaire un logiciel de secrétariat tel que le traitement de texte.
+>
+> (@alessiInitiationLaTeX2022, p. vii)
+
+- Logiciel libre : gratuit et ouvert ;
+
+<!--Le fait qu’un logiciel soit libre ne veut pas dire qu’on puisse en faire tout à fait ce que l’on veut. Il reste la propriété de son auteur et toute modification doit être documentée-->
+
+> Le fait de pouvoir obtenir les sources d’un logiciel peut sembler secondaire à la plupart des utilisateurs ; il faut comprendre que c’est parce que rien n’est caché que l’amélioration de l’existant et la création d’extensions sont possibles.
+>
+> (@lozanoToutCeQue2013, p. x)
+
+<!--En somme, LaTeX s’inscrit dans la philosophie du logiciel libre et de la recherche ouverte : un système transparent, extensible et durable, conçu par et pour les chercheurs.-->
+
+## LaTeX : Les indispensables
+
+Tout document LaTeX se compose généralement de trois grandes parties :
+
+- La classe du document ;
+- Le préambule :
+  - utilisation de packages particuliers ;
+  - initialisations et déclarations diverses ;
+- Le corps du document (entre `\begin{document}` et `\end{document}`).
+
+### Classe du document
+
+- Détermine la mise en page de certaines parties du document ;
+- Certaines commandes ne sont disponibles que pour certaines classes : par ex., `\chapter` existe pour la classe `book` mais pas pour la classe `article`.
+- Quelques classes (`\documentclass{<la-classe>}`) :
+  - `article` pour un article ;
+  - `report` pour un rapport de plusieurs dizaines de pages ;
+  - `book` pour un livre ou une thèse ;
+  - `letter` pour une lettre ;
+  - etc. (dont, sa propre classe)
+- `\documentclass` accepte des options, par ex.: `\documentclass[12pt,a4paper]{book}`
+
+### Préambule
+
+- Ce qui se situe entre `\documentclass` et `\begin{document}` ;
+- On y charge les *packages* (= extensions) nécessaires au document (avec `\usepackage{<nom-du-package>}`) ;
+- On y définit aussi les paramètres globaux du document (marges, langues, polices, style de titre, etc.) ;
+- Le préambule est lu avant le contenu du document : tout ce qu’on y déclare s’applique à l’ensemble du fichier.
+
+### Corps du document
+
+- **Toujours** placé entre `\begin{document}` et `\end{document}` ;
+- C’est la partie principale du document, elle contient :
+  - le texte,
+  - les commandes de mise en forme,
+  - les environnements,
+  - et les références.
+
+### Quelques principes
+
+- Ligne vierge = Saut de paragraphe (les lignes supplémentaires ne changent rien) ;
+- LaTeX ignore les sauts de ligne (traités comme de simples espaces) ;
+- LaTeX ignore les espaces multiples ;
+- `\` = caractère "d'échappement" : ce qui suit est une séquence de contrôle ;
+- `{}` = délimiteurs de groupe ; <!--ils permettent de limiter la portée d’un effet ou de définir un argument-->
+- Caractères spéciaux : `\ $ & % # ^_ { } ~` ; <!--Ces caractères ont une signification particulière et doivent être échappés pour être affichés.-->
+- `%` Commente la ligne qui suit ;
+- `$` Symbole de début et de fin de formule (passe en mode mathématique).
+
+### Comparaison Markdown, HTML, LaTeX {.scrollable .smaller}
+
+<!--
+| Élément | Markdown | HTML | LaTeX |
+|------------------|------------------|------------------|------------------|
+| Liens | `[Lien](https://lien.com)` | `<a href="https://lien.com/">Lien</a>` | `\href{Lien}{https://lien.com}` |
+| Italique | `_italique_` ou `*italique*` | `<em>italique</em>` | `\emph{italique}` ou `\textit{italique}` |
+| Gras | `__gras__` ou `**gras**` | `<strong>gras</strong>` | `\textbf{italique}` |
+| Verbatim | `fonction()` | `<code>fonction()</code>` | `\verb|fonction()|` |
+| Images | `![Image](/lien/vers/img.png)` | `<img src="/lien/vers/img.png" alt="Alt"/>` | `\includegraphics{img}` |
+| Section | `# Titre 1` ; `## Titre 2` | `<h1>Titre 1</h1>` ; `<h2>Titre 2</h2>` | `\section{Titre 1}` ; `subsection{Titre 2}` |
+| Citation | `> Citation...` | `<blockquote><p>Citation...</p></blockquote>` | `\begin{quote}Citation...\end{quote}` |
+| Liste | `* item1, * item2` ou `1. item1, 2. item 2` | `<ul><li>item1</li><li>item2</li></ul>` ou | `\begin{itemize}\item item1 \item item2 \end{itemize}` ou `\begin{enumerate}\item item1 \item item2 \end{enumerate}` |
+--> 
+
+![](img/comparaisons.png){.lightbox height="200"}
+
+(Cf. @debouyVademecumInformatiquePour2025, p. 91)
+
+## Un exemple de document LaTeX minimal
+
+```         
+\documentclass[12pt]{article}
+
+% --- Préambule ---
+\usepackage[utf8]{inputenc} 
+\usepackage[french]{babel}  
+
+\title{Mon premier document en \LaTeX{}}
+\author{Mathilde Verstraete}
+
+% --- Document ---
+\begin{document}
+
+\maketitle
+
+Bonjour, ceci est mon premier document \LaTeX{}!
+
+\end{document}
+```
+
+## Exercice : Prise en main d'OverLeaf {.scrollable .smaller}
+
+Overleaf est une bonne solution pour commencer à utiliser LaTeX sans avoir à installer quoi que ce soit sur votre ordinateur. Pour des travaux plus complexes, il est néanmoins conseillé d'avoir une installation locale complète (type TEXLive).
+
+- Créez-vous un compte OverLeaf : <https://www.overleaf.com/register> ;
+- Créez un nouveau projet → Projet vide → Donnez-lui un nom ("Premiers pas") ;
+- Familiarisez-vous avec cet environnement de travail :
+
+![](img/Overleaf-tuto.png){.lightbox height="200"}
+
+- Pour compiler : `CTRL-S` ou "Recompiler"
+
+</section>
+<section>
+
+- Supprimez les lignes présentes entre `\documentclass{article}` et `\begin{document}` ainsi que `\maketitle` et `\section{Introduction}` ;
+
+Vous remarquez deux environnements distincts :
+
+- le préambule ;
+- le corps du document ;
+
+</section>
+<section>
+
+- Dans le corps du document, écrivez votre première phrase, soit : "Bonjour tout le monde", puis compilez ;
+- Mettez votre "Bonjour" en italique, comme ceci : `\emph{Bonjour} tout le monde`, où :
+  - `\` : caractère d’échappement ;
+  - `emph` : commande ;
+  - `{}` : groupe sur lequel agissent la ou les commandes.
+
+</section>
+<section>
+
+- Ajoutez des commandes supplémentaires dans le préambule :
+  - (a) `\author{votre nom}` ;
+  - (b) `\title{le titre du document}` ;
+  - (c) Compilez ! Normalement, rien ne se passe.
+-  Ajoutez, dans le corps du texte, un `\maketitle` (sans argument, il s’agit ici d’un ordre direct), compilez, et admirez !
+
+</section>
+<section>
+
+- Testez quelques commandes supplémentaires, recompilez régulièrement afin de vous assurer que tout fonctionne :
+  - (a) Ajoutez deux sections : `\section{titre de la section}` ;
+  - (b) Ajoutez des sous-sections : `\subsection{titre de la subsection}`.
+- Dans une des sous-sections, ajoutez une citation quelconque ;
+- Après compilation, insérez-là dans un environnement `\begin{quote}...\end{quote}` :
+  - (c) Ajoutez une table des matières : `\tableofcontents` ;
+  - (d) Ajoutez une note de bas de page : `\footnote{texte de la note}`.
+
+</section>
+<section>
+
+Par défaut, le document est en anglais ; or, nous écrivons, depuis tout à l’heure, en français ! Les règles de typographie varient d’une langue à l’autre. Changeons cela en ajoutant, dans le préambule : `\usepackage[english, french]{babel}`
+
+- Remarquez le titre `Contents` qui devient `Table des matières` ou l’ajout d’espaces fines avant le point d’exclamation et l’indication de la note de bas de page.
+
+</section>
+<section>
+
+En résumé, on a trois types de commandes :
+
+- (a) Les commandes sans argument (comme `\maketitle`) ;
+- (b) Les commandes avec un argument (comme `\footnote{}`) ;
+- (c) Les commandes avec un argument et une ou des options (comme `\usepackage[lang1, lang2, langn]{babel}`).
+
+## LaTeX : Pour aller plus loin
+
+- <https://www.learnlatex.org/> propose d'excellents tutoriels.
+
+## Et après Overleaf ?
+
+Pour des travaux plus importants, il est conseillé de disposer d'une installation complète de LaTeX sur sa machine. Pour ce faire, un espace d'environ **6 Go** sur son disque est nécessaire (c'est lourd, et l'installation prend du temps).
+
+### Windows {.scrollable}
+
+- Cet utilitaire <http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe> lancera l'installation. Sauvegardez-le temporairement sur votre bureau. Une fois l'installation terminée, il pourra être déplacé dans la corbeille. Ensuite, deux installations sont possibles :
+  - en mode utilisateur : double-clic sur le fichier `install-tl-windows.exe` ;
+  - en mode administrateur (pour que tous les utilisateurs de la machine puissent utiliser TeXLive) : clic droit sur le fichier `install-tl-windows.exe` \> `exécuter en tant qu'administrateur`.
+- Dans les deux cas : cliquer sur `Install` (lance l'installation : prévoir un bon réseau et 1 à 3h de temps).
+- Redémarrez l'ordinateur
+
+Il vous faudra un éditeur de texte : VSCodium fonctionnera, mais [TeXmaker](https://texmaker.fr.softonic.com/) sera plus adapté.
+
+### Mac OS
+
+- La distribution s'appelle MacTeX et est disponible à l'adresse <http://www.tug.org/mactex/mactex-download.html> ;
+- Cliquez sur le lien `MacTeX.pkg` (prévoir un bon réseau et 1 à 3h de temps) ;
+- Dans le répertoire `Téléchargements`, double clic sur `MacTeX.pkg` ;
+- Sur toutes les fenêtres qui s'ouvrent, cliquez sur `Continuer` puis `Accepter`. Il vous faudra finalement saisir votre mot de passe puis `Installer le logiciel`.
+
+Il vous faudra un éditeur de texte : VSCodium fonctionnera, mais [TeXmaker](https://texmaker.fr.softonic.com/) sera plus adapté.
+
+## XML-TEI
+
+### XML {.scrollable}
+
+- *eXtensible Markup Language* ;
+- Développé à la fin des années 1990 par le W3C, dans le but de simplifier le SGML (*Standard Generalized Markup Language*) et de rendre le balisage textuel plus universel et interopérable ;
+- Consiste en une suite de spécifications implémentables dans des *schémas* (comme la TEI -- qui a d’ailleurs précédé XML) :
+  - XML est un métaformat : il ne définit pas un ensemble de balises fixe, mais une syntaxe générique permettant de créer de nouveaux langages structurés (schémas) ;
+- Repose sur le principe de hiérarchie et de structure logique, lisible par l’humain comme par la machine ;
+- Puissant mais complexe à utiliser.
+
+Un exemple très minimaliste:
+
+```         
+<mondocument>
+  <titre>Un exemple d'XML</titre>
+  <texte>
+    <paragraphe>
+    Ce texte est un exemple d'XML.
+    </paragraphe>
+  </texte>
+</mondocument>
+```
+
+### TEI {.scrollable}
+
+- *Text Encoding Initiative* :
+  - Les spécifications : <https://www.tei-c.org/> ;
+  - Des exemples : <https://teibyexample.org/> ;\
+- Consortium international fondé en 1987, rassemblant chercheurs, éditeurs et institutions des humanités numériques ;
+- Objectif : définir des recommandations normalisées pour l’encodage de textes, afin d’assurer leur interopérabilité et leur pérennité ;
+- Repose aujourd’hui sur XML, après avoir d’abord utilisé SGML ;
+- La TEI définit un ensemble de balises et de modules permettant de décrire la structure logique, le contenu et les annotations d’un texte (titres, notes, apparat critique, correspondance, etc.) ;
+- On ne parle pas de format, mais d'une famille de schémas dérivés d'un modèle commun.
+
+Un exemple: une lettre de Juliette Drouet:
+
+``` xml
+<teiCorpus xml:id="jd.entry.7912">
+  <TEI xml:id="jd.entry.7912.01">
+    <teiHeader>
+      <fileDesc>
+      <titleStmt>
+        <title>Title</title>
+        <respStmt>
+          <resp>Rétroconversion Spip vers XML-TEI</resp>
+          <persName>Josselin Morvan</persName>
+        </respStmt>
+        <respStmt>
+          <resp>Validation des fichiers XML-TEI</resp>
+          <persName>Élisa Barthélemy</persName>
+          <persName>Hélène Hôte</persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription</resp>
+          <persName>Apolline Ponthieux</persName>
+        </respStmt>
+        <respStmt>
+          <resp>Contrôle</resp>
+          <persName>Florence Naugrette</persName>
+        </respStmt>
+      </titleStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <repository>BnF, Mss, NAF 16400, f. 246</repository>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+        <correspDesc>
+          <correspAction type="written">
+            <persName>Juliette Drouet</persName>
+            <date when="1879-10-14">14 octobre 1879</date>
+            <placeName>Paris</placeName>
+          </correspAction>
+          <correspAction type="received">
+            <persName>Victor Hugo</persName>
+          </correspAction>
+        </correspDesc>
+      </profileDesc>
+    </teiHeader>
+    <text>
+      <body>
+        <div type="letter">
+          <opener>
+            <dateline rend="right">
+              Paris, 14 octobre 
+                <supplied>18</supplied>79, 1 h. du matin
+            </dateline>
+          </opener>
+          <p>
+          Cher bien-aimé, je te porte le premier toast avant tous ceux 
+          qu’on te portera ce soir
+            <note type="footnote">
+            Victor Hugo se trouve au Grand-Hôtel, pour le banquet 
+            qu’il a organisé à l’occasion de la centième 
+            représentation de l’adaptation de <emph>Notre-Dame de Paris</emph> 
+            par Paul Meurice, au Théâtre des Nations. 
+            Cet événement rassemble des personnalités éminentes 
+            des milieux littéraire, artistique et journalistique.
+            </note>
+          qui ne seront d’ailleurs, quelque
+            <note type="manuscriptologique">
+            « quelques ».
+            </note>
+          nombreux et quelque
+            <note type="manuscriptologique">
+            « quelques ».
+            </note>
+          enthousiastes qu’ils soient, que l’écho affaibli du mien. 
+          Pense à moi qui te souris et qui te bénis 
+          et aime-moi, moi, qui t’adore.
+          <lb/>
+          Je ne sais pas si je me coucherai avant ton retour car 
+          il me semble que mon cœur te garde mieux les yeux ouverts. 
+          Je crains pour toi les excitations inévitables de la gloire 
+          versée à plein bord par tous ceux qui sont là au risque 
+          de te donner trop d’émotion à la fois. 
+          Cher adoré, tu ne sais pas combien je t’aime ! 
+          Tu ne le sauras que lorsque tu verras mon âme tout entière, 
+          alors tu comprendras tout ce que ma sollicitude pour toi 
+          a de vénérable et de sublime devant Dieu.
+          <lb/>
+          Je baise ton divin front.
+          </p>
+          <div type="address">
+          <p>
+            <supplied>Adresse</supplied>
+            <lb/>
+            Monsieur Victor Hugo
+          </p>
+          </div>
+        </div>
+      </body>
+    </text>
+</TEI>
+```
+
+## Exercice : Écrire en TEI-XML (avec Leaf-Writer)
+
+**LEAF** est un outil éditorial pour la collaboration et la publication ouvertes. Il fournit des outils basés sur le web et des espaces en ligne permettant à un plus grand nombre de chercheurs, d'enseignants et d'étudiants de participer à la production collaborative de connaissances numériques : créer, publier, préserver, relier et partager des données sur le web.
+
+**LEAF-Writer** est un éditeur sémantique basé sur le web qui permet de baliser des documents en utilisant une combinaison de XML et de RDF. Il prend en charge la TEI pour l'encodage du contenu scientifique, y compris des schémas personnalisés, et crée en option des annotations mettant à profit le Web des données ouvertes et liées.
+
+- Voir [la documentation](https://www.leaf-vre.org/docs/documentation/leaf-commons/leaf-writer-documentation-basic) et un [tutoriel](https://www.leaf-vre.org/docs/training/tutorials/leaf-writer-basics-tutorial).
+
+## Extra : Quelques outils des Humanités numériques[^1]
+
+[^1]: Cette section est tirée du cours HNU2000-A22 donné par A. Fauchié.
+
+### Hypothes.is {.scrollable .smaller}
+
+> Annotate the web, with anyone, anywhere.
+
+Hypothes.is est un outil d’annotation pour le Web, il est basé sur les standards du Web et permet de créer des conversations.
+
+- fonction(s) : annoter des pages web ;
+- usage(s) : créer des conversations sur des documents ;
+- création : 2011, Dan Whaley ;
+- mise à jour : développements continus ;
+- changement(s) induit(s) : implémentation d’un standard pour annoter tout document numérique.
+
+Pour bien appréhender Hypothes.is il faut comprendre le fonctionnement du Web en détail ainsi que les enjeux des standards.
+
+![](img/hypothesis.png){.lightbox height="200"}
+
+### Stylo {.scrollable .smaller}
+
+> Stylo est un éditeur de texte sémantique pour les sciences humaines.
+
+Stylo est un outil conçu pour repenser le processus d’écriture et d’édition des revues savantes en sciences humaines et sociales. En tant qu’éditeur de texte sémantique WYSIWYM (*What You See Is What You Mean*) pour les sciences humaines, il vise à améliorer la chaîne de publication académique.
+
+- fonction(s) : écrire et structurer du texte dans une interface web ;
+- usage(s) : créer des articles scientifiques en respectant des protocoles d’édition ;
+- création : 2008, Chaire de recherche du Canada sur les écritures numériques ;
+- mise à jour : plusieurs fois par an ;
+- changement(s) induit(s) : repenser l’écriture scientifique et les chaînes de publication académique.
+
+Stylo est basé sur des standards et des protocoles, c’est aussi un outil qui fonctionne grâce au balisage sémantique et grâce à d’autres outils libres.
+
+### Zotero {.scrollable .smaller}
+
+> Your personal research assistant
+
+Zotero est un logiciel permettant de récolter et d’organiser des références bibliographiques, mais aussi un service en ligne permettant de sauvegarder et de partager des références bibliographiques.
+
+- fonction(s) : enregistrer, organiser, sauvegarder et partager des références bibliographiques ;
+- usage(s) : création et gestion de références bibliographiques à usage universitaire et éditorial ;
+- création : 2006, Roy Rosenzweig Center for History and New Media ;
+- mise à jour : évolutions très régulières ;
+- changement(s) induit(s) : outil de gestion de références bibliographiques libre et gratuit.
+
+Zotero est un outil qui semble parfois trop avancé pour une question si simple que la création de références bibliographiques ou de bibliographies. Dans les faits Zotero se trouve être un outil incontournable, mais pour arriver à cette conclusion il faut appréhender les questions de contraintes éditoriales en milieu académique, ainsi que la définition d’une bibliographie structurée (ou de toute donnée structurée en général).
+
+### Ngram Viewer {.scrollable .smaller}
+
+> Ngram Viewer est une application linguistique proposée par Google, permettant d’observer l’évolution de la fréquence d’un ou de plusieurs mots ou groupes de mots à travers le temps dans les sources imprimées. ([Wikipédia](https://fr.wikipedia.org/wiki/Ngram_Viewer))
+
+Ngram Viewer est un pur produit de Google : il s’agit d’interroger les livres numérisés par Google autant que d’utiliser des algorithmes de recherche produits par Google.
+
+- fonction(s) : recherche, comparaison et affichage de termes dans un corpus défini ;
+- usage(s) : comparaison de termes dans l’un des plus importants corpus de livres numérisés ;
+- création : 2010, Google ;
+- mise à jour : février 2020 (pas possible d’interroger les livres publiés après 2019) ;
+- changement(s) induit(s) : comparer facilement un immense corpus, avec une visualisation graphique.
+
+Il faut découvrir comment un livre est numérisé pour prendre la mesure d’une telle application, ainsi que comprendre comment un moteur de recherche permet de parser une quantité de données aussi importante.
+
+![](img/ngram-viewer.png){.lightbox height="200"}
+
+### Voyant Tools {.scrollable .smaller}
+
+> Voyant Tools est un environnement en ligne de lecture et d’analyse de textes numériques.
+
+Voyant Tools est un projet universitaire proposant un environnement de lecture et d’analyse de texte sur le Web. C’est un outil pédagogique permettant de comprendre ce qu’est la fouille de texte.
+
+- fonction(s) : extraction, calcul de la fréquence, production de statistiques, etc. ;
+- usage(s) : outil d’analyse de texte ;
+- création : 2003, Stéfan Sinclair et Geoffrey Rockwell ;
+- mise à jour : développements réguliers ;
+- changement(s) induit(s) : disposer d’outils d’analyse de texte accessibles.
+
+La question du logiciel libre est ici importante : comment un programme informatique ou une application web peut être créée et maintenue ? Cette application permet de comprendre les enjeux (complexes) de la fouille de texte.
+
+![](img/voyant-tools.png){.lightbox height="200"}
+
+### Gephi {.scrollable .smaller}
+
+> Gephi is the leading visualization and exploration software for all kinds of graphs and networks. Gephi is open-source and free.
+
+Gephi est un logiciel de visualisation et d’exploration de réseaux, très utilisé en histoire ou dans le domaine du journalisme.
+
+- fonction(s) : visualiser des graphes en appliquant un certain nombre de calculs ;
+- usage(s) : donner une représentation graphique de réseaux ;
+- création : 2008, notamment par Sébastien Heymann ;
+- mise à jour : une ou plusieurs fois par an ;
+- changement(s) induit(s) : visualiser des informations impossibles à.
+
+Gephi permet d’appréhender la théorie des graphes et de comprendre pourquoi la visualisation a une place prépondérante dans certaines disciplines.
+
+![](img/gephi.png){.lightbox height="200"}
+
+### Qu’est-ce qu’une étude de cas ? {.scrollable .smaller}
+
+- analyse d’un objet/projet ;
+- comprendre les implications scientifiques, techniques et fonctionnelles ;
+- description et regard critique ;
+- expérimenter.
+
+L’étude de cas est une analyse d’un objet ou d’un projet permettant d’en comprendre les implications scientifiques, techniques et fonctionnelles. À la fois description référencée et sourcée, et regard critique, une étude de cas est un travail synthétique qui répond à des questions comme « qui ? », « comment ? », « pourquoi ? » ou « quand ? ». En décrivant les origines et le fonctionnement d’un objet, l’analyse de cas vise à expliquer l’intention initiale ainsi que de mesurer la pertinence de la démarche dans un contexte.
+
+C’est un exercice qui requiert de la méthode, ainsi que des recherches et des manipulations. Dans le cadre de ce cours en partie pratique, il est important de tester soi-même l’objet étudié afin d’en tirer une expérience.
+
+::: {.content-visible when-format="revealjs"}
+## Travaux cités
+:::
