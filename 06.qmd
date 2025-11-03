@@ -25,7 +25,7 @@ Certains langages de balisage permettent d’aller plus loin dans la structurati
   - langage de composition et de structuration du texte ; <!-- axé sur la strcuture et non la mise en page directe, même si très performant à ce niveau. Sépare le fond de la forme-->
   - très utilisé dans les sciences dites *dures* ;
   - langage interprété : un compilateur traduit le source (`.tex`) en une sortie (généralement `.pdf`) ;
--   XML(-TEI) :
+- XML(-TEI) :
   - XML (*Extensible Markup Language*) : langage de balisage hiérarchique conçu pour représenter la structure logique d’un document ;
   - TEI (*Text Encoding Initiative*) : ensemble de balises et de recommandations pour la représentation numérique des textes (littéraires, historiques, scientifiques, etc.).
   - Utilisé dans les humanités numériques pour rendre les textes lisibles par la machine tout en conservant leur richesse sémantique et critique.
