@@ -1,0 +1,732 @@
+# [Séance 9 : 11/11] ÉCRIRE & PUBLIER {.unnumbered}
+
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+```{=html}
+<iframe src="_slides/09.html"></iframe>
+```
+
+[Ouvrir dans mon navigateur](_slides/09.html){target="_blank"}
+:::
+
+## Retour sur les lectures
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+-  @fauchieImportanceSingleSource2023a
+
+:::
+
+
+## Le Single Source Publishing 
+
+> L’expression *single source publishing*, ou publication à source unique en français, désigne le fait de produire plusieurs formats ou artefacts différents à partir d’une seule et même source, dans le cadre d’une démarche de publication.
+
+<!--Qu’est-ce que cela signifie ? Le fait de pouvoir produire plusieurs formats de sortie différents à partir d’une seule source (qui peut se décomposer en plusieurs fichiers).--> 
+
+![](img/ssp.png){.lightbox height="200"}
+
+### Une seule source  {.scrollable}
+
+- Une source unique ; 
+- Pour éviter les confusions ; 
+- Pour gagner en énergie ; 
+- Différents types d'interventions. 
+
+<!--
+
+L’idée du single source publishing, c’est avant tout de travailler à partir d’une seule et même source.
+Autrement dit, on ne duplique pas les contenus pour chaque format de sortie — on les centralise dans un fichier maître.
+
+Cela permet d’éviter les confusions : quand on modifie quelque chose dans la source, la mise à jour se répercute automatiquement dans toutes les versions dérivées.
+C’est aussi un vrai gain d’énergie : on ne passe plus du temps à corriger la même coquille dans trois documents différents.
+
+Enfin, cette approche facilite différents types d’interventions : chacun peut contribuer à son niveau — que ce soit sur le contenu, la mise en forme ou les métadonnées — sans risquer de désynchroniser l’ensemble.
+
+--> 
+
+### Modéliser les sorties {.scrollable}
+
+- Un format de sortie = un modèle/template spécifique ; 
+- Répartir chaque information ; 
+- Prendre en compte un certain nombre de contraintes. 
+
+<!--
+
+À partir de cette source unique, il faut ensuite modéliser les sorties.
+Chaque format de diffusion — que ce soit du HTML, du PDF, ou du ePub — correspond à un modèle ou un template spécifique.
+
+L’enjeu, c’est de répartir correctement chaque information selon la logique du support : ce qui fonctionne bien sur le web n’aura pas forcément le même rendu dans un document imprimé.
+
+Enfin, il faut prendre en compte un ensemble de contraintes : techniques, typographiques, mais aussi éditoriales.
+Ce travail de modélisation permet d’assurer que, malgré la diversité des formats, le contenu reste cohérent et fidèle à la source.
+
+--> 
+
+### Quelques exemples 
+
+- [Lodel](https://lodel.hypotheses.org/) ; 
+- [Métopes](https://www.metopes.fr/) ; 
+- [Scalar](https://scalar.me/anvc/scalar/) ; 
+- [Manifold](https://manifoldapp.org/) ; 
+- [Quire](https://quire.getty.edu/).
+
+<!-- 
+
+LODEL 
+
+Lodel est un système de gestion de contenu (CMS) libre, orienté édition scientifique (revues, livres) développé par OpenEdition. Il permet de publier en ligne des articles ou ouvrages, avec prise en charge des paragraphes, notes, structures, import depuis traitement de texte, etc. 
+
+Points clés : 
+- Conçu pour les textes longs, avec gestion de notes, index, langues non-latines. 
+- Produit des formats conformes aux normes (XML, OAI-PMH, RSS, etc.). 
+- Utilisé majoritairement dans le monde francophone pour l’édition en SHS dans un cadre open access. 
+
+MÉTOPES 
+
+Métopes est un dispositif (boîte à outils + méthodes) mis en place par la MRSH Caen (et ses partenaires) pour structurer les contenus éditoriaux (notamment scientifiques) via XML-TEI, rationaliser la production, et diffuser sur supports multiples. 
+
+Points clés :
+- Il propose des modèles de styla­ge pour Microsoft Word, des scripts d’export vers XML-TEI, des workflows de conversion vers HTML, ePub, PDF. 
+- Le principe du single source publishing est explicite : une source unique (TEI) → plusieurs formes de diffusion. 
+- Orientation forte vers l’interopérabilité, les métadonnées, la pérennité.  
+- Attention, usage orienté revues/universités (pas d'usage léger ou "démo rapide")
+
+SCALAR 
+
+Scalar est une plateforme open-source d’authoring et de publication conçue pour les humanités numériques, permettant de créer des travaux “born-digital” (essais longs, livres numériques) en combinant écriture, médias et liens non linéaires. 
+digitalhumanities.duke.edu
+
+Points clés :
+
+- Permet d’assembler du texte, des médias (images, audio, vidéo), et de structurer des œuvres numériques avec des relations complexes (liens, annotations). 
+- Orientée “web first”, avec API pour réutilisation des contenus, conçu pour la flexibilité du modèle éditorial numérique. 
+- Relativement accessible pour un usage basique ; orienté expérimentations numériques.
+
+MANIFOLD
+
+Manifold est une plateforme open-source de publication numérique académique (livres, textes, médias) développée par la communauté DH (notamment CUNY Graduate Center, etc.). Elle vise à transformer la publication en ligne en un “work in progress” interactif. 
+
+Points clés :
+
+- Permet d’importer des contenus existants, de publier des livres/collections, d’ajouter annotations, groupes de lecture, médias. 
+- Conçue pour l’open access, la collaboration, les formats numériques enrichis. 
+
+QUIRE 
+
+Quire est un outil de publication numérique multiformat open-source développé par The J. Paul Getty Trust, destiné à créer des “digital books” visibles en ligne, en impression, ou en e-book, avec un souci de durabilité, accessibilité et interopérabilité. 
+
+Points clés :
+
+- Utilise des fichiers textes simples + génération de site statique (et e-book/pdf) → ce qui favorise la pérennité et la simplicité. 
+- Conçu pour des publications visuelles riches (musées, arts) mais aussi pour des revues/ouvrages universitaires. 
+- Orientation “ouvrage numérique” plus que revue ou plateforme collaborative complexe. Le workflow peut exiger un peu de technique pour la génération statique.
+-->
+
+### Une approche modulaire
+
+- *Chaîne d’édition classique* : Word + InDesign ; 
+- *Chaîne d’édition modulaire* : un ou plusieurs modules remplissent une ou plusieurs fonctions.
+
+Les chaînes d’édition classiques reposent sur des logiciels par défaut, c’est-à-dire que ceux-ci sont utilisés faute d’application mieux adaptées. 
+
+<!--
+- penser une architecture technique qui s’adapte ; 
+- ne pas s’enfermer dans des modèles contraignants ; 
+-->
+
+### Quelques exemples 
+
+- *Stylo* : Markdown, YAML et BibTeX pour les données ; Pandoc et LaTeX pour la génération des formats ; 
+- *Quire* (article) : Markdown, YAML et JSON pour les données ; Hugo et PrinceXML pour la génération des formats ; 
+- [*Abrüpt*](https://abrupt.cc/) : Markdown, HTML, YAML ; Make, Pandoc et LaTeX pour la génération des formats. 
+
+### Un exemple d'outil : [Quarto](https://quarto.org/about.html) {.scrollable}
+
+- Outil open-source de création et de publication de documents scientifiques (rapports, présentations, livres, sites, etc) ; 
+- Permet de combiner du `.md` avec du code dans plusieurs langages (R, Python, Julia, etc.) ; 
+- Production de documents dans différents formats : HTML, PDF, Word, diaporamas interactifs,...
+
+> Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time. ([Quarto](https://quarto.org/about.html))
+
+> Make reproducible research and publications the norm rather than the exception. ([Quarto](https://quarto.org/about.html))
+
+Fonctionnement : `.md` (+ syntaxe "quarto" incluant code et options de formatage) + `.yaml` (dans le `.md` ou à part) + **pandoc** = vos formats de sortie  
+
+### Note sur Pandoc {.scrollable} 
+
+- Logiciel libre en ligne de commande pour la conversion de fichiers texte ; 
+- John MacFarlane, licence GPL ; 
+- « Couteau suisse de l'édition » ([Perret 2018](https://www.arthurperret.fr/blog/2018-12-04-semantique-et-mise-en-forme.html)) ; 
+- Documentation : <https://pandoc.org/MANUAL.html>. 
+
+Exemple (simple) : 
+
+`pandoc --citeproc -f markdown -t epub TexteAvant.md -o TexteApres.epub`
+
+Traduction : 
+
+cher pandoc avec l'option de citation, fais la conversion, depuis (from) le Markdown vers (to) le ePuB, de mon fichier de départ (`TexteAvant.md`) vers mon fichier de destination (out) (`TexteApres.epub`) 
+
+Exemple (moins simple) : 
+
+`pandoc --citeproc --template=Template.latex -f markdown -t latex TexteAvant.md -o TexteApres.tex`
+
+Traduction : 
+
+cher pandoc avec l'option citation, en utilisant et mon template (qui est le fichier `Template.latex`), fais la conversion, depuis (from) le Markdown vers (to) le Latex, de mon fichier de départ (`TexteAvant.md`) vers mon fichier de destination (out) (`TexteApres.tex`)
+
+### Manipuler quarto  {.scrollable}
+
+1. Installez Quarto : <https://quarto.org/docs/get-started/> (et choisissez VSCode comme outil) ; 
+2. Faites le tuto *Hello, Quarto* : <https://quarto.org/docs/get-started/hello/text-editor.html> : 
+   - Vous pouvez passer les parties où il est question de code informatique, nous nous concentrerons sur le texte ; 
+3. Faites le tuto *Authoring* : <https://quarto.org/docs/get-started/hello/text-editor.html> ; 
+4. Créez une présentation : rendez-vous dans un nouveau répertoire consacré au cours et suivez les informations décrites [dans la documentation](https://quarto.org/docs/presentations/revealjs/) : 
+   1. Creating Slides ; 
+   2. Incremental Lists ; 
+   3. Multiple Columns ; 
+   4. Content Overflow ; 
+   5. Speaker Notes ; 
+   6. Themes ; 
+   7. Asides & Footnotes.  
+
+<!-- 
+## Les apports du minimal computing 
+
+### Définition 
+
+> Minimal computing is an approach that, first and foremost, advocates for using only the technologies that are necessary and sufficient for developing digital humanities scholarship in such constrained environments. This does not mean that the « minimal » of « minimal computing » implies ease for all users or prescribes acceptable types of hardware, software, and platforms (e.g., Jekyll, Arduino, and Raspberry PI). Rather, it gestures towards a decision-making process driven by the local contexts in which scholarship is being created. In this way, minimal computing is platform- and software-agnostic, emphasizing instead the importance of making these choices, based on the constraints with which we are working, to facilitate the development of digital humanities scholarship in environments where resources (e.g., financial, infrastructural, and labor) or freedoms (e.g., movement and speech) are scarce. [@risamIntroductionQuestionsMinimal2022]
+
+### Quelques éléments 
+
+- un accès/une maîtrise facile ; 
+- des technologies avec une empreinte faible ; 
+- se concentrer sur les objectifs du projet (et non un idéal technologique) ; 
+- aspect financier important ; 
+- peu de compromis sur le résultat final. 
+
+--> 
+## La gestion de versions 
+
+Cela vous rappelle-t-il quelque chose ? `mon-fichier-v2-relu-2021-12-09-final-ok-okok.txt` 
+
+Il est utile d'utiliser un système de contrôle de version (ou VCS) en anglais afin de suivre toutes les modifications du code saisi pour produire un texte. 
+
+Le versionnement entend répondre à plusieurs objectifs :
+
+- Enregistrer un ou plusieurs fichiers ; 
+- Garder une trace des versions des fichiers ; 
+- Naviguer dans l’historique des versions ; 
+- (Le tout à plusieurs). 
+
+<!--
+logiciels qui permettent de suivre toutes les modifications des fichiers et des répertoires qui se trouvent dans un répertoire donné. À partir du moment où l'on décide de suivre le contenu d'un répertoire, on peut retrouver l'état qui était le sien dans le passé à tout moment.
+
+Supposons que l'on ait quelque part modifié un paragraphe dans un texte, ajouté ou retranché des lignes: le système de contrôle de version permet alors de retrouver la chronologie de toutes les modifications et de les afficher clairement, l'une après l'autre. On a ainsi l'assurance de ne jamais rien perdre de son travail.
+--> 
+
+### Décentraliser pour mieux travailler
+
+Plusieurs principes inhérents à une bonne gestion collective de fichiers informatiques :
+
+- Ne pas centraliser la sauvegarde ; 
+- Cloner facilement = copier le dossier de travail avec l’ensemble de l’historique ; 
+- Travailler hors connexion ; 
+- Créer des versions parallèles d’un projet. 
+
+### Les différents systèmes de contrôle de version {.scrollable}
+
+- Systèmes locaux : 
+  - Modifications enregistrées dans une base de données ; 
+  - Seules sont enregistrées les différences dans un seul fichier annexe, soit : fichier initial + fichier de difféences ; 
+- Systèmes centralisés : 
+  - Idem, mais les bases de données se trouvent sur un serveur ; 
+  - Possibilités de travail en groupe ; 
+  - Si panne de serveur, base de données inaccessible, impossibilité de travailler ; 
+- Systèmes distribués : 
+  - Un ensemble de composants indépendants situés sur des machines différentes qui partagent des messages entre eux afin d’atteindre des objectifs communs ; 
+  - Le travail se fait sur une version autonome et dupliquée de tous les fichiers présents sur le serveur ; 
+  - Chacun travaille sur ses propres fichiers (même hors ligne) ; 
+  - Une fois une portion de travail terminée, envoi sur le serveur d'un nouvel état de la base de données que les autres pourront alors synchroniser ; 
+  - Possibilité d'accéder à un dépôt à partir de plusieurs emplacements ; 
+  - Git. 
+
+## Introduction à Git 
+
+- Un logiciel de gestion de versions parmi d’autres (pour les fichiers en plein texte) ; 
+- Système distribué ; 
+- Avantage : plutôt que de considérer les *différences* entre modifications des fichiers, il sauvegarde des *instantanés* complets. 
+
+### Versionnement 
+
+chaque fois qu’on enregistre (`commit`), ou qu’on sauvegarde l’état de notre projet dans Git, Git prend un instantané de tous les fichiers, en sauvegardant une référence à l’instantané. Git traite donc nos fichiers comme une série d’instantanés dans le temps. Pour être plus efficace, si Git recconaît que certains fichiers n’ont pas changé depuis l’instantané précédent, Git ne les récupère pas à nouveau, mais crée smplement une collation vers le fichier précédent qui a déjà été sauvegardé.
+
+### Exemple [@debouyVademecumInformatiquePour2025, p. 82-3] {.scrollable}
+
+Soit un fichier `recherche.txt` : 
+
+```md
+PREMIÈRE PARTIE
+===============
+
+COMBRAY
+-------
+
+I 
+
+Longtemps, je me suis couché très tôt. 
+Parfois, à peine ma bougie éteinte,
+mes yeux se fermaient si vite que j'avais 
+juste le temps de me dire : « Je m'endors. » 
+
+```
+
+Que je modifie de la sorte : 
+
+```md
+PREMIÈRE PARTIE
+===============
+
+COMBRAY
+-------
+
+I 
+
+Longtemps, je me suis couché de bonne heure.  
+Parfois, à peine ma bougie éteinte,  
+mes yeux se fermaient si vite que je n'avais  
+pas le temps de me dire : « Je m'endors. »  
+
+```
+
+En analysant les différences entre les deux états de `recherche.txt`, j'obtiendrai : 
+
+```txt
+--- recherche.txt	2018-10-03 12:35:05.848903296 +0200
++++ recherche.txt	2018-10-03 12:31:04.292356175 +0200
+@@ -6,6 +6,6 @@
+ 
+ I
+-Longtemps, je me suis couché très tôt. Parfois, à peine ma
+-bougie éteinte, mes yeux se fermaient si vite que j'avais juste le
++Longtemps, je me suis couché de bonne heure. Parfois, à peine ma
++bougie éteinte, mes yeux se fermaient si vite que je n'avais pas le
+ temps de me dire: «Je m'endors.»
+``` 
+
+Que j'interprète de la sorte : 
+
+- l. 3 : aucune modification avant la l. 6 du fichier original (`recherche.txt`) ; 
+- ll. 5 et 10 : lignes non modifiées (= contexte, ll. 7 et 11 du fichier original) ; 
+- ll. 6 et 7 : précédées du signe `-`, remplacées par les ...
+- ... ll. 8 et 9, précédées quant à elles du signe `+`. 
+
+<!--
+Les systèmes de contrôle de version peuvent donc procéder de deux manières différentes: 1) Enregistrer le fichier original seulement, puis tous les rapports successifs qui donnent les modifications. Ainsi, pour donner l'état le plus récent d'un fichier, il suffit de prendre l'original puis de lui appliquer toutes les modifications successives. 2) Enregistrer toutes les versions successives des fichiers sous la forme d'instantanés. Dans ce cas, les rapports qui enregistrent les modifications ne sont pas eux-mêmes enregistrés, mais peuvent toujours être produits à partir de deux instantanés enregistrés. C'est ainsi que procède Git. 
+
+Bien entendu, quand on travaille sur de nombreux fichiers simultanément et que, d'une étape à l'autre de son travail, on n'en modifie que quelques-uns, Git ne prend pas d'instantané des fichiers non modifiés. Au lieu de faire cela, il enregistre simplement un pointeur vers le dernier instantané du fichier, c'est-à-dire vers la dernière version modifiée de ce fichier.
+
+Cette méthode présente de nombreux avantages dont le plus évident tient à la sécurité. En effet, les systèmes qui enregistrent seulement les rapports de modifications ne sont plus en mesure de restituer un fichier donné si l'un de ces rapports est corrompu. Si un chaînon est manquant, c'est toute la chaîne qui est brisée. Git n'est pas vulnérable sur ce point.
+
+--> 
+
+### Quelques principes {.scrollable}
+
+- Suivre un projet ; 
+- Développements/évolutions non linéaires (branches) : 
+  - travail simultané sur plusieurs *branches* : une branche principale et des branches secondaires ; 
+  - Ex. : 
+  - > à un moment donné, on souhaite revenir sur une page complexe que l'on a rédigée et y apporter des modifications et on voudrait ne rien perdre de la version originale. On ouvre alors une *branche secondaire* dans laquelle on modifie à souhait la page. Durant tout le travail, sur la branche secondaire, le travail enregistré dans la branche principale n'est pas altéré. Une fois terminé le travail sur la branche secondaire, on peut l'abandonner ou bien, si le résultat est satisfaisant, le conserver. Dans ce cas, on demande au système de contrôle de version de fusionner dans la branche principale la branche secondaire sur laquelle on a travaillé. Puis on continue le travail dans la branche principale, après avoir effacé la branche secondaire, tout en sachant qu'à tout moment, toutes les étapes de ces modifications peuvent être retrouvées. [@debouyVademecumInformatiquePour2025, p. 81]
+  - Autant de branches qu'on le souhaite  ; 
+- Historique général et particulier ; 
+- Système de gestion de versions distribué ; 
+- Complexité relative ; 
+- Logiciels/plateformes qui simplifient l’usage. 
+
+Git est pensé pour versionner un projet, seul·e ou à plusieurs. Si Git permet de versionner des fichiers, il ne faut pas oublier que l’objectif final est bien de suivre un projet dans son ensemble et pas forcément un fichier en particulier 
+
+<!--
+
+Git, avant tout, est un système de gestion de versions — mais pas seulement pour des fichiers isolés : il est conçu pour suivre l’évolution d’un projet dans son ensemble, que l’on travaille seul·e ou en équipe.
+
+L’un des points essentiels, c’est que le développement d’un projet n’est pas linéaire.
+Git repose sur la logique des branches, qui permettent de mener plusieurs développements en parallèle.
+On a en général une branche principale, souvent appelée main ou master, et des branches secondaires pour tester, modifier ou faire évoluer certains éléments sans risquer d’altérer la version stable.
+
+Par exemple, imaginons qu’on veuille retravailler une page complexe déjà rédigée.
+On crée alors une branche secondaire, où l’on peut expérimenter librement.
+Pendant ce temps, la branche principale reste intacte.
+Et une fois les modifications terminées, on a deux choix : soit on abandonne cette branche, soit, si le résultat est satisfaisant, on la fusionne avec la branche principale (merge).
+On continue ensuite le travail en sachant que toutes les étapes intermédiaires sont conservées et qu’il est toujours possible de revenir en arrière à n’importe quel moment.
+
+Git garde donc un historique complet — à la fois général (celui du projet) et particulier (celui de chaque fichier).
+C’est aussi un système distribué, ce qui signifie que chaque personne possède une copie intégrale du projet, avec tout son historique : on peut travailler hors ligne, puis synchroniser ses changements plus tard.
+
+Enfin, Git peut sembler complexe au premier abord, mais de nombreux logiciels et plateformes — comme GitHub, GitLab ou encore GitKraken — simplifient grandement son utilisation grâce à des interfaces visuelles.
+
+-->
+
+### Une illustration {.scrollable}
+
+![](img/git-purr-01.jpg){.lightbox height="200"}
+
+![](img/git-purr-02.jpg){.lightbox height="200"}
+
+![](img/git-purr-03.jpg){.lightbox height="200"}
+
+([source](https://girliemac.com/blog/2017/12/26/git-purr/))
+
+### Quelques termes {.scrollable}
+
+- **Dépôt** : ensemble des fichiers versionnés ; 
+- **Commit** : enregistrement des changements dans un dépôt : 
+  - Pour comprendre comment fonctionne Git il faut comprendre ce qu’est un commit : ce n’est pas un enregistrement classique, mais l’état du projet tout entier après une série de modifications sur un ou plusieurs fichiers ; 
+- **Fork** : divergence d’un projet, une copie qui va vivre sa propre vie (ou presque) : 
+  - En forkant on s’approprie le projet, si besoin on pourra soumettre des modifications à la version originale tout en travaillant sur notre version ; 
+- **Cloner** : copier un projet chez soi pour pouvoir y contribuer : 
+  - En clonant le projet je conserve le projet original, mais je risque de perturber les développements ; 
+- **Conflit** : lorsque l’on tente de réunir voir de fusionner plusieurs versions d’un même projet. 
+
+
+Un commit est une série d’informations :
+
+- un identifiant ; 
+- une date ; 
+- un message ; 
+- une liste de modifications associées : les fichiers modifiés. 
+
+### En somme 
+
+- Bien configurer Git ; 
+- Git ≠ GitHub/GitLab ; 
+- La bible : https://git-scm.com/book/fr/v2 ; 
+- Il est presque impossible de supprimer quelque chose. 
+
+## Manipulation : Git et GitHub.
+
+### Les commandes usuelles {.scrollable}
+
+- `git init` : initialiser un dossier ; 
+- `git status` : voir l’état du projet ; 
+- `git log` : afficher l’historique de la branche actuelle ; 
+- `git add` : ajouter un fichier dans l’index avant de commiter ; 
+- `git commit` : déclarer des modifications ; 
+- `git branch` : créer une nouvelle branche ; 
+- `git checkout` : pour basculer sur une branche ; 
+- `git push` : envoyer les modifications sur un dépôt distant ; 
+- `git fetch` : récupérer les modifications d’un dépôt distant ; 
+- `git pull` : récupérer les modifications d’un dépôt distant et les fusionner avec le dépôt local. 
+
+Pour afficher un historique plus détaillé : `git log --decorate=full --raw`, ou pour afficher l’arbre des branches : `git log --branches --remotes --tags --graph --oneline --decorate --pretty=format:"%h - %ar - %s"`
+
+<!--
+--decorate=full	Affiche les références complètes (branche, tag, HEAD, etc.) associées à chaque commit. Par défaut, git log affiche une version abrégée comme HEAD -> main, mais ici tu verras le chemin complet (refs/heads/main, refs/remotes/origin/main, etc.).
+--raw	Affiche la liste des fichiers modifiés dans chaque commit, avec des symboles indiquant leur statut : ajout (A), modification (M), suppression (D), renommage (R), etc.
+Tu obtiens une vue très complète de ce qui a changé, utile pour :
+
+analyser l’évolution d’un fichier précis,
+
+vérifier les changements entre deux commits,
+
+ou comprendre le contenu d’un dépôt complexe.
+
+
+2) Afficher l’arbre des branches (les relations entre commits), de manière compacte et visuelle.
+
+--branches	Inclut tous les commits présents dans toutes les branches locales.
+--remotes	Inclut aussi les commits des branches distantes (celles de GitHub par exemple).
+--tags	Inclut les commits associés à des tags (versions stables, points marquants, etc.).
+--graph	Dessine un graphique textuel (avec des *, `
+--oneline	Affiche chaque commit sur une seule ligne, pour un aperçu rapide.
+--decorate	Ajoute les noms des branches et des tags à côté des commits.
+--pretty=format:"%h - %ar - %s"	Personnalise le format d’affichage :
+  %h → hash abrégé du commit
+  %ar → date “relative” (ex. 2 days ago)
+  %s → message du commit |
+
+Tu obtiens un arbre clair de ton historique, par exemple :
+  * 1a2b3c4 - 2 hours ago - Correction du README (HEAD -> main, origin/main)
+| * d5e6f7g - 3 days ago - Ajout d’une nouvelle fonctionnalité (feature/ajout-fonction)
+|/
+* a1b2c3d - 5 days ago - Initial commit
+
+C’est très pratique pour :
+
+    visualiser les branches et leurs fusions ;
+
+    repérer où tu te trouves (HEAD) ;
+
+    identifier rapidement les derniers commits sur les différentes branches
+-->
+
+
+### Installation de Git {.scrollable}
+
+::: {.callout-important}
+
+Git ≠ GitHub/GitLab
+
+:::
+
+- Installer Git : <https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git> 
+  - Le plus simple, pour ce cours, est de l'installer avec les installations Github, soit, 
+    - Pour MacOS : <https://desktop.github.com/> ; 
+    - Pour Windows : <https://windows.github.com/>  ou  <https://desktop.github.com/> ; 
+- Initialiser Git (peut-être, selon l'installation ci-dessus) : lui donner votre nom et votre email : 
+
+```txt
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
+Pour vérifier si git est bien installé : `git --version`
+
+### Clés SSH 
+
+- *Secure Socket Shell* ; 
+- Protocole de cryptage ; 
+- Pour faire interagir mon ordinateur (client) avec un serveur en sécurité ; 
+
+<!--
+Pour que votre ordinateur puisse communiquer avec GitHub sans retaper votre mot de passe à chaque fois, on va créer une petite clé d’accès appelée clé SSH.
+
+Vérifier si vous avez déjà une clé ssh : `ls -al ~/.ssh`
+
+S’ils voient des fichiers comme id_rsa.pub, id_ed25519.pub ou id_ecdsa.pub, c’est qu’ils ont déjà une clé publique.
+
+Mac OS : 
+
+- ssh-keygen -t ed25519 -C "adresse@email.com" 
+- Entrée pour accepter l’emplacement par défaut (~/.ssh/id_ed25519).
+- Laisser la passphrase vide pour éviter d’avoir à la taper à chaque utilisation.
+
+Windows : 
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+Ajouter la clé a github 
+
+cat ~/.ssh/id_ed25519.pub
+
+ou 
+
+clip < ~/.ssh/id_ed25519.pub    # sur Windows
+pbcopy < ~/.ssh/id_ed25519.pub  # sur Mac
+
+
+GitHub → Settings → SSH and GPG keys → New SSH key
+
+Tester la connexion : ssh -T git@github.com
+-->
+
+### Prise en main de Git {.scrollable}
+
+- Créez un répertoire de travail dans le dossier dédié au cours, par ex : 
+  - `cd Documents/HNU2000` ; 
+  - `mkdir Seance_9` ; 
+  - `cd Seance_9` ; 
+  - `git init` : on demande à Git de suivre le contenu de ce répertoire ; 
+  -  Vous devriez obtenir comme "réponse" : 
+     -  `Dépôt Git vide initialisé dans /home/votre-nom/Documents/HNU2000/Seance_9/.git/`
+     - la base de données sera maintenue dans un répertoire caché `.git` lui-même à l'intérieur du répertoire `Seance_9`. 
+- Ouvrez VSCodium (en veillant à bien être dans le même répertoire) et créez un document `recherche.txt` et ajoutez-y le texte du premier état du fichier donné en exemple plus haut. 
+- Sauvez puis, dans votre terminal, faites un `git status` ; la réponse devrait être : 
+
+```txt
+[votre-nom Seance_9]$ git status 
+Sur la branche master
+
+Validation initiale
+
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+
+	recherche.txt
+
+aucune modification ajoutée à la validation mais des fichiers non suivis 
+sont présents (utilisez "git add" pour les suivre)
+```
+
+Voici comment interpréter ce message : 
+
+- l. 2 : par défaut, la *branche principale* est appelée par Git `master` (ou `main`, selon les configs) ; 
+- l. 6 sq. : liste de fichiers trouvés dans le répertoire + indique qu'on ne lui a pas (encore) demandé de les *suivre* ; 
+  - ! Git ne suivra que les fichiers qu'on lui a demandé d'indexer ! 
+- l. 7 : instructions pour indexer le fichier qui a été trouvé: `git add <fichier>`
+
+Ajoutons le fichier et demandons à Git un nouveau rapport : 
+
+- `git add recherche.txt` : place le fichier `recherche.txt` dans la zone d'indez de Git (la zone de travail, ou *staging area*) ; 
+- `git status` ; 
+- Vous devriez obtenir en réponse : 
+
+```txt
+Sur la branche master
+
+Validation initiale
+
+Modifications qui seront validées :
+  (utilisez "git rm --cached <fichier>..." pour désindexer)
+
+	nouveau fichier : recherche.txt
+```
+
+Le fichier est désormais indexé, mais pas enregistré dans la base de données : 
+
+- `git commit <fichier> -m "<message>"` ou plutôt `git commit recherche.txt -m "version initiale"` ; 
+- Avec, en réponse : 
+
+```txt
+[master (commit racine) fa1ec00] version initiale
+ 1 file changed, 11 insertions(+)
+ create mode 100644 recherche.txt
+```
+
+Modifions maintenant le fichier avec la deuxième version donnée en exemple plus haut ; 
+
+- sauvez ; 
+- `git diff` : affiche les différences entre la version actuelle des fichiers et leur dernière version enregistrée (par un `git commit`) ; 
+- la réponse devrait être : 
+
+```txt
+diff --git a/recherche.txt b/recherche.txt
+index 3baf502..f230132 100644
+--- a/recherche.txt
++++ b/recherche.txt
+@@ -6,6 +6,6 @@ COMBRAY
+ 
+ I
+ 
+-Longtemps, je me suis couché très tôt. Parfois, à peine ma
+-bougie éteinte, mes yeux se fermaient si vite que j'avais juste le
++Longtemps, je me suis couché de bonne heure. Parfois, à peine ma
++bougie éteinte, mes yeux se fermaient si vite que je n'avais pas le
+ temps de me dire: «Je m'endors.»
+```
+
+Pour enregistrer ces informations : 
+
+- `git commit recherche.txt -m "nouvelle version de l'incipit"` 
+- Réponse : 
+
+```txt 
+[master 83b6c3e] nouvelle version de l'incipit
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+```
+
+Demandons à Git de nous fournir un extrait de son journal : 
+
+- `git log` ; 
+- Réponse : 
+
+```txt
+commit 83b6c3e6dad72116eac5ce7d1ba70968e4e57ebb 
+Author: Votre-Nom <votre-adresse@email.com>
+Date:   Wed Oct 3 15:05:32 2018 +0200
+
+    nouvelle version de l'incipit
+
+commit fa1ec001efdca9c69cc768dc9cf83706bdb6e603
+Author: Votre-Nom <votre-adresse@email.com>
+Date:   Wed Oct 3 14:49:10 2018 +0200
+
+    version initiale
+```
+
+- Analyse : 
+  - ll. 1 et 7 : à chaque *commit* est associé un numéro de registre, en notation hexadécimale, formé d'une séquence de 40 caractères allant de 0 à 9 et de a à f.
+    - Cette chaîne est appelée *hash* ; 
+    - un identifiant pour un commit ; 
+    - ex. : `24b9da6552252987aa493b52f8696cd6d3b00373`
+  
+### Tuto 
+
+Réalisons ensemble quelques uns des tutos disponibles sur le site : <https://learngitbranching.js.org/?locale=fr_FR&demo=> 
+
+- Regarder la démo ; 
+- Tuto `Principal` : 
+  - Les 4 exercices de la séquence d'introduction ; 
+- Tuto `Remote` : 
+  - Les exercices 1 à 6 de la séquence `Push & Pull`
+
+### Résumé des commandes {.scrollable}
+
+- `git config --global` : paramétrage initial de Git ; 
+- `git init` : initialisation de Git dans un nouveau répertoire ; 
+- `git status` : demande à Git un *rapport d'état* ; 
+- `git add` : indexe des fichiers dans la zone de travail. Seuls les fichiers indexés seront suivis par Git ; 
+- `git commit <fichier> -m "<message>"` : enregistre dans la base de données de Git les versions modifiées des fichiers sous forme d'instantanés ; 
+- `git diff` : montre les différences entre la version actuelle des fichiers et leur dernière version enregistrée par `git commit` ; 
+- `git log` : affiche le journal de Git.
+
+### Exercice {.scrollable}
+
+**Étape 1 — Créer et initialiser un dépôt local :**
+
+- créer un dossier : `mkdir bac-a-sable` ; 
+- aller dans ce dossier : `cd bac-a-sable` ; 
+- créer un fichier : `echo "Mon texte" >fichier-01.txt` ; 
+- initialiser un dépôt git : `git init` ; 
+- ajouter le fichier dans l’index : `git add fichier-01.txt` ; 
+- commiter : `git commit -m "Premier commit : ajout du fichier-01.txt"` ; 
+- afficher l’historique : `git log`.
+
+<!-- Jusqu’ici, tout se passe localement — rien n’est encore en ligne. --> 
+
+**Étape 2 — Synchroniser avec GitHub :**
+
+1. Créer un dépôt vide sur GitHub : 
+   1. Se rendre sur https://github.com et s'y connecter ; 
+   2. Créer un "New repository" ; 
+   3. Nommer le dépôt : `bac-a-sable` ; 
+   4. N'ajoutez pas de Readme ; 
+   5. Copier l’adresse SSH du dépôt (elle ressemble à `git@github.com:nom-utilisateur/bac-a-sable.git`). 
+2. Lier le dépôt local à GitHub : 
+   1. Dans le terminal, à la racine du dossier `bac-a-sable` : `git remote add origin git@github.com:nom-utilisateur/bac-a-sable.git` ; 
+   2. Il sera sans doute nécessaire de configurer votre clé SSH à cette étape ; 
+3. Vérifier la connexion : `git remote -v` ; <!--Cela doit afficher deux lignes avec l’URL du dépôt distant.-->
+4. Envoyer le projet sur GitHub : `git push -u origin main` ; 
+   - Si la branche s'appelle `master` il faudra la renommer : 
+     - `git branch -M main` ; 
+     - `git push -u origin main` ; 
+
+**Étape 3 — Synchroniser les changements :**
+
+<!--Une fois le dépôt lié à GitHub, il faut savoir récupérer et envoyer les modifications pour rester à jour avec le dépôt distant.--> 
+
+- Récupérer les changements faits sur GitHub : `git pull` ; 
+  - (`git pull` = `git fetch` + `git merge`) ; 
+- Récupérer les infos du dépôt distant sans fusionner : `git fetch` ; 
+- Intègrer les nouvelles modifications : `git rebase` ; 
+- Envoyer les commits locaux vers GitHub : `git push`. 
+
+### Exercice : résoudre un conflit {.scrollable}
+
+- Créer une nouvelle branche appelée `modifs` : `git checkout -b modifs` ; 
+- Vous êtes désormais sur cette nouvelle branche ; 
+- Modifier le fichier, par exemple : `echo "Autre texte hop là" >fichier-01.txt` ; 
+- Enregistrer vos modifications dans Git : `git commit -a -m "révision de la première ligne"` ; 
+- Retourner sur la branche principale : `git checkout master` (ou `git checkout main` selon votre configuration) ; 
+- Effectuer une nouvelle modification : `echo "Ceci est mon texte" >fichier-01.txt` ; 
+- Enregistrer vos modifications : `git commit -a -m "réécriture"` ; 
+- Tenter de fusionner les deux branches : `git merge modifs` ; 
+
+Vous devez avoir un conflit !
+
+Vous devez ouvrir le fichier pour résoudre le conflit :
+
+- Dans un éditeur de texte comme VSCodium, des options vont vous être proposées pour choisir la version souhaitée ; 
+  - C’est à vous de conserver manuellement ce qui vous intéresse
+- Une fois ces modifications faites, vous devez enregistrer le fichier (`git add`), et commiter tout cela (`git commit`) ;
+- Effectuer un `git status` pour s’assurer que tout est en ordre ! 
+- Si vous arrivez pas à résoudre les conflits et vous voulez retourner à la situation précédente : `git merge --abort` ; 
+
+
+::: {.content-visible when-format="revealjs"}
+
+## Travaux cités 
+
+:::
