@@ -273,6 +273,7 @@ Semaine de lecture -- pas de cours.
 ## [Séance 9 : 11/11] ÉCRIRE & PUBLIER {.smaller}
 
 - Le *Single Source Publishing* ; 
+- [Manipulation]{.text-danger} : Quarto ; 
 - La gestion de versions ; 
 - [Manipulation]{.text-danger} : Git et GitHub. 
 
