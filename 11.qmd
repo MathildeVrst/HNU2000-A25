@@ -1,0 +1,193 @@
+# [Séance 11 : 25/11] ANALYSER : textométrie, stylométrie et TAL {.unnumbered}
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+```{=html}
+<iframe src="_slides/11.html"></iframe>
+```
+
+[Ouvrir dans mon navigateur](_slides/11.html){target="_blank"}
+:::
+
+## Retour sur les lectures
+
+::: {.callout-important collapse="true"}
+## Lectures obligatoires
+
+- @reboulMesuresSavoirsQuelles2019
+
+:::
+
+<!--
+
+- Numérisation de masse : problèmes nouveaux pour la recherche 
+- Les corpus et leur constitution ne sont pas neutres 
+- Question des métadonnées (fautives) 
+- "convertir des récits en des bases de données, passer de la narration ou de la diction à de l’information, c’est identifier des noms et des concepts signifiants, transposer des typographies et des mises en pages, annoter un texte « à l’ancienne » ou avec des outils collaboratifs innovants, démembrer une structure en repérant l’énonciation éditoriale et les enjeux esthétiques des supports." 
+- "Il n’y a donc pas une œuvre numérisée mais des standards et des degrés d’encodage et de sémantisation"
+- pré-traitement du corpus, généralement tokénisation, lemmatisation et étiquetage syntaxique léger.
+-->
+
+## Les Humanités Numériques et le texte 
+
+- Qu’est-ce qu’une « manipulation » numérique du texte ? 
+- Analyse computationnelle et tradition d'analyse textuelle 
+
+### Un peu d'histoire 
+
+concordanciers, stylométrie, corpus numériques.
+
+close reading vs. distant reading, texte vs. donnée, modélisation.
+
+### La fouille de textes 
+
+La fouille de textes est une fouille de données spécialisée, il s’agit d’extraire des termes ou des expressions d’un corpus de textes pour l’analyse de ces textes. Il peut s’agir de déterminer des relations dans le texte, impossible sans cette technique (numérique).
+
+En lien avec la fouille de textes il y a le traitement automatique des langues (ou NLP pour Natural language processing).
+
+### Quelques cas d’usage #
+
+- Faire une étude linguistique ; 
+- Chercher une ou des expressions précises dans un corpus ; 
+- Comparer les occurrences de plusieurs termes/expressions dans un corpus ; 
+- Comparer plusieurs versions d’un même texte à partir de critères préétablis. 
+
+La fouille de textes permet donc d’étudier des textes grâce à différents éléments : chercher des modèles, comparer des textes. 
+
+### Fonctionnement 
+
+- Disposer d’un corpus interrogeable ; 
+- Définir une méthode et des outils pour extraire des informations ; 
+- Réaliser les manipulations et les interprétations.  
+
+### Les étapes 
+
+- Constituer le corpus, le délimiter ; 
+- Analyser le texte : extraire les termes, les expressions, etc. ; 
+- Interpréter les résultats : extraire les informations des analyses. 
+
+### Exemples d'utilisation 
+
+Le référencement des sites web, ou encore la gestion des pourriels. Dans les cas, il s’agit de traiter une grande quantité de texte, comprendre ce que le texte signifie et réaliser des actions en conséquence. Dans le cas du référencement web il s’agit de créer des index à partir de nombreux textes structurés (les pages web), alors qu’avec la gestion du spam il s’agit d’identifier les messages considérés comme non pertinents.
+
+D’autres domaines font appel au text mining pour améliorer leurs chaînes de traitement, de la recherche de brevets à la veille en passant par l’analyse de textes biomédicaux pour établir une veille technique.
+
+### Quelques outils 
+
+Pour :
+
+- Nettoyer le texte ; 
+- Transformer le texte en base de données ; 
+- Interroger le texte. 
+
+Outils :
+
+⁻ Langages de programmation : Python très utilisé dans les DH ; 
+⁻ Pour nettoyer le texte et déterminer des modèles : des algorithmes ; 
+⁻ Pour visualiser/analyser/interpréter les résultats : des bibliothèques de code ou des logiciels. 
+
+Il y a donc différentes tâches à réaliser, des outils existent pour une ou plusieurs de ces tâches.
+
+<!--La question des algorithmes est récurrentes dans la fouille de textes ou le traitement automatique des langues. Mais qu’est-ce qu’un algorithme ?-->
+
+### Diposer des terxtes 
+
+La fouille de textes se fait généralement sur des documents non nativement numériques, une numérisation est donc nécessaire. Mais où trouver ces textes ? Et sous quel format ? Ça change tout de travailler avec des PDFs non océrisés ou des fichiers structurés (ou, entre les deux, du format texte non structuré). 
+
+Numérisations... : 
+
+- Universités et bibliothèques nationales ; 
+- Google ; 
+- Initiatives indépendantes.
+
+<!--
+
+
+
+Qui numérise tous ces documents ? Numériser des textes est complexe et coûteux, il faut à la fois disposer des textes originaux (principalement des livres), avoir du matériel pour la prise de vue, des conditions adéquates pour ne pas abîmer les documents et enfin les logiciels et les savoir faire pour le traitement des documents.
+
+Les premières structures qui commencent à numériser des documents sont des universités et des bibliothèques, principalement pour des questions de sauvegarde, puis pour des questions de consultation des documents (plus facile même avec des CD-ROM, et en évitant de trop manipuler des documents vieillissants) et enfin pour des questions de recherche dans les documents.
+
+La Bibliothéque nationale de France a été par exemple l’une des premières à débuter une importante campagne de numérisation avec Gallica, après la Bibliothèque du Congrès aux États-Unis ou le Projet Gutenberg, mais avant Google Books.
+
+Google Books ou Google Livres est un projet de très grande envergure qui débute en 2002 et qui va créer de nombreux débats :
+
+    Google va tenter d’établir des partenariats avec des bibliothèques publiques ou universitaires, proposant une numérisation presque gratuite contre l’ajout de ces documents dans sa base (avec un embargo) ;
+    Google va numériser des fonds d’éditeurs sans leur accord, provoquant de nombreux procès.
+
+Il existe aussi des initiatives dites indépendantes, qui ne dépendent pas d’organismes publics et qui sont à but non lucratif : outre le projet Gutenberg, Archive.org est un très bon exemple de tentative de numériser largement au profit de toutes et tous.
+
+
+-->
+
+<!--
+
+Quelques étapes nécessaires :
+
+    référencement des documents
+    prise de vue (photographie)
+    reconnaissance optique des caractères
+    zonage du texte et structuration
+
+Petite exploration de comment numériser un texte en plusieurs étapes détaillées ci-dessous :
+
+    le référencement des documents : il faut d’abord savoir quoi numériser, et cela n’est possible qu’à condition de disposer d’une base de données des références des documents concernés. Donc une sorte de catalogue qui comporte des informations primordiales : les métadonnées des documents mais aussi des informations sur les propriétés du document (nombre de pages par exemple). La constitution d’un catalogue est une tâche complexe et longue, mais heureusement les informations sont désormais souvent mutualisées ;
+    la prise de vue consiste à prendre en photo les différentes pages d’un document ou d’un livre, et plusieurs paramètres sont à prendre en compte : la qualité de la photo (qualité qui a beaucoup évolué ces 50 dernières années (avec le passage de l’argentique au numérique notamment), le fait que le document est mis à plat, etc. Une prise de vue ne permet pas de faire des requêtes sur un texte, mais uniquement de le consulter autrement que via l’exemplaire analogique. Le mode image permet toutefois de prévoir d’autres traitements par la suite ;
+    la reconnaissance optique des caractères (ou OCR) est une opération qui consiste à transformer une image en texte. Outre le fait de pouvoir reconnaître les différents caractères typographiques dans différentes langues, il s’agit aussi d’être en mesure d’attribuer des coordonnées à chaque portion de texte par rapport à l’image afin de pouvoir ensuite développer des fonctionnalités de calques (le texte océrisé vient se placer sur l’image pour afficher des termes recherchés ou sélectionnés) ;
+    le zonage du texte et la structuration sont des étapes distinctes qui permettent d’aller au-delà de la simple conversion textuelle d’une image. Ce sont souvent des opérations difficilement automatisables, car elles nécessitent une bonne interprétation du document original. Le zonage du texte consiste en une description des blocs de textes : décrire quel est le type de texte et le placer dans une arborescence logique. La structuration est une opération d’encodage qui consiste à qualifier tout type de texte : niveaux de titres, emphases, listes, citations, noms de personnes ou de lieux, etc.
+
+-->
+
+### Texte et data 
+
+> Comment un texte devient-il une donnée ? Qu’est-ce qu’on perd et qu’est-ce qu’on gagne ? 
+
+## Ngram Viewer 
+
+<!--
+L’affichage des résultats sur un graphe permet de prendre la mesure du nombre d’occurrences d’une expression à travers le temps et à travers des corpus très divers. Si Ngram Viewer est intéressant pour appréhender des grands corpus de textes, encore faut-il en faire une analyse plus poussée en ayant accès aux documents sources (ce que ne permet pas totalement Google Books).
+-->
+
+## Voyant Tools 
+
+Atelier présenté par Yann Audin. 
+
+<!--
+
+- Application web ; 
+- Exploration de textes par des approches “distantes” ; 
+- À destination du monde académique ; 
+- Open source et user friendly ; 
+- <https://voyant-tools.org/>.  
+
+### Charger un ou plusieurs textes
+
+- Copier-coller le texte directement ; 
+- Copier-coller une URL pointant vers un texte brut ; 
+- Copier-coller plusieurs URLs (avec saut de ligne) ; 
+
+### Exemples
+
+Quelques textes disponibles grâce au [projet Gutenberg](https://www.gutenberg.org/) : 
+
+- A la Recherche du Temps Perdu (M. Proust) : <https://www.gutenberg.org/cache/epub/2650/pg2650.txt> ; 
+- La Curée (E. Zola) : <https://www.gutenberg.org/cache/epub/17553/pg17553.txt> ; 
+- Le Mystère de la Chambre Jaune (G. Leroux) : <https://www.gutenberg.org/cache/epub/13765/pg13765.txt> 
+
+### Manipulons 
+
+- Exploration des panneaux de Voyant Tools ; 
+- Quelques notions sur l’exploration statistique des textes ; 
+- Fonction de recherche dans le corpus ; 
+- Autres panneaux d’exploration. 
+
+### Manipulations individuelles 
+
+- Importer un ou plusieurs textes de votre choix (ou garder ceux utilisés jusqu’à présent) ; 
+- Explorer les différents outils - quels éléments notables découvrez-vous sur le corpus? ; 
+- Partager vos découvertes avec le groupe. 
+
+-->
+
+::: {.content-visible when-format="revealjs"}
+## Travaux cités
+:::

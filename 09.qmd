@@ -139,7 +139,7 @@ Les chaînes d’édition classiques reposent sur des logiciels par défaut, c�
 ### Quelques exemples 
 
 - *Stylo* : Markdown, YAML et BibTeX pour les données ; Pandoc et LaTeX pour la génération des formats ; 
-- *Quire* (article) : Markdown, YAML et JSON pour les données ; Hugo et PrinceXML pour la génération des formats ; 
+- *Quire* : Markdown, YAML et JSON pour les données ; Hugo et PrinceXML pour la génération des formats ; 
 - [*Abrüpt*](https://abrupt.cc/) : Markdown, HTML, YAML ; Make, Pandoc et LaTeX pour la génération des formats. 
 
 ### Un exemple d'outil : [Quarto](https://quarto.org/about.html) {.scrollable}

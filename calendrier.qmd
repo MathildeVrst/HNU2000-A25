@@ -273,9 +273,7 @@ Semaine de lecture -- pas de cours.
 ## [Séance 9 : 11/11] ÉCRIRE & PUBLIER {.smaller}
 
 - Le *Single Source Publishing* ; 
-- [Manipulation]{.text-danger} : Quarto ; 
-- La gestion de versions ; 
-- [Manipulation]{.text-danger} : Git et GitHub. 
+- [Manipulation]{.text-danger} : Quarto.
 
 ::: {.callout-important collapse="true"}
 ## Lectures obligatoires
@@ -302,15 +300,21 @@ Semaine de lecture -- pas de cours.
 
 ## [Séance 10 : 18/11] NETTOYER & EXPLOITER les données textuelles {.smaller}
 
-::: {.callout-warning}
+::: {.callout-important collapse="true"}
 
-- Conférence & Workshop, A. Chagué, « De l’OCR à l’HTR : panorama général, suivi d’un workshop introductif à eScriptorium » -- À confirmer !  
+- Remise des résumés sur les vidéos IA : 
+  - jeudi 11 septembre 2025 15:30 : [Introduction : comment distinguer l’IA de ChatGPT](https://alexiaschn.github.io/ateliers_ia/seances/intro.html#/title-slide) ; 
+  - jeudi 09 octobre 2025 15:30 : [IA et la correction textuelle automatique : quels outils et quelles limites ?](https://alexiaschn.github.io/ateliers_ia/seances/correction.html) 
 
 :::
 
-- La notion de *data* ; 
-- La numérisation des corpus : qui, quoi, comment ? ; 
-- Une petite histoire de l'OCR à l'HTR.
+::: {.callout-warning}
+
+- 09h-11h30 : Conférence & Workshop, A. Chagué, « De l’OCR à l’HTR : panorama général, suivi d’un workshop introductif à eScriptorium »
+
+:::
+
+![](img/S%C3%A9ance10_EScriptorium.png){.lightbox height="200"} 
 
 ::: {.callout-important collapse="true"}
 ## Lectures obligatoires
@@ -323,10 +327,11 @@ Semaine de lecture -- pas de cours.
 
 ## [Séance 11 : 25/11] ANALYSER : textométrie, stylométrie et TAL {.smaller}
 
+- Retour sur les vidéos IA ; 
 - Humanités Numériques et Texte ; 
 - [Manipulations]{.text-danger} : 
   - [Ngram Viewer](https://books.google.com/ngrams/) ; 
-  - [Voyant Tools](https://voyant-tools.org/).
+  - [Voyant Tools](https://voyant-tools.org/) (atelier pratique donné par Yann Audin).
 
 ::: {.callout-important collapse="true"}
 ## Lectures obligatoires
@@ -347,10 +352,18 @@ Semaine de lecture -- pas de cours.
 
 ## [Séance 12 : 02/12] VISUALISER : vers une autre lecture {.smaller}
 
+::: callout-important
+
+- [Remise de l'examen final (écrit)](index.qmd#travail-écrit). 
+
+:::
+
+- La gestion de versions (à confirmer) ; 
+- [Manipulation]{.text-danger} : Git et GitHub. 
 - Les graphes : quelques éléments théoriques ; 
 - [Manipulations]{.text-danger} : 
   - [TimeLineJS](https://timeline.knightlab.com/) ; 
-  - [StoryMapJS](https://storymap.knightlab.com/). 
+  - [StoryMapJS](https://storymap.knightlab.com/).
 
 ::: {.callout-important collapse="true"}
 ## Lectures obligatoires
@@ -370,13 +383,17 @@ Semaine de lecture -- pas de cours.
 
 \newpage 
 
-## [Séance 13 : 09/12] IA {.smaller}
+## [Séance 13 : 09/12] Présentations examen final {.smaller}
 
 ::: callout-important
 
-- [Remise de l'examen final (écrit)](index.qmd#travail-écrit). 
+[Examen final (présentations en classe)](index.qmd#présentation-orale-et-discussion-en-classe).
 
 :::
+
+\newpage 
+
+## [Séance 14 : 16/12] 
 
 ::: {.callout-important}
 Cette séance est remplacée par les deux [Ateliers *IA pour les SHS*](https://alexiaschn.github.io/ateliers_ia/) : 
@@ -394,15 +411,6 @@ Cette séance est remplacée par les deux [Ateliers *IA pour les SHS*](https://a
 
 :::
 
-\newpage 
-
-## [Séance 14 : 16/12] 
-
-::: callout-important
-
-[Examen final](index.qmd#présentation-orale-et-discussion-en-classe).
-
-:::
 
 ::: {.content-visible when-format="revealjs"}
 
