@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR" xml:lang="fr-FR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>[Séance 11 : 25/11] ANALYSER : textométrie, stylométrie et TAL – HNU2000-A25</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./09.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11.html">[Séance 11 : 25/11] ANALYSER&nbsp;: textométrie, stylométrie et TAL</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">HNU2000-A25</a> 
+        <div class="sidebar-tools-main">
+    <a href="./HNU2000-A25.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plan du cours</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./calendrier.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calendrier des séances et des lectures</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction au cours</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01b.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">[Séance 1&nbsp;: 02/09] Introduction aux Humanités Numériques</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">[Séance 2 : 09/09] COMPRENDRE son environnement</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">[Séance 3 : 16/09] CHERCHER: corpus et ressources numériques</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">[Séance 4 : 23/09] ORGANISER &amp; BIBLIOGRAPHIER: métadonnées et formats</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">[Séance 5 : 07/10] REPRÉSENTER le texte (I): formats légers</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">[Séance 6 : 14/10\] REPRÉSENTER le texte (II): formats riches et normés</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">[Séance 9 : 11/11] ÉCRIRE &amp; PUBLIER</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">[Séance 11 : 25/11] ANALYSER&nbsp;: textométrie, stylométrie et TAL</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Références</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenu</h2>
+   
+  <ul>
+  <li><a href="#retour-sur-les-lectures" id="toc-retour-sur-les-lectures" class="nav-link active" data-scroll-target="#retour-sur-les-lectures">Retour sur les lectures</a></li>
+  <li><a href="#humanités-numériques-et-analyse-des-textes" id="toc-humanités-numériques-et-analyse-des-textes" class="nav-link" data-scroll-target="#humanités-numériques-et-analyse-des-textes">Humanités numériques et analyse des textes</a>
+  <ul class="collapse">
+  <li><a href="#quest-ce-quune-manipulation-numérique-du-texte" id="toc-quest-ce-quune-manipulation-numérique-du-texte" class="nav-link" data-scroll-target="#quest-ce-quune-manipulation-numérique-du-texte">Qu’est-ce qu’une manipulation numérique du texte ?</a></li>
+  <li><a href="#analyse-computationnelle-et-tradition-danalyse-textuelle" id="toc-analyse-computationnelle-et-tradition-danalyse-textuelle" class="nav-link" data-scroll-target="#analyse-computationnelle-et-tradition-danalyse-textuelle">Analyse computationnelle et tradition d’analyse textuelle</a></li>
+  <li><a href="#brève-histoire-des-approches-computationnelles" id="toc-brève-histoire-des-approches-computationnelles" class="nav-link" data-scroll-target="#brève-histoire-des-approches-computationnelles">Brève histoire des approches computationnelles</a></li>
+  <li><a href="#texte-vs-donnée" id="toc-texte-vs-donnée" class="nav-link" data-scroll-target="#texte-vs-donnée">Texte vs Donnée</a></li>
+  <li><a href="#quelques-cas-dusage" id="toc-quelques-cas-dusage" class="nav-link" data-scroll-target="#quelques-cas-dusage">Quelques cas d’usage</a></li>
+  </ul></li>
+  <li><a href="#de-la-textométrie-à-la-fouille-de-textes" id="toc-de-la-textométrie-à-la-fouille-de-textes" class="nav-link" data-scroll-target="#de-la-textométrie-à-la-fouille-de-textes">De la textométrie à la fouille de textes</a>
+  <ul class="collapse">
+  <li><a href="#textométrie-de-quoi-parle-t-on" id="toc-textométrie-de-quoi-parle-t-on" class="nav-link" data-scroll-target="#textométrie-de-quoi-parle-t-on">Textométrie : de quoi parle-t-on ?</a></li>
+  <li><a href="#la-fouille-de-textes-text-mining" id="toc-la-fouille-de-textes-text-mining" class="nav-link" data-scroll-target="#la-fouille-de-textes-text-mining">La fouille de textes (text mining)</a></li>
+  <li><a href="#étapes-dune-analyse-textuelle-informatique" id="toc-étapes-dune-analyse-textuelle-informatique" class="nav-link" data-scroll-target="#étapes-dune-analyse-textuelle-informatique">Étapes d’une analyse textuelle informatique</a></li>
+  <li><a href="#cas-dusage" id="toc-cas-dusage" class="nav-link" data-scroll-target="#cas-dusage">Cas d’usage</a></li>
+  <li><a href="#où-trouver-les-textes" id="toc-où-trouver-les-textes" class="nav-link" data-scroll-target="#où-trouver-les-textes">Où trouver les textes ?</a></li>
+  </ul></li>
+  <li><a href="#stylométrie-mesurer-les-styles" id="toc-stylométrie-mesurer-les-styles" class="nav-link" data-scroll-target="#stylométrie-mesurer-les-styles">Stylométrie : mesurer les styles</a>
+  <ul class="collapse">
+  <li><a href="#que-peut-on-mesurer" id="toc-que-peut-on-mesurer" class="nav-link" data-scroll-target="#que-peut-on-mesurer">Que peut-on mesurer ?</a></li>
+  <li><a href="#comment-ça-marche" id="toc-comment-ça-marche" class="nav-link" data-scroll-target="#comment-ça-marche">Comment ça marche ?</a></li>
+  <li><a href="#deux-exemples" id="toc-deux-exemples" class="nav-link" data-scroll-target="#deux-exemples">Deux exemples</a></li>
+  </ul></li>
+  <li><a href="#introduction-au-tal-nlp" id="toc-introduction-au-tal-nlp" class="nav-link" data-scroll-target="#introduction-au-tal-nlp">Introduction au TAL (NLP)</a>
+  <ul class="collapse">
+  <li><a href="#tal-définitions-et-enjeux" id="toc-tal-définitions-et-enjeux" class="nav-link" data-scroll-target="#tal-définitions-et-enjeux">TAL : définitions et enjeux</a></li>
+  <li><a href="#quelques-concepts-clés" id="toc-quelques-concepts-clés" class="nav-link" data-scroll-target="#quelques-concepts-clés">Quelques concepts clés</a></li>
+  </ul></li>
+  <li><a href="#récapitulons" id="toc-récapitulons" class="nav-link" data-scroll-target="#récapitulons">Récapitulons</a>
+  <ul class="collapse">
+  <li><a href="#limites-biais-enjeux-de-modélisation" id="toc-limites-biais-enjeux-de-modélisation" class="nav-link" data-scroll-target="#limites-biais-enjeux-de-modélisation">Limites, biais, enjeux de modélisation</a></li>
+  </ul></li>
+  <li><a href="#deux-démonstrations-simples" id="toc-deux-démonstrations-simples" class="nav-link" data-scroll-target="#deux-démonstrations-simples">Deux démonstrations simples</a>
+  <ul class="collapse">
+  <li><a href="#tf-idf" id="toc-tf-idf" class="nav-link" data-scroll-target="#tf-idf">TF-IDF</a></li>
+  <li><a href="#ngram-viewer-google-books" id="toc-ngram-viewer-google-books" class="nav-link" data-scroll-target="#ngram-viewer-google-books">Ngram Viewer (Google Books)</a></li>
+  </ul></li>
+  <li><a href="#atelier-voyant-tools-par-y.-audin" id="toc-atelier-voyant-tools-par-y.-audin" class="nav-link" data-scroll-target="#atelier-voyant-tools-par-y.-audin">Atelier : Voyant Tools (par Y. Audin)</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">[Séance 11 : 25/11] ANALYSER&nbsp;: textométrie, stylométrie et TAL</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<iframe src="_slides/11.html"></iframe>
+<p><a href="_slides/11.html" target="_blank">Ouvrir dans mon navigateur</a></p>
+<section id="retour-sur-les-lectures" class="level2">
+<h2 class="anchored" data-anchor-id="retour-sur-les-lectures">Retour sur les lectures</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lectures obligatoires
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><span class="citation" data-cites="reboulMesuresSavoirsQuelles2019">Reboul &amp; Gefen (<a href="references.html#ref-reboulMesuresSavoirsQuelles2019" role="doc-biblioref">2019</a>)</span></li>
+</ul>
+<p>La lecture de <span class="citation" data-cites="sinclairChapitre12Potentialites2014">Sinclair &amp; Rockwell (<a href="references.html#ref-sinclairChapitre12Potentialites2014" role="doc-biblioref">2014</a>)</span> est vivement conseillée !</p>
+</div>
+</div>
+</div>
+<!--
+
+- Numérisation de masse : problèmes nouveaux pour la recherche 
+- Les corpus et leur constitution ne sont pas neutres 
+- Question des métadonnées (fautives) 
+- "convertir des récits en des bases de données, passer de la narration ou de la diction à de l’information, c’est identifier des noms et des concepts signifiants, transposer des typographies et des mises en pages, annoter un texte « à l’ancienne » ou avec des outils collaboratifs innovants, démembrer une structure en repérant l’énonciation éditoriale et les enjeux esthétiques des supports." 
+- "Il n’y a donc pas une œuvre numérisée mais des standards et des degrés d’encodage et de sémantisation"
+- pré-traitement du corpus, généralement tokénisation, lemmatisation et étiquetage syntaxique léger.
+-->
+</section>
+<section id="humanités-numériques-et-analyse-des-textes" class="level2">
+<h2 class="anchored" data-anchor-id="humanités-numériques-et-analyse-des-textes">Humanités numériques et analyse des textes</h2>
+<section id="quest-ce-quune-manipulation-numérique-du-texte" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="quest-ce-quune-manipulation-numérique-du-texte">Qu’est-ce qu’une manipulation numérique du texte ?</h3>
+<blockquote class="blockquote">
+<p>Le texte magnétique ou électronique possède des caractères de flexibilité et de malléabilité qu’ignore le texte imprimé. Les caractères et les mots incrustés dans le papier ne peuvent être ni déplacés, ni ré-ordonnés, ni modifiés, tandis que les caractères et les mots magnétisés sont complètement mobiles. Ce trait propre au texte électronique permet de lui appliquer, grâce à l’ordinateur, différentes procédures algorithmiques de manipulation. <span class="citation" data-cites="lusignanQuelquesReflexionsStatut1985">(<a href="references.html#ref-lusignanQuelquesReflexionsStatut1985" role="doc-biblioref">Lusignan, 1985</a>)</span></p>
+</blockquote>
+<ul>
+<li>Utilisation de l’ordinateur pour lire ou transformer un texte puis en extraire des informations&nbsp;;</li>
+<li>Exemples&nbsp;:
+<ul>
+<li><code>Ctrl-F</code>, <code>Ctrl-H</code>&nbsp;;</li>
+<li>Comparer (<code>diff</code>) deux textes&nbsp;;</li>
+</ul></li>
+<li>Pour l’ordinateur, le texte n’est qu’une suite de caractères (comptables, classables, comparables).</li>
+</ul>
+</section>
+<section id="analyse-computationnelle-et-tradition-danalyse-textuelle" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="analyse-computationnelle-et-tradition-danalyse-textuelle">Analyse computationnelle et tradition d’analyse textuelle</h3>
+<p>Importance du texte dans les Humanités.</p>
+<p>Deux grandes approches&nbsp;(qui se complètent)&nbsp;:</p>
+<ul>
+<li>Le <em>Close reading</em>&nbsp;:
+<ul>
+<li>Lecture <em>attentive</em> et interprétation minutieuse d’un texte ou d’un extrait d’un texte&nbsp;;</li>
+<li>L’accent est mis sur le particulier plutôt que sur le général&nbsp;;
+<ul>
+<li>ordre des mots, syntaxe, structures formelles&nbsp;;</li>
+</ul></li>
+<li>Interpréter, analyser, commenter&nbsp;;</li>
+<li>~ <em>Quali</em>&nbsp;;</li>
+</ul></li>
+<li>Le <em>Distant reading</em>&nbsp;:
+<ul>
+<li>Application de méthodes informatiques aux <em>données</em> littéraires&nbsp;;</li>
+<li>Grand corpus, étudié dans son ensemble&nbsp;;</li>
+<li>Tendances, fréquences, motifs qui échappent à la simple lecture&nbsp;;</li>
+<li>Ex.&nbsp;: évolution de l’usage du mot «&nbsp;nature&nbsp;» dans tous les romans du XIX<sup>e</sup> siècle&nbsp;;</li>
+<li>~ <em>Quanti</em>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="brève-histoire-des-approches-computationnelles" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="brève-histoire-des-approches-computationnelles">Brève histoire des approches computationnelles</h3>
+<p><strong>Concordanciers</strong> (années 1960–1980)&nbsp;:</p>
+<ul>
+<li>Ancêtre&nbsp;: <em>Index Thomisticus</em> de Busa&nbsp;:
+<ul>
+<li>Projet de Roberto Busa (c.&nbsp;1940-1970)&nbsp;;</li>
+<li>Index automatique de chaque mot, de ses formes, de ses contextes dans les 10 millions de mots constituant les œuvres de Thomas d’Aquin&nbsp;;</li>
+<li>Numérisation (manuelle), segmentation, lemmatisation, indexation&nbsp;;</li>
+</ul></li>
+<li>Premiers outils numériques utilisés par des linguistes et des biblistes&nbsp;;</li>
+<li>Ils servaient à chercher un mot dans un corpus et à afficher ses contextes&nbsp;;</li>
+<li>Ex. : voir toutes les occurrences du mot « amour » dans Racine.</li>
+</ul>
+<p><strong>Stylométrie</strong> (1960–)&nbsp;:</p>
+<ul>
+<li>Mesurer des caractéristiques d’écriture : fréquence des mots, longueur de phrases,…&nbsp;;</li>
+<li>Applications fameuses&nbsp;:
+<ul>
+<li>Déterminer si tel texte est vraiment de Shakespeare&nbsp;;</li>
+<li>Distinguer deux auteurs proches.</li>
+</ul></li>
+</ul>
+<p><strong>Corpus numériques</strong> (1990–)&nbsp;:</p>
+<ul>
+<li>Les textes commencent à être numérisés massivement&nbsp;;</li>
+<li>Ils peuvent alors être recherchés, comptés, comparés&nbsp;;</li>
+<li>Développement des XML-TEI, de collections en ligne, des bibliothèques numériques.</li>
+</ul>
+</section>
+<section id="texte-vs-donnée" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="texte-vs-donnée">Texte vs Donnée</h3>
+<p>Concrètement&nbsp;:</p>
+<ol type="1">
+<li>Un poème papier&nbsp;;</li>
+<li>Numérisation (image)&nbsp;;</li>
+<li>Reconnaissance de caractères (OCR ou HTR)&nbsp;;</li>
+<li>Texte brut&nbsp;;</li>
+<li>Segmentation (mots, phrases)&nbsp;;</li>
+<li>tableau de fréquences&nbsp;;</li>
+<li>Visualisation / statistiques.</li>
+</ol>
+<p>Ce qu’on gagne&nbsp;:</p>
+<ul>
+<li>Recherche rapide → trouver toutes les occurrences d’un mot&nbsp;;</li>
+<li>Comparaisons automatiques&nbsp;;</li>
+<li>Possibilité de traiter de très grands volumes de texte.</li>
+</ul>
+<p>Ce qu’on perd&nbsp;:</p>
+<ul>
+<li>La mise en page&nbsp;;</li>
+<li>Le grain matériel du texte&nbsp;;</li>
+<li>Les ambiguïtés, nuances qui nécessitent un lecteur humain.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Le texte doit être nettoyé et structuré pour être analysé, et cela change sa nature.</p>
+</blockquote>
+</section>
+<section id="quelques-cas-dusage" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="quelques-cas-dusage">Quelques cas d’usage</h3>
+<ul>
+<li>Identifier les thèmes d’un corpus de journaux&nbsp;:</li>
+<li>Comparer le vocabulaire d’un auteur jeune vs.&nbsp;tardif&nbsp;;</li>
+<li>Distinguer automatiquement deux versions d’un même texte&nbsp;;</li>
+<li>Explorer 10.000 articles de presse.</li>
+</ul>
+</section>
+</section>
+<section id="de-la-textométrie-à-la-fouille-de-textes" class="level2">
+<h2 class="anchored" data-anchor-id="de-la-textométrie-à-la-fouille-de-textes">De la textométrie à la fouille de textes</h2>
+<section id="textométrie-de-quoi-parle-t-on" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="textométrie-de-quoi-parle-t-on">Textométrie : de quoi parle-t-on ?</h3>
+<blockquote class="blockquote">
+<p>La textométrie met donc un large éventail de calculs linguistiquement significatifs et mathématiquement fondés au service de l’analyse méthodique et renouvelée de collections de textes&nbsp;: associations syntagmatiques et paradigmatiques, contrastes et caractérisations, évolutions. Outillant une démarche équilibrée alternant calcul de vues synthétiques globales et consultation ciblée des contextes d’emploi, elle révèle les nouvelles possibilités de lecture offertes par les corpus numériques. <a href="https://txm.gitpages.huma-num.fr/textometrie/Introduction/">TXM</a></p>
+</blockquote>
+<!--
+« La textométrie, c’est l’idée de mesurer le texte. On ne l’interprète pas encore : on commence par le compter. »
+La textométrie repose sur une intuition simple :
+👉 si on compte les mots, les formes, les cooccurrences, on peut repérer des habitudes, des régularités, des choix d’écriture.
+-->
+<p>Exemples&nbsp;:</p>
+<ul>
+<li>Compter les mots les plus fréquents dans <em>L’Étranger</em> de Camus → le texte devient plus “statistique”&nbsp;;</li>
+<li>Repérer quels mots reviennent toujours ensemble (ex. «&nbsp;mer&nbsp;» avec «&nbsp;soleil », «&nbsp;été&nbsp;»)&nbsp;;</li>
+<li>Comparer quels adverbes ou quels déterminants sont utilisés dans deux chapitres différents.</li>
+</ul>
+</section>
+<section id="la-fouille-de-textes-text-mining" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="la-fouille-de-textes-text-mining">La fouille de textes (text mining)</h3>
+<blockquote class="blockquote">
+<p>Ensemble de traitements informatiques consistant à extraire des connaissances selon un critère de nouveauté ou de similarité dans des textes produits par des humains pour des humains. Dans la pratique, cela revient à mettre en algorithme un modèle simplifié des théories linguistiques dans des systèmes informatiques d’apprentissage et de statistiques, et des technologies de compréhension du langage naturel. <a href="https://fr.wikipedia.org/wiki/Fouille_de_textes">Wikipedia</a></p>
+</blockquote>
+<!--
+La fouille de textes est une forme de fouille de données spécialisée : on veut découvrir des motifs, des relations, des tendances dans un corpus de textes.
+
+Textométrie : compter, mesurer, repérer des patterns simples.
+
+Fouille de textes : aller plus loin : découvrir des thèmes, des relations, classifier des documents.
+
+-->
+<p>Exemples&nbsp;:</p>
+<ul>
+<li>Repérer toutes les relations entre personnages dans 800 romans&nbsp;:
+<ul>
+<li><a href="https://arxiv.org/abs/1907.02704">Labatut, V., Bost, X. <em>Extraction and Analysis of Fictional Character Networks: A Survey</em>, 2019.</a>&nbsp;;</li>
+</ul></li>
+<li>Détecter automatiquement les thèmes d’une collection d’articles&nbsp;:
+<ul>
+<li>Ex.: <a href="https://hal.science/hal-04128262">Puren, M., Pellet, A. <em>Explorer les débats parlementaires français de la Troisième République par leurs sujets</em>. Humanistica 2023, Association francophone des humanités numériques, Jun 2023, Genève, Suisse.</a>&nbsp;;</li>
+</ul></li>
+<li>Faire ressortir les «&nbsp;signaux faibles&nbsp;» dans un corpus énorme (ex : début d’une épidémie dans des publications biomédicales) :
+<ul>
+<li>Ex.: <a href="https://doi.org/10.1186/1471-2105-11-S5-O5">Ongenaert, M., Dehaspe, L. <em>Integrating automated literature searches and text mining in biomarker discovery</em>. BMC Bioinformatics 11 (Suppl 5), O5 (2010).</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="étapes-dune-analyse-textuelle-informatique" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="étapes-dune-analyse-textuelle-informatique">Étapes d’une analyse textuelle informatique</h3>
+<p>Globalement, trois étapes principales&nbsp;:</p>
+<p>1. Constituer et délimiter un corpus&nbsp;:</p>
+<ul>
+<li>Choisir les textes pertinents&nbsp;;</li>
+<li>S’assurer qu’ils sont lisibles par l’ordinateur&nbsp;;</li>
+<li>Choisir un format : texte brut, XML, JSON, PDF.</li>
+</ul>
+<p>2. Analyser le texte&nbsp;:</p>
+<ul>
+<li>Nettoyage / prétraitement&nbsp;:
+<ul>
+<li>Enlever les balises inutiles, normaliser les accents, référencer les paragraphes&nbsp;;</li>
+<li>Enlever (ou non) la ponctuation et/ou les majuscules (selon les besoins)&nbsp;;</li>
+</ul></li>
+<li>Extraction&nbsp;:
+<ul>
+<li>Listes de mots (tokens)&nbsp;;</li>
+<li>Fréquences&nbsp;;</li>
+<li>Cooccurrences&nbsp;;</li>
+<li>N-grammes (paires, triplets de mots)</li>
+<li>Entités nommées (noms de personnes, lieux, dates).</li>
+</ul></li>
+</ul>
+<p>3. Interpréter les résultats&nbsp;:</p>
+<ul>
+<li>Généralement, les mots les plus fréquents ne sont pas très informatifs (le, la, et, de,…)&nbsp;;</li>
+<li>Les cooccurrences montrent les champs lexicaux&nbsp;;</li>
+<li>Le profil lexical peut aider à distinguer deux auteurs&nbsp;;</li>
+<li>Nécessité d’une interprétation, d’une contextualisation, d’un retour vers les sciences humaines pour faire parler les chiffres&nbsp;!</li>
+</ul>
+</section>
+<section id="cas-dusage" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="cas-dusage">Cas d’usage</h3>
+<p>1. Faire une étude linguistique</p>
+<ul>
+<li>Ex : voir comment la négation évolue dans la presse française (ne…pas / pas).</li>
+</ul>
+<p>2. Chercher des expressions précises</p>
+<ul>
+<li>Ex : trouver toutes les occurrences de « liberté » dans un corpus de discours politiques.</li>
+</ul>
+<p>3. Comparer les occurrences de plusieurs termes</p>
+<ul>
+<li>Ex : « nature » vs « industrie » dans la littérature du XIX<sup>e</sup>.</li>
+</ul>
+<p>4. Comparer plusieurs versions d’un texte</p>
+<ul>
+<li>Ex : distinguer automatiquement deux états d’un manuscrit (version A / version B) grâce aux différences de vocabulaire.</li>
+</ul>
+<p>5. Usages en dehors des humanités</p>
+<ul>
+<li>Ex : Référencement web de Google (repérer les mots-clés et organiser l’index)&nbsp;; filtrage du spam (via des expressions propres aux emails indésirables)&nbsp;; … <!--
+« Ce ne sont pas des questions nouvelles. Ce qui change, c’est qu’on peut maintenant le faire sur des milliers de pages. »
+--></li>
+</ul>
+</section>
+<section id="où-trouver-les-textes" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="où-trouver-les-textes">Où trouver les textes ?</h3>
+<ul>
+<li>Bibliothèques numériques nationales (Gallica, Project Gutenberg,…)&nbsp;;</li>
+<li>Google Books&nbsp;;</li>
+<li>Projets universitaires&nbsp;;</li>
+<li>Initiatives indépendantes.</li>
+</ul>
+<p>Importance du format et de la qualité de la source&nbsp;!</p>
+<!-- 
+« Travailler sur un PDF scanné n’est pas du tout la même chose que travailler sur du texte structuré. »
+« La qualité du texte d’origine influence complètement la qualité de l’analyse. »
+-->
+</section>
+</section>
+<section id="stylométrie-mesurer-les-styles" class="level2">
+<h2 class="anchored" data-anchor-id="stylométrie-mesurer-les-styles">Stylométrie : mesurer les styles</h2>
+<blockquote class="blockquote">
+<p>Domaine de la linguistique qui utilise la statistique pour décrire les propriétés stylistiques d’un texte. Elle est utilisée pour identifier le style d’un auteur, par exemple, celui de textes anciens ou un auteur anonyme dans le domaine judiciaire. <a href="https://fr.wikipedia.org/wiki/Stylom%C3%A9trie">Wikipedia</a></p>
+</blockquote>
+<!--
+La stylométrie est l’étude du style d’un texte à l’aide de mesures numériques.
+On cherche à repérer des traits d’écriture réguliers, souvent inconscients, que l’on peut compter.
+
+« C’est mesurer la manière dont un texte est écrit, à partir de chiffres. »
+-->
+<p>Utilisations&nbsp;:</p>
+<ul>
+<li>Identifier un auteur (attribution)&nbsp;;</li>
+<li>Comparer des styles (entre auteurs, époques, genres)&nbsp;;</li>
+<li>Distinguer des sections écrites par différentes personnes&nbsp;;</li>
+<li>Étudier l’évolution du style dans le temps.</li>
+</ul>
+<!--
+On ne s’intéresse pas à ce que le texte dit, mais à comment il le dit.
+-->
+<section id="que-peut-on-mesurer" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="que-peut-on-mesurer">Que peut-on mesurer ?</h3>
+<p><strong>Indices lexicaux (vocabulaire)</strong>&nbsp;:</p>
+<ul>
+<li>La fréquence des mots les plus courants (les “mots outils” : le, la, à, que,…)&nbsp;;</li>
+<li>La richesse du vocabulaire (nombre de mots différents)&nbsp;;</li>
+<li>La longueur moyenne des mots.</li>
+</ul>
+<p><strong>Indices syntaxiques (structure)</strong>&nbsp;:</p>
+<ul>
+<li>Longueur moyenne des phrases&nbsp;;</li>
+<li>Utilisation des virgules, des points-virgules&nbsp;;</li>
+<li>Taux de subordination.</li>
+</ul>
+<p><strong>Indices statistiques</strong>&nbsp;:</p>
+<ul>
+<li>Répartition des mots dans le texte&nbsp;;</li>
+<li>Courbes de fréquence.</li>
+</ul>
+<!-- 
+Ex. 
+Hugo utilise en moyenne des phrases très longues ;
+Maupassant utilise un vocabulaire très varié ;
+Voltaire utilise énormément de connecteurs logiques.
+-->
+</section>
+<section id="comment-ça-marche" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="comment-ça-marche">Comment ça marche ?</h3>
+<p>En gros&nbsp;:</p>
+<p>1. Préparer le corpus&nbsp;:</p>
+<ul>
+<li>Texte numérique&nbsp;;</li>
+<li>Nettoyage&nbsp;:
+<ul>
+<li>Enlever les dates, les notes, la mise en forme&nbsp;;</li>
+</ul></li>
+<li>Possiblement lemmatiser.</li>
+</ul>
+<p>2. Extraire les “caractéristiques de style”&nbsp;:</p>
+<ul>
+<li>Fréquence des mots&nbsp;;</li>
+<li>Longueur des phrases&nbsp;;</li>
+<li>Distribution des n-grams&nbsp;;</li>
+<li>Etc.</li>
+</ul>
+<p>&nbsp;3. Comparer les textes entre eux&nbsp;:</p>
+<ul>
+<li>Distance entre les styles&nbsp;;</li>
+<li><em>Clustering</em> (qui ressemble à qui ?)&nbsp;;</li>
+<li>Classification automatique&nbsp;;</li>
+<li>Visualisations.</li>
+</ul>
+</section>
+<section id="deux-exemples" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="deux-exemples">Deux exemples</h3>
+<p>1. Shakespeare a-t-il vraiment écrit toutes les pièces qui lui sont attribuées&nbsp;?</p>
+<ul>
+<li>Cas idéal&nbsp;: corpus large et bien délimité&nbsp;;</li>
+<li>Ses contemporains ont laissé un corpus comparable (permettant des comparaisons)&nbsp;;</li>
+<li>Pièces remaniées (permettant d’étuder des strates rédactionnelles).</li>
+<li>Ex.: <a href="https://doi.org/10.1093/llc/fqac092">Savoy, J. <em>Stylometric analysis of characters in Shakespeare’s plays</em>, Digital Scholarship in the Humanities, Volume 38, Issue 3, September 2023, Pages 1238–1246</a></li>
+<li>Ou <a href="https://shakespeareoxfordfellowship.org/shakespeare-by-the-numbers-what-stylometrics-can-and-cannot-tell-us/"><em>Shakespeare by the Numbers: What Stylometrics Can and Cannot Tell Us</em></a></li>
+</ul>
+<!-- 
+Shakespeare est l’un des auteurs les plus étudiés, mais aussi parmi les plus sujets aux doutes sur l’attribution : certaines pièces sont co-écrites, d’autres sont apocryphes. Dès le XIXᵉ siècle, des philologues ont soupçonné que certaines œuvres étaient collaboratives ou partiellement écrites par d’autres dramaturges de l’époque élisabéthaine.
+
+Beaucoup de pièces attribuées à Shakespeare ont été analysées pour détecter des co-auteurs.
+
+Méthodes utilisées : fréquence de mots, mots-outils, clustering, PCA, machine learning.
+
+Résultats principaux :
+
+Certaines pièces (Henry VI, Two Noble Kinsmen) semblent avoir été écrites à plusieurs mains.
+
+Le style de Shakespeare évolue au fil du temps, ce qui peut compliquer l’attribution.
+
+Les méthodes stylométriques permettent de détecter des ressemblances et des différences, mais ne prouvent jamais de manière absolue qui a écrit quoi.
+
+La stylométrie donne des indices solides sur le style et les collaborations, mais ne remplace pas la preuve historique ou documentaire.
+-->
+<p>2. Qui est Elena Ferrante&nbsp;?</p>
+<ul>
+<li>Plusieurs livres à succès (notamment la quadrilogie <em>L’amie prodigieuse</em>), sous pseudonyme&nbsp;;</li>
+<li>Engouement dans la communauté scientifique, surtout vers 2016 + questions éthiques émergent&nbsp;→ cas médiatique&nbsp;;</li>
+<li><a href="https://gwern.net/doc/fiction/2017-tuzzi.pdf">Tuzzi, A., Cortelazzo, M. <em>Drawing Elena Ferrante’s Profile</em>. Workshop Proceedings (Padova, 7 September 2017). Padova University Press 2018.</a> ;</li>
+<li>attribution ≠ preuve&nbsp;!</li>
+</ul>
+<!--
+Ferrante a choisi l’anonymat dès son premier roman.
+
+Le succès international de ses livres a stimulé l’intérêt scientifique et médiatique.
+
+Une question centrale : peut-on déterminer l’auteur à partir du style ?
+
+Le style de Ferrante correspond fortement à Domenico Starnone, écrivain napolitain.
+
+L’hypothèse qu’Anita Raja soit l’autrice est fortement contredite par la stylométrie.
+
+Possibilité d’une collaboration éditoriale : le style pourrait refléter des corrections ou relectures.
+
+Message clé : La stylométrie peut identifier des “empreintes stylistiques”, et dans le cas de Ferrante, elle a été très efficace pour orienter les hypothèses d’attribution.
+
+-->
+</section>
+</section>
+<section id="introduction-au-tal-nlp" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-au-tal-nlp">Introduction au TAL (NLP)</h2>
+<section id="tal-définitions-et-enjeux" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="tal-définitions-et-enjeux">TAL : définitions et enjeux</h3>
+<ul>
+<li>Traitement Automatique des Langues (= <em>Natural Language Processing</em>)&nbsp;;</li>
+<li>Ensemble de méthodes qui permettent à un ordinateur de comprendre, manipuler ou analyser du texte ou de la parole&nbsp;;</li>
+<li>En HN&nbsp;:
+<ul>
+<li>Analyser de très grands corpus&nbsp;;</li>
+<li>Identifier des motifs, tendances, entités (personnages, lieux, concepts)&nbsp;;</li>
+<li>Créer des outils pour explorer des textes (corpus littéraire, articles scientifiques, archives historiques).</li>
+</ul></li>
+</ul>
+</section>
+<section id="quelques-concepts-clés" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="quelques-concepts-clés">Quelques concepts clés</h3>
+<p>1. <strong>Entités nommées (<em>Named Entities</em>)</strong></p>
+<ul>
+<li>Noms propres : personnes, lieux, organisations, dates, etc&nbsp;;</li>
+<li>Deux étapes principales&nbsp;:
+<ul>
+<li>Détection : repérer un mot ou groupe de mots qui est une entité&nbsp;;</li>
+<li>Classification&nbsp;: dire de quel type il s’agit (personne, lieu, organisation…).</li>
+</ul></li>
+<li>Puis, désambiguïsation&nbsp;: comprendre le contexte&nbsp;;</li>
+<li>Pour aller plus loin, <em>entity linking</em>&nbsp;: relier une entité à une base de données (ex. Wikidata) pour recueillir des informations supplémentaires.</li>
+</ul>
+<!--https://leaf-writer.leaf-vre.org/-->
+<p>Exemple&nbsp;(issu de <a href="https://www.smalsresearch.be/named-entity-recognition-une-application-du-nlp-utile/">cette page</a>):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/ner.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Exemple d’extraction d’entités nommées d’un article de journal avec le module NER de spaCy."><img src="img/ner.png" height="200" alt="Exemple d’extraction d’entités nommées d’un article de journal avec le module NER de spaCy." class="figure-img"></a></p>
+<figcaption>Exemple d’extraction d’entités nommées d’un article de journal avec le module NER de spaCy.</figcaption>
+</figure>
+</div>
+<p>Exemple de désambiguisation&nbsp;: “Orange” peut être une ville, un fruit ou une entreprise.</p>
+<p>2. <strong><em>Tokenization</em></strong> (découpage du texte)</p>
+<ul>
+<li>Couper le texte en unités exploitables : (caractères), mots, phrases, paragraphe.</li>
+</ul>
+<p>Exemple : “J’aime le NLP.” → [“J’aime”, “le”, “NLP”, “.”] ou [“J”, “’”, “aime”, “le”, “NLP”, “.”]</p>
+<p>3. <strong>Lemmatisation ou racinisation</strong></p>
+<ul>
+<li>Lemmatisation&nbsp;: Ramener le mot à sa forme canonique (lemme) telle qu’on la trouve dans le dictionnaire&nbsp;:
+<ul>
+<li>Exemple : “mangions”, “mangeons”, “mangé” → racine “manger”.</li>
+</ul></li>
+<li>Racinisation&nbsp;: Couper le mot pour garder sa racine, en enlevant les suffixes (parfois approximatif et pas forcément adapté au français)&nbsp;:
+<ul>
+<li>Exemple&nbsp;: “dancing”, “dancer”, “dances” → racine “dance”.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/stemmin_lemm_ex-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Stemming vs Lemmatization"><img src="img/stemmin_lemm_ex-1.png" height="200" alt="Stemming vs Lemmatization" class="figure-img"></a></p>
+<figcaption><a href="https://studymachinelearning.com/stemming-and-lemmatization/">Stemming vs Lemmatization</a></figcaption>
+</figure>
+</div>
+<p>4. <strong>N‑grams</strong></p>
+<ul>
+<li>Séquences de mots de longueur n.
+<ul>
+<li>Exemple 2-gram : “traitement automatique”, “automatique des”, “des langues”.</li>
+</ul></li>
+<li>Utile pour détecter des expressions récurrentes ou des patterns stylistiques.</li>
+</ul>
+</section>
+</section>
+<section id="récapitulons" class="level2">
+<h2 class="anchored" data-anchor-id="récapitulons">Récapitulons</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 23%">
+<col style="width: 34%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Approche</th>
+<th>Objectif principal</th>
+<th>Exemple</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fouille de textes</td>
+<td>Extraire motifs et tendances</td>
+<td>Fréquences, cooccurrences dans un corpus</td>
+<td>Contenu / occurrences</td>
+</tr>
+<tr class="even">
+<td>Textométrie</td>
+<td>Analyse quantitative de textes</td>
+<td>Comparer distribution des mots dans des romans</td>
+<td>Mesures statistiques</td>
+</tr>
+<tr class="odd">
+<td>Stylométrie</td>
+<td>Étudier le style d’écriture</td>
+<td>Attribution auteur, détection collaboration</td>
+<td>Style / empreinte personnelle</td>
+</tr>
+<tr class="even">
+<td>TAL / NLP</td>
+<td>Traiter le texte automatiquement</td>
+<td>Extraction d’entités, TF-IDF, analyse syntaxique</td>
+<td>Compréhension et exploitation automatique</td>
+</tr>
+</tbody>
+</table>
+<!--
+
+La fouille de textes explore les tendances générales.
+
+La textométrie quantifie ces tendances dans un cadre littéraire ou linguistique.
+
+La stylométrie examine le style et l’auteur.
+
+Le TAL/NLP permet d’automatiser tout cela et d’aller plus loin sur de grands corpus.
+Ensemble, elles ouvrent la porte à de nouvelles façons de comprendre et d’exploiter le texte.”
+
+-->
+<section id="limites-biais-enjeux-de-modélisation" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="limites-biais-enjeux-de-modélisation">Limites, biais, enjeux de modélisation</h3>
+<ul>
+<li>Les modèles ne “comprennent” pas les textes&nbsp;:
+<ul>
+<li>Quid des nuances (ironie, implicite)&nbsp;;</li>
+<li>Fréquences, cooccurrences, vecteurs, plutôt que le sens global&nbsp;;</li>
+<li>Détection de structures plutôt qu’explication, l’interprétation est humaine.</li>
+</ul></li>
+<li>Variabilité des corpus&nbsp;:
+<ul>
+<li>Corpus trop petit est difficilement utilisable&nbsp;;</li>
+<li>Corpus trop hétérogène produit du bruit ou des incohérences&nbsp;;</li>
+<li>Corpus mal numérisé introduit des erreurs ou pertes d’information.</li>
+</ul></li>
+<li>Importance du contexte culturel, historique et linguistique&nbsp;:
+<ul>
+<li>Les outils et modèles ne sont pas neutres&nbsp;!
+<ul>
+<li>Souvent construits sur l’anglais (plus de données)&nbsp;;</li>
+</ul></li>
+<li>Les mots varients selont les époques, normes éditoriales, pratiques scribales ;</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="deux-démonstrations-simples" class="level2">
+<h2 class="anchored" data-anchor-id="deux-démonstrations-simples">Deux démonstrations simples</h2>
+<section id="tf-idf" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="tf-idf">TF-IDF</h3>
+<ul>
+<li><em>Term frequency–inverse document frequency</em>&nbsp;:
+<ul>
+<li>transforme des mots en chiffres&nbsp;;</li>
+<li>mesure l’importance d’un <em>terme</em> dans un document d’un corpus&nbsp;;
+<ul>
+<li>TF&nbsp;: un mot est important s’il apparaît souvent dans ce document&nbsp;;</li>
+<li>IDF&nbsp;: un mot est moins important s’il apparaît partout dans le corpus.</li>
+</ul></li>
+<li>Usages&nbsp;: repérer les thèmes d’un texte, les mots caractéristiques, les différences entre documents.</li>
+</ul></li>
+</ul>
+<p>Ex.&nbsp;: Calculer le nombre d’occurrence du mot <em>mineur</em> dans <em>Germinal</em> de Zola par rapport à tous les autres ouvrages de la série des Rougon-Macquart.</p>
+<!--Dans Germinal, le mot “mineur” apparaît 150 fois.
+
+Dans les deux autres romans : 0 fois.
+→ TF élevé + IDF élevé → mot très important pour Germinal.-->
+</section>
+<section id="ngram-viewer-google-books" class="level3 scrollable smaller">
+<h3 class="scrollable smaller anchored" data-anchor-id="ngram-viewer-google-books">Ngram Viewer (Google Books)</h3>
+<ul>
+<li>Outil Google pour explorer l’évolution de la fréquence des mots dans les livres numérisés&nbsp;;</li>
+<li>Corpus&nbsp;: plusieurs centaines de milliards de mots (Google Books).</li>
+<li>Usages&nbsp;:
+<ul>
+<li>comparer la fréquence de plusieurs termes dans le temps&nbsp;;</li>
+<li>observer des phénomènes culturels, politiques ou scientifiques&nbsp;;</li>
+</ul></li>
+<li>Limites&nbsp;:
+<ul>
+<li>corpus biaisé (publications essentiellement occidentales, universitaires ou littéraires)&nbsp;;</li>
+<li>ocr parfois imparfait&nbsp;;</li>
+<li>utile pour faire émerger des tendances générales (peu précises)</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="atelier-voyant-tools-par-y.-audin" class="level2">
+<h2 class="anchored" data-anchor-id="atelier-voyant-tools-par-y.-audin">Atelier : Voyant Tools (par Y. Audin)</h2>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-lusignanQuelquesReflexionsStatut1985" class="csl-entry" role="listitem">
+Lusignan, S. (1985). Quelques <span>Réflexions</span> Sur Le <span>Statut Epistémologique</span> Du <span>Texte Electronique</span>. <em>Computers and the Humanities</em>, <em>19</em>(4), 209‑212. <a href="https://www.jstor.org/stable/30200019">https://www.jstor.org/stable/30200019</a>
+</div>
+<div id="ref-reboulMesuresSavoirsQuelles2019" class="csl-entry" role="listitem">
+Reboul, M., &amp; Gefen, A. (2019). <span>Mesures et savoirs : Quelles m<span>é</span>thodes pour l’histoire culturelle <span>à</span> l’heure du big data ?</span> <em>Semiotica</em>, <em>2019</em>(230), 97. <a href="https://doi.org/10.1515/sem-2018-0103">https://doi.org/10.1515/sem-2018-0103</a>
+</div>
+<div id="ref-sinclairChapitre12Potentialites2014" class="csl-entry" role="listitem">
+Sinclair, S., &amp; Rockwell, G. (2014). Chapitre 12. Les potentialités du texte numérique. In M. Vitali-Rosati &amp; M. E. Sinatra (Éds.), <em>Pratiques de l’édition numérique</em> (p. 191‑204). Presses de l’Université de Montréal. <a href="https://doi.org/10.4000/books.pum.337">https://doi.org/10.4000/books.pum.337</a>
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./09.html" class="pagination-link" aria-label="[Séance 9 : 11/11] ÉCRIRE &amp; PUBLIER">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">[Séance 9 : 11/11] ÉCRIRE &amp; PUBLIER</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="Références">
+        <span class="nav-page-text">Références</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>HNU2000-A25, Mathilde Verstraete</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
