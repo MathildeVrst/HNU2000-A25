@@ -15,6 +15,8 @@
 
 - @reboulMesuresSavoirsQuelles2019
 
+La lecture de @sinclairChapitre12Potentialites2014 est vivement conseillée ! 
+
 :::
 
 <!--
@@ -27,166 +29,447 @@
 - pré-traitement du corpus, généralement tokénisation, lemmatisation et étiquetage syntaxique léger.
 -->
 
-## Les Humanités Numériques et le texte 
+## Humanités numériques et analyse des textes 
 
-- Qu’est-ce qu’une « manipulation » numérique du texte ? 
-- Analyse computationnelle et tradition d'analyse textuelle 
+### Qu’est-ce qu’une manipulation numérique du texte ? {.scrollable .smaller}
 
-### Un peu d'histoire 
+> Le texte magnétique ou électronique possède des caractères de flexibilité et de malléabilité qu’ignore le texte imprimé. Les caractères et les mots incrustés dans le papier ne peuvent être ni déplacés, ni ré-ordonnés, ni modifiés, tandis que les caractères et les mots magnétisés sont complètement mobiles. Ce trait propre au texte électronique permet de lui appliquer, grâce à l’ordinateur, différentes procédures algorithmiques de manipulation. [@lusignanQuelquesReflexionsStatut1985]
+ 
+- Utilisation de l'ordinateur pour lire ou transformer un texte puis en extraire des informations ; 
+- Exemples : 
+  - `Ctrl-F`, `Ctrl-H` ; 
+  - Comparer (`diff`) deux textes ; 
+- Pour l'ordinateur, le texte n'est qu'une suite de caractères (comptables, classables, comparables). 
 
-concordanciers, stylométrie, corpus numériques.
+### Analyse computationnelle et tradition d’analyse textuelle {.scrollable .smaller}
 
-close reading vs. distant reading, texte vs. donnée, modélisation.
+Importance du texte dans les Humanités. 
 
-### La fouille de textes 
+Deux grandes approches (qui se complètent) : 
 
-La fouille de textes est une fouille de données spécialisée, il s’agit d’extraire des termes ou des expressions d’un corpus de textes pour l’analyse de ces textes. Il peut s’agir de déterminer des relations dans le texte, impossible sans cette technique (numérique).
+- Le *Close reading* : 
+  - Lecture *attentive* et interprétation minutieuse d'un texte ou d'un extrait d'un texte ; 
+  - L'accent est mis sur le particulier plutôt que sur le général ; 
+    - ordre des mots, syntaxe, structures formelles ; 
+  - Interpréter, analyser, commenter ; 
+  - ~ *Quali* ; 
+- Le *Distant reading* : 
+  - Application de méthodes informatiques aux *données* littéraires ; 
+  - Grand corpus, étudié dans son ensemble ; 
+  - Tendances, fréquences, motifs qui échappent à la simple lecture ; 
+  - Ex. : évolution de l’usage du mot « nature » dans tous les romans du XIX^e^ siècle ; 
+  - ~ *Quanti*. 
 
-En lien avec la fouille de textes il y a le traitement automatique des langues (ou NLP pour Natural language processing).
+### Brève histoire des approches computationnelles {.scrollable .smaller}
 
-### Quelques cas d’usage #
+**Concordanciers** (années 1960–1980) : 
 
-- Faire une étude linguistique ; 
-- Chercher une ou des expressions précises dans un corpus ; 
-- Comparer les occurrences de plusieurs termes/expressions dans un corpus ; 
-- Comparer plusieurs versions d’un même texte à partir de critères préétablis. 
+- Ancêtre : *Index Thomisticus* de Busa : 
+  - Projet de Roberto Busa (c. 1940-1970) ; 
+  - Index automatique de chaque mot, de ses formes, de ses contextes dans les 10 millions de mots constituant les œuvres de Thomas d’Aquin ; 
+  - Numérisation (manuelle), segmentation, lemmatisation, indexation ; 
+- Premiers outils numériques utilisés par des linguistes et des biblistes ; 
+- Ils servaient à chercher un mot dans un corpus et à afficher ses contextes ; 
+- Ex. : voir toutes les occurrences du mot « amour » dans Racine. 
 
-La fouille de textes permet donc d’étudier des textes grâce à différents éléments : chercher des modèles, comparer des textes. 
+**Stylométrie** (1960–) :
 
-### Fonctionnement 
+- Mesurer des caractéristiques d’écriture : fréquence des mots, longueur de phrases,... ; 
+- Applications fameuses : 
+    - Déterminer si tel texte est vraiment de Shakespeare ; 
+    - Distinguer deux auteurs proches.
 
-- Disposer d’un corpus interrogeable ; 
-- Définir une méthode et des outils pour extraire des informations ; 
-- Réaliser les manipulations et les interprétations.  
+**Corpus numériques** (1990–) : 
 
-### Les étapes 
+- Les textes commencent à être numérisés massivement ; 
+- Ils peuvent alors être recherchés, comptés, comparés ; 
+- Développement des XML-TEI, de collections en ligne, des bibliothèques numériques.
 
-- Constituer le corpus, le délimiter ; 
-- Analyser le texte : extraire les termes, les expressions, etc. ; 
-- Interpréter les résultats : extraire les informations des analyses. 
+### Texte vs Donnée {.scrollable .smaller}
 
-### Exemples d'utilisation 
+Concrètement : 
 
-Le référencement des sites web, ou encore la gestion des pourriels. Dans les cas, il s’agit de traiter une grande quantité de texte, comprendre ce que le texte signifie et réaliser des actions en conséquence. Dans le cas du référencement web il s’agit de créer des index à partir de nombreux textes structurés (les pages web), alors qu’avec la gestion du spam il s’agit d’identifier les messages considérés comme non pertinents.
+1. Un poème papier ; 
+2. Numérisation (image) ; 
+3. Reconnaissance de caractères (OCR ou HTR) ; 
+4. Texte brut ; 
+5. Segmentation (mots, phrases) ; 
+6. tableau de fréquences ; 
+7. Visualisation / statistiques.
 
-D’autres domaines font appel au text mining pour améliorer leurs chaînes de traitement, de la recherche de brevets à la veille en passant par l’analyse de textes biomédicaux pour établir une veille technique.
+Ce qu’on gagne : 
 
-### Quelques outils 
+- Recherche rapide → trouver toutes les occurrences d’un mot ; 
+- Comparaisons automatiques ; 
+- Possibilité de traiter de très grands volumes de texte.
 
-Pour :
+Ce qu’on perd : 
 
-- Nettoyer le texte ; 
-- Transformer le texte en base de données ; 
-- Interroger le texte. 
+- La mise en page ; 
+- Le grain matériel du texte ; 
+- Les ambiguïtés, nuances qui nécessitent un lecteur humain.
 
-Outils :
+> Le texte doit être nettoyé et structuré pour être analysé, et cela change sa nature.
 
-⁻ Langages de programmation : Python très utilisé dans les DH ; 
-⁻ Pour nettoyer le texte et déterminer des modèles : des algorithmes ; 
-⁻ Pour visualiser/analyser/interpréter les résultats : des bibliothèques de code ou des logiciels. 
+### Quelques cas d'usage {.scrollable .smaller} 
 
-Il y a donc différentes tâches à réaliser, des outils existent pour une ou plusieurs de ces tâches.
+- Identifier les thèmes d’un corpus de journaux : 
+- Comparer le vocabulaire d’un auteur jeune vs. tardif ; 
+- Distinguer automatiquement deux versions d’un même texte ; 
+- Explorer 10.000 articles de presse. 
 
-<!--La question des algorithmes est récurrentes dans la fouille de textes ou le traitement automatique des langues. Mais qu’est-ce qu’un algorithme ?-->
+## De la textométrie à la fouille de textes 
 
-### Diposer des terxtes 
+### Textométrie : de quoi parle-t-on ? {.scrollable .smaller}
 
-La fouille de textes se fait généralement sur des documents non nativement numériques, une numérisation est donc nécessaire. Mais où trouver ces textes ? Et sous quel format ? Ça change tout de travailler avec des PDFs non océrisés ou des fichiers structurés (ou, entre les deux, du format texte non structuré). 
-
-Numérisations... : 
-
-- Universités et bibliothèques nationales ; 
-- Google ; 
-- Initiatives indépendantes.
+> La textométrie met donc un large éventail de calculs linguistiquement significatifs et mathématiquement fondés au service de l’analyse méthodique et renouvelée de collections de textes : associations syntagmatiques et paradigmatiques, contrastes et caractérisations, évolutions. Outillant une démarche équilibrée alternant calcul de vues synthétiques globales et consultation ciblée des contextes d’emploi, elle révèle les nouvelles possibilités de lecture offertes par les corpus numériques. [TXM](https://txm.gitpages.huma-num.fr/textometrie/Introduction/)
 
 <!--
+« La textométrie, c’est l’idée de mesurer le texte. On ne l’interprète pas encore : on commence par le compter. »
+La textométrie repose sur une intuition simple :
+👉 si on compte les mots, les formes, les cooccurrences, on peut repérer des habitudes, des régularités, des choix d’écriture.
+--> 
 
+Exemples : 
 
+- Compter les mots les plus fréquents dans *L’Étranger* de Camus → le texte devient plus "statistique" ; 
+- Repérer quels mots reviennent toujours ensemble (ex. « mer » avec « soleil », « été ») ; 
+- Comparer quels adverbes ou quels déterminants sont utilisés dans deux chapitres différents.
 
-Qui numérise tous ces documents ? Numériser des textes est complexe et coûteux, il faut à la fois disposer des textes originaux (principalement des livres), avoir du matériel pour la prise de vue, des conditions adéquates pour ne pas abîmer les documents et enfin les logiciels et les savoir faire pour le traitement des documents.
+### La fouille de textes (text mining) {.scrollable .smaller}
 
-Les premières structures qui commencent à numériser des documents sont des universités et des bibliothèques, principalement pour des questions de sauvegarde, puis pour des questions de consultation des documents (plus facile même avec des CD-ROM, et en évitant de trop manipuler des documents vieillissants) et enfin pour des questions de recherche dans les documents.
+> Ensemble de traitements informatiques consistant à extraire des connaissances selon un critère de nouveauté ou de similarité dans des textes produits par des humains pour des humains. Dans la pratique, cela revient à mettre en algorithme un modèle simplifié des théories linguistiques dans des systèmes informatiques d'apprentissage et de statistiques, et des technologies de compréhension du langage naturel. [Wikipedia](https://fr.wikipedia.org/wiki/Fouille_de_textes)
 
-La Bibliothéque nationale de France a été par exemple l’une des premières à débuter une importante campagne de numérisation avec Gallica, après la Bibliothèque du Congrès aux États-Unis ou le Projet Gutenberg, mais avant Google Books.
+<!--
+La fouille de textes est une forme de fouille de données spécialisée : on veut découvrir des motifs, des relations, des tendances dans un corpus de textes.
 
-Google Books ou Google Livres est un projet de très grande envergure qui débute en 2002 et qui va créer de nombreux débats :
+Textométrie : compter, mesurer, repérer des patterns simples.
 
-    Google va tenter d’établir des partenariats avec des bibliothèques publiques ou universitaires, proposant une numérisation presque gratuite contre l’ajout de ces documents dans sa base (avec un embargo) ;
-    Google va numériser des fonds d’éditeurs sans leur accord, provoquant de nombreux procès.
-
-Il existe aussi des initiatives dites indépendantes, qui ne dépendent pas d’organismes publics et qui sont à but non lucratif : outre le projet Gutenberg, Archive.org est un très bon exemple de tentative de numériser largement au profit de toutes et tous.
-
+Fouille de textes : aller plus loin : découvrir des thèmes, des relations, classifier des documents.
 
 -->
 
+Exemples : 
+
+- Repérer toutes les relations entre personnages dans 800 romans : 
+  - [Labatut, V., Bost, X. *Extraction and Analysis of Fictional Character Networks: A Survey*, 2019.](https://arxiv.org/abs/1907.02704) ; 
+- Détecter automatiquement les thèmes d’une collection d’articles : 
+  - Ex.: [Puren, M., Pellet, A. *Explorer les débats parlementaires français de la Troisième République par leurs sujets*. Humanistica 2023, Association francophone des humanités numériques, Jun 2023, Genève, Suisse.](https://hal.science/hal-04128262) ; 
+- Faire ressortir les « signaux faibles » dans un corpus énorme (ex : début d'une épidémie dans des publications biomédicales) : 
+  - Ex.: [Ongenaert, M., Dehaspe, L. *Integrating automated literature searches and text mining in biomarker discovery*. BMC Bioinformatics 11 (Suppl 5), O5 (2010).](https://doi.org/10.1186/1471-2105-11-S5-O5)
+
+### Étapes d’une analyse textuelle informatique {.scrollable .smaller}
+
+Globalement, trois étapes principales : 
+
+1\. Constituer et délimiter un corpus : 
+
+- Choisir les textes pertinents ; 
+- S’assurer qu’ils sont lisibles par l’ordinateur ; 
+- Choisir un format : texte brut, XML, JSON, PDF.
+ 
+2\. Analyser le texte : 
+
+- Nettoyage / prétraitement : 
+    - Enlever les balises inutiles, normaliser les accents, référencer les paragraphes ; 
+    - Enlever (ou non) la ponctuation et/ou les majuscules (selon les besoins) ; 
+- Extraction : 
+  - Listes de mots (tokens) ; 
+  - Fréquences ; 
+  - Cooccurrences ; 
+  - N-grammes (paires, triplets de mots)
+  - Entités nommées (noms de personnes, lieux, dates). 
+
+3\. Interpréter les résultats : 
+
+- Généralement, les mots les plus fréquents ne sont pas très informatifs (le, la, et, de,...) ; 
+- Les cooccurrences montrent les champs lexicaux ; 
+- Le profil lexical peut aider à distinguer deux auteurs ; 
+- Nécessité d'une interprétation, d'une contextualisation, d'un retour vers les sciences humaines pour faire parler les chiffres ! 
+
+### Cas d’usage {.scrollable .smaller}
+
+1\. Faire une étude linguistique
+
+- Ex : voir comment la négation évolue dans la presse française (ne...pas / pas).
+
+2\. Chercher des expressions précises
+
+- Ex : trouver toutes les occurrences de « liberté » dans un corpus de discours politiques.
+
+3\. Comparer les occurrences de plusieurs termes
+
+- Ex : « nature » vs « industrie » dans la littérature du XIX^e^.
+
+4\. Comparer plusieurs versions d’un texte
+
+- Ex : distinguer automatiquement deux états d’un manuscrit (version A / version B) grâce aux différences de vocabulaire.
+
+5\. Usages en dehors des humanités 
+
+- Ex : Référencement web de Google (repérer les mots-clés et organiser l’index) ; filtrage du spam (via des expressions propres aux emails indésirables) ; ...
+<!--
+« Ce ne sont pas des questions nouvelles. Ce qui change, c’est qu’on peut maintenant le faire sur des milliers de pages. »
+--> 
+
+### Où trouver les textes ? {.scrollable .smaller}
+
+- Bibliothèques numériques nationales (Gallica, Project Gutenberg,...) ; 
+- Google Books ; 
+- Projets universitaires ; 
+- Initiatives indépendantes. 
+
+Importance du format et de la qualité de la source ! 
+
+<!-- 
+« Travailler sur un PDF scanné n’est pas du tout la même chose que travailler sur du texte structuré. »
+« La qualité du texte d’origine influence complètement la qualité de l’analyse. »
+--> 
+
+## Stylométrie : mesurer les styles 
+
+> Domaine de la linguistique qui utilise la statistique pour décrire les propriétés stylistiques d'un texte. Elle est utilisée pour identifier le style d'un auteur, par exemple, celui de textes anciens ou un auteur anonyme dans le domaine judiciaire. [Wikipedia](https://fr.wikipedia.org/wiki/Stylom%C3%A9trie)
+
+<!--
+La stylométrie est l’étude du style d’un texte à l’aide de mesures numériques.
+On cherche à repérer des traits d’écriture réguliers, souvent inconscients, que l’on peut compter.
+
+« C’est mesurer la manière dont un texte est écrit, à partir de chiffres. »
+--> 
+
+Utilisations : 
+
+- Identifier un auteur (attribution) ;
+- Comparer des styles (entre auteurs, époques, genres) ;
+- Distinguer des sections écrites par différentes personnes ;
+- Étudier l’évolution du style dans le temps.
+
+<!--
+On ne s’intéresse pas à ce que le texte dit, mais à comment il le dit.
+--> 
+
+### Que peut-on mesurer ? {.scrollable .smaller}
+
+**Indices lexicaux (vocabulaire)** :
+
+- La fréquence des mots les plus courants (les “mots outils” : le, la, à, que,...) ; 
+- La richesse du vocabulaire (nombre de mots différents) ; 
+- La longueur moyenne des mots.
+
+**Indices syntaxiques (structure)** :
+
+- Longueur moyenne des phrases ; 
+- Utilisation des virgules, des points-virgules ; 
+- Taux de subordination.
+
+**Indices statistiques** :
+
+- Répartition des mots dans le texte ; 
+- Courbes de fréquence.
+
+<!-- 
+Ex. 
+Hugo utilise en moyenne des phrases très longues ;
+Maupassant utilise un vocabulaire très varié ;
+Voltaire utilise énormément de connecteurs logiques.
+--> 
+
+### Comment ça marche ? {.scrollable .smaller} 
+
+En gros : 
+
+1\. Préparer le corpus : 
+
+- Texte numérique ; 
+- Nettoyage : 
+  - Enlever les dates, les notes, la mise en forme ; 
+- Possiblement lemmatiser. 
+
+2\. Extraire les “caractéristiques de style” : 
+
+- Fréquence des mots ; 
+- Longueur des phrases ; 
+- Distribution des n-grams ; 
+- Etc.
+
+\ 3. Comparer les textes entre eux : 
+
+- Distance entre les styles ; 
+- *Clustering* (qui ressemble à qui ?) ; 
+- Classification automatique ; 
+- Visualisations. 
+
+### Deux exemples {.scrollable .smaller}
+
+1\. Shakespeare a-t-il vraiment écrit toutes les pièces qui lui sont attribuées ? 
+
+- Cas idéal : corpus large et bien délimité ; 
+- Ses contemporains ont laissé un corpus comparable (permettant des comparaisons) ; 
+- Pièces remaniées (permettant d'étuder des strates rédactionnelles). 
+- Ex.: [Savoy, J. *Stylometric analysis of characters in Shakespeare’s plays*, Digital Scholarship in the Humanities, Volume 38, Issue 3, September 2023, Pages 1238–1246](https://doi.org/10.1093/llc/fqac092)
+- Ou [*Shakespeare by the Numbers: What Stylometrics Can and Cannot Tell Us*](https://shakespeareoxfordfellowship.org/shakespeare-by-the-numbers-what-stylometrics-can-and-cannot-tell-us/) 
+
+<!-- 
+Shakespeare est l’un des auteurs les plus étudiés, mais aussi parmi les plus sujets aux doutes sur l’attribution : certaines pièces sont co-écrites, d’autres sont apocryphes. Dès le XIXᵉ siècle, des philologues ont soupçonné que certaines œuvres étaient collaboratives ou partiellement écrites par d’autres dramaturges de l’époque élisabéthaine.
+
+Beaucoup de pièces attribuées à Shakespeare ont été analysées pour détecter des co-auteurs.
+
+Méthodes utilisées : fréquence de mots, mots-outils, clustering, PCA, machine learning.
+
+Résultats principaux :
+
+Certaines pièces (Henry VI, Two Noble Kinsmen) semblent avoir été écrites à plusieurs mains.
+
+Le style de Shakespeare évolue au fil du temps, ce qui peut compliquer l’attribution.
+
+Les méthodes stylométriques permettent de détecter des ressemblances et des différences, mais ne prouvent jamais de manière absolue qui a écrit quoi.
+
+La stylométrie donne des indices solides sur le style et les collaborations, mais ne remplace pas la preuve historique ou documentaire.
+--> 
+
+2\. Qui est Elena Ferrante ? 
+
+- Plusieurs livres à succès (notamment la quadrilogie *L'amie prodigieuse*), sous pseudonyme ; 
+- Engouement dans la communauté scientifique, surtout vers 2016 + questions éthiques émergent → cas médiatique ; 
+- [Tuzzi, A., Cortelazzo, M. *Drawing Elena Ferrante’s Profile*. Workshop Proceedings (Padova, 7 September 2017). Padova University Press 2018.](https://gwern.net/doc/fiction/2017-tuzzi.pdf) ; 
+- attribution ≠ preuve ! 
+
+<!--
+Ferrante a choisi l’anonymat dès son premier roman.
+
+Le succès international de ses livres a stimulé l’intérêt scientifique et médiatique.
+
+Une question centrale : peut-on déterminer l’auteur à partir du style ?
+
+Le style de Ferrante correspond fortement à Domenico Starnone, écrivain napolitain.
+
+L’hypothèse qu’Anita Raja soit l’autrice est fortement contredite par la stylométrie.
+
+Possibilité d’une collaboration éditoriale : le style pourrait refléter des corrections ou relectures.
+
+Message clé : La stylométrie peut identifier des “empreintes stylistiques”, et dans le cas de Ferrante, elle a été très efficace pour orienter les hypothèses d’attribution.
+
+--> 
+
+## Introduction au TAL (NLP) 
+
+### TAL : définitions et enjeux {.scrollable .smaller}
+
+- Traitement Automatique des Langues (= *Natural Language Processing*) ; 
+- Ensemble de méthodes qui permettent à un ordinateur de comprendre, manipuler ou analyser du texte ou de la parole ; 
+- En HN : 
+  - Analyser de très grands corpus ; 
+  - Identifier des motifs, tendances, entités (personnages, lieux, concepts) ; 
+  - Créer des outils pour explorer des textes (corpus littéraire, articles scientifiques, archives historiques).
+
+### Quelques concepts clés {.scrollable .smaller}
+
+1\. **Entités nommées (*Named Entities*)**
+
+- Noms propres : personnes, lieux, organisations, dates, etc ; 
+- Deux étapes principales : 
+  - Détection : repérer un mot ou groupe de mots qui est une entité ; 
+  - Classification : dire de quel type il s’agit (personne, lieu, organisation…).
+- Puis, désambiguïsation : comprendre le contexte ; 
+- Pour aller plus loin, *entity linking* : relier une entité à une base de données (ex. Wikidata) pour recueillir des informations supplémentaires.
+
+<!--https://leaf-writer.leaf-vre.org/-->
+Exemple (issu de [cette page](https://www.smalsresearch.be/named-entity-recognition-une-application-du-nlp-utile/)): 
+
+![Exemple d’extraction d’entités nommées d’un article de journal avec le module NER de spaCy.](img/ner.png){.lightbox height="200"}
+
+Exemple de désambiguisation : “Orange” peut être une ville, un fruit ou une entreprise. 
+
+2\. ***Tokenization*** (découpage du texte)
+
+- Couper le texte en unités exploitables : (caractères), mots, phrases, paragraphe.
+
+Exemple : “J’aime le NLP.” → [“J’aime”, “le”, “NLP”, “.”] ou [“J”, “’”, “aime”, “le”, “NLP”, “.”]
+
+3\. **Lemmatisation ou racinisation**
+
+- Lemmatisation : Ramener le mot à sa forme canonique (lemme) telle qu’on la trouve dans le dictionnaire : 
+  - Exemple : “mangions”, “mangeons”, “mangé” → racine “manger”.
+- Racinisation : Couper le mot pour garder sa racine, en enlevant les suffixes (parfois approximatif et pas forcément adapté au français) : 
+  - Exemple :  “dancing”, “dancer”, “dances” → racine “dance”.
+
+![[Stemming vs Lemmatization](https://studymachinelearning.com/stemming-and-lemmatization/)](img/stemmin_lemm_ex-1.png){.lightbox height="200"}
+
+4\. **N‑grams**
+
+- Séquences de mots de longueur n.
+  - Exemple 2-gram : “traitement automatique”, “automatique des”, “des langues”.
+- Utile pour détecter des expressions récurrentes ou des patterns stylistiques.
+
+## Récapitulons 
+
+| Approche          | Objectif principal               | Exemple                                  | Focus                                     |
+| ----------------- | -------------------------------- | ------------------------------------------------ | ----------------------------------------- |
+| Fouille de textes | Extraire motifs et tendances     | Fréquences, cooccurrences dans un corpus         | Contenu / occurrences                     |
+| Textométrie       | Analyse quantitative de textes   | Comparer distribution des mots dans des romans   | Mesures statistiques                      |
+| Stylométrie       | Étudier le style d’écriture      | Attribution auteur, détection collaboration      | Style / empreinte personnelle             |
+| TAL / NLP         | Traiter le texte automatiquement | Extraction d’entités, TF-IDF, analyse syntaxique | Compréhension et exploitation automatique |
+
 <!--
 
-Quelques étapes nécessaires :
+La fouille de textes explore les tendances générales.
 
-    référencement des documents
-    prise de vue (photographie)
-    reconnaissance optique des caractères
-    zonage du texte et structuration
+La textométrie quantifie ces tendances dans un cadre littéraire ou linguistique.
 
-Petite exploration de comment numériser un texte en plusieurs étapes détaillées ci-dessous :
+La stylométrie examine le style et l’auteur.
 
-    le référencement des documents : il faut d’abord savoir quoi numériser, et cela n’est possible qu’à condition de disposer d’une base de données des références des documents concernés. Donc une sorte de catalogue qui comporte des informations primordiales : les métadonnées des documents mais aussi des informations sur les propriétés du document (nombre de pages par exemple). La constitution d’un catalogue est une tâche complexe et longue, mais heureusement les informations sont désormais souvent mutualisées ;
-    la prise de vue consiste à prendre en photo les différentes pages d’un document ou d’un livre, et plusieurs paramètres sont à prendre en compte : la qualité de la photo (qualité qui a beaucoup évolué ces 50 dernières années (avec le passage de l’argentique au numérique notamment), le fait que le document est mis à plat, etc. Une prise de vue ne permet pas de faire des requêtes sur un texte, mais uniquement de le consulter autrement que via l’exemplaire analogique. Le mode image permet toutefois de prévoir d’autres traitements par la suite ;
-    la reconnaissance optique des caractères (ou OCR) est une opération qui consiste à transformer une image en texte. Outre le fait de pouvoir reconnaître les différents caractères typographiques dans différentes langues, il s’agit aussi d’être en mesure d’attribuer des coordonnées à chaque portion de texte par rapport à l’image afin de pouvoir ensuite développer des fonctionnalités de calques (le texte océrisé vient se placer sur l’image pour afficher des termes recherchés ou sélectionnés) ;
-    le zonage du texte et la structuration sont des étapes distinctes qui permettent d’aller au-delà de la simple conversion textuelle d’une image. Ce sont souvent des opérations difficilement automatisables, car elles nécessitent une bonne interprétation du document original. Le zonage du texte consiste en une description des blocs de textes : décrire quel est le type de texte et le placer dans une arborescence logique. La structuration est une opération d’encodage qui consiste à qualifier tout type de texte : niveaux de titres, emphases, listes, citations, noms de personnes ou de lieux, etc.
+Le TAL/NLP permet d’automatiser tout cela et d’aller plus loin sur de grands corpus.
+Ensemble, elles ouvrent la porte à de nouvelles façons de comprendre et d’exploiter le texte.”
 
 -->
 
-### Texte et data 
+### Limites, biais, enjeux de modélisation {.scrollable .smaller}
 
-> Comment un texte devient-il une donnée ? Qu’est-ce qu’on perd et qu’est-ce qu’on gagne ? 
+- Les modèles ne “comprennent” pas les textes : 
+  - Quid des nuances (ironie, implicite) ; 
+  - Fréquences, cooccurrences, vecteurs, plutôt que le sens global ; 
+  - Détection de structures plutôt qu'explication, l'interprétation est humaine. 
+- Variabilité des corpus : 
+  - Corpus trop petit est difficilement utilisable ; 
+  - Corpus trop hétérogène produit du bruit ou des incohérences ; 
+  - Corpus mal numérisé introduit des erreurs ou pertes d'information. 
+- Importance du contexte culturel, historique et linguistique : 
+  - Les outils et modèles ne sont pas neutres ! 
+    - Souvent construits sur l'anglais (plus de données) ; 
+  - Les mots varients selont les époques, normes éditoriales, pratiques scribales ; 
 
-## Ngram Viewer 
+## Deux démonstrations simples
 
-<!--
-L’affichage des résultats sur un graphe permet de prendre la mesure du nombre d’occurrences d’une expression à travers le temps et à travers des corpus très divers. Si Ngram Viewer est intéressant pour appréhender des grands corpus de textes, encore faut-il en faire une analyse plus poussée en ayant accès aux documents sources (ce que ne permet pas totalement Google Books).
--->
+### TF-IDF {.scrollable .smaller}
 
-## Voyant Tools 
+- *Term frequency–inverse document frequency* : 
+  - transforme des mots en chiffres ; 
+  - mesure l'importance d'un *terme* dans un document d'un corpus ; 
+    - TF : un mot est important s'il apparaît souvent dans ce document ; 
+    - IDF : un mot est moins important s'il apparaît partout dans le corpus. 
+  - Usages : repérer les thèmes d'un texte, les mots caractéristiques, les différences entre documents. 
 
-Atelier présenté par Yann Audin. 
+Ex. : Calculer le nombre d'occurrence du mot *mineur* dans *Germinal* de Zola par rapport à tous les autres ouvrages de la série des Rougon-Macquart. 
 
-<!--
+<!--Dans Germinal, le mot “mineur” apparaît 150 fois.
 
-- Application web ; 
-- Exploration de textes par des approches “distantes” ; 
-- À destination du monde académique ; 
-- Open source et user friendly ; 
-- <https://voyant-tools.org/>.  
+Dans les deux autres romans : 0 fois.
+→ TF élevé + IDF élevé → mot très important pour Germinal.--> 
 
-### Charger un ou plusieurs textes
+### Ngram Viewer (Google Books) {.scrollable .smaller}
 
-- Copier-coller le texte directement ; 
-- Copier-coller une URL pointant vers un texte brut ; 
-- Copier-coller plusieurs URLs (avec saut de ligne) ; 
+- Outil Google pour explorer l’évolution de la fréquence des mots dans les livres numérisés ; 
+- Corpus : plusieurs centaines de milliards de mots (Google Books). 
+- Usages : 
+  - comparer la fréquence de plusieurs termes dans le temps ; 
+  - observer des phénomènes culturels, politiques ou scientifiques ; 
+- Limites : 
+  - corpus biaisé (publications essentiellement occidentales, universitaires ou littéraires) ; 
+  - ocr parfois imparfait ; 
+  - utile pour faire émerger des tendances générales (peu précises)
 
-### Exemples
+## Atelier : Voyant Tools (par Y. Audin)
 
-Quelques textes disponibles grâce au [projet Gutenberg](https://www.gutenberg.org/) : 
-
-- A la Recherche du Temps Perdu (M. Proust) : <https://www.gutenberg.org/cache/epub/2650/pg2650.txt> ; 
-- La Curée (E. Zola) : <https://www.gutenberg.org/cache/epub/17553/pg17553.txt> ; 
-- Le Mystère de la Chambre Jaune (G. Leroux) : <https://www.gutenberg.org/cache/epub/13765/pg13765.txt> 
-
-### Manipulons 
-
-- Exploration des panneaux de Voyant Tools ; 
-- Quelques notions sur l’exploration statistique des textes ; 
-- Fonction de recherche dans le corpus ; 
-- Autres panneaux d’exploration. 
-
-### Manipulations individuelles 
-
-- Importer un ou plusieurs textes de votre choix (ou garder ceux utilisés jusqu’à présent) ; 
-- Explorer les différents outils - quels éléments notables découvrez-vous sur le corpus? ; 
-- Partager vos découvertes avec le groupe. 
-
--->
 
 ::: {.content-visible when-format="revealjs"}
 ## Travaux cités
