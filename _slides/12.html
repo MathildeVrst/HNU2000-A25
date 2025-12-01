@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="12_files/libs/clipboard/clipboard.min.js"></script>
+<script src="12_files/libs/quarto-html/tabby.min.js"></script>
+<script src="12_files/libs/quarto-html/popper.min.js"></script>
+<script src="12_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="12_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="12_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="12_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="12_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="12_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="12_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="12_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
+
+  <title>quarto-input9c065ce2b7bfd42a</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="12_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="12_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="12_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="12_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="12_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="12_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="12_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section id="séance-12-0212-visualiser-vers-une-autre-lecture" class="title-slide slide level1 unnumbered center">
+<h1>[Séance 12 : 02/12] VISUALISER&nbsp;: vers une autre lecture</h1>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Lectures obligatoires</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><span class="citation" data-cites="robichaudPrendreTournantSpatial2019">Robichaud, Burgess, and Linteau (<a href="#/travaux-cités" role="doc-biblioref" onclick="">2019</a>)</span></li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+NOTES LECTURE 
+
+- Expliquer ce que sont les SIG 
+
+Goégraphie/histoire.
+diffusion des données cartographiques (-> contrôle de l'info ET culture cartographique; réappropriation du territoire). 
+
+Ressources matérielles et humaines : 
+- plateormes utilisant un modèle par abonnement : pas possible ! 
+
+> Les cartes qui en découlent peuvent alors illustrer des communications,
+compléter des articles scientifiques ou enrichir des expositions. Les cher-
+cheurs les utilisent pour confirmer les hypothèses ou pour découvrir de
+nouvelles tendances qui méritent une analyse plus poussée
+
+
+-->
+</section>
+<section id="visualisation-de-données-et-hn" class="title-slide slide level2 center">
+<h2>Visualisation de données et HN</h2>
+
+</section>
+<section id="définition-générale" class="slide level3">
+<h3>Définition générale</h3>
+<p>Textes → Données → Formes visuelles</p>
+<ul>
+<li>graphiques,</li>
+<li>cartes,</li>
+<li>diagrammes,</li>
+<li>réseaux,</li>
+<li>…</li>
+</ul>
+<blockquote>
+<p>All information visualizations are metrics expressed as graphics […] Visualizations are always interpretations - data does not have an inherent visual form that merely gives rise to a graphic expression <span class="citation" data-cites="druckerGraphesisVisualForms2014">(<a href="#/travaux-cités" role="doc-biblioref" onclick="">Drucker 2014, 9</a>)</span></p>
+</blockquote>
+<!--
+- Manière dont on transforme les informations brutes en formes visuelles. 
+
+On part souvent de textes — que ce soit des documents, des corpus, des observations — puis on les structure en données, et ces données peuvent ensuite prendre différentes formes visuelles : des graphiques, des cartes, des diagrammes, des réseaux, etc.
+
+- Important de noter que les visualisations ne sont jamais neutres ; toujours une interprétation, un choix qui est fait. qu'est-ce qu'on mesure, comment on le représente, sous quelle échelle ou quelle forme.  
+-->
+</section>
+<section id="pourquoi-la-visualisation-de-données" class="slide level3">
+<h3>Pourquoi la visualisation de données ?</h3>
+<div>
+<ul>
+<li class="fragment">Voir pour croire&nbsp;: rendre visibles des phénomènes abstraits&nbsp;;</li>
+<li class="fragment">Interpréter&nbsp;: transformer des données en significations&nbsp;;</li>
+<li class="fragment">Identifier de nouvelles structures, relations, tendances&nbsp;;</li>
+<li class="fragment">Faire émerger de nouvelles questions</li>
+</ul>
+</div>
+<!-- 
+
+- permet de voir ce que les données ne montrent pas toujours directement 
+- On dit souvent “voir pour croire” : une visualisation rend visibles des phénomènes qui resteraient abstraits dans un tableau ou un texte.
+
+- Mais l’objectif n’est pas seulement de rendre les données jolies :  manière d’interpréter. 
+- bonne visualisation peut révéler des structures, des tendances, des relations que l’on n’avait pas anticipées. Et c’est souvent à partir de ces visualisations que de nouvelles questions apparaissent, ce qui fait avancer l’analyse.  
+- Exemples : 
+  - Liste de brute de fréquences dans un texte vs nuage de mots ou visualisation de cooccurences (cf. Voyant Tools semaine passée)
+
+-->
+</section>
+<section id="comment" class="slide level3">
+<h3>Comment ?</h3>
+<ul>
+<li>Comprendre ses données&nbsp;: nature, structure, limites&nbsp;;</li>
+<li>Choisir la forme graphique adaptée à nos données et à nos usages</li>
+</ul>
+<p>Rester critique !</p>
+<ul>
+<li>Visualiser = interpréter&nbsp;: les choix graphiques ne sont jamais neutres&nbsp;;</li>
+<li>Risques de simplification, distorsion, biais cognitifs ou méthodologiques&nbsp;;</li>
+<li>Importance de la contextualisation et de la transparence méthodologique</li>
+</ul>
+<!--
+
+- Pas juste choisir une forme graphique. 
+- Nécessaire de comprendre ses données : leur nature, leur granularité, leur source, leurs limites. C’est cette compréhension qui permet ensuite de choisir une forme visuelle adaptée, à la fois au type de donnée et à l’objectif de la visualisation.
+
+- Adopter une posture critique. Une visualisation est toujours un choix interprétatif : ce que l’on montre, ce que l’on omet, l’échelle, les couleurs, la forme… Aucun de ces choix n’est neutre. 
+- Ils peuvent simplifier, orienter, ou parfois produire des biais. C’est pour ça qu’en visualisation, la transparence méthodologique et la contextualisation sont essentielles. 
+- On doit savoir sur quoi repose l’image que l’on regarde. 
+
+-->
+</section>
+<section id="et-en-hn" class="slide level3">
+<h3>Et en HN ?</h3>
+<ul>
+<li>Mise en évidence de phénomènes culturels, linguistiques, historiques&nbsp;;</li>
+<li>“Faciliter” l’analyse de corpus complexes (textuels, iconographiques, bibliographiques)&nbsp;;</li>
+<li>Vulgarisation et médiation scientifique</li>
+</ul>
+<!--
+
+- permet de mettre en évidence des phénomènes culturels, linguistiques ou historiques qui peuvent être difficiles à percevoir autrement.
+
+- Elle aide aussi à travailler sur des corpus complexes : des textes en grande quantité, des bases bibliographiques, des ensembles d’images… Grâce à certaines visualisations, on peut repérer plus facilement des motifs, des absences, des clusters, ou même des anomalies.
+
+- Enfin, la visualisation est un outil puissant de vulgarisation : elle permet de rendre accessibles des analyses parfois très techniques, et de partager des résultats avec des publics variés, des étudiants, des collègues d’autres disciplines ou même un public non académique. 
+
+-->
+</section>
+<section id="quelles-données" class="slide level3 scrollable">
+<h3>Quelles données ?</h3>
+<p><strong>Données quantitatives</strong></p>
+<ul>
+<li>Comptages&nbsp;: fréquence, occurrence, distribution&nbsp;;</li>
+<li>Exemples&nbsp;: fréquence de mots, nombre de publications par année&nbsp;;</li>
+<li>Outil&nbsp;: Voyant Tools</li>
+</ul>
+<!--
+D’abord, les données quantitatives : ce sont des comptages, des occurrences, des fréquences.
+Par exemple : la fréquence de mots dans un corpus, ou le nombre de publications par année.
+Un outil comme Voyant Tools permet de visualiser ce type d’information très rapidement.
+-->
+<p><strong>Données qualitatives</strong></p>
+<ul>
+<li>Catégories, classes, types d’entités.</li>
+<li>Exemples : genres littéraires, typologie de manuscrits.</li>
+</ul>
+<!--
+Ensuite, les données qualitatives, qui concernent des catégories, des classes, des types d'entités :
+par exemple les genres littéraires, ou une typologie de manuscrits selon la tradition, le format, ou d’autres critères.
+Peuvent être liées à des données quantitatives 
+-->
+<p><strong>Données relationnelles</strong></p>
+<ul>
+<li>Liens&nbsp;: auteurs → œuvres, manuscrits → témoins, personnes → correspondances&nbsp;;</li>
+<li>Sources&nbsp;: prosopographie, réseaux épistolaires, édition numérique&nbsp;;</li>
+<li>Outil/projet&nbsp;: <a href="https://hdlab.stanford.edu/palladio/">Palladio</a> et, par exemple, le projet <a href="http://republicofletters.stanford.edu/publications/voltaire/letters/">Mapping the Republic of Letters</a></li>
+</ul>
+<!--
+données qui décrivent des liens : entre auteurs et œuvres, entre manuscrits et témoins, entre personnes dans un réseau de correspondance.
+Plateforme de visualisation développée à Standford. Mapping the Republic of Letters vise à visualiser les correspondances épistolaires (dates, lieux, destinataires) sur des cartes + chronologies pour étudier la diffusion géographique et temporelle des lettres dans le réseau des “lettres savantes”
+
+Network: ensemble d'objets dans lesquels des paires d'objets sont connectées par des liens. 
+-->
+<p><strong>Données géographiques et temporelles</strong></p>
+<ul>
+<li>Spatialisation, chronologies.</li>
+<li>Idéal pour montrer des dynamiques : diffusion, migrations, évolutions.</li>
+</ul>
+</section>
+<section id="différents-types-de-visualisation" class="slide level3">
+<h3>Différents types de visualisation</h3>
+<p><strong>Graphiques statistiques classiques</strong></p>
+<ul>
+<li>Histogrammes&nbsp;; diagrammes en barres&nbsp;; courbes temporelles&nbsp;; nuages de points&nbsp;;</li>
+<li>Pour&nbsp;: quantités, comparaisons, tendances&nbsp;;</li>
+<li>Exemple : évolution annuelle d’un corpus de publications</li>
+</ul>
+<!--
+Pour les données quantitatives, on mobilise souvent des graphiques statistiques classiques :
+histogrammes, barres, courbes temporelles, nuages de points.
+Ils sont idéaux pour comparer des quantités ou mettre en évidence des tendances — par exemple l’évolution annuelle d’un corpus de publications.
+-->
+<p><strong>Cartographies</strong></p>
+<ul>
+<li>Cartes statiques ou interactives&nbsp;;</li>
+<li>Choroplèthes, heatmaps&nbsp;;</li>
+<li>Exemples : parcours d’auteurs, circulation des imprimés, provenance des manuscrits&nbsp;; cf.&nbsp;<a href="https://www.itiner-e.org/">itiner-e</a></li>
+</ul>
+<p><strong>Chronologies et frises temporelles</strong></p>
+<ul>
+<li>Frises temporelles ; timelines interactives&nbsp;;</li>
+<li>Exemples&nbsp;: carrière d’un auteur&nbsp;; chronologie d’un projet éditorial&nbsp;;</li>
+<li>Projet <a href="histoire%20de%20l'humanité">https://histography.io/</a></li>
+</ul>
+<p><strong>Réseaux</strong> (graphes)</p>
+<ul>
+<li>Représenter les relations&nbsp;: personnes, textes, lieux, concepts&nbsp;;</li>
+<li>Utilisations&nbsp;: prosopographie, co-occurrences, citations, transmissions manuscrites&nbsp;;</li>
+<li>Exemple&nbsp;: correspondances savantes dans Mapping the Republic of Letters ou même <a href="https://www.submarinecablemap.com/">la cable des cartes sous-marins</a></li>
+</ul>
+<!-- 
+Ils permettent de représenter visuellement des relations entre personnes, lieux, textes ou concepts.
+- Mettre en évidence et comprendre les relations entre des éléments qui constituent par exemple un réseau social (liens entre des personnes), un réseau d’énergie (distribution des énergies HydroQuebec), un réseau aérien (les aéroports reliés par voie aérienne) ou le routage pour les réseaux informatiques (comme Internet). 
+
+-->
+</section>
+
+<section id="quelques-outils" class="title-slide slide level2 center">
+<h2>Quelques outils</h2>
+<ul>
+<li>Logiciels : e.g.&nbsp;<a href="https://www.vosviewer.com/">VOSviewer</a>, visualisation en réseau&nbsp;;</li>
+<li>SIG (systèmes d’information géographique) : e.g.&nbsp;<a href="QGIS">https://www.qgis.org/</a>&nbsp;;</li>
+<li>Librairies de code informatique : e.g.&nbsp;D3.js</li>
+</ul>
+<!--
+Source https://observablehq.com/@lenamk/hnu6056-cours2?collection=@lenamk/hnu6056
+
+LOGICIELS 
+
+En chargeant des données tabulaires dans le logiciel, on peut facilement accéder à différentes vues sur les données (carte, graphe, liste et galerie) qui peuvent être filtrées selon différents critères ou à l’aide de la chronologie générée par les données. Ce type de logiciels, conçus pour être simples d’utilisation ne requiert pas de connaissances particulières en informatique. Il faut toutefois, au minimum, disposer de données et savoir les structurer en vue de leur utilisation dans le logiciel.
+
+Deux inconvénients pour la recherche
+
+- le logiciel prédéfinit les vues possibles sur les données: on ne peut pas les adapter ni en ajouter, ce qui contraint ainsi le choix de visualisations à celles proposées par défaut.
+- utilisation individuelle: on peut enregistrer le projet pour le partager avec d’autres, mais l’accès et la diffusion restent internes au logiciel ou se limitent aux services web offerts par le logiciel.
+
+SIG 
+
+outils spécialisés pour la cartographie numérique, il s’agit des systèmes d’information géographique (SIG). Ces logiciels complexes et puissants doivent être installés sur l’ordinateur des chercheur·se·s. Ils requièrent un apprentissage spécialisé en cartographie numérique, mais présentent un vaste attirail d’outil pour spécifier chaque aspect technique et visuel de la carte. Remontant aux années 1960, les SIG ont d’abord été crées pour une utilisation interne au logiciel qui permet des exports de cartes statiques (.png ou .pdf). Il existe désormais des extensions qui permettent certaines formes de publications interactives sur le web. Excepté pour QGIS, qui est un logiciel libre, il faut également prendre en compte le coût très élevé pour l’emploi de ces logiciels.
+
+Une fois que l’on saisit le fonctionnement des SIGs, ceux-ci s’avèrent des outils très efficaces et utiles dans le quotidien de la recherche, notamment pour explorer et cartographier des données géolocalisées. Les SIGs présentent aussi l’avantage de pouvoir prendre en charge des traitements géomatiques complexes, tels que le géoréférencement de plans historiques et l’application d’une panoplie de méthodes cartographiques et statistiques.
+
+LIBRAIRIE DE CODE 
+
+La dernière catégorie d’outils que nous souhaitons évoquer concerne les bibliothèques de code informatique, telles que Leaflet.js et D3.js. Leur emploi requiert des connaissances en programmation. Une librairie de code est un recueil de code auquel on peut faire appel pour utiliser des fonctionnalités prédéfinies. Leaflet.js, par exemple, est conçue pour faciliter la création de cartes interactives.
+
+Il existe désormais des librairies de code qui requièrent moins de connaissance en programmation, comme Vega ou Plot
+
+-->
+</section>
+
+<section id="ça-ne-date-pas-daujourdhui" class="title-slide slide level2 center">
+<h2>Ça ne date pas d’aujourd’hui</h2>
+
+</section>
+<section id="la-table-de-peutinger" class="slide level3">
+<h3>La Table de Peutinger</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/peutinger.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Table de Peutinger, le fac-similé de Konrad Miller de 1887"><img data-src="img/peutinger.jpg" height="200" alt="Table de Peutinger, le fac-similé de Konrad Miller de 1887"></a></p>
+<figcaption>Table de Peutinger, le fac-similé de Konrad Miller de 1887</figcaption>
+</figure>
+</div>
+<!-- 
+Table de Peutinger. une des plus anciennes visualisations de données géographiques que l’on possède. carte routière de l’Empire romain, réalisée probablement entre le IIIᵉ et le IVᵉ siècle (d’après un original plus ancien, peut-être du Iᵉʳ siècle). Elle doit son nom à Konrad Peutinger, érudit du XVIᵉ siècle qui en hérite et la rend célèbre. ~6,80 m de long pour ~34 cm de haut — un “ruban” de parchemin. → Ce n’est pas une carte au sens moderne, mais une visualisation linéaire du réseau de routes.
+schéma de circulation plutôt qu’une représentation réaliste du territoire.
+environ 4 000 localités, 200 000 km de routes, villes, ports, relais, particularités géographiques, certaines villes sont représentées avec des icônes (Rome, Constantinople, Antioche…)
+Ce n’est pas une carte réaliste, mais une modélisation : elle schématise, sélectionne, simplifie. Rien à voir avec Google maps. 
+déformer l’espace pour servir un objectif (ici : montrer les connexions plutôt que les formes),
+encoder de l’information avec des symboles,
+produire un objet hybride entre carte, diagramme et réseau.
+-->
+</section>
+<section id="joseph-priestley-sa-chart-of-biography-1765" class="slide level3">
+<h3>Joseph Priestley &amp; sa “Chart of Biography” (1765)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/A_New_Chart_of_History_color.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Joseph Priestley’s A New Chart of History (1769)"><img data-src="img/A_New_Chart_of_History_color.jpg" height="200" alt="Joseph Priestley’s A New Chart of History (1769)"></a></p>
+<figcaption>Joseph Priestley’s A New Chart of History (1769)</figcaption>
+</figure>
+</div>
+<!-- 
+
+Sur ce graphique, l’histoire du monde est représentée non comme une suite de textes, mais visuellement — par des barres colorées, alignées selon le temps et selon des régions géographiques.
+
+L’axe horizontal représente le temps : on va de l’Antiquité à l’époque contemporaine. L’axe vertical divise le monde en territoires ou « nations » (Europe, Asie, Afrique, Amériques…). Chaque bloc coloré symbolise un empire ou une civilisation, avec sa durée, son extension, et les recouvrements possibles avec d’autres entités. Ainsi, on voit immédiatement la montée et le déclin des puissances, les chevauchements, les dynamiques globales sur des millénaires.
+
+Le but de Priestley était pédagogique : offrir une vue d’ensemble — une image claire de l’“histoire du monde” — pour faciliter la compréhension de la durée, des ruptures, des continuités. À une époque où l’histoire se présentait presque exclusivement sous forme de récits, c’était une innovation graphique majeure.
+
+C’est un ancêtre direct de nos frises, timelines, chronologies interactives ou posters d’histoire — un des premiers exemples de « datavisualisation historique
+
+-->
+</section>
+<section id="cause-de-mortalité-dans-larmée-britannique-lors-de-la-guerre-de-crimée" class="slide level3">
+<h3>Cause de mortalité dans l’armée britannique lors de la guerre de Crimée</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/Nightingale-mortality.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="“Diagram of the causes of mortality in the army in the East” (1858) by Florence Nightingale, a colored pie chart to illustrate causes of death in the British Army"><img data-src="img/Nightingale-mortality.jpg" height="200" alt="“Diagram of the causes of mortality in the army in the East” (1858) by Florence Nightingale, a colored pie chart to illustrate causes of death in the British Army"></a></p>
+<figcaption>“Diagram of the causes of mortality in the army in the East” (1858) by Florence Nightingale, a colored pie chart to illustrate causes of death in the British Army</figcaption>
+</figure>
+</div>
+<!--
+
+le diagramme de Florence Nightingale, publié en 1858 dans son rapport sur l’armée britannique pendant la guerre de Crimée. Son titre officiel est “Diagram of the causes of mortality in the army in the East”.
+
+C’est ce qu’on appelle un diagramme en rose polaire : chaque secteur circulaire représente un mois, et la longueur de chaque secteur correspond au nombre de décès. Les couleurs codent les causes de mortalité :
+
+- Bleu pour les maladies évitables,
+- Rouge pour les blessures de guerre,
+- Noir ou gris sombre pour les autres causes.
+
+Si on regarde ce graphique, ce qui saute aux yeux, c’est l’énorme surface bleue : la majorité des morts dans les hôpitaux militaires n’étaient pas dues aux combats, mais à des maladies évitables. La visualisation rend cette information immédiatement lisible, bien plus qu’un tableau chiffré.
+
+Le contexte historique est crucial : Nightingale (infirmière britannique + statisticienne) a vécu les conditions sanitaires catastrophiques des hôpitaux militaires pendant la guerre de Crimée. Son objectif n’était pas seulement scientifique, mais politique et social : montrer de manière convaincante aux autorités l’urgence de réformer l’hygiène et l’organisation hospitalière.
+
+Ce diagramme est important pour l’histoire de la visualisation pour plusieurs raisons :
+
+- Il transforme des données quantitatives complexes (morts par mois, causes variées) en une image visuelle claire.
+- Il utilise la forme graphique pour persuader — la couleur et la forme circulaire créent un effet visuel puissant.
+- Il illustre que la datavisualisation n’est pas neutre : c’est une interprétation, un choix de représentation. 
+
+En somme, Florence Nightingale a inventé, avec ce diagramme, une des premières visualisations modernes à la fois quantitative, narrative et persuasive. C’est un excellent exemple pour montrer que la visualisation de données a une longue histoire, bien avant l’informatique, et qu’elle peut avoir un vrai impact sur la société. »
+-->
+</section>
+
+<section id="zoom-sur-les-cartes" class="title-slide slide level2 center">
+<h2>Zoom sur les cartes</h2>
+
+</section>
+<section id="la-cartographie-média-outil-et-message" class="slide level3">
+<h3>La cartographie : média, outil et message</h3>
+<ul>
+<li>Une carte n’est pas neutre&nbsp;: elle représente une réalité selon un point de vue&nbsp;;</li>
+<li>Cartographie objective&nbsp;: vise à donner une image “réaliste” ou mesurable du territoire&nbsp;;</li>
+<li>Cartographie subjective&nbsp;: exprime un ressenti, une narration, une expérience personnelle de l’espace&nbsp;;</li>
+<li>Exemple&nbsp;: cartes mentales, cognitives, artistiques ou littéraires.</li>
+</ul>
+<!-- 
+Une carte est toujours une représentation. Même une carte dite objective n’est jamais totalement neutre : elle reflète des choix, un contexte historique, des valeurs sociales, politiques ou culturelles. La cartographie subjective, elle, assume cette dimension et devient un moyen d’exprimer le ressenti, l’expérience, ou une vision personnelle du monde.
+-->
+</section>
+<section id="cartographie-subjective" class="slide level3">
+<h3>Cartographie subjective</h3>
+<p>Caractéristiques :</p>
+<ul>
+<li>Personnelle, ressentie, narrative&nbsp;;</li>
+<li>Appropriation d’un espace réel&nbsp;;</li>
+<li>Diversification des approches : artistique, performative, littéraire</li>
+<li>Exemple : <a href="https://markusmoestue.no/home/criticaltouristmap.html">Critical Tourist Map</a> qui interroge le vécu et l’expérience subjective de l’espace.</li>
+</ul>
+<!-- 
+Les cartes subjectives ne cherchent pas seulement à montrer où se trouvent les lieux, elles racontent des histoires, traduisent un vécu, un ressenti. Elles peuvent être artistiques, littéraires ou performatives. Par exemple, la Critical Tourist Map invite à réfléchir sur notre expérience personnelle de l’espace, ce que la cartographie traditionnelle ne montre pas.
+-->
+</section>
+<section id="cartographie-représenter" class="slide level3">
+<h3>Cartographie = Représenter</h3>
+<ul>
+<li>Même les cartes “objectives” sont contextuelles&nbsp;: elles dépendent d’un point de vue et d’un choix d’échelle, de projection, d’informations&nbsp;;</li>
+<li>Exemple historique : représentations de la Terre — sphérique, aplatie, projections différentes selon les époques et les usages&nbsp;;</li>
+<li>Les cartes que nous connaissons dépendent de notre culture, de notre expérience : elles sont toujours situées (valeurs politiques, sociales, religieuses, effets de mode).</li>
+</ul>
+<!-- 
+« Qu’on parle de cartographie objective ou subjective, chaque carte reflète un point de vue. La projection, l’échelle, les informations sélectionnées font que la carte change selon l’époque, le contexte, le public. C’est pour cela que relativiser la frontière entre cartographie objective et subjective est important : chaque carte est une vision spécifique du monde. »
+
+Différentes cartes de la terre mais pourtant elle n'a pas changé. 
+
+La carte subjective assume cette dimension dans son intitulé, ce qu'on fait moins avec les cartes dites objectives. 
+Relativiser l'opposition cartographie subjective vs objective : "les cartes subjectives ne sont pas scientfiiques, attraits uniquement esthétiques" mais en fait les frontières entre subj. et obj. sont bien poreuses. 
+Chaque carte = une vision spécifique du monde 
+Les cartes avec lesquelles j'ai grandi sont différentes des votres ou d'un autre continent 
+Lieu de notre regard, de notre observation, perspective, au centre 
+
+-->
+</section>
+<section id="cartographier-le-monde" class="slide level3 scrollable">
+<h3>Cartographier le monde</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/TabulaRogeriana.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Copie de la Tablula Rogeriana, carte du monde dessinée par Muhammad al-Idrisi pour Roger II de Sicile en 1154."><img data-src="img/TabulaRogeriana.jpg" height="200" alt="Copie de la Tablula Rogeriana, carte du monde dessinée par Muhammad al-Idrisi pour Roger II de Sicile en 1154."></a></p>
+<figcaption>Copie de la Tablula Rogeriana, carte du monde dessinée par Muhammad al-Idrisi pour Roger II de Sicile en 1154.</figcaption>
+</figure>
+</div>
+<!-- 
+Reconstitution de la carte du géographe Muhammad al-Idrisi, intitulée Tabula Rogeriana, dessinée pour Roger II de Sicile en 1154. La carte est orientée vers le sud. Le texte en arabe a été retranscrit en alphabet latin par le cartographe allemand Konrad Miller. Reproduction basée sur une copie de la fin du Moyen Âge (1300 ou 1486).
+
+C’est l’une des cartes du monde médiéval les plus précises de l’époque, mais elle montre — comme toutes les cartes anciennes — un monde « vu depuis » un contexte particulier (échelle, connaissances, zones explorées).
+
+On a tout le continent eurasien mais seulement la moitié nord de l'afrique
+-->
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/1500_map_by_Juan_de_la_Cosa_rotated.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Map of Juan de la Cosa, 1500"><img data-src="img/1500_map_by_Juan_de_la_Cosa_rotated.jpg" height="200" alt="Map of Juan de la Cosa, 1500"></a></p>
+<figcaption>Map of Juan de la Cosa, 1500</figcaption>
+</figure>
+</div>
+<!--
+Le Nouveau Monde apparaît dans la partie supérieure (en vert) et l'Ancien Monde dans la partie centrale et inférieure (en blanc).
+Cette carte, dessinée par le navigateur Juan de la Cosa en 1500, inclut la première représentation connue des terres du Nouveau Monde. 
+Elle témoigne des connaissances géographiques de l’époque, des limites de l’exploration, et de la façon dont le monde était imaginé après les voyages de découverte.
+photographie” d’un savoir : le savoir évolue, la carte aussi.
+-->
+<p>Et pour les vues plus récentes de notre planète, cf.&nbsp;<a href="https://histoire-itinerante.fr/cartotheque/les-pays-du-monde-a-leur-taille-reelle/">ces explications</a></p>
+<!-- 
+
+Planisphères auxquels on est habitués : on pense que le monde est tel quel. Mais en réalité, toutes les cartes déforment la surface terrestre, parce qu’il est impossible de représenter une sphère sur un plan sans introduire de distorsion.
+- Prenons la projection de Mercator, qui est l’une des plus utilisées depuis le XVIᵉ siècle. Elle était très utile pour la navigation : elle conserve les angles, ce qui permet aux marins de tracer des routes droites. Mais elle déforme fortement les surfaces : les régions proches des pôles, comme le Groenland, la Russie ou le Canada, paraissent énormes par rapport à leur taille réelle, alors que des régions équatoriales comme l’Afrique ou l’Amérique du Sud semblent plus petites qu’elles ne le sont.
+- Ces distortions ne sont pas neutres : elles influencent notre perception du monde, notre imaginaire géographique et parfois même nos représentations politiques et culturelles. On peut ainsi dire qu’une carte raconte quelque chose, qu’elle exprime un point de vue, même si elle est dite “objective”.
+- Heureusement, il existe aujourd’hui des alternatives. Par exemple, la World AuthaGraph Map, conçue par l’architecte japonais Hajime Narukawa, divise la Terre en triangles pour la déplier en rectangle tout en préservant les surfaces relatives. Il y a aussi des outils interactifs comme The True Size, qui permettent de comparer la taille réelle des pays en les superposant, révélant immédiatement les déformations introduites par les projections classiques.
+-->
+</section>
+<section id="et-aujourdhui" class="slide level3">
+<h3>Et aujourd’hui ?</h3>
+<p>Transition vers la cartographie numérique</p>
+<ul>
+<li>Les nouvelles cartes numériques (Google Earth, OpenStreetMap, etc.) offrent une image spatiale immédiate, souvent réaliste et “décryptée” automatiquement&nbsp;;</li>
+<li>L’utilisateur devient spectateur plutôt qu’interprète, l’abstraction et la schématisation disparaissent&nbsp;;</li>
+<li>Participation active/passive des populations&nbsp;: nos données (géolocalisation, photos, traces) alimentent la cartographie&nbsp;;</li>
+</ul>
+<!-- 
+« Avec la cartographie numérique, le rapport à la carte change : nous voyons des images réalistes de l’espace et ne sommes plus obligés de déchiffrer des symboles ou des projections. Nous devenons également participants : nos données personnelles contribuent à la carte. Cela pose la question : ces cartes représentent-elles vraiment la réalité, ou simplement une version filtrée et médiatisée de celle-ci ? »
+-->
+</section>
+
+<section id="au-travail" class="title-slide slide level2 center">
+<h2>Au travail</h2>
+<p>Quelques outils du Knightlab :</p>
+<ul>
+<li><a href="https://storymap.knightlab.com/#overview">StoryMapJS</a></li>
+<li><a href="https://timeline.knightlab.com/">TimelineJS</a></li>
+</ul>
+<!--  
+- Outil pour la cartographie narrative et storytelling
+- Outil développé par le KnightLab
+- Outil libre et gratuit
+
+TimelineJS et StoryMapJS sont deux outils interactifs développés par le Knight Lab pour raconter l’histoire avec des données.
+
+TimelineJS permet de créer des frises chronologiques interactives. On peut saisir les événements dans un Google Sheet ou un CSV, et chaque événement peut inclure du texte, des images, des vidéos ou des liens. C’est très utile pour retracer la vie d’un auteur, l’évolution d’un projet ou un parcours scientifique.
+
+StoryMapJS, quant à lui, associe chaque étape à un lieu sur la carte. On crée des “slides” où texte et médias sont liés à une localisation géographique, ce qui est parfait pour montrer la diffusion des idées, les voyages d’un chercheur ou des migrations historiques.
+
+Ces outils ont l’avantage d’être interactifs, multimédias et facilement accessibles en ligne. Ils permettent de raconter des histoires complexes à travers le temps et l’espace de façon visuelle et engageante, ce qui est particulièrement utile dans le contexte des humanités numériques.
+
+-->
+</section>
+<section id="storymapjs" class="slide level3">
+<h3>StorymapJS</h3>
+<p>Exemples: <a href="https://storymap.knightlab.com/examples/aryas-journey/">Arys’s Journey</a> ou <a href="https://storymap.knightlab.com/examples/bosch-garden/">Bosch, Le Jardin des délices</a></p>
+</section>
+<section id="exercice-timelinejs" class="slide level3 scrollable">
+<h3>Exercice : TimeLineJS</h3>
+<p><a href="https://vimeo.com/143407878">Tuto</a></p>
+<ul>
+<li>Choisir un sujet sur lequel faire une frise chronologique&nbsp;;</li>
+<li>Rassembler des dates, des informations, etc, à intégrer dans la frise&nbsp;;</li>
+<li>Remplir le GoogleSheet selon ce que l’on souhaite voir apparaître&nbsp;:
+<ul>
+<li>Au moins 10 entrées dans la frise et utiliser différents types de médias&nbsp;;</li>
+</ul></li>
+<li>Présenter le résultat au reste de la classe&nbsp;:
+<ul>
+<li>quel sujet&nbsp;;</li>
+<li>quelles informations mises en avant&nbsp;;</li>
+<li>quelles difficultés rencontrées&nbsp;;</li>
+<li>quelle impression générale.</li>
+</ul></li>
+</ul>
+<p>Exemples de sujet&nbsp;:</p>
+<p>-&nbsp;Histoire d’un auteur ou d’un philosophe&nbsp;; - Histoire de Montréal (cf.&nbsp;<a href="https://chronomontreal.uqam.ca/chronologie">le lien issu de l’article à lire pour ajourd’hui</a>)&nbsp;; - Chronologie d’un projet scientifique ou artistique</p>
+<!-- 
+
+Créer une frise chronologique interactive pour raconter une histoire ou visualiser des événements à travers le temps.
+
+Intégrer différents types de médias : texte, images, vidéos, liens.
+
+SUJETS : 
+
+- Histoire d’un auteur ou d’un philosophe
+  - Exemple : Victor Hugo (naissance, publications, exil, mort)
+- Événements scientifiques
+  - Exemple : découvertes majeures en astronomie ou en biologie (ex. la chronologie des missions Apollo)
+- Évolution d’un projet ou d’une exposition
+  - Exemple : chronologie d’un musée, d’une exposition artistique ou scientifique
+- Événements historiques
+  - Exemple : Révolutions françaises, Guerres mondiales, Grandes explorations
+
+DONNEES : 
+
+- Wikidata : pour dates de naissance, événements historiques, publications, naissances/morts d’auteurs
+- Gallica / BnF : images de manuscrits, affiches, documents historiques
+- Europeana : images, documents, archives, collections culturelles 
+- NASA / données scientifiques ouvertes : missions spatiales, satellites
+- Open Data gouvernemental : données chronologiques sur événements publics ou culturels 
+-->
+</section>
+
+<section id="travaux-cités" class="title-slide slide level2 smaller scrollable">
+<h2>Travaux cités</h2>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p>HNU2000-A25</p>
+</div>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-druckerGraphesisVisualForms2014" class="csl-entry" role="listitem">
+Drucker, Johanna. 2014. <em>Graphesis: Visual Forms of Knowledge Production</em>. Harvard University Press.
+</div>
+<div id="ref-robichaudPrendreTournantSpatial2019" class="csl-entry" role="listitem">
+Robichaud, Léon, Joanne Burgess, and Paul-André Linteau. 2019. <span>“Prendre Le Tournant Spatial En Histoire: Le Laboratoire d’histoire Et de Patrimoine de Montréal Et Le Système de Cartographie de l’histoire de Montréal.”</span> In <em>Histoire Et Patrimoine. Pistes de Recherche Et de Mise En Valeur</em>, 213–36. Chaire Fernand-Dumont Sur La Culture. Québec: Presses de l’Université Laval. <a href="https://www.pulaval.com/libreacces/9782763743295.pdf">https://www.pulaval.com/libreacces/9782763743295.pdf</a>.
+</div>
+</div>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="12_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="12_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="12_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="12_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="12_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="12_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="12_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="12_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="12_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="12_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    <script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
+    
+
+</body></html>
