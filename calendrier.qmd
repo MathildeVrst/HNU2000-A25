@@ -358,8 +358,6 @@ Semaine de lecture -- pas de cours.
 
 :::
 
-- La gestion de versions (à confirmer) ; 
-- [Manipulation]{.text-danger} : Git et GitHub. 
 - Les graphes : quelques éléments théoriques ; 
 - [Manipulations]{.text-danger} : 
   - [TimeLineJS](https://timeline.knightlab.com/) ; 
@@ -393,7 +391,7 @@ Semaine de lecture -- pas de cours.
 
 \newpage 
 
-## [Séance 14 : 16/12] 
+## [Séance 14 : 16/12] Contenu Bonus : Git
 
 ::: {.callout-important}
 Cette séance est remplacée par les deux [Ateliers *IA pour les SHS*](https://alexiaschn.github.io/ateliers_ia/) : 
@@ -411,6 +409,10 @@ Cette séance est remplacée par les deux [Ateliers *IA pour les SHS*](https://a
 
 :::
 
+Contenu Bonus : 
+
+- La gestion de versions (à confirmer) ; 
+- [Manipulation]{.text-danger} : Git et GitHub. 
 
 ::: {.content-visible when-format="revealjs"}
 

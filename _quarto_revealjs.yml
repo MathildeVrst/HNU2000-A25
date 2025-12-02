@@ -12,6 +12,8 @@ project:
     - 06.qmd
     - 09.qmd
     - 11.qmd
+    - 12.qmd
+    - 14.qmd
     - references.qmd
 
 bibliography: ref.bib

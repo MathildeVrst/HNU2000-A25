@@ -292,7 +292,7 @@ En gros :
 - Distribution des n-grams ; 
 - Etc.
 
-\ 3. Comparer les textes entre eux : 
+3\. Comparer les textes entre eux : 
 
 - Distance entre les styles ; 
 - *Clustering* (qui ressemble à qui ?) ; 
@@ -436,7 +436,7 @@ Ensemble, elles ouvrent la porte à de nouvelles façons de comprendre et d’ex
 - Importance du contexte culturel, historique et linguistique : 
   - Les outils et modèles ne sont pas neutres ! 
     - Souvent construits sur l'anglais (plus de données) ; 
-  - Les mots varients selont les époques, normes éditoriales, pratiques scribales ; 
+  - Les mots varients selont les époques, normes éditoriales, pratiques scribales. 
 
 ## Deux démonstrations simples
 
@@ -466,7 +466,7 @@ Dans les deux autres romans : 0 fois.
 - Limites : 
   - corpus biaisé (publications essentiellement occidentales, universitaires ou littéraires) ; 
   - ocr parfois imparfait ; 
-  - utile pour faire émerger des tendances générales (peu précises)
+  - utile pour faire émerger des tendances générales (peu précises). 
 
 ## Atelier : Voyant Tools (par Y. Audin)
 
